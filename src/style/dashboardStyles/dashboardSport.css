@@ -1,0 +1,89 @@
+.Sporthead{
+    display:flex;
+    max-width: 800px;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    text-align: center;
+}
+
+.Sport12{
+    padding:10px 5px;
+    background-color:  #ffffff1c;;
+    width:32%;
+    /* border-radius: 8px; */
+    background: #ffffff1f;
+border-radius: 26px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color:#fff;
+}
+.GamEType{
+    margin-top: 20px;
+background: rgba(255, 255, 255, 0.01);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding:15px 15px;
+
+}
+.GamEType1{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.GamEType2{
+    padding: 10px 20px;
+width:28%;
+/* background-color: #fff; */
+background-color:inherit;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 6px;
+font-size: 18px;
+color:#fff
+}
+.GamEType3{
+    padding:10px 5px;
+    background-color:inherit;
+    border-radius: 6px;
+    width:68%; 
+    /* background: rgba(255, 255, 255, 0.2); */
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+.dashboardAdd{
+    text-align: center;
+    color:#000;
+    font-size: 18px;
+    font-weight: 500;
+    padding:10px 5px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+}
+.RomaDAs{
+    display:flex;
+    align-items: center;
+
+}
+.GEoniPad{
+    display:flex;
+  justify-content: space-between;
+  color:#fff;
+   
+}

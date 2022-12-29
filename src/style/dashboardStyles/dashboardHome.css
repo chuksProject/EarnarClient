@@ -1,0 +1,83 @@
+
+
+.dashboardItem{
+    display:flex;
+  
+}
+
+.menuDiv{
+    flex:1;
+    background-color: #4b5478;
+    height: 100vh;
+   overflow: hidden;
+    padding:80px 4px 2px 4px;
+}
+.itemDiv{
+    flex:5;
+    padding:80px 20px 2px 20px;
+    overflow: scroll;
+    background-color: #192854;
+    height: 100vh;
+    
+}
+
+  
+
+  
+
+.dashList li{
+    padding:24px 5px;
+    background-color: #192854;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    color:#fff;
+
+}
+.dashList li:hover{
+    background-color: #1f326b;
+    border-right: 4px solid #758cc9;
+}
+.dashOverView{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Users{
+  
+    width: 32%;
+    text-align: center;
+    background: #ffffff12;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(133, 164, 229, 0.32);
+    padding: 20px 2px;
+    border-radius: 10px;
+    color: #fff;
+}
+.Userstext{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Userstext1{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.UserNum{
+    font-size: 20px;
+    font-weight: 700;
+}
+.UserNum1{
+    font-size: 32px;
+    font-weight: 800;
+}
+.totalBot{
+    margin-top: 30px;}
+/* }
+.dashboardMegaMenu{
+} */
