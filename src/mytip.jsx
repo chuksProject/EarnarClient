@@ -1,13 +1,22 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import "./style/mytip.css"
 import { Link} from "react-router-dom";
 import Footer from "./footer"
+import axios from "axios";
 
 
 
 const Mytip =()=>{
 
     const [register,setRegister] = useState(false)
+    const [sportInfo,setSportInfo]=useState([])
+    const [coupon,setCoupon]=useState([])
+
+
+//     const tr = window.location.pathname;
+//   if(tr === "/tip"){
+//     console.log("Mr kingsley is Good and nan")
+//   }
 
 
        const [tip,setTip] = useState("Tip")
@@ -19,14 +28,47 @@ const Mytip =()=>{
            setTip('crypto')
        }
 
+
+       useEffect(()=>{
+        const userInfom = async ()=>{
+          try{
+            const res = await axios.get('/post/sports/tip')
+     
+            setSportInfo(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userInfom()
+    
+      },[])
+
+      useEffect(()=>{
+        const userCoupon = async ()=>{
+          try{
+            const res = await axios.get('/post/coupon')
+     
+            setCoupon(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userCoupon()
+    
+      },[coupon])
+
+
     return(
    <div className="Mysee" style={{ backgroundImage: "linear-gradient(to right, rgb(106 116 167 / 34%), rgb(119 135 182 / 95%))"}} >
 
         
 <div className="Sports23 MyTipUp">
-             <div className="sportsAt people2" onClick ={()=>setTip("Tip")}>Sports</div>
-             <div className="sportsAt people2" onClick ={forexChange}>Forex</div>
-             <div className="sportsAt people2" onClick={cryptoChange}>Cryptocurrency</div>
+             <div className={tip === "Tip"?"sportsAt people2 gamings":"sportsAt people2"} onClick ={()=>setTip("Tip")}>Sports</div>
+             <div className={tip === "forex"?"sportsAt people2 gamings":"sportsAt people2"} onClick ={forexChange}>Forex</div>
+             <div className={tip === "crypto"?"sportsAt people2 gamings":"sportsAt people2"} onClick={cryptoChange}>Cryptocurrency</div>
+             <div className={tip === "binary"?"sportsAt people2 gamings":"sportsAt people2"} onClick={()=>setTip("binary")}>Binary</div>
          </div>
          
          {tip === "Tip"? 
@@ -75,40 +117,21 @@ const Mytip =()=>{
                <div className="Leaque tipHeightDiv">
                    
                 
-
-                   <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
+            {sportInfo.map((user,id)=>(
+                   <div key={id}>
+            <ul className={(user.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
+                <li>{user.time}</li>
+                <li className="EngLan">{user.league}</li>
+                <li>{`${user.teamA} vs ${user.teamB}`}</li>
+                <li>{user.tip}</li>
+                <li>{user.odd}</li>
              
                 
             </ul>
         </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-             
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-           
-                
-            </ul>
-        </div>
+        ))}
+        
+     
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
                 <li className="Total_Odd">TOTAL ODD</li>
@@ -170,36 +193,20 @@ const Mytip =()=>{
                    
                 
 
+    {coupon.map((app)=>(
                    <div>
             <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>Bet9ja</li>
-                <li className="EngLan">7XU-TUG-UITO-RYI</li>
+                <li>{app.betName}</li>
+                <li className="EngLan">{app.couponCode}</li>
                 <li>Copy Code </li>
                
              
                 
             </ul>
         </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>Bet9ja</li>
-                <li className="EngLan">7XU-TUG-UITO-RYI</li>
-                <li>Copy Code</li>
-            
-             
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>Bet9ja</li>
-                <li className="EngLan">7XU-TUG-UITO-RYI</li>
-                <li>Copy Code</li>
-                
-           
-                
-            </ul>
-        </div>
+        ))}
+       
+       
        
        
         
@@ -261,84 +268,25 @@ const Mytip =()=>{
                <div className="Leaque tipHeightDiv">
                    
                 
-
-                   <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
+               {sportInfo.map((users,id)=>(
+                   <div key={id}>
+            <ul className={(users.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
+                <li>{users.time}</li>
+                <li className="EngLan">{users.league}</li>
+                <li>{`${users.teamA} vs ${users.teamB}`}</li>
+                <li>{users.tip}</li>
+                <li>{users.odd}</li>
               
                 
             </ul>
         </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-          
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-         
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-             
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-          
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-           
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>2:00</li>
-                <li className="EngLan">England</li>
-                <li>Ac Roma vs Nigeria </li>
-                <li>X2</li>
-                <li>1.34</li>
-            
-                
-            </ul>
-        </div>
+        ))}
+     
+       
+      
+        
+      
+        
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
                 <li className="Total_Odd">TOTAL ODD</li>
@@ -1489,6 +1437,130 @@ const Mytip =()=>{
 
      
                </div>
+
+            
+  </div>
+                   :""
+               }
+
+{
+                   tip === "binary"? 
+                   <div  >
+
+
+
+       <div className="MyTip ">
+      
+
+     <div className="TimeDiv12 ">
+                      <div>
+                        <ul className="GameN kim">
+                          <li className="NoGame">Trade No :</li>
+                          <li className="NoGame">BN/2022/10/7/1</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <ul className="GameN">
+                          <li className="NoGame">Market Type :</li>
+                          <li className="NoGame">Forex</li>
+                        </ul>
+                      </div>
+                   <ul className="TimeDiv spaceMargiN">
+                       <li>
+                           PAIR
+                       </li>
+                       <li className="EngLan">
+                        CONDITION
+                       </li>
+                      
+                       
+                       
+                   
+                     
+                     
+                   </ul>
+               </div> 
+
+               <div className="bigManDiv">
+                   <div className="FOR">
+               <div className="Leaque tipHeightDiv">
+                   
+                
+
+                   <div>
+            <ul className="TimeDiv1 ADDTimeDbg1">
+                <li>GBPUSD</li>
+                <li className="EngLan">Buy(Cell)</li>
+                
+             
+                
+            </ul>
+        </div>
+        <div>
+            <ul className="TimeDiv1 ADDTimeDbg1">
+                <li>Expiration Time</li>
+                <li className="EngLan">30 Minutes</li>
+                
+             
+                
+            </ul>
+        </div>
+      
+      
+  
+       
+        <div>
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+                <li className="Total_Odd">RESULT</li>
+               
+                <li></li>
+                <li></li>
+                <li>
+                <div >
+                  <form>
+                    <div className="sped ">
+                      <div>Lost</div>
+                      <div className="greenDiv gt"></div>
+                    </div>
+                    </form>
+                    </div>
+                </li>
+                <li className="tippo">
+                  <div>
+                  <form>
+                    <div className="sped">
+                      <div>Won</div>
+                      <div className="greenDiv"></div>
+                    </div>
+                    </form>
+                    </div>
+                    </li>
+                
+            </ul>
+        </div>
+        
+        
+  
+               </div>
+            
+              
+
+            
+               <div className="finding">GOOD LUCK</div>
+
+
+               </div>
+               </div>
+
+            
+
+     
+               </div>
+
+         
+            
+
+          
 
             
   </div>

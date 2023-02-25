@@ -1,6 +1,8 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import "./style/walletOverView.css"
 import { Link} from "react-router-dom";
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
+import { AuthContext } from './context/authContext';
 
 const WalletOverView =()=>{
 
@@ -15,6 +17,30 @@ const WalletOverView =()=>{
     const [move,setMove] = useState(true)
     const [active,setActive] = useState(true)
     const [register,setRegister] = useState(false)
+    const [amount,setAmount] =useState("")
+    const {currentUser} = useContext(AuthContext);
+
+
+
+    const config = {
+        public_key: 'FLWPUBK-b42771553f0c152c7a00ef070ececc77-X',
+        tx_ref: Date.now(),
+        amount: amount,
+        currency: 'NGN',
+        payment_options: 'card,mobilemoney,ussd',
+        customer: {
+          email: `${currentUser?.email}`,
+           phone_number: '070********',
+          name: `${currentUser?.username}`,
+        },
+        customizations: {
+          title: 'my Payment Title',
+          description: 'Payment for items in cart',
+          logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+        },
+      };
+    
+      const handleFlutterPayment = useFlutterwave(config);
 
 
     const setGo=()=>{
@@ -214,7 +240,7 @@ const trig =()=>{
                      <ul className="TYPE_DATE">
                          <li className="STaTus">Date</li>
                          <li className="STaTus">User ID</li>
-                         <li className="STaTus">Package</li>
+                        
                          <li className="STaTus">Commission</li>
                          <li className="STaTus">Status</li>
                      </ul>
@@ -223,7 +249,7 @@ const trig =()=>{
                      <ul className="DopoR">
                          <li className="SuccessId">12-07-2022</li>
                          <li className="SuccessId">ID:0000023</li>
-                         <li className="SuccessId">Gold</li>
+                       
                          <li className="SuccessId">₦6000.00</li>
                          <li className="SuccessId">Active</li>
                      </ul>
@@ -233,7 +259,7 @@ const trig =()=>{
                      <ul className="DopoR">
                          <li className="SuccessId">12-07-2022</li>
                          <li className="SuccessId">ID:0000023</li>
-                         <li className="SuccessId">Gold</li>
+                        
                          <li className="SuccessId">₦6000.00</li>
                          <li className="SuccessId">Active</li>
                      </ul>
@@ -242,7 +268,7 @@ const trig =()=>{
                      <ul className="DopoR">
                          <li className="SuccessId">12-07-2022</li>
                          <li className="SuccessId">ID:0000023</li>
-                         <li className="SuccessId">Silver</li>
+                        
                          <li className="SuccessId">₦6000.00</li>
                          <li className="SuccessId">Inactive</li>
                      </ul>
@@ -251,7 +277,7 @@ const trig =()=>{
                      <ul className="DopoR">
                          <li className="SuccessId">12-07-2022</li>
                          <li className="SuccessId">ID:0000023</li>
-                         <li className="SuccessId">Gold</li>
+                        
                          <li className="SuccessId">₦6000.00</li>
                          <li className="SuccessId">Active</li>
                      </ul>
@@ -284,14 +310,25 @@ const trig =()=>{
                     
                     </div>
                     <form>
-                        {active? 
+                        {/* {active? 
                         <div className="ProccedRent">
                             <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} disabled/></div>
                             :<div className="ProccedRent">
                             <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} /></div>
-                            }
+                            } */}
 
-                        <div className="MMMYE">Proceed</div>
+                        <div className="ProccedRent">
+                            <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} value={amount} onChange={(e)=>setAmount(e.target.value)}/></div>
+
+                        <div className="MMMYE"   onClick={() => {
+          handleFlutterPayment({
+            callback: (response) => {
+               console.log(response);
+                closePaymentModal() // this will close the modal programmatically
+            },
+            onClose: () => {},
+          });
+        }}>Proceed</div>
                     </form>
                     </div>
                     :" "}
@@ -303,8 +340,16 @@ const trig =()=>{
                         <p className="WidrawMoney">₦2,000,000.00</p>
                         <form>
                             <div className="ProccedRent"><input type="text" placeholder="EnterAmount"
-                            className="ProccedRent1"/></div>
-                            <div className="MMMYE">Withdraw</div>
+                            className="ProccedRent1" value={amount} onChange={(e)=>setAmount(e.target.value)}/></div>
+                            <div className="MMMYE" onClick={() => {
+          handleFlutterPayment({
+            callback: (response) => {
+               console.log(response);
+                closePaymentModal() // this will close the modal programmatically
+            },
+            onClose: () => {},
+          });
+        }}>Withdraw</div>
                             <p className="WithdrawTextIn">Note : All withdrawals are processed authomatically within 24hrs.</p>
                         </form>
 
@@ -319,8 +364,18 @@ const trig =()=>{
                         <p className="WidrawMoney">₦2,000,000.00</p>
                         <form>
                             <div className="ProccedRent"><input type="text" placeholder="EnterAmount"
-                            className="ProccedRent1"/></div>
-                            <div className="MMMYE">Proceed</div>
+                            className="ProccedRent1"
+                            value={amount}
+                            onChange={(e)=>setAmount(e.target.value)}/></div>
+                            <div className="MMMYE" onClick={() => {
+          handleFlutterPayment({
+            callback: (response) => {
+               console.log(response);
+                closePaymentModal() // this will close the modal programmatically
+            },
+            onClose: () => {},
+          });
+        }}>Proceed</div>
                             
                         </form>
 

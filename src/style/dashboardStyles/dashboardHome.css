@@ -7,18 +7,30 @@
 
 .menuDiv{
     flex:1;
-    background-color: #4b5478;
+    background-color: #3c476e;
     height: 100vh;
-   overflow: hidden;
+    overflow-y: scroll;
     padding:80px 4px 2px 4px;
 }
+.menuDiv::-webkit-scrollbar{
+    display:none;
+}
+
 .itemDiv{
     flex:5;
     padding:80px 20px 2px 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: #192854;
     height: 100vh;
     
+}
+
+.itemDiv::-webkit-scrollbar{
+    display:none;
+}
+.by{
+    background-color: #fff;
+    color:#000
 }
 
   
@@ -32,11 +44,12 @@
     font-size: 18px;
     font-weight: 500;
     color:#fff;
+    cursor:pointer
 
 }
 .dashList li:hover{
     background-color: #1f326b;
-    border-right: 4px solid #758cc9;
+ 
 }
 .dashOverView{
     display:flex;

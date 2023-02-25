@@ -1,0 +1,183 @@
+.sportPa{
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.MakingMoney{
+    width:100%;
+    max-width: 600px;
+    margin:20px auto 20px auto;
+    font-size: 20px;
+    text-align: center;
+    color:#fff;
+}
+.NowUpSign{
+    padding:10px 5px;
+    margin:15px auto;
+    width:146px;
+    text-align: center;
+    color:#fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    backdrop-filter: blur(4.3px);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(133, 164, 229, 0.32);
+    background: #ffffff12;
+    cursor:pointer;
+
+
+}
+.ifi{
+    text-decoration: none;
+}
+
+.NowUpSign:hover{
+background:#fff;
+color:#000
+}
+.SportBetting{
+    color:#c6cbd2;
+    margin:45px auto 20px auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+.outcomeBeen{
+   width:100%;
+   max-width:800px;
+   margin:0 auto; 
+   text-align: center;
+   color: #b8bcc7;
+   backdrop-filter: blur(4.3px);
+   box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+   border: 1px solid rgba(133, 164, 229, 0.32);
+   background: #ffffff12;
+   padding:30px 10px;
+   border-radius:5px;
+   font-size: 18px;
+}
+.WhyStart{
+    text-align: center;
+    color:#c6cbd2;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 8px;
+
+}
+.EasyTi{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+
+}
+.EasyTim{
+    width:30%;
+    border: 1px solid rgba(133, 164, 229, 0.32);
+    box-shadow: 0 4px 30px rgb(15 24 52 / 82%);
+    backdrop-filter: blur(4.3px);
+    background: #ffffff12;
+    color:#b8bcc7;
+    padding:15px 15px;
+    height: 376px;
+    border-radius: 5px;
+   
+}
+
+.everyDay{
+    font-size: 18px;
+}
+.startedf{
+    color:#5f7ac9;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.AgenciesTy{
+    color:#fff;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color:#c6cbd2;
+}
+.everyDay{
+    width:100%;
+    max-width: 800px;
+    text-align: center;
+    color: #b8bcc7;
+    margin:0 auto 40px auto;
+
+}
+.wemerYt{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.papaf{
+
+}
+.papaf1{
+    width:100%;
+}
+.papaf12{
+    width:186px
+    
+}
+.papaf13{
+    width:250px;
+    
+}
+.papaf14{
+    width:50px;
+    
+}
+.papaf15{
+    width:90px;
+    
+}
+
+.BettingTu{
+    text-align: center;
+    width:40%;
+    padding:12px 5px;
+    background-color:#3c476e;
+    color:#fff;
+    margin:40px auto 20px auto;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.firey{
+    display:flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+.firey1{
+    width:30%;
+    height:200px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.faqSports{
+    color:#fff;
+}
+.faqSportMa{
+    margin-bottom: 50px;
+}
+.imghi{
+    width:100%;
+    height:auto
+}
+.ifNi{
+    width:15%;
+    margin:0 auto 30px auto;
+    height:5px;
+    background-color: #c6cbd2;
+}
+.forexy{
+    color: #5e71b7;
+    font-size: 18px;
+}

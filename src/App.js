@@ -21,6 +21,11 @@ import "./App.css"
 import Mobile from "./mobileheader"
 import SampleHome from "./home2"
 import Sports from "./sports"
+import SportPage from "./sportsPage"
+import ForexPage from "./forexPage"
+import CryptoPage from "./cryptoPage"
+import BinaryPage from "./binarypage"
+import Flutter from "./flutterwave"
 
 import Navbar from "./navbar"
 import DashboardHome from "./Dashboard/dashboardHome"
@@ -41,8 +46,13 @@ function App() {
            <Route path="/wallet" element={<WalletOverView/>} />
            <Route path="/affliate" element={<Affliate/>} />
            <Route path="/profile" element={<Profile/>} />
+           <Route path="/flu" element={<Flutter/>} />
            <Route path="/Odd" element={<OddPredict/>} />
            <Route path="/agent" element={<Agent/>} />
+           <Route path="/sportp" element={<SportPage/>} />
+           <Route path="/forexp" element={<ForexPage/>} />
+           <Route path="/cryptop" element={<CryptoPage/>} />
+           <Route path="/binaryp" element={<BinaryPage/>} />
            <Route path="/tip" element={<Mytip />} />
            <Route path="/atip" element={<Mytip1 />} />
            <Route path="/Vcal" element={< Virc />} />

@@ -1,7 +1,11 @@
-import React from 'react'
+import React ,{useContext} from 'react'
 import "../style/dashboardStyles/dashboardHome.css"
+import { AuthContext } from '../context/authContext';
 
-const dashboardHome1 = () => {
+const DashboardHome1 = () => {
+    const {currentUser} = useContext(AuthContext);
+
+    console.log(currentUser?.username)
   return (
     <div>
           <div className="poer">
@@ -45,4 +49,4 @@ const dashboardHome1 = () => {
   )
 }
 
-export default dashboardHome1
+export default DashboardHome1

@@ -39,14 +39,14 @@ const Register =()=>{
             <div className="Form_Div">
                 <form>
                      <p className="New_Account">Register New Account</p>
-                    <div> <input type="text" placeholder="Full_Name"  className="Full_Name" onChange={handleChange} name="username"/></div>
+                    <div> <input type="text" placeholder="User Name"  className="Full_Name" onChange={handleChange} name="username"/></div>
                     <div> <input type="email" placeholder="Enter_Your Email" className="Full_Name" onChange={handleChange} name="email"/></div>
-                    <div> <select className="Full_Name">
+                    {/* <div> <select className="Full_Name">
                          <option>school</option>
                          <option>Bussiness</option>
                          <option>Enterprise</option>
                          <option>Soccer</option>
-                     </select></div>
+                     </select></div> */}
                     <div> <input type="password" placeholder="Password" className="Full_Name" onChange={handleChange} name="password"/></div>
                     <div> <input type="password" placeholder=" Confirm_password" className="Full_Name" name="password" onChange={handleChange}/></div>
                 

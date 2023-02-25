@@ -70,9 +70,9 @@ const Footer =()=>{
                      <ul>
                           <li className="Footer_header_title">CONTACT US</li>
                           {/* <li className="Footer_list_space"><a href="#">Terms & Conditions</a></li> */}
-                          <li className="Footer_list_space"><p> WhatsApp: +234 906 024 3960</p></li>
-                          <li className="Footer_list_space"><p>Email Us: info@victorspredict.com</p></li>
-                          <li className="Footer_list_space"><p>Advert: advert@victorspredict.com</p></li>
+                          <li className="Footer_list_space"><p> WhatsApp: +234 805 927 9660</p></li>
+                          <li className="Footer_list_space"><p>Email Us: service@earners.com</p></li>
+                          <li className="Footer_list_space"><p>Advert: advert@earners.com</p></li>
                       </ul>
                   </div>
                   <div>

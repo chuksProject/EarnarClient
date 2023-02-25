@@ -1,12 +1,15 @@
-import React from "react";
+import React ,{useState,useContext} from "react";
 import "./style/home.css"
 import "./style/affiliate.css"
 import Footer from "./footer";
 import { Link} from "react-router-dom";
+import { AuthContext } from './context/authContext';
 
 const Affliate =()=>{
+
+    const {currentUser} = useContext(AuthContext);
     return(
-        <div className="Affliate_Bg_Cover3">
+        <div className=" " style={{background:"#192854"}}>
        
 
          <div className="AffliateDiv34">
@@ -15,7 +18,7 @@ const Affliate =()=>{
                <div className="ExcitedShare">
                   We Are Excited to Share Our Revenue with you
                </div>
-               <div className="EarnNaira">Earn ₦750 to ₦6000 Naira per referral</div>
+               <div className="EarnNaira">Earn ₦2,500 Naira per referral</div>
 
                <div className="ButtonT"> <button className="Watch_Now25">Watch Now</button></div>
                <div className="SimpleLet">Its easy and Simple .Lets get the following Steps.</div>
@@ -44,26 +47,18 @@ const Affliate =()=>{
                    Your Earnings Never Stops
                </div>
                <div className="Package_Up">
-                   <p className="Each_Time_your">Each time your referral subscribe to any of our premium package you earn 50% of the amount paid.</p>
+                   <p className="Each_Time_your">Each time your referral subscribe to  our premium package you earn 50% of the amount paid.</p>
                    <p className="Each_Time_your">
                        Withdrawals of Earnings Are instant and paid directly to your bank account.
                    </p>
                </div>
 
-               <div className="Start_Now_Button" style={{marginBottom:"15px"}}>Start now</div>
-               {/* <div className="Promotional_Material">Download promotional materials</div> */}
+     {currentUser? <Link to="/profile" className="AffButton"><div className="Start_Now_Button" style={{marginBottom:"70px"}}>Start now</div></Link>:
+               <Link to="/register" className="AffButton"><div className="Start_Now_Button" style={{marginBottom:"70px"}}>Start now</div></Link>}
+             
 
-               {/* <div className="Promo_Div2">
-                   <div className="Promo_Div"></div>
-                   <div className="Promo_Div"></div>
-                   <div className="Promo_Div"></div>
-               </div> */}
 
-               {/* <div className="Promo_Div2 PromoTv">
-                   <div className="Promo_Div"></div>
-                   <div className="Promo_Div"></div>
-                   <div className="Promo_Div"></div>
-               </div> */}
+               
 
 
          </div>
