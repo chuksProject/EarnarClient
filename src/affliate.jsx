@@ -13,15 +13,17 @@ const Affliate =()=>{
        
 
          <div className="AffliateDiv34">
-
-
+                 <div >
+                     <img src="/img/EarnarsAffliateBanner.png" className="AffliateBanner"/>
+                 </div>
+                
                <div className="ExcitedShare">
                   We Are Excited to Share Our Revenue with you
                </div>
-               <div className="EarnNaira">Earn ₦2,500 Naira per referral</div>
+               <div className="EarnNaira">Earn $25 dollars or ₦12,500 Naira per referral</div>
 
                <div className="ButtonT"> <button className="Watch_Now25">Watch Now</button></div>
-               <div className="SimpleLet">Its easy and Simple .Lets get the following Steps.</div>
+               <div className="SimpleLet">Its easy and Simple .Lets get started with the following Steps.</div>
 
                <div className="Create_account_holder_Div">
                    <div className="who">
@@ -53,8 +55,8 @@ const Affliate =()=>{
                    </p>
                </div>
 
-     {currentUser? <Link to="/profile" className="AffButton"><div className="Start_Now_Button" style={{marginBottom:"70px"}}>Start now</div></Link>:
-               <Link to="/register" className="AffButton"><div className="Start_Now_Button" style={{marginBottom:"70px"}}>Start now</div></Link>}
+     {currentUser? <Link to="/profile" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></Link>:
+               <Link to="/register" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></Link>}
              
 
 

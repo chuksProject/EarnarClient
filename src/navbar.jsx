@@ -17,7 +17,7 @@ const Navbar= () => {
             <div>
               
                 <Link to="/" >
-                  <img src="/img/fudu.svg" className="imghy"/>
+                  <img src="/img/Earnars1@72x1.png" className="imghy"/>
                 </Link>
               
             </div>
@@ -30,23 +30,23 @@ const Navbar= () => {
                       <a className="cover_Div"></a>
                       <Link to="/sportp">Sports</Link>
                       <Link to="/forexp">Forex</Link>
-                      <Link to="cryptop">Cryptocurrency </Link>
+                      <Link to="/cryptop">Cryptocurrency </Link>
                       <Link to="/binaryp">Binary</Link> 
                     
                     </div>
                   </div>
                 </li>
                 <li className="Premium_Bet">
-                  <a href="#">Premium Subscription</a>
+                  <Link to="/premium">Premium Subscription</Link>
                 
                 </li>
                 <li className="Affliate_Bet">
-                  <Link to="/affliate">Affliate Program</Link>
+                  <Link to="/affliate">Partners Program</Link>
                 </li>
                 <li className="Contact_Bet">
-                  <Link to="/Vcal"> Earn Calculator</Link>
+                  <Link to="/Vcal"> Bet Calculator</Link>
                 </li>
-                <li className="Contact_Bet">
+                <li className="Contact_Bet vap">
                   {(tr == "/")||(tr =="/sportp")||(tr =="/forexp")||(tr =="/cryptop")|| (tr == "/binaryp")?<a href="#Faqc">FAQ</a>:""}
                   
                 </li>

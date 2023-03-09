@@ -8,12 +8,8 @@
     width:100%;
     /* max-width:600px; */
     margin:1px auto;
-    background-color: #001041;
+    background-color: #304688;
     padding:10px 15px 20px 15px;
-    /* position:absolute; */
-    /* top:50%; */
-    /* left:50%; */
-    /* transform: translate(-50%,-50%); */
     margin-bottom: 40px;
     border-radius: 5px;
 }
@@ -136,12 +132,12 @@
     margin:0 auto;
 }
 .backBet{
-    background-color: #fff;
+   
     width:100%;
     
     
     margin:0 auto 100px auto;
-    background-color: #001041;
+    background-color: #304688;
     padding:10px 15px 20px 15px;
     color:#fff;
     border-radius: 4px;
@@ -372,27 +368,12 @@ cursor: pointer;
 }
 
 
-
-
-/* .special{
-    width:100%;
-    padding:15px 0;
-    background-color: #fff;
-} */
-
 .Mobile_menu1{
- 
-    /* background-color: #001041; */
     color:#fff;
-    /* position: fixed;
-    width:100%;
-    top: 0;
-    z-index:400 */
+   
 }
 
-.Mobile_menu12{
-  
-}
+
 
 .Closeme{
     font-size: 25px;
@@ -413,8 +394,31 @@ cursor: pointer;
 .Du{
 display:none;
 }
+.Car{
+    margin-top: 100px;
 }
-@media(min-width:1010px){
+}
+@media(max-width:768px){
+    .Car{
+        margin-top: 22px;
+    } 
+    .backBet{
+        margin: 0 auto 22px auto;
+    }
+}
+@media(min-width:769px) and (max-width:1010px){
+    .Car{
+        margin-top: 88px;
+    } 
+}
+@media (min-width:616px) and (max-width:1010px){
+  .pink{
+    width: 100%;
+    max-width: 619px;
+    margin: 0 auto;
+  }
+}
+@media(min-width:1011px){
     .Car{
     display:none;
     }
@@ -432,4 +436,22 @@ display:none;
         width: 93%;
        
     }
+  }
+
+  @media(max-width:768px){
+    .Win_ButTON{
+        font-size: 13px;
+    }
+
+
+.InvestTotal{
+    font-size: 15px;
+}
+.infu13{
+    font-size:12px ;
+}
+.Enter_Expected_Profit{
+    margin-bottom: 17px !important;
+}
+
   }

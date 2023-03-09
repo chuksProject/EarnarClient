@@ -81,7 +81,7 @@ const DashboardSports = () => {
     const addList=(todo)=>{
  
         const newTodo = {
-            id:Math.random(),
+            id:Math.random()+ 1,
             todo:todo
 
         }
@@ -100,7 +100,7 @@ const DashboardSports = () => {
     const addList1=(todo)=>{
  
         const newTodo = {
-            id:Math.random(),
+            id:Math.random()+ 1,
             todo:todo
 
         }
@@ -182,6 +182,63 @@ const DashboardSports = () => {
        
        }    
         }
+
+
+        const handleSumit9 = async e =>{
+            e.preventDefault()
+     
+           try{
+             await axios.post("/post/forex",list1)
+            //  console.log(list2)
+            const interval = setInterval(() => {
+                setSuccess("user has been created")
+                    }, 1000);
+                     clearInterval(interval);
+             
+             
+           }catch(err){
+            setError(err.response.data)
+           
+           }    
+            }
+
+            const handleSumit8 = async e =>{
+                e.preventDefault()
+         
+               try{
+                 await axios.post("/post/crypto",list)
+                //  console.log(list2)
+                const interval = setInterval(() => {
+                    setSuccess("user has been created")
+                        }, 1000);
+                         clearInterval(interval);
+                 
+                 
+               }catch(err){
+                setError(err.response.data)
+               
+               }    
+                }
+
+
+
+                const handleSumit7 = async e =>{
+                    e.preventDefault()
+             
+                   try{
+                     await axios.post("/post/binary",list3)
+                    //  console.log(list2)
+                    const interval = setInterval(() => {
+                        setSuccess("user has been created")
+                            }, 1000);
+                             clearInterval(interval);
+                     
+                     
+                   }catch(err){
+                    setError(err.response.data)
+                   
+                   }    
+                    }
 
 
 
@@ -381,10 +438,7 @@ const DashboardSports = () => {
                   <option>Daily</option>
                   <option>Weekly</option></select></div>
           </div>
-          {/* <div className="GamEType1 daro">
-              <div className="GamEType2">Trade No</div>
-              <div className="GamEType3"></div>
-          </div> */}
+          
           <div className="GamEType1">
               <div className="GamEType2">Pair</div>
               <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="pair" onChange={handleChange1} value={inputs1.pair}/></div>
@@ -453,7 +507,7 @@ const DashboardSports = () => {
           </div>
           </div>
        
-       <div className="opst">Post</div>
+       <div className="opst" onClick={handleSumit9}>Post</div>
        
       
       </div>
@@ -540,7 +594,7 @@ const DashboardSports = () => {
       
           </div>
        
-       <div className="opst">Post</div>
+       <div className="opst" onClick={handleSumit8}>Post</div>
        
       
       </div>
@@ -602,7 +656,7 @@ const DashboardSports = () => {
       
           </div>
        
-       <div className="opst">Post</div>
+       <div className="opst" onClick={handleSumit7}>Post</div>
        
       
       </div>

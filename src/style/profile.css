@@ -87,6 +87,7 @@
   margin:20px auto 10px auto;
 
 }
+
 .UpDatePls:hover{
     /* box-shadow: 0px 3px 5px 3px #171e36; */
     box-shadow: 0px 3px 5px 3px #929ab4cc;
@@ -166,5 +167,13 @@
     }
     .yink{
         text-align: center;
+    }
+}
+@media(max-width:768px){
+    .pet{
+    padding:0 8px !important;
+    }
+    .Profile_Div{
+        margin: 0px auto !important;
     }
 }

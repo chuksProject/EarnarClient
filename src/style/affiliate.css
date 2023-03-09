@@ -14,12 +14,14 @@
     right:0;
     z-index: 50;
 }
-/* .Affliate_Bg_Cover3{
-    background-color:#1f326c;
-} */
+.AffliateBanner{
+    margin: 54px auto 0 auto;
+    width:100%;
+    max-width: 1500px;
+}
 .ExcitedShare{
-    color:#c4c8d5;
-    padding-top: 150px;
+    color:#2956e8;
+    padding-top: 40px;
     padding-bottom: 40px;
     font-size: 28px;
     text-align: center;
@@ -199,6 +201,9 @@
 .AffButton{
     text-decoration: none;
 }
+.cap{
+    margin-bottom: 70px;
+}
 
 @media(max-width:1024px){
     .header_list li a{
@@ -267,28 +272,48 @@
 
 @media(max-width:768px){
     .ExcitedShare {
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
         font-size: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    .Create_account_holder_Div {
+        flex-direction: column;
+        margin: 46px auto 0 auto;
+    }
+.Package_Up {
+   
+    padding: 15px 10px;
+   
+}
+  
+    .AffliateBanner {
+        margin: 5px auto 0 auto !important;
     }
     .EarnNaira {
-        width: 57%;
+        width: 85%;
         margin: 0 auto;
         font-size: 20px;
     }
     .SimpleLet {
         width: 70%;
     }
-    .Create_account_holder_Div {
-        flex-direction: column;
-       
+    .cap{
+        margin-bottom: 36px;
     }
+
     .Your_Earning_never_Stop {
-        width: 58%;
+        margin: 6px auto 0 auto;
+        width: 80%;
+      
     }
    
+  
+   
     .Each_Time_your {
-        width: 73%;
+        width: 90%;
        
     }
     .Promo_Div2 {
@@ -323,6 +348,9 @@
         .Promo_Div {
             width: 100%;
             margin-bottom: 8px;
+        }
+        .SimpleLet {
+            width: 70% !important;
         }
      }
 

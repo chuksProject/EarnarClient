@@ -20,7 +20,8 @@ import Disclaimer from "./disclaimer"
 import "./App.css"
 import Mobile from "./mobileheader"
 import SampleHome from "./home2"
-import Sports from "./sports"
+
+import Premium from "./premium"
 import SportPage from "./sportsPage"
 import ForexPage from "./forexPage"
 import CryptoPage from "./cryptoPage"
@@ -41,8 +42,8 @@ function App() {
            <Route path="/register" element={<Register/>} />
            <Route path="/login" element={<Login/>} />
       
-        
-           {/* <Route path="/sports" element={<Sports/>} /> */}
+  
+         
            <Route path="/wallet" element={<WalletOverView/>} />
            <Route path="/affliate" element={<Affliate/>} />
            <Route path="/profile" element={<Profile/>} />
@@ -55,8 +56,9 @@ function App() {
            <Route path="/binaryp" element={<BinaryPage/>} />
            <Route path="/tip" element={<Mytip />} />
            <Route path="/atip" element={<Mytip1 />} />
-           <Route path="/Vcal" element={< Virc />} />
-           <Route path="/about" element={< About />} />
+           <Route path="/Vcal" element={<Virc/>} />
+           <Route path="/about" element={<About/>} />
+           <Route path="/premium" element={<Premium/>} />
            <Route path="/dashboard" element={< DashboardHome />} />
            <Route path="/contact" element={< Contact />} />
            <Route path="/disclaimer" element={< Disclaimer/>} />

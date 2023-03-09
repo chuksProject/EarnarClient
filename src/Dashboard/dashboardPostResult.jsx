@@ -9,6 +9,7 @@ const DashboardPostResult = () => {
     const [rest,setRest]= useState(null)
     const [lossed,setLossed] = useState(false)
     const [success,setSuccess] = useState('')
+    const [notSuccessful,setNotSuccessful] = useState('')
   
     const [info,setInfo]=useState([])
     const [inputsIn,setInputsIn]=useState({
@@ -27,15 +28,23 @@ const DashboardPostResult = () => {
         exitPoint:"",
         takeProfit:""
     })
+    const [inputsIn2,setInputsIn2]=useState({
+        tradeNo:"",
+        pair:"",
+        condition:"",
+        entryPoint:"",
+        exitPoint:"",
+        takeProfit:""
+    })
+    const [inputsIn3,setInputsIn3]=useState({
+        tradeNo:"",
+        pair:"",
+        condition:"",
+        expireTime:"",
+        profit:""
+    })
 
-    // const handler = e =>{
-    //     if(e.taget.checked){
-    //         console.log("working dear")
-    //     } else{
-    //         console.log('not working')
-    //     }
-    //     setCheck(event => !event)
-    // }
+
 
     const handleChange = e =>{
         setInputsIn(prev =>({...prev,[e.target.name]:e.target.value || e.target.checked}))  
@@ -43,10 +52,23 @@ const DashboardPostResult = () => {
     const handleChange1 = e =>{
         setInputsIn1(prev =>({...prev,[e.target.name]:e.target.value}))
     }
+    const handleChange2 = e =>{
+        setInputsIn2(prev =>({...prev,[e.target.name]:e.target.value}))
+    }
+    const handleChange3 = e =>{
+        setInputsIn3(prev =>({...prev,[e.target.name]:e.target.value}))
+    }
 
     const handleSumit1 = async e =>{
         e.preventDefault()
        try{
+           if((inputsIn.gameNo === "")|| (inputsIn.dailyProfit==="")){
+            setNotSuccessful('files not upload, please check input field') 
+            setTimeout(() => {
+                setNotSuccessful('')
+              }, 5000);
+           }
+           else{
          await axios.post("/post/postResult",inputsIn)
 
          setSuccess('Succesful upload')
@@ -59,6 +81,7 @@ const DashboardPostResult = () => {
             
           
         })
+    }
          
         
         // console.log(inputsIn)
@@ -71,7 +94,7 @@ const DashboardPostResult = () => {
         const handleSumit2 = async e =>{
             e.preventDefault()
            try{
-             await axios.post("/post/resultforex",inputsIn1)
+             await axios.post("/post/postResultForex",inputsIn1)
              
             console.log(inputsIn1)
            }catch(err){
@@ -79,6 +102,34 @@ const DashboardPostResult = () => {
             
            }    
             }
+
+            const handleSumit3 = async e =>{
+                e.preventDefault()
+               try{
+                 await axios.post("/post/postResultCrypto",inputsIn2)
+                 
+                console.log(inputsIn2)
+               }catch(err){
+                setError(err.response.data)
+                
+               }    
+                }
+
+                const handleSumit4 = async e =>{
+                    e.preventDefault()
+                   try{
+                     await axios.post("/post/postResultBinary",inputsIn3)
+                     
+                    console.log(inputsIn3)
+                   }catch(err){
+                    setError(err.response.data)
+                    
+                   }    
+                    }
+        
+        
+    
+    
 
 
   return (
@@ -106,6 +157,9 @@ const DashboardPostResult = () => {
               <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="dailyProfit" onChange={handleChange}  value={inputsIn.dailyProfit}/></div>
           </div>
         
+          {success && <div className="SuccessInfoM suc1">{success}</div>} 
+          {notSuccessful && <div className="SuccessInfoM suc2">{notSuccessful}</div>}
+
           
        
        <div>
@@ -128,7 +182,7 @@ const DashboardPostResult = () => {
            </div>
        </div>
 
-      {success && <div>{success}</div>} 
+      
     
        
        <div className="opst" onClick={handleSumit1 }>Post</div>
@@ -202,28 +256,38 @@ const DashboardPostResult = () => {
           </div>
           <div className="GamEType1 daro">
               <div className="GamEType2">Trade No</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="tradeNo"
+              className="pade" onChange={handleChange2}/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Pair</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="pair"
+              className="pade" onChange={handleChange2}/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Condition</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="condition"
+              className="pade" onChange={handleChange2}/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Entry Point</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="entryPoint" className="pade" onChange={handleChange2}/></div>
             
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Exit Point</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"
+              name="exitPoint" onChange={handleChange2}/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Take Profit </div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="takeProfit"
+              className="pade" onChange={handleChange2}/></div>
           </div>
         
        <div className="resultClass" >
@@ -243,7 +307,7 @@ const DashboardPostResult = () => {
        
        
        
-       <div className="opst">Post</div>
+       <div className="opst" onClick={handleSumit3}>Post</div>
        
       
       </div>
@@ -257,24 +321,37 @@ const DashboardPostResult = () => {
           </div>
           <div className="GamEType1 daro">
               <div className="GamEType2">Trade No</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter"
+              name="tradeNo" 
+              onChange={handleChange3}
+              className="pade"/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Pair</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="pair"
+              onChange={handleChange3}className="pade"/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Condition</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              onChange={handleChange3}
+              name="condition"
+              className="pade"/></div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Expire Time</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" 
+              name="expireTime"
+              onChange={handleChange3}
+              className="pade"/></div>
             
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Profit</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade"/></div>
+              <div className="GamEType3"><input type="text" placeholder="Enter"
+              name="profit"
+              onChange={handleChange3} className="pade"/></div>
           </div>
      
         
@@ -295,7 +372,7 @@ const DashboardPostResult = () => {
        
        
        
-       <div className="opst">Post</div>
+       <div className="opst" onClick={handleSumit4}>Post</div>
        
       
       </div>

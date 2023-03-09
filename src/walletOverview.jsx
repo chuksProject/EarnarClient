@@ -16,9 +16,10 @@ const WalletOverView =()=>{
     const [pinAmount,setPinAmount]=useState("Enter Amount")
     const [move,setMove] = useState(true)
     const [active,setActive] = useState(true)
-    const [register,setRegister] = useState(false)
+  
     const [amount,setAmount] =useState("")
     const {currentUser} = useContext(AuthContext);
+    const[divFlex,setDivFlex]=useState("")
 
 
 
@@ -47,21 +48,22 @@ const WalletOverView =()=>{
         setSubscription('going');
         setWallet("")
         setRefferal("")
+        setDivFlex("Amam")
     }
     const setGo1=()=>{
         setSubscription('');
         setWallet("wallets")
         setRefferal("")
+        setDivFlex("")
     }
     const setGo2=()=>{
         setSubscription('');
         setWallet("")
         setRefferal("fort")
+        setDivFlex("")
     }
 
-    // const ModalFunction =()=>{
-    //     setModal(!modal)
-    // }
+    
  const depositT =()=>{
      setDeposit('depositMe')
      setWithdraw('')
@@ -90,7 +92,7 @@ const trig =()=>{
 
 
     return(
-        <div className="Parent_Over_File_Bg" style={{    backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))",width:"100%",height:"100vh",paddingTop:"40px",paddingBottom:"10px"}}>
+        <div className="Parent_Over_File_Bg" style={{    backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
 
 
 
@@ -105,6 +107,13 @@ const trig =()=>{
 
                 <p className="Status_Active">Account Status <span className="Actn">active</span></p>
                 
+
+                <div className={divFlex}>
+
+              
+
+
+                <div>
                 <div className="LikeSed">
               <div className="TREEH">
                   <div className="Main_WALL">
@@ -142,7 +151,9 @@ const trig =()=>{
                   </div>
               </div>
               </div>
+              </div>
               
+   <div>
 
            { wallet === "wallets"? 
              <div>
@@ -201,11 +212,11 @@ const trig =()=>{
             <div> <div className="Silver_Weekly2">
                  <div className="Silver_Weekly">
 
-                     <div className="Pack">Subcription Tip</div>
+                     <div className="Pack">Premium Subscription</div>
                      <div className="Access1">
-                     <p className="AccessTo">Get Access to 2.0 Odds. </p>
-                     <p className="AccessTo">Premium Tips for 7days</p>
-                     <div className="Going1"><p className="Going">₦1,500.00</p></div>
+                     <p className="AccessTo">Get Access to all our prediction. </p>
+                     <p className="AccessTo">Premium Tips For 30days</p>
+                     <div className="Going1"><p className="Going"> $50/₦25,000</p></div>
                      </div>
                      <div className="NOWYY"><button className="BUbU" >Subcribe Now</button></div>
                  </div>
@@ -284,6 +295,10 @@ const trig =()=>{
                  </div>
              </div>
              :""}
+
+</div>
+
+</div>
 
             
             </div>

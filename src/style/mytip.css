@@ -163,6 +163,9 @@ style={{backgroundImage:"url(/img/save.svg)",backgroundRepeat:"no-repeat ", back
     color:#fff;
     cursor:pointer;
 }
+.Name1{
+    display:none
+}
 .people2:hover{
     background-color: #fff;
     color:#001041;
@@ -189,6 +192,9 @@ style={{backgroundImage:"url(/img/save.svg)",backgroundRepeat:"no-repeat ", back
 .ifiy{
     color:#d38b8b
 }
+.colVs{
+    color:red;
+}
 .riskin{
 width:50%;
 margin:0 auto;
@@ -205,9 +211,9 @@ color:#c7c3c3;
 }
 
 @media(max-width:500px){
-    .EngLan{
+    /* .EngLan{
         display:none
-    }
+    } */
     
     .Total_Odd{
         width:40%
@@ -223,5 +229,40 @@ color:#c7c3c3;
     }
     .deee {
         margin: 39px auto 0px auto;
+    }
+}
+@media(max-width:768px){
+    .MyTip {
+        padding: 22px 0 20px 0;
+    }
+    .Sports23 {
+        margin: 24px auto 0 auto;
+        padding: 0 8px;
+    }
+    .Name1{
+        display:block;
+    }
+    .riskin {
+        width: 86%;
+    }
+    .pays {
+        margin-bottom: 4px;
+    }
+    .Name{
+        display:none
+    }
+    .MyTipUp {
+        margin-top: 18px;
+    }
+    .TimeDiv1 li{
+        width:24.6%;
+    }
+    .ggLive{
+       width:100% !important
+    }
+    .ResultTip{
+        padding-left: 8px;
+        padding-right:8px;
+        gap:10px;
     }
 }

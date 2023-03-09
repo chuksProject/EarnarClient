@@ -1,7 +1,8 @@
 .teleCom{
     display:flex;
     justify-content: center;
-    gap:20px
+    gap:20px;
+    padding:0 10px
 
 }
 .commT{
@@ -106,6 +107,7 @@
 .Forex1{
     display:flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 .Forex12{
     padding:10px 2px;
@@ -215,7 +217,7 @@
     text-align: center;
 }
 .lio{
-    font-size: 22px;
+    font-size:18px;
     font-weight: 700;
     margin-top: 20px;
     
@@ -236,7 +238,8 @@
 }
 .Rtme{
     width:100%;
-    max-width: 1200px;
+    max-width: 1000px;
+    padding: 0 10px;
     margin:0 auto
 }
 .Make15{
@@ -404,7 +407,7 @@ padding:10px 10px 0px 10px;
     /* border:1px solid #fff; */
     padding:6px 22px;
     border-radius: 3px;
-    box-shadow: 0px 2px 8px #5269a4;
+    box-shadow: 0px 2px 8px #182852;
     /* background-color: #000; */
 }
 .fadama{
@@ -422,17 +425,29 @@ padding:10px 10px 0px 10px;
     border-right: 12px;
     border-top: 12px;
 }
+.fit{
+    padding: 5px 5px 5px 10px;
+}
+.fit:hover{
+    color:#5f7ac9
+}
 .WhatD{
     padding-bottom: 60px;
     padding-top: 80px;
 }
 
+@media(min-width:768px) and (max-width:868px){
+    .vap{
+        display:none
+    }
+
+}
 @media(max-width:768px){
     .fugmu {
         padding: 1px 0 1px 0;
     } 
     .CarouseDivDiv {
-        margin: 8px auto 2px auto;
+        margin: 8px auto 2px auto !important;
     }
     .teleCom {
         flex-direction: column;
@@ -445,12 +460,21 @@ padding:10px 10px 0px 10px;
         flex-direction: column;
         padding: 0 6px;
     }
+    .Stuffy{
+        width: 100%;
+        max-width: 92%;
+    }
+
     .Forex12 {
         width: 100%;
         margin-bottom: 5px;
     }
     .ImgDiv{
         height:fit-content
+    }
+    .millionM{
+        font-size: 20px;
+       
     }
     .Tmfood{
         width:100%;
@@ -472,7 +496,7 @@ padding:10px 10px 0px 10px;
     width: 100%;
 }
 .SealY {
-    width: 45%;
+    width: 62%;
 }
 .ifYou {
     width: 92%;
@@ -488,19 +512,32 @@ padding:10px 10px 0px 10px;
 }
 .loud{
     padding-top: 20px;
+    font-size: 21px;
+}
+.with {
+    font-size: 21px;
+  
+}
+.backthan{
+    font-size: 21px;
 }
 .UsAbout {
     width: 82%;
+    font-size: 26px;
+    margin-bottom: 2px;
 }
 .Great{
     height:auto
 }
 
 .EarnP {
+    font-size: 30px;
     text-align: center;
+    margin-top: 14px;
 }
 .Rtme {
-    width: 98%; 
+    width: 100%;
+    padding: 0 8px; 
 }
 .you {
     width: 100%;
@@ -511,4 +548,15 @@ padding:10px 10px 0px 10px;
 .Great{
     padding-top:40px;
 }
+}
+@media (max-width: 1024px){
+.Rtme {
+    max-width: 768px;
+}
+}
+
+@media(min-width:1250px){
+    .Rtme {
+        max-width: 1200px;
+    } 
 }

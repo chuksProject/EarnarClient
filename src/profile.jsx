@@ -21,7 +21,7 @@ const Profile = () =>{
 
     })
 
-    console.log(currentUser.id)
+    console.log(currentUser)
     const [display,setDisplay] = useState(false)
     const options = useMemo(() => countryList().getData(), [])
 
@@ -31,12 +31,12 @@ const Profile = () =>{
     }
 
     const changeHandler = e => {
-        setValue({
-            country:e
+        setInputs({
+            country:e.label
         })
       }
 
-      console.log(value)
+     
 
       const navigate = useNavigate()
 
@@ -54,20 +54,20 @@ const Profile = () =>{
 
 
 
-        
+
 
     return(
         <div className="PpDiv" style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
 
-
+<div className="pet">
             <div className="Profile_Div">
                 <p className="ProfilePp" >Profile Overview</p>
                 <div className="ProfilePp_PP">
                     <div className="yink"><img src="/img/invite.jpg" alt="" className="ProfilePp_P2P" /></div>
                     <div className="Conty">
-                       <p className="Country1">Full Name : {currentUser?.username}</p> 
-                       <p className="Country1">User ID : TIP0000{currentUser?.id}</p>
-                       <p className="Country1">Email : <span>{currentUser?.email}</span></p>
+                       <p className="Country1">Full Name : {(currentUser?.username)||"kingsley Chuks"}</p> 
+                       <p className="Country1">User ID : TIP0000{(currentUser?.id)|| 8}</p>
+                       <p className="Country1">Email : <span>{(currentUser?.email)||"chukwubuikekingsley@gmail.com"}</span></p>
                        <p className="Country1">Phone : +2348035012328</p>
                        <p className="Country1">Country : Nigeria</p>
                     </div>
@@ -103,7 +103,9 @@ const Profile = () =>{
                                 <p className="nameFin upon">Country</p>
                                 <div>
                               
-                                    <Select options={options}onChange={changeHandler}
+                                    <Select options={options}
+                                    
+                                    onChange={changeHandler}
                                     name="country"/>
                                     </div>
                             </div>
@@ -172,6 +174,7 @@ const Profile = () =>{
 
                     </form>
                 </div>
+            </div>
             </div>
 
         </div>

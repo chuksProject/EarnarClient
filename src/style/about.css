@@ -9,33 +9,20 @@
     max-width: 820px;
     margin:180px auto;
     color:#fff;
-    /* margin-bottom: 100px; */
+    
 }
-/* .About_Dive_Page{
-    height:100vh;
-    overflow: hidden;
-} */
-/* .About_Dive_Page1{
-    overflow-y: scroll;
-    height: 100vh;
-} */
 
-/* .Foot_VH{
-position:sticky;
-bottom: 0;
-left:0;
-right:0;
-} */
 
 .About_header{
-    font-size: 22px;
+    font-size: 21px;
     margin-bottom: 40px;
-    font-weight: 500;
+    font-weight: 400;
 
 }
 .About_paragraph{
 
-    background-color: #001041;
+    /* background-color: #001041; */
+    background-color: #404f7e;
     padding:35px 20px;
     border-radius: 5px;
 
@@ -81,7 +68,7 @@ right:0;
     .About_Us {
     
         max-width: 580px;
-        margin: 85px auto 15px auto;
+        margin: 25px auto 15px auto;
         
     }
 }

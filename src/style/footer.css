@@ -1,10 +1,12 @@
 .Footer_Div{
     width:100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin:0 auto;
+    padding: 0 10px;
 }
 .Footer_Bg_Color{
     background-color:#001041;
+    /* background-color:#3a44665e; */
     /* padding:40px 10px; */
     padding: 50px 10px 40px 10px;
     /* margin-top: 35px; */
@@ -34,7 +36,7 @@
     text-align: center;
     padding: 20px 0 0 0;
     border-top: 1px solid #4d4a4a;
-    width: 53%;
+    width: 58%;
     margin: 60px auto 0 auto;
     color:#a09a9a;
 
@@ -101,5 +103,10 @@
     }
 }
 
+@media(min-width:1250px){
+    .Footer_Div{
+        max-width: 1200px;
+    }
+}
 
 /* #00104138 */

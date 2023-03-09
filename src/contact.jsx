@@ -35,13 +35,13 @@ const Contact =()=>{
                        <div className="For_general_Advert">
                            <div className="For_General_Div">
                                <p className="contact_p_c">For general enquiries:</p>
-                               <p className="infoTrY">info@preditbet.com</p>
+                               <p className="infoTrY">info@earnars.com</p>
                                <p className="infoTrY fontWW">Or</p>
-                               <p> WhatsApp: <span className="WhattsZ">+254 792 740 472</span></p>
+                               <p> WhatsApp: <span className="WhattsZ">+234 805 927 9660</span></p>
                            </div> 
                            <div className="For_General_Div">
                                <p className="contact_p_c">For advert and sponsorship:</p>
-                               <p className="infoTrY">advert@preditbet.com</p>
+                               <p className="infoTrY">advert@earnars.com</p>
                                <p className="infoTrY fontWW">Or</p>
                                <p><a href="#" className="ClickHereMe">Click here to Chat on Skype</a></p>
                            </div> 

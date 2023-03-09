@@ -932,7 +932,9 @@ color:#fff;
 
 @media (max-width:1024px){
     .header{
-        max-width: 768px;
+        max-width: 100%;
+        padding: 0 20px;
+        width: 100%;
     }
 
     .header_list .Prediction_dropDown,.header_list .Premium_Bet,.header_list .Affliate_Bet,
@@ -968,6 +970,7 @@ color:#fff;
         font-size: 22px !important;
       
     }
+  
     .Emy {
         display: grid;
         grid-template-columns: auto auto;

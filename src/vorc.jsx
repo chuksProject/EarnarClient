@@ -1,116 +1,16 @@
 import React, { useState } from "react";
 import "./style/vorc.css";
-import { Link } from "react-router-dom";
+
 import Footer from "./footer";
 
 
 const Vic = () => {
-  const [register, setRegister] = useState(false);
+  
 
-  const [show1, setShow1] = useState("ultimate");
-  const [show12, setShow12] = useState("");
-  const [show13, setShow13] = useState("");
-  const [show14, setShow14] = useState("");
-  const [show15, setShow15] = useState("");
-  const [show16, setShow16] = useState("");
-  const [show17, setShow17] = useState("");
-  const [show18, setShow18] = useState("");
-  const [show19, setShow19] = useState("");
-  const [show20, setShow20] = useState("");
- 
+  const [show1, setShow1] = useState("ultimate")
 
 
 
-
-
-
- 
-
-const  display1 = ()=>{
-  setShow12("backbet")
-  setShow1("")
-  setShow13("")
-  setShow14("")
-  setShow15("")
-  setShow16("")
-  setShow17("")
-  setShow18("")
-}
-const  display2 = ()=>{
-  setShow12("")
-  setShow1("ultimate")
-  setShow13("")
-  setShow14("")
-  setShow15("")
-  setShow16("")
-  setShow17("")
-  setShow18("")
-}
-const  display3 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("")
-  setShow14("bonusBet")
-  setShow15("")
-  setShow16("")
-  setShow17("")
-  setShow18("")
-}
-const  display4 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("")
-  setShow14("")
-  setShow15("dutching")
-  setShow16("")
-  setShow17("")
-  setShow18("")
-}
-const  display5 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("")
-  setShow14("")
-  setShow15("")
-  setShow16("hedging")
-  setShow17("")
-  setShow18("")
-}
-const  display6 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("")
-  setShow14("")
-  setShow15("")
-  setShow16("")
-  setShow17("")
-  setShow18("staking")
-}
-const  display7 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("")
-  setShow14("")
-  setShow15("")
-  setShow16("")
-  setShow17("lay")
-  setShow18("")
-}
-const  display8 = ()=>{
-  setShow12("")
-  setShow1("")
-  setShow13("odd")
-  setShow14("")
-  setShow15("")
-  setShow16("")
-  setShow17("")
-  setShow18("")
-}
-const ppp =[ display1,display2,display3,display4,display5,display6,display7,display8 ]
-
-  const shed = () => {
-    document.getElementById("throwup").style.position = "relative";
-  };
 
   const odds = [
     { id: 1, selection: "selection1", stake: "stake" },
@@ -129,11 +29,69 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
     { id: 14, selection: "selection14", stake: "stake" },
   ];
 
+
+
+
+
   const odd1 = [
     { id: 1, selection: "selection1", stake: "stake" },
     { id: 2, selection: "selection2", stake: "stake" },
+
+
   ];
 
+
+
+  const  onChangeHandler =(e)=>{
+
+    const val = e.target.value;
+   
+
+    switch(val) {
+      case "ultimate":
+        // code block
+        setShow1("ultimate")
+
+        break;
+      case "2chanceBet":
+        // code block
+        setShow1("backbet")
+        break;
+      case "Arbitrage":
+          // code block
+          setShow1("")
+        break;
+      case "bonusBet":
+            // code block
+            setShow1("bonusBet")
+        break;
+      case "dutchingBet":
+              // code block
+              setShow1("dutching")
+         break;
+     case "hedgingBet":
+            // code block
+            setShow1("hedging")
+        break;
+     case "stakingBet":
+           // code block
+           setShow1("staking")
+       break;
+    case "layBet":
+         // code block
+         setShow1("lay")
+      break;
+    case "oddCalculator":
+          // code block
+          setShow1("odd")
+       break;
+      default:
+        // code block
+        setShow1("ultimate")
+    }
+    
+
+  }
   return (
     <div className="Cover_BackgroundColor" style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
   
@@ -148,39 +106,34 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
 
       <div className="Du">
         <ul className="Bet_CC">
-          <li className="VirtualP" onClick={display2}>Ultimate Virtual Bet</li>
-          <li className="VirtualP" onClick={display1}>2Chance Bet</li>
-          <li className="VirtualP" >Arbitrage Bet </li>
-          <li className="VirtualP" onClick={display3}>Bonus Bet</li>
-          <li className="VirtualP" onClick={display4}>Dutching Bet</li>
-          <li className="VirtualP" onClick={display5}>Hedging Bet</li>
-          <li className="VirtualP" onClick={display6}>Staking Bet</li>
-          <li className="VirtualP" onClick={display7}>Lay Bet</li>
-          <li className="VirtualP" onClick={display8}>Odd Calculator</li>
+          <li className="VirtualP" onClick={()=>setShow1( "ultimate")}>Ultimate Virtual Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("")}>2Chance Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("backbet")} >Arbitrage Bet </li>
+          <li className="VirtualP" onClick={()=>setShow1("bonusBet")}>Bonus Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("dutching")} >Dutching Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("hedging")} >Hedging Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("staking")} >Staking Bet</li>
+          <li className="VirtualP" onClick={()=>setShow1("lay")}>Lay Bet</li>
+          <li className="VirtualP"  onClick={()=>setShow1("odd")}>Odd Calculator</li>
         </ul>
       </div>
+      <div className="pink">
       <div className="Car">
-      <select id="cars" name="cars" className="Car2" onChange={ppp}>
-           <option value="volvo" onClick={display2}>Ultimate Virtual Bet</option>
-           <option value="saab" onClick={display1}>2Chance Bet</option>
-           <option value="fiat">Arbitrage Bet</option>
-           <option value="audi" onClick={display3}>Bonus Bet</option>
-           <option value="fiat" onClick={display4}>Dutching Bet</option>
-           <option value="audi" onClick={display5}>Hedging Bet</option>
-           <option value="fiat" onClick={display6}>Staking Bet</option>
-           <option value="audi" onClick={display7}>lay Bet</option>
-           <option value="fiat" onClick={display8}>Odd Calculator</option>
+      <select id="cars" name="cars" className="Car2" onChange={onChangeHandler} >
+           <option value="ultimate" id={1}>Ultimate Virtual Bet</option>
+           <option value="2chanceBet" id={2}>2Chance Bet</option>
+           <option value="Arbitrage" id={3}>Arbitrage Bet</option>
+           <option value="bonusBet" id={4}>Bonus Bet</option>
+           <option value="dutchingBet" id={5}>Dutching Bet</option>
+           <option value="hedgingBet" id={6}>Hedging Bet</option>
+           <option value="stakingBet" id={7}>Staking Bet</option>
+           <option value="layBet" id={8}>lay Bet</option>
+           <option value="oddCalculator" id={9}>Odd Calculator</option>
            
   </select>
       </div>
-      {/* <fieldset>
-    <legend>Personalia:</legend>
-    <label for="fname">First name:</label><br/>
-    <input type="text" id="fname" name="fname" value="John"/><br/>
-    <label for="lname">Last name:</label><br/>
-    <input type="text" id="lname" name="lname" value="Doe"/><br/><br/>
-    <input type="submit" value="Submit"/>
-  </fieldset> */}
+      </div>
+ 
  
 
       <div className="New_Month">
@@ -190,7 +143,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
           <p className="ExposeMass">Enter Expected profit</p>
           <div className="ExposeMass1">
             <div className="infu1">
-              <span>Recommended :</span>
+              <span className="infu13">Recommended :</span>
             </div>
             <div className="nfu2">
               <input type="text" placeholder="₦50" className="infu3" />
@@ -272,7 +225,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
         </div>
         :""}
         
-        {show12 === "backbet" ? (
+        {show1 === "backbet" ? (
           <div className="backBet">
             <div className="betBackF">
               <div className="betBackFIN">
@@ -387,7 +340,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
         )}
 
 
-    {show13 === "odd"? 
+    {show1 === "odd"? 
       <div>
         <div className="backBet diviveNax">
           <div className="DeciFac">Decimal to Fraction</div>
@@ -436,7 +389,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
         </div>
     :""}
 
-     {show14 === "bonusBet"? 
+     {show1 === "bonusBet"? 
         <div className="backBet ">
           <div className="DeciFac">Bonus Bet</div>
           <div className="FracDeci">
@@ -491,7 +444,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
        :""}
 
 
-     { show15 === "dutching"? 
+     { show1 === "dutching"? 
         <div className="backBet ">
           <div className="DeciFac">Dutching</div>
           <div className="FracDeci">
@@ -522,7 +475,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
         :""}
 
 
-      {show16 === "hedging"? 
+      {show1 === "hedging"? 
         <div className="backBet ">
           <div className="DeciFac">Hedging</div>
           <div className="FracDeci">
@@ -559,7 +512,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
         :""}
 
 
-      {show17 === "lay"? 
+      {show1 === "lay"? 
         <div className="backBet ">
           <div className="DeciFac">Lay</div>
           <div className="FracDeci">
@@ -613,7 +566,7 @@ const ppp =[ display1,display2,display3,display4,display5,display6,display7,disp
           </div>
         </div>
         :""}
-       {show18 === "staking"?
+       {show1 === "staking"?
         <div className="backBet ">
           <div className="DeciFac">Staking</div>
           <div className="FracDeci">

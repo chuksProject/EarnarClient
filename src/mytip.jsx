@@ -44,6 +44,9 @@ const Mytip =()=>{
     
       },[])
 
+   
+
+
       useEffect(()=>{
         const userCoupon = async ()=>{
           try{
@@ -67,7 +70,7 @@ const Mytip =()=>{
 <div className="Sports23 MyTipUp">
              <div className={tip === "Tip"?"sportsAt people2 gamings":"sportsAt people2"} onClick ={()=>setTip("Tip")}>Sports</div>
              <div className={tip === "forex"?"sportsAt people2 gamings":"sportsAt people2"} onClick ={forexChange}>Forex</div>
-             <div className={tip === "crypto"?"sportsAt people2 gamings":"sportsAt people2"} onClick={cryptoChange}>Cryptocurrency</div>
+             <div className={tip === "crypto"?"sportsAt people2 gamings":"sportsAt people2"} onClick={cryptoChange}><span className="Name">Cryptocurrency</span><span className="Name1">Crypto</span></div>
              <div className={tip === "binary"?"sportsAt people2 gamings":"sportsAt people2"} onClick={()=>setTip("binary")}>Binary</div>
          </div>
          
@@ -463,8 +466,8 @@ const Mytip =()=>{
            
            
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Take Profit: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -474,8 +477,8 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Stop Loss: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -485,7 +488,7 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                      <li className="Total_Odd">RESULT</li>
                     
                      <li></li>
@@ -589,8 +592,8 @@ const Mytip =()=>{
            
            
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Take Profit: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -600,8 +603,8 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Stop Loss: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -611,7 +614,7 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                      <li className="Total_Odd">RESULT</li>
                     
                      <li></li>
@@ -715,8 +718,8 @@ const Mytip =()=>{
            
            
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Take Profit: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -726,8 +729,8 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Stop Loss: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
+                     <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                     
                      <li></li>
                      <li></li>
@@ -737,7 +740,7 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                      <li className="Total_Odd">RESULT</li>
                     
                      <li></li>
@@ -845,8 +848,8 @@ const Mytip =()=>{
             
              
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Take Profit: No of Pips</li>
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ">
+                     <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                      
                      <li></li>
                      <li></li>
@@ -857,7 +860,7 @@ const Mytip =()=>{
              </div>
              <div>
                  <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                     <li className="Total_Odd">Stop Loss: No of Pips</li>
+                     <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                      
                      <li></li>
                      <li></li>
@@ -867,7 +870,7 @@ const Mytip =()=>{
                  </ul>
              </div>
              <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                      <li className="Total_Odd">RESULT</li>
                     
                      <li></li>
@@ -985,7 +988,7 @@ const Mytip =()=>{
       
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Take Profit: No of Pips</li>
+                <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -996,7 +999,7 @@ const Mytip =()=>{
         </div>
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Stop Loss: No of Pips</li>
+                <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -1006,7 +1009,7 @@ const Mytip =()=>{
             </ul>
         </div>
         <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
                
                 <li></li>
@@ -1111,7 +1114,7 @@ const Mytip =()=>{
       
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Take Profit: No of Pips</li>
+                <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -1122,7 +1125,8 @@ const Mytip =()=>{
         </div>
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Stop Loss: No of Pips</li>
+                <li className="Total_Odd ggl
+                live">Stop Loss: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -1132,7 +1136,7 @@ const Mytip =()=>{
             </ul>
         </div>
         <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
                
                 <li></li>
@@ -1237,7 +1241,7 @@ const Mytip =()=>{
       
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Take Profit: No of Pips</li>
+                <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -1248,7 +1252,7 @@ const Mytip =()=>{
         </div>
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Stop Loss: No of Pips</li>
+                <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                
                 <li></li>
                 <li></li>
@@ -1258,7 +1262,7 @@ const Mytip =()=>{
             </ul>
         </div>
         <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
                
                 <li></li>
@@ -1367,7 +1371,7 @@ const Mytip =()=>{
         
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Take Profit: No of Pips</li>
+                <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
                 
                 <li></li>
                 <li></li>
@@ -1378,7 +1382,7 @@ const Mytip =()=>{
         </div>
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd">Stop Loss: No of Pips</li>
+                <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
                 
                 <li></li>
                 <li></li>
@@ -1388,7 +1392,7 @@ const Mytip =()=>{
             </ul>
         </div>
         <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
                
                 <li></li>
@@ -1510,7 +1514,7 @@ const Mytip =()=>{
   
        
         <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1">
+            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
                
                 <li></li>

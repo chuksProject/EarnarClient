@@ -1,8 +1,8 @@
 .sportPa{
     width:100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 5px;
 }
 .MakingMoney{
     width:100%;
@@ -31,6 +31,7 @@
 }
 .ifi{
     text-decoration: none;
+    color:#fff
 }
 
 .NowUpSign:hover{
@@ -43,6 +44,9 @@ color:#000
     text-align: center;
     font-size: 24px;
     font-weight: 600;
+}
+.outcomeBeen1{
+    padding:0 10px;
 }
 .outcomeBeen{
    width:100%;
@@ -69,29 +73,34 @@ color:#000
 }
 .EasyTi{
    display:flex;
-   align-items: center;
+   height:auto;
+   padding:0 10px;
+   align-items: stretch;
    justify-content: space-between;
 
 }
 .EasyTim{
-    width:30%;
+    width:32%;
     border: 1px solid rgba(133, 164, 229, 0.32);
     box-shadow: 0 4px 30px rgb(15 24 52 / 82%);
     backdrop-filter: blur(4.3px);
     background: #ffffff12;
     color:#b8bcc7;
     padding:15px 15px;
-    height: 376px;
+
     border-radius: 5px;
    
 }
-
+.fora{
+    margin-bottom: 10px;
+}
 .everyDay{
     font-size: 18px;
 }
 .startedf{
     color:#5f7ac9;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -106,6 +115,7 @@ color:#000
 .everyDay{
     width:100%;
     max-width: 800px;
+    padding:0 8px;
     text-align: center;
     color: #b8bcc7;
     margin:0 auto 40px auto;
@@ -116,9 +126,7 @@ color:#000
     align-items: center;
     justify-content: space-between;
 }
-.papaf{
 
-}
 .papaf1{
     width:100%;
 }
@@ -152,11 +160,12 @@ color:#000
 }
 .firey{
     display:flex;
+    padding:0 10px;
     align-items: center;
     justify-content:space-between ;
 }
 .firey1{
-    width:30%;
+    width:32%;
     height:200px;
     background-color: #fff;
     border-radius: 5px;
@@ -172,12 +181,89 @@ color:#000
     height:auto
 }
 .ifNi{
-    width:15%;
+    width:24%;
     margin:0 auto 30px auto;
-    height:5px;
+    height:3px;
     background-color: #c6cbd2;
 }
 .forexy{
     color: #5e71b7;
     font-size: 18px;
+}
+
+@media(min-width:500px) and (max-width:768px){
+    .outcomeBeen1,.Dayword {
+        padding: 0px 60px !important;
+    }
+    .BettingTu {
+        width: 84% !important;
+    }
+    .firey {
+        padding: 0 60px !important;
+    }
+    .EasyTi {
+       
+        padding: 0 60px !important;
+       
+    }
+
+}
+@media(max-width:768px){
+    .MakingMoney{
+        padding: 0 15px; 
+    }
+    .EasyTi{
+        display:flex;
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 15px;
+    }
+    .Dayok{
+        padding:0 8px
+    }
+    .BettingTu{
+        width: 96%;
+        font-size: 20px;
+    }
+    .faqSportMa{
+        margin-bottom: 18px;
+        padding: 0 8px;
+    }
+    .firey{
+        flex-direction: column;
+        gap: 12px;
+    padding: 0 8px;
+    }
+    .firey1{
+        width: 100%;
+    }
+    .EasyTim{
+        height: fit-content; 
+        width: 100%;
+    }
+    .outcomeBeen1{
+        padding:0 8px;
+    }
+    .cap3 {
+        width: 44px !important;
+    }
+    .cap5 {
+        width: 62px !important;
+    }
+    .cap4 {
+        width: 38px !important;
+    }
+    .wemerYt{
+        padding:0 8px
+    }
+    
+    
+
+}
+@media(min-width:1250px){
+    .sportPa{
+    
+        max-width: 1200px;
+        
+    }
 }

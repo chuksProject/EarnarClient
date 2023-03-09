@@ -18,19 +18,81 @@ const SportsPage = () => {
     const [show3,setShow3]= useState(false)
     const [show4,setShow4]= useState(false)
     const [show5,setShow5]= useState(false)
-    const [show6,setShow6]= useState(false)
+
     const {currentUser} = useContext(AuthContext);
+
+    const drup =()=>{
+      setShow(!show)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+     
+    }
+    const drup1 =()=>{
+
+      setShow(false)
+      setShow1(!show1)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+
+    }
+    const drup2 =()=>{
+     
+      setShow(false)
+      setShow1(false)
+      setShow2(!show2)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+    }
+    const drup3 =()=>{
+       
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(!show3)
+      setShow4(false)
+      setShow5(false)
+    }
+    const drup4 =()=>{
+    
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(!show4)
+      setShow5(false)
+    }
+    const drup5 =()=>{
+
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(!show5)
+    }
+
   return (
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
+        <div>
+          <img src="/img/earnarsBanner34.png" className="AffliateBanner"/>
+          </div>
         <div className="MakingMoney">
         Making Money Daily on <span className="forexy">SPORTS</span> trading is as easy as following our daily expert predictions
         </div>
-        {currentUser?"":
-        <Link to="/login" className="ifi"> <div className="NowUpSign">SIGN UP NOW</div></Link>}
+        
+       <div className="NowUpSign"> <Link to="/login" className="ifi"> SIGN UP NOW</Link></div>
         <p className="SportBetting">What Is Sport Betting</p>
+        <div className="outcomeBeen1">
         <div className="outcomeBeen">
          Sports betting is the activity of predicting sports results and placing a wager on the outcome. Sport betting is legally recognized across the world and has actually been an alternative source of income for millions of sport fans across the world.  
+        </div>
         </div>
         <p className="WhyStart">Why Start Sport Betting</p>
         <div className="ifNi"></div>
@@ -38,7 +100,7 @@ const SportsPage = () => {
             <div className="EasyTim">
                 <p className="startedf">Easy to Get Started</p>
                 <div className="everyDay">
-                Alot of money making 
+                A lot of money making 
 sites require you to follow specific rules and may even require you to have high level skills or go through 
 regorious learning to get 
 started. This may lead to 
@@ -48,11 +110,11 @@ thing with sports betting is
 that you won’t need any tool 
 or financial commitment 
 before you begin staking.
-You only need like N500 naira to begin staking. You also have the chance to bet with the same amount from time to time.</div>
+With $1 dollar or ₦500 naira you can start staking. You also have the chance to bet with the same amount from time to time.</div>
             </div>
             <div className="EasyTim">
                 <p className="startedf">Alternative Source of Income</p>
-                <div className="everyDay">Betting comes with the oppurtunity to make money when some cash is involved. Any amount you have can earn you some profit as long as you bet on wining games or follow our recommended wining games. Some people even quit their jobs to concentrate fully on betting as a means of their survival. when you structure your betting system with proper risk reward ratio you will definitely ,make a fortune from it.
+                <div className="everyDay">Betting comes with the oppurtunity to make money when some cash is involved. Any amount you have can earn you some profit as long as you bet on wining games or follow our recommended wining games. Some people even quit their jobs to concentrate fully on betting as a means of their survival. when you structure your betting system with proper risk reward ratio you will definitely make a fortune from it.
 
 </div>
             </div>
@@ -70,27 +132,57 @@ You can also enjoy sports betting anywhere and anytime e.g from the comfort of y
 
         <div className="AgenciesTy">Sports Betting Agencies</div>
         <div className="ifNi"></div>
-        <p className="everyDay">Any company that is providing sports betting services can be called a bookmaker, betting agency,sportsbook or bookie.</p>
-        <div className="wemerYt">
-            <div className=""><img src="/img/images.jpg" className="cap3" /></div>
-            <div><img src="/img/betKing.svg" className="cap3" /></div>
-            <div className=""><img src="/img/guma.png" className="cap5" /></div>
-            <div className=""><img src="/img/bett.svg" className="cap3" /></div>
-            <div className=""><img src="/img/Betway.png" className="cap3" /></div>
-            <div className=""><img src="/img/kingk.png" className="cap4" /></div>
-        </div>
+        <p className="everyDay Dayok Dayword">Any company that is providing sports betting services can be called a bookmaker, betting agency,sportsbook or bookie.</p>
+      
+
+
+        {/* <section className="logoMarqueeSection">
+	<div className="container" id="logoMarqueeSection">
+		<div className="default-content-container flex items-center">
+			<div className="default-content-container-inner marquee-wrapper relative overflow-hidden inline-block">
+				<div className="marquee" style={{animationDuration: "57s"}}>
+					<a target="_blank"><img src="/img/images.jpg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
+					<a target="_blank"><img src="/img/bett.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/Betway.png" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/kingk.png"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/images.jpg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/bett.svg" title="" className="marqueelogo" style={{width: "200px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/images.jpg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img src="/img/bett.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+					<a target="_blank"><img  src="/img/kingk.png"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
+				</div>
+      
+			</div>
+		</div>
+	</div>
+</section> */}
+
+
+
+
+
+
         <div className="BettingTu">Sport Betting Tutorial Videos</div>
         <div className="firey">
-            <div className="firey1"></div>
-            <div className="firey1"></div>
-            <div className="firey1"></div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QLfYPHSCATU" title="SPORTYBET TUTORIAL: HOW TO SIGN UP AND LOGIN TO YOUR SPORTYBET ACCOUNT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mgXNWBDOD8w" title="SPORTYBET TUTORIAL: HOW TO DEPOSIT AND WITHDRAW MONEY FROM YOUR SPORTYBET ACCOUNT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/38TXXWrUrdQ" title="Sportybet Tips - How To Place Bets On Sportybet | Bet unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
 
         <div>
           <div id="Faqc" className="faqSportMa">
             <div className="firstTom faqSports">FAQ</div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow(!show)}>
+              <div className="HowFarBro" onClick={drup}>
                 <span>How do I register  with a broker?</span>{" "}
                 <span>
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -106,7 +198,7 @@ with more than one broker.
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow1(!show1)}>
+              <div className="HowFarBro" onClick={drup1}>
                 <span>I dont Know anything about betting,What should I do?</span>
                 <span>
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -114,14 +206,14 @@ with more than one broker.
               </div>
               {show1 ? (
                 <p className="ILOVEK">
-               Not knowing about sports bettng doesnt stops you from making money from sports betting. All you need to know is how to place bet using our coupon code for each prediction we make. Watch our tutorial video on how to bet to give you the required knowledge you need to place a bet.
+               Not knowing about sports bettng doesn't stops you from making money from sports betting. All you need to know is how to place bet using our coupon code for each prediction we make. Watch our tutorial video on how to bet to give you the required knowledge you need to place a bet.
                 </p>
               ) : (
                 ""
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow2(!show2)}>
+              <div className="HowFarBro" onClick={drup2}>
                 <span> How can I fund my account?</span>
                 <span>
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -136,7 +228,7 @@ with more than one broker.
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow3(!show3)}>
+              <div className="HowFarBro" onClick={drup3}>
                 <span> Can your company bet for me and pay me percentage monthly? </span>
                 <span>
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -152,7 +244,7 @@ We do not manage users funds or bet for any user, we only forecast/predicts game
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow4(!show4)}>
+              <div className="HowFarBro" onClick={drup4}>
                 <span>How much do I bet in every game?</span>
                 <span>
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -167,7 +259,7 @@ We do not manage users funds or bet for any user, we only forecast/predicts game
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow5(!show5)}>
+              <div className="HowFarBro" onClick={drup5}>
                 <span> What is the guarantee am going to make money betting?</span>
                 <span>
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -175,7 +267,7 @@ We do not manage users funds or bet for any user, we only forecast/predicts game
               </div>
               {show5 ? (
                 <p className="ILOVEK">
-              We do not guarantee any prediction made by our experts, how ever we guarantee the refund of users subscription fees if at the end of any particular month they dont turn profit by following all our prediction. This refund policy is subject to our "Refund Policy Terms and Condition"
+              We do not guarantee any prediction made by our experts, however we guarantee the refund of users subscription fees if at the end of any particular month they dont turn profit by following all our prediction. This refund policy is subject to our "Refund Policy Terms and Condition"
                 </p>
               ) : (
                 ""

@@ -5,6 +5,7 @@ import {  faPlus,faMinus} from '@fortawesome/free-solid-svg-icons'
 import "./style/home.css";
 import "./style/home2.css"
 import Footer from "./footer"
+import { Link} from "react-router-dom";
 
 const BinaryPage = () => {
 
@@ -16,14 +17,78 @@ const BinaryPage = () => {
     const [show4,setShow4]= useState(false)
     const [show5,setShow5]= useState(false)
     const [show6,setShow6]= useState(false)
+
+    
+
+     const dropping =()=>{
+      setShow(!show)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+    }
+
+    const dropping1 =()=>{
+      setShow(false)
+      setShow1(!show1)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+
+    }
+
+    const dropping2 =()=>{
+      setShow(false)
+      setShow1(false)
+      setShow2(!show2)
+      setShow3(false)
+      setShow4(false)
+      setShow5(false)
+       
+    }
+    const dropping3 =()=>{
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(!show3)
+      setShow4(false)
+      setShow5(false)
+       
+    }
+    const dropping4 =()=>{
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(!show4)
+      setShow5(false)
+       
+    }
+    const dropping5 =()=>{
+
+      setShow(false)
+      setShow1(false)
+      setShow2(false)
+      setShow3(false)
+      setShow4(false)
+      setShow5(!show5)
+       
+    }
+
   return (
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
+        <div>
+          <img src="/img/earnarsBanners3.png" className="AffliateBanner"/>
+          </div>
         <div className="MakingMoney">
-        Making Money Daily on SPORTS trading is as easy as following our daily expert predictions
+        Making Money Daily on Binary trading is as easy as following our daily expert predictions
         </div>
-        <div className="NowUpSign">SIGN UP NOW</div>
+        <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
         <p className="SportBetting">What Is Binary trading</p>
+        <div className="outcomeBeen1">
         <div className="outcomeBeen">
         A binary option is a type of option with a fixed payout in which you 
 predict the outcome from two possible results. If your prediction is 
@@ -31,7 +96,8 @@ correct, you receive the agreed payout. If not, you lose your initial
 stake, and nothing more. It's called 'binary' because there can be 
 only two outcomes – win or lose. 
         </div>
-        <p className="WhyStart">Why Start Binart Trading</p>
+        </div>
+        <p className="WhyStart">Why Start Binary Trading</p>
         <div className="ifNi"></div>
         <div className="EasyTi">
             <div className="EasyTim">
@@ -83,28 +149,34 @@ make if you win.</div>
 
         <div className="AgenciesTy">What Are Binary Option Broker</div>
         <div className="ifNi"></div>
-        <p className="everyDay">Binary Brokers are platforms that sell binary options at a fixed price (e.g., $100) 
+        <p className="everyDay Dayword">Binary Brokers are platforms that sell binary options at a fixed price (e.g., $100) 
 and offer some fixed percentage return in case of in-the-money settlement.</p>
-        <div className="wemerYt">
+        {/* <div className="wemerYt">
             <div className=""><img src="/img/images.jpg" className="cap3" /></div>
             <div><img src="/img/betKing.svg" className="cap3" /></div>
             <div className=""><img src="/img/guma.png" className="cap5" /></div>
             <div className=""><img src="/img/bett.svg" className="cap3" /></div>
             <div className=""><img src="/img/Betway.png" className="cap3" /></div>
             <div className=""><img src="/img/kingk.png" className="cap4" /></div>
-        </div>
-        <div className="BettingTu">Binary Option Tutorial Vidios</div>
+        </div> */}
+        <div className="BettingTu">Binary Option Tutorial Videos</div>
         <div className="firey">
-            <div className="firey1"></div>
-            <div className="firey1"></div>
-            <div className="firey1"></div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zBlvE9pX-IQ" title="How to Register and Verify Pocket Option Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7dGSYzLpY7I" title="POCKET OPTIONS TUTORIAL - FUNDING YOUR BROKER TO MAKE MONEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Z5e1CbNbxdU" title="How To WITHDRAW Money From Pocket Option - 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
 
         <div>
           <div id="Faqc" className="faqSportMa">
             <div className="firstTom faqSports">FAQ</div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow(!show)}>
+              <div className="HowFarBro" onClick={dropping}>
                 <span>How do resgister  with a Binary Option Broker?</span>{" "}
                 <span>
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -120,7 +192,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow1(!show1)}>
+              <div className="HowFarBro" onClick={dropping1}>
                 <span>I dont Know anything about Binary trading,What should i do?</span>
                 <span>
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -135,7 +207,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow2(!show2)}>
+              <div className="HowFarBro" onClick={dropping2}>
                 <span> How can i fund my account? </span>
                 <span>
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -150,7 +222,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow3(!show3)}>
+              <div className="HowFarBro" onClick={dropping3}>
                 <span> Can your company Trade for me and pay me a percentage monthly?</span>
                 <span>
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -158,14 +230,14 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
               </div>
               {show3 ? (
                 <p className="ILOVEK">
-                  We do not manage users funds or bet for any user, we only forecast wining trades. Users are responsible for for any amount of money they wish to stake with the trading platform they are registered with.
+                  We do not manage users funds or bet for any user, we only forecast wining trades. Users are responsible for  any amount of money they wish to stake with the trading platform they are registered with.
                 </p>
               ) : (
                 ""
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow4(!show4)}>
+              <div className="HowFarBro" onClick={dropping4}>
                 <span>How much do i stake in every trade?</span>
                 <span>
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
@@ -173,14 +245,14 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
               </div>
               {show4 ? (
                 <p className="ILOVEK">
-                Your are responsible for any amount you wish to stake on any trading portal but we advice users to risk between 1% to 5% of their capital on any trade forecasted.
+                You are responsible for any amount you wish to stake on any trading portal but we advice users to risk between 1% to 5% of their capital on any trade forecasted.
                 </p>
               ) : (
                 ""
               )}
             </div>
             <div>
-              <div className="HowFarBro" onClick={() => setShow5(!show5)}>
+              <div className="HowFarBro" onClick={dropping5}>
                 <span> What is the guarantee am going to make money on Binary trading?</span>
                 <span>
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}

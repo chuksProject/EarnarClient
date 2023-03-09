@@ -47,9 +47,7 @@ const Login =()=>{
             <div className="Form_Divbb">
            <div className="Form_Div renttt">
                <form>
-                  {/* <div>
-                      <input type="email" placeholder=""/>
-                  </div> */}
+                  
                   <div className="welcome4">Welcome</div>
                   <div> <input type="text" placeholder="User_name" className="Full_Name" name="username" onChange={handleChange}/></div>
                   <div className="sers"> <input type={inputs.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}

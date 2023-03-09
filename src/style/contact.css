@@ -20,7 +20,7 @@
     text-align: center;
     font-size: 16px;
     border-radius: 3px;
-    background-color: #3c6abe;
+    background-color: #001041a1;
     margin-bottom: 15px;
 }
 .infoTrY{
@@ -33,7 +33,7 @@
 .We_areF{
     text-align: center;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.3px;
 }
 .ClickHereMe{
@@ -56,4 +56,10 @@
         margin:20px 0;
     }
 }
-
+@media(max-width:768px){
+    .We_areF{
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+    }
+}
