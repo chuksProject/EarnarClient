@@ -23,7 +23,7 @@ your next month subscription becomes free. </p>
             <div className="LIne"></div>
         </div>
 
-
+        <div className="ShowUp">
         <div className="AY">
         <table className="TYPE" >
         <tr>
@@ -62,6 +62,7 @@ your next month subscription becomes free. </p>
     <td>YES</td>
   </tr>
 </table>
+        </div>
         </div>
 
 

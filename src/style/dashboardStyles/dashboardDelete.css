@@ -16,3 +16,8 @@
 .tigh4{
     width:65%
 }
+@media(max-width:768px){
+    .tigh4,.tigh2{
+        width:100%
+    }
+}

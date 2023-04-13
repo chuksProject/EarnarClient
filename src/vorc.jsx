@@ -55,11 +55,11 @@ const Vic = () => {
         break;
       case "2chanceBet":
         // code block
-        setShow1("backbet")
+        setShow1()
         break;
       case "Arbitrage":
           // code block
-          setShow1("")
+          setShow1("backbet")
         break;
       case "bonusBet":
             // code block
@@ -107,7 +107,7 @@ const Vic = () => {
       <div className="Du">
         <ul className="Bet_CC">
           <li className="VirtualP" onClick={()=>setShow1( "ultimate")}>Ultimate Virtual Bet</li>
-          <li className="VirtualP" onClick={()=>setShow1("")}>2Chance Bet</li>
+         
           <li className="VirtualP" onClick={()=>setShow1("backbet")} >Arbitrage Bet </li>
           <li className="VirtualP" onClick={()=>setShow1("bonusBet")}>Bonus Bet</li>
           <li className="VirtualP" onClick={()=>setShow1("dutching")} >Dutching Bet</li>
@@ -121,13 +121,13 @@ const Vic = () => {
       <div className="Car">
       <select id="cars" name="cars" className="Car2" onChange={onChangeHandler} >
            <option value="ultimate" id={1}>Ultimate Virtual Bet</option>
-           <option value="2chanceBet" id={2}>2Chance Bet</option>
-           <option value="Arbitrage" id={3}>Arbitrage Bet</option>
-           <option value="bonusBet" id={4}>Bonus Bet</option>
-           <option value="dutchingBet" id={5}>Dutching Bet</option>
-           <option value="hedgingBet" id={6}>Hedging Bet</option>
-           <option value="stakingBet" id={7}>Staking Bet</option>
-           <option value="layBet" id={8}>lay Bet</option>
+           {/* <option value="2chanceBet" id={2}>2Chance Bet</option> */}
+           <option value="Arbitrage" id={2}>Arbitrage Bet</option>
+           <option value="bonusBet" id={3}>Bonus Bet</option>
+           <option value="dutchingBet" id={4}>Dutching Bet</option>
+           <option value="hedgingBet" id={5}>Hedging Bet</option>
+           <option value="stakingBet" id={6}>Staking Bet</option>
+           <option value="layBet" id={7}>lay Bet</option>
            <option value="oddCalculator" id={9}>Odd Calculator</option>
            
   </select>

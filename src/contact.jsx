@@ -37,7 +37,7 @@ const Contact =()=>{
                                <p className="contact_p_c">For general enquiries:</p>
                                <p className="infoTrY">info@earnars.com</p>
                                <p className="infoTrY fontWW">Or</p>
-                               <p> WhatsApp: <span className="WhattsZ">+234 805 927 9660</span></p>
+                               <p> WhatsApp: <span className="WhattsZ"><a href="https://wa.me/08059279660">+234 805 927 9660</a></span></p>
                            </div> 
                            <div className="For_General_Div">
                                <p className="contact_p_c">For advert and sponsorship:</p>

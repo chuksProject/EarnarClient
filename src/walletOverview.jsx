@@ -157,6 +157,7 @@ const trig =()=>{
 
            { wallet === "wallets"? 
              <div>
+                 <div className="Att">
                  <p className="AllTrans"> All transanction</p>
                  <div>
                      <ul className="TYPE_DATE">
@@ -203,6 +204,7 @@ const trig =()=>{
                          <li className="SuccessId">ID:00001</li>
                          <li className="SuccessId">Success</li>
                      </ul>
+                 </div>
                  </div>
              </div>
              :""}

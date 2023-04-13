@@ -102,7 +102,7 @@ color:#000
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 .AgenciesTy{
     color:#fff;
@@ -116,7 +116,7 @@ color:#000
     width:100%;
     max-width: 800px;
     padding:0 8px;
-    text-align: center;
+    /* text-align: center; */
     color: #b8bcc7;
     margin:0 auto 40px auto;
 
@@ -187,8 +187,35 @@ color:#000
     background-color: #c6cbd2;
 }
 .forexy{
-    color: #5e71b7;
+    color: #9caef6;
     font-size: 18px;
+}
+.SportsImg{
+    display:flex;
+    align-items: center;
+    width:1200px;
+    position:relative;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+}
+.onV{
+    display: flex;
+    align-items:center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.everyday{
+    width:50px
+}
+.SportsImg1{
+    width:100%;
+    padding:0 10px;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.Dayword{
+    text-align: center;
 }
 
 @media(min-width:500px) and (max-width:768px){
@@ -255,6 +282,9 @@ color:#000
     }
     .wemerYt{
         padding:0 8px
+    }
+    .startedf{
+        font-size: 22px;
     }
     
     

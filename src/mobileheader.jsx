@@ -2,7 +2,7 @@
 import React, {useState,useContext} from 'react'
 import "./style/mobileheader.css"
 import "./style/footer.css"
-import { Link} from "react-router-dom";
+import { Link,NavLink} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown,faAngleUp} from '@fortawesome/free-solid-svg-icons'
 import { AuthContext } from './context/authContext';
@@ -36,9 +36,9 @@ const Mobileheader = () => {
         {/* <div className="special"></div> */}
       <div className="mobileH">
         <div>
-        <Link to="/"  onClick={()=>setShow21(false)} >
+        <a href="/"  onClick={()=>setShow21(false)} >
                   <img src="/img/Earnars1@72x1.png" className="emanu"/>
-                </Link>
+                </a>
         </div>
         <div>
         <button className="menu" onClick={()=>setShow21(!show21) } aria-label="Main Menu">
@@ -66,15 +66,15 @@ const Mobileheader = () => {
           <li><div className="derr" onClick={()=>setShowMe(!showMe)}><span className="derpm">Predictions</span> <span>{showMe?<FontAwesomeIcon icon={faAngleUp} className="PlusIcon plusIcon2" />:<FontAwesomeIcon icon={faAngleDown} className="PlusIcon plusIcon2" />}</span></div>
           {showMe? 
             <div className="Forexmm">
-                      <Link  className="fit" to="/sportp" onClick={()=>setShow21(!show21)}>Sports</Link>
-                      <Link  className="fit" to="/forexp" onClick={()=>setShow21(!show21)}>Forex</Link>
-                      <Link  className="fit" to="cryptop" onClick={()=>setShow21(!show21)}>Cryptocurrency </Link>
-                      <Link  className="fit" to="/binaryp" onClick={()=>setShow21(!show21)}>Binary</Link> 
+                      <a  className="fit" href="/sport" onClick={()=>setShow21(!show21)}>Sports</a>
+                      <a  className="fit" href="/forex" onClick={()=>setShow21(!show21)}>Forex</a>
+                      <a  className="fit" href="cryptocurrency" onClick={()=>setShow21(!show21)}>Cryptocurrency </a>
+                      <a  className="fit" href="/binary" onClick={()=>setShow21(!show21)}>Binary</a> 
             </div>:""}
             </li>
-          <li ><Link to="/premium" onClick={()=>setShow21(!show21)} className="derpm">Premium Subscription</Link></li>
-          <li><Link to="/affliate" className="derpm" onClick={()=>setShow21(!show21)}>Partners Program</Link></li>
-          <li className="dpM"><Link to="/Vcal" className="derpm" onClick={()=>setShow21(!show21)}>Bet Calculator</Link></li>
+          <li ><a href="/premium" onClick={()=>setShow21(!show21)} className="derpm">Premium Subscription</a></li>
+          <li><a href="/affliate" className="derpm" onClick={()=>setShow21(!show21)}>Partners Program</a></li>
+          <li className="dpM"><a href="/betcalculator" className="derpm" onClick={()=>setShow21(!show21)}>Bet Calculator</a></li>
           <li>
             {(currentUser)|| state1? <div>
             <div className="derr" onClick={()=>setShowMe1(!showMe1)}><span className="derpm appjo">{(currentUser?.username)||"kingsley Chuks"}</span> <span>{showMe1?<FontAwesomeIcon icon={faAngleUp} className="PlusIcon plusIcon2" />:<FontAwesomeIcon icon={faAngleDown} className="PlusIcon plusIcon2" />}</span></div>

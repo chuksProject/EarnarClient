@@ -6,18 +6,19 @@
 
 }
 .commT{
+    position: relative;
     width:50%;
     border-radius: 4px;
-    background-color:#475891;
+    background-color: rgb(71 79 217 / 15%);
     text-align: center;
     z-index: 1;
-    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-
+    /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px; */
+    box-shadow: 0 13px 27px -5px rgb(178 178 212 / 25%), 0 8px 16px -8px rgb(15 15 15 / 17%);
 }
 
 .fareWo{
     position:relative;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
 }
 .fareWo1{
     width:200px;
@@ -41,7 +42,8 @@
 }
 .FreeComm{
     padding:10px;
-    background-color:#b7bbd6;
+    /* background-color:#b7bbd6; */
+    border-bottom: 2px solid rgb(200 208 233 / 29%);
     text-align: center;
     font-size: 22px;
     font-weight: 500;
@@ -58,27 +60,28 @@
 .perceT{
     font-size: 28px;
     font-weight: 800;
-    color:#c4c8d5;
+    color:#fff;
     margin-bottom: 10px;
 }
 
 .dailyOn{
     font-size: 28px;
     font-weight: 800;
-    color:#fff;
+    color:#000;
     margin-bottom: 10px;
 }
 .AirTime{
     font-size:16px ;
-    color:#fff;
+    color:#53555a;
     font-weight: 500;
     margin-bottom: 20px;
 }
 .successRate100{
     padding:10px;
-    
-    background-color: #354269;
-    color: #c4c8d6;
+    background-color: rgb(60 71 110 / 73%);
+    /* background-color: #354269; */
+    /* color: #c4c8d6; */
+    color: #ffffff;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
 
@@ -92,17 +95,17 @@
     margin-bottom: 60px;
 }
 .fear{
-    padding-top: 80px;
-    height:300px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    /* height:300px; */
+    padding-bottom: 20px;
 }
 .loud{
     text-align: center;
     font-size: 28px;
     font-weight: 700;
-    color:#c4c8d5;
+    color:#3c476e;
     margin-bottom: 20px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 .Forex1{
     display:flex;
@@ -117,13 +120,13 @@
     font-weight: 400;
     z-index: 1;
 
-    background: #ffffff1f;
+    background: #fff;
     border-radius: 26px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
+    color: #000;
     cursor: pointer;
   
 }
@@ -144,7 +147,7 @@
 
 
 .sport2{
-    background-color:#475891;
+    background-color:#3c476e;
     width: 30% ;
     text-align: center;
     z-index: 1;
@@ -153,7 +156,7 @@
 }
 .divS{
     padding:10px 2px;
-    background-color: #fff;
+    background-color: #d8d8d8;
 }
 .dailyP21{
     font-size: 16px;
@@ -186,31 +189,32 @@
     background-color: #880000 !important;
 }
 .TrustSeal{
-    border:0.5px solid #384e90;
+ 
     margin:15px 0;
 
 
     border-radius: 6px;
-    background: inherit;
+    background: rgb(71 79 217 / 15%);
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 90px solid rgb(61 65 129 / 15%)
 }
 .SealY{
     padding:10px 2px;
     text-align: center;
-    background-color: #354269;
+    /* background-color:#cbcbcb; */
+    background-color: #3c476e;
     font-size: 16px;
     font-weight: 600;
     width:30%;
     max-width: 400px;
     margin:-20px auto 20px auto;
-    color:#fff
+    color: #e9e9ef;
 }
 .ifYou{
     width:75%;
-    color:#c4c8d5;
+    color:#040f32;
     margin:0 auto 10px auto;
     font-size: 18px;
     font-weight: 400;
@@ -222,17 +226,18 @@
     margin-top: 20px;
     
 }
+
 .ye{
     width:200px;
     height:4px;
     margin: 0 auto 20px auto;
-    background-color: #c4c8d5;
+    background-color: #5b6587;
 }
 .with{
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    color:#c4c8d5;
+    color:#000;
     margin-bottom: 10px;
    
 }
@@ -260,12 +265,12 @@
 .OnRef{
     text-align: center;
     font-size: 18px;
-    color:#c4c8d5;
+    color:#000;
     font-weight: 500;
 }
 .Onref1{
     font-size: 18px;
-    color:#c4c8d5;
+    color:#000;
     font-weight: 500;
     line-height: 28px;
 }
@@ -292,6 +297,23 @@
     letter-spacing: 1px;
 }
 
+.ballSport{
+    position: absolute;
+    font-size: 60px;
+    top:47%;
+    color:#3c476e;
+    left:5%
+}
+.ballSport1{
+    position: absolute;
+    font-size: 60px;
+    top:22%;
+    color:#3c476e;
+    right:5%
+}
+.ffoo{
+    width:50px
+}
  
 .UsAbout{
     text-align: center;
@@ -301,7 +323,8 @@
     width:50%;
     max-width: 415px;
     margin:30px auto 0 auto;
-    /* color:#041548; */
+    color:#000;
+   
     margin-bottom: 40px;
     transition: ease all 2s;
 }
@@ -312,10 +335,11 @@
    padding: 20px 10px; 
 }
 .fugmu{
-    padding:50px 0 20px 0;
+    padding:35px 0 0px 0;
 }
 .HomPageBg{
-background-color:#192854 ;
+/* background-color:#f7f7f7; */
+background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95));
 }
 .divUnder{
     width:55%;
@@ -350,6 +374,8 @@ background-color:#192854 ;
 .you{
     width:100%;
     display: flex;
+  
+    border-radius: 5px;
     /* justify-content: center; */
 
 }
@@ -363,13 +389,13 @@ background-color:#192854 ;
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 10px;
-    color: #607ac9;
+    color:#2d3c73;
 
 }
 .pickStuff{
     font-size: 18px;
     font-weight: 400;
-    color:#c4c8d5;
+    color:#fff;
 
 }
 .carousel .control-next.control-arrow:before {
@@ -391,8 +417,8 @@ background-color:#192854 ;
     margin-bottom: 10px;
 }
 .pin{
-    background-color: #fff;
-    color:#000;
+    background-color:#3c476e;
+    color: #fff;
 }
 .Usdj{
     font-size:16px;
@@ -413,17 +439,19 @@ padding:10px 10px 0px 10px;
 .fadama{
     width:100%;
     max-width:700px;
-    margin:0 auto 80px auto;
+    margin:0 auto 60px auto;
 }
 .Great{
     padding-top:60px;
     padding-bottom: 50px;
+    background-color:rgb(71 79 217 / 15%);
     height:300px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-left: 12px;
+    border: 20px solid rgb(60 71 110);
+    /* border-left: 12px;
     border-right: 12px;
-    border-top: 12px;
+    border-top: 12px; */
+    border-radius: 10px;
 }
 .fit{
     padding: 5px 5px 5px 10px;
@@ -433,7 +461,7 @@ padding:10px 10px 0px 10px;
 }
 .WhatD{
     padding-bottom: 60px;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 @media(min-width:768px) and (max-width:868px){
@@ -447,18 +475,52 @@ padding:10px 10px 0px 10px;
         padding: 1px 0 1px 0;
     } 
     .CarouseDivDiv {
-        margin: 8px auto 2px auto !important;
+        margin: 2px auto 2px auto !important;
     }
     .teleCom {
         flex-direction: column;
+        gap:0; 
+        /* margin-bottom: 20px; */ 
         padding: 0 6px;
+    }
+    .dese{
+        margin-bottom:0px !important;
     }
     .commT {
         width: 100%;
+        margin-bottom:20px;
+        background-color:rgb(71 79 217 / 15%);
+    }
+
+
+.successRate100 {
+  
+    background-color: rgb(60 71 110 / 73%);
+  
+}
+.TrustSeal {
+  
+    background: rgb(71 79 217 / 15%);
+    border: 1px solid rgb(61 65 129 / 15%);
+  
+}
+    .FreeComm {
+        border-bottom: 2px solid rgb(200 208 233 / 29%);
+       
     }
     .Forex1 {
-        flex-direction: column;
+        /* flex-direction: column; */
+        width:900px;
+        max-width: 900px;
+        overflow-x: hidden;
+        position: relative;
         padding: 0 6px;
+    }
+    .faith{
+        width:100%;
+        max-width: 100%;
+        overflow-x: scroll;
+
     }
     .Stuffy{
         width: 100%;
@@ -466,11 +528,11 @@ padding:10px 10px 0px 10px;
     }
 
     .Forex12 {
-        width: 100%;
+        width: 210px;
         margin-bottom: 5px;
     }
     .ImgDiv{
-        height:fit-content
+        height:auto;
     }
     .millionM{
         font-size: 20px;
@@ -522,12 +584,15 @@ padding:10px 10px 0px 10px;
     font-size: 21px;
 }
 .UsAbout {
+  
     width: 82%;
     font-size: 26px;
     margin-bottom: 2px;
 }
 .Great{
-    height:auto
+    height:auto;
+    background-color: rgb(71 79 217 / 15%);
+    border:1px solid rgb(130 143 197);
 }
 
 .EarnP {
@@ -559,4 +624,15 @@ padding:10px 10px 0px 10px;
     .Rtme {
         max-width: 1200px;
     } 
+}
+@media(max-width:351px){
+    .fear{
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width:464px){
+    .cappin{
+        width:100% !important;
+    }
 }

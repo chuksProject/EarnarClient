@@ -79,16 +79,16 @@ const CryptoPage = () => {
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
           <div>
-          <img src="/img/earnarsbanner23.png" className="AffliateBanner"/>
+          <img src="/img/earnarsbanner23.png" className="AffliateBanner" alt=""/>
           </div>
         <div className="MakingMoney">
-        Making Money Daily on Cryptocurrency trading is as easy as following our daily expert predictions
+        Making Money Daily on <span className="forexy">Cryptocurrency</span> trading is as easy as following our daily expert predictions
         </div>
         <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
         <p className="SportBetting">What Is Cryptocurrency trading</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">
-        Cryptocurrency trading happens when you buy or sell digital 
+        <span className="forexy">   Cryptocurrency </span>trading happens when you buy or sell digital 
 currencies with the aim of making a profit when their is change in value 
 of the underlying asset. There are two main ways to trade 
 cryptocurrency online: through a specialized brokerage or via a 
@@ -99,7 +99,10 @@ dedicated cryptocurrency exchange.
         <div className="ifNi"></div>
         <div className="EasyTi">
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">High Volatility</p>
+                </div>
                 <div className="everyDay">
                 Cryptocurrencies volatility is 
 part of what makes this market
@@ -115,7 +118,10 @@ done your research and developed
 a risk management strategy.</div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">A 24-hour market</p>
+                </div>
                 <div className="everyDay">There is no waiting for the 
 opening bell. From the 
 Monday morning to Sunday and year to year the market is open and available world wide for trading.
@@ -131,7 +137,10 @@ sleep.
 </div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Low Barriers to Entry</p>
+                </div>
                 <div className="everyDay">Getting Started with crypto 
 trading has one of the
  lowest barrier of entry. This 
@@ -154,14 +163,22 @@ following our expert prediction.</div>
 cryptocurrencies. You can also use exchanges to trade one crypto 
 for another
 </p>
-        {/* <div className="wemerYt">
-            <div className=""><img src="/img/images.jpg" className="cap3" /></div>
-            <div><img src="/img/betKing.svg" className="cap3" /></div>
-            <div className=""><img src="/img/guma.png" className="cap5" /></div>
-            <div className=""><img src="/img/bett.svg" className="cap3" /></div>
-            <div className=""><img src="/img/Betway.png" className="cap3" /></div>
-            <div className=""><img src="/img/kingk.png" className="cap4" /></div>
-        </div> */}
+      
+
+
+<div className="SportsImg1">
+   <div className="SportsImg">
+   <img src="/img/images.jpg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/bett.svg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/Betway.png" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/kingk.png" alt=""  title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
+   <img src="/img/betKing.svg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/images.jpg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   </div>
+</div>
+
+
+
         <div className="BettingTu">Crypto Trading Tutorial Videos</div>
         <div className="firey fora">
             <div className="firey1">

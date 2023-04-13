@@ -81,16 +81,16 @@ const BinaryPage = () => {
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
         <div>
-          <img src="/img/earnarsBanners3.png" className="AffliateBanner"/>
+          <img src="/img/earnarsBanners3.png" className="AffliateBanner" alt=""/>
           </div>
         <div className="MakingMoney">
-        Making Money Daily on Binary trading is as easy as following our daily expert predictions
+        Making Money Daily on <span className="forexy">Binary </span>trading is as easy as following our daily expert predictions
         </div>
         <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
         <p className="SportBetting">What Is Binary trading</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">
-        A binary option is a type of option with a fixed payout in which you 
+        A <span className="forexy">Binary</span> option is a type of option with a fixed payout in which you 
 predict the outcome from two possible results. If your prediction is 
 correct, you receive the agreed payout. If not, you lose your initial 
 stake, and nothing more. It's called 'binary' because there can be 
@@ -101,7 +101,10 @@ only two outcomes – win or lose.
         <div className="ifNi"></div>
         <div className="EasyTi">
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Easy To Trade</p>
+                </div>
                 <div className="everyDay">
                 Binary option trading allows 
 traders/investors who have 
@@ -117,7 +120,10 @@ magnitude of price movement
 when binary trading.</div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">High  R.O.I  Potential</p>
+                </div>
                 <div className="everyDay">Due to the higher risk nature 
 of binary options, typically 
 the returns on your investment 
@@ -130,7 +136,10 @@ returns of approximately 10%.
 </div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf"> Known Risk And Reward </p>
+                </div>
                 <div className="everyDay">You know right up front exactly 
 how much you are risking and 
 exactly how much you will profit 
@@ -151,14 +160,18 @@ make if you win.</div>
         <div className="ifNi"></div>
         <p className="everyDay Dayword">Binary Brokers are platforms that sell binary options at a fixed price (e.g., $100) 
 and offer some fixed percentage return in case of in-the-money settlement.</p>
-        {/* <div className="wemerYt">
-            <div className=""><img src="/img/images.jpg" className="cap3" /></div>
-            <div><img src="/img/betKing.svg" className="cap3" /></div>
-            <div className=""><img src="/img/guma.png" className="cap5" /></div>
-            <div className=""><img src="/img/bett.svg" className="cap3" /></div>
-            <div className=""><img src="/img/Betway.png" className="cap3" /></div>
-            <div className=""><img src="/img/kingk.png" className="cap4" /></div>
-        </div> */}
+       
+<div className="SportsImg1">
+   <div className="SportsImg">
+   <img src="/img/images.jpg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/bett.svg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/Betway.png" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/kingk.png" alt=""  title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
+   <img src="/img/betKing.svg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/images.jpg" alt=""  title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   </div>
+</div>
+
         <div className="BettingTu">Binary Option Tutorial Videos</div>
         <div className="firey">
             <div className="firey1">

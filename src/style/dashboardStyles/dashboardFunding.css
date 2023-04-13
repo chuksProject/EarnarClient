@@ -26,3 +26,46 @@ width:45%
     letter-spacing: 1px;
   
 }
+@media(max-width:768px){
+    .Sporthead {
+       
+        /* flex-direction: column; */
+        gap: 10px;
+    }
+    .fortCredit{
+        overflow-x: scroll;
+        width:100%;
+    }
+    .fortCredit::-webkit-scrollbar{
+        display:none;
+    }
+    .TexT,.credit{
+       width:100%;
+
+    }
+    .headSport{
+        width:400px;
+        max-width: 400px;
+    }
+    .fort{
+        width:45% !important;
+    }
+    .timimg{
+        width:100%;
+     }
+    .SeconT{
+        width:40%
+    }
+    .remey {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
+        gap: 30px;
+    }
+    /* .timimg {
+        width: 100%;
+        max-width:
+    } */
+
+}

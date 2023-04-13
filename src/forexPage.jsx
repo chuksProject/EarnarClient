@@ -78,7 +78,7 @@ const ForexPage = () => {
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
         <div>
-          <img src="/img/earnarsBanner45.png" className="AffliateBanner"/>
+          <img src="/img/earnarsBanner45.png" className="AffliateBanner" alt=""/>
           </div>
           
         <div className="MakingMoney">
@@ -101,7 +101,10 @@ liquid asset markets in the world.
         <div className="ifNi"></div>
         <div className="EasyTi">
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Low Barriers to Entry</p>
+                </div>
                 <div className="everyDay">
                 Getting Started with forex 
 trading has one of the
@@ -118,7 +121,10 @@ making money online by just
 following our expert forecast.</div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">A 24-hours market</p>
+                </div>
                 <div className="everyDay">There is no waiting for the 
 opening bell. From the 
 Monday morning opening in 
@@ -138,7 +144,10 @@ sleep.
 </div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Leverage</p>
+                </div>
                 <div className="everyDay">Leverage means using 
 small amount to control 
 larger amount of money.If 
@@ -167,30 +176,20 @@ management, this high degree
         <p className="everyDay Dayword">A Forex brooker is a finacial services company that provides traders access to  a platform for buying and selling foreign currrencies.</p>
       
 
-{/* 
-        <section className="logoMarqueeSection">
-	<div className="container" id="logoMarqueeSection">
-		<div className="default-content-container flex items-center">
-			<div className="default-content-container-inner marquee-wrapper relative overflow-hidden inline-block">
-				<div className="marquee" style={{animationDuration: "57s"}}>
-					<a target="_blank"><img src="/img/oct.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/fxtm.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/ex.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/apari.png" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/fbs.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/hfm.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/oct.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/fxtm.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/ex.svg" title="" className="marqueelogo" style={{width: "200px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/apari.png" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/apari.png"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img  src="/img/fbs.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-				</div>
-      
-			</div>
-		</div>
-	</div>
-</section> */}
+
+  
+
+
+<div className="SportsImg1">
+   <div className="SportsImg">
+   <img src="/img/oct.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+   <img src="/img/fxtm.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+   <img src="/img/ex.svg" alt="" title="" className="marqueelogo" style={{width: "180px", maxWidth:"none"}}/>
+   <img src="/img/apari.png" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/fbs.svg" alt="" title="" className="marqueelogo" style={{width: "60px", maxWidth:"none"}}/>
+   <img src="/img/hfm.svg" alt="" title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
+   </div>
+</div>
 
 
 

@@ -328,6 +328,7 @@ const DashboardSports = () => {
 
   return (
     <div>
+        <div className="coverPan">
       <div className="Sporthead">
           <div className={trade === "sports"?"Sport12 activeBg" :"Sport12" } onClick={()=>{setTrade("sports")}}>Sports</div>
           <div className={trade === "forex"?"Sport12 activeBg" :"Sport12" } onClick={()=>{
@@ -335,6 +336,7 @@ const DashboardSports = () => {
           }}>Forex</div>
           <div className={trade === "crypto"?"Sport12 activeBg" :"Sport12" } onClick={()=>{setTrade("crypto")}}>Crypto</div>
           <div className={trade === "binary"?"Sport12 activeBg" :"Sport12" } onClick={()=>{setTrade("binary")}}>Binary</div>
+      </div>
       </div>
 
        {success && <div className="chuksInput"><p style={{fontSize:'18px'}}>{success}</p></div> }

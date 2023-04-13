@@ -81,7 +81,7 @@ const SportsPage = () => {
     <div style={{  backgroundColor:"#192854"}}>
         <div className="sportPa">
         <div>
-          <img src="/img/earnarsBanner34.png" className="AffliateBanner"/>
+          <img src="/img/earnarsBanner34.png" className="AffliateBanner" alt=""/>
           </div>
         <div className="MakingMoney">
         Making Money Daily on <span className="forexy">SPORTS</span> trading is as easy as following our daily expert predictions
@@ -91,14 +91,17 @@ const SportsPage = () => {
         <p className="SportBetting">What Is Sport Betting</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">
-         Sports betting is the activity of predicting sports results and placing a wager on the outcome. Sport betting is legally recognized across the world and has actually been an alternative source of income for millions of sport fans across the world.  
+        <span className="forexy"> Sports </span>betting is the activity of predicting sports results and placing a wager on the outcome.  <span className="forexy">Sport </span>betting is legally recognized across the world and has actually been an alternative source of income for millions of sport fans across the world.  
         </div>
         </div>
         <p className="WhyStart">Why Start Sport Betting</p>
         <div className="ifNi"></div>
         <div className="EasyTi">
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Easy to Get Started</p>
+                </div>
                 <div className="everyDay">
                 A lot of money making 
 sites require you to follow specific rules and may even require you to have high level skills or go through 
@@ -113,13 +116,19 @@ before you begin staking.
 With $1 dollar or ₦500 naira you can start staking. You also have the chance to bet with the same amount from time to time.</div>
             </div>
             <div className="EasyTim">
+            <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Alternative Source of Income</p>
+                </div>
                 <div className="everyDay">Betting comes with the oppurtunity to make money when some cash is involved. Any amount you have can earn you some profit as long as you bet on wining games or follow our recommended wining games. Some people even quit their jobs to concentrate fully on betting as a means of their survival. when you structure your betting system with proper risk reward ratio you will definitely make a fortune from it.
 
 </div>
             </div>
             <div className="EasyTim">
+              <div className="onV">
+            <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Convinience & non stop</p>
+                </div>
                 <div className="everyDay">Most games can’t be played
 every day, maybe because 
 they are too expensive or 
@@ -136,29 +145,18 @@ You can also enjoy sports betting anywhere and anytime e.g from the comfort of y
       
 
 
-        {/* <section className="logoMarqueeSection">
-	<div className="container" id="logoMarqueeSection">
-		<div className="default-content-container flex items-center">
-			<div className="default-content-container-inner marquee-wrapper relative overflow-hidden inline-block">
-				<div className="marquee" style={{animationDuration: "57s"}}>
-					<a target="_blank"><img src="/img/images.jpg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/></a>
-					<a target="_blank"><img src="/img/bett.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/Betway.png" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/kingk.png"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/images.jpg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/betKing.svg" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/bett.svg" title="" className="marqueelogo" style={{width: "200px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/images.jpg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img src="/img/bett.svg"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-					<a target="_blank"><img  src="/img/kingk.png"  title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}} alt=""/></a>
-				</div>
-      
-			</div>
-		</div>
-	</div>
-</section> */}
+       
+
+<div className="SportsImg1">
+   <div className="SportsImg">
+   <img src="/img/images.jpg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/bett.svg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/Betway.png" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/kingK.png" alt="" title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
+   <img src="/img/betKing.svg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   <img src="/img/images.jpg" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   </div>
+</div>
 
 
 

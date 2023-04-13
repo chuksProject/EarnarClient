@@ -12,7 +12,7 @@
     top:0;
     left:0;
     right:0;
-    z-index: 50;
+    z-index: 6000;
 }
 .AffliateBanner{
     margin: 54px auto 0 auto;
@@ -20,11 +20,12 @@
     max-width: 1500px;
 }
 .ExcitedShare{
-    color:#2956e8;
+    color:#7b93df;
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 28px;
     text-align: center;
+    font-weight: 500;
 }
 .EarnNaira{
     color:#c4c8d5;

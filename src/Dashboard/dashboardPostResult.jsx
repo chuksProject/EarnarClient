@@ -134,13 +134,15 @@ const DashboardPostResult = () => {
 
   return (
     <div>
-      <div className="Sporthead">
+        <div className="coverPan">
+      <div className="Sporthead for">
           <div className={trade === "sports"?"Sport12 packsa":"Sport12"} onClick={()=>setTrade("sports")}>Sports</div>
           <div className={trade === "forex"?"Sport12 packsa":"Sport12"}onClick={()=>
               setTrade("forex")
           }>Forex</div>
           <div className={trade === "crypto"?"Sport12 packsa":"Sport12"} onClick={()=>setTrade("crypto")}>Crypto</div>
           <div className={trade === "binary"?"Sport12 packsa":"Sport12"} onClick={()=>setTrade("binary")}>Binary</div>
+      </div>
       </div>
       {trade === "sports" ?  
       <div className="GamEType">

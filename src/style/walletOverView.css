@@ -326,6 +326,7 @@ background-color:#00104180;
 /* .ILOVEP{
     margin-top: 15px;
 } */
+
 .Deposit_Modal{
     position:fixed;
     top:0;
@@ -481,6 +482,9 @@ background-color:#00104180;
       
         width: 100%;
         margin-bottom: 8px;
+    }
+    .Att{
+        margin-bottom: 10px;
     }
     .Main_WALL {
         width: 100%;

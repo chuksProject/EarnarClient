@@ -1,6 +1,6 @@
 
 
-import { BrowserRouter,Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route,Navigate } from "react-router-dom";
 
 import Register from "./register"
 import Login from "./login";
@@ -10,7 +10,7 @@ import Profile from "./profile"
 import OddPredict from "./OddPredict"
 import Agent from "./agent"
 import Mytip from "./mytip"
-import Mytip1 from "./myTips1"
+// import Mytip1 from "./myTips1"
 import Virc from "./vorc"
 import About from "./about"
 import Contact from "./contact"
@@ -50,15 +50,17 @@ function App() {
            <Route path="/flu" element={<Flutter/>} />
            <Route path="/Odd" element={<OddPredict/>} />
            <Route path="/agent" element={<Agent/>} />
-           <Route path="/sportp" element={<SportPage/>} />
-           <Route path="/forexp" element={<ForexPage/>} />
-           <Route path="/cryptop" element={<CryptoPage/>} />
-           <Route path="/binaryp" element={<BinaryPage/>} />
+           <Route path="/sport" element={<SportPage/>} />
+           <Route path="/forex" element={<ForexPage/>} />
+           <Route path="/cryptocurrency" element={<CryptoPage/>} />
+           <Route path="/binary" element={<BinaryPage/>} />
            <Route path="/tip" element={<Mytip />} />
-           <Route path="/atip" element={<Mytip1 />} />
-           <Route path="/Vcal" element={<Virc/>} />
+           {/* <Route path="/atip" element={<Mytip1 />} /> */}
+           <Route path="/betcalculator" element={<Virc/>} />
            <Route path="/about" element={<About/>} />
            <Route path="/premium" element={<Premium/>} />
+           <Route path="/" element={<SampleHome/>} />
+          	<Route path="*" element={<Navigate to="/" />} />
            <Route path="/dashboard" element={< DashboardHome />} />
            <Route path="/contact" element={< Contact />} />
            <Route path="/disclaimer" element={< Disclaimer/>} />

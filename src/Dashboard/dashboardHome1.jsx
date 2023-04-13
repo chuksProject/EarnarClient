@@ -1,18 +1,86 @@
-import React ,{useContext} from 'react'
+import React ,{useContext,useEffect,useState } from 'react'
 import "../style/dashboardStyles/dashboardHome.css"
 import { AuthContext } from '../context/authContext';
+import axios from 'axios';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 const DashboardHome1 = () => {
     const {currentUser} = useContext(AuthContext);
 
-    console.log(currentUser?.username)
+     const [sap,setSap]=useState(null)
+
+    useEffect(()=>{
+        const fetchCount = async()=>{
+            try{
+   const res = await axios.get(`/post/count`)
+    //  setSap(res.data)
+     setSap(res.data[0].id_count)
+     console.log(sap)
+            }catch(err){
+          console.log(err)
+            }
+
+        }
+        fetchCount()
+    },[sap])
+
+    const data = [
+        {
+          name: 'Page A',
+          uv: 4000,
+          pv: 2400,
+          amt: 2400,
+        },
+        {
+          name: 'Page B',
+          uv: 3000,
+          pv: 1398,
+          amt: 2210,
+        },
+        {
+          name: 'Page C',
+          uv: 2000,
+          pv: 9800,
+          amt: 2290,
+        },
+        {
+          name: 'Page D',
+          uv: 2780,
+          pv: 3908,
+          amt: 2000,
+        },
+        {
+          name: 'Page E',
+          uv: 1890,
+          pv: 4800,
+          amt: 2181,
+        },
+        {
+          name: 'Page F',
+          uv: 2390,
+          pv: 3800,
+          amt: 2500,
+        },
+        {
+          name: 'Page G',
+          uv: 3490,
+          pv: 4300,
+          amt: 2100,
+        },
+      ];
+
+
+      const changewith = 1000
+        
+      
+   
   return (
     <div>
           <div className="poer">
                 <div className="dashOverView" >
                     <div className="Total Users">
                         <p className="Userstext">Total Users</p>
-                        <p className="UserNum">500,000</p>
+                       <p className="UserNum">{sap}</p>
                     </div>
                     <div className="Active Users"> 
                         <p className="Userstext">Active Users</p>
@@ -40,9 +108,32 @@ const DashboardHome1 = () => {
                 </div>
                 </div>
                 <div>
-                    <div>
+                    {/* <div>
                         Chart Div
+                    </div> */}
+                    <div>
+                    
+        <AreaChart
+      
+          width={changewith}
+          height={600}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 30,
+            bottom: 0,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area type="monotone" dataKey="uv" stroke="#fff" fill="#fff" />
+        </AreaChart>
+     
                     </div>
+    
                 </div>
 
     </div>

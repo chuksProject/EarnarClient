@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import Footer from "./footer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faPlus,faMinus} from '@fortawesome/free-solid-svg-icons'
+import {  faPlus,faMinus,faVolleyball} from '@fortawesome/free-solid-svg-icons'
 import Came from "./addcarousel"
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -291,6 +291,8 @@ const Sports1 =()=>{
               
                <div className="commT">
                    <div className="FreeComm">Forex Trading</div>
+                   <img src="/img/forexIcon.png" alt="not found" className="ballSport1 ffoo"/>
+                   <img src="/img/forex12.png" alt="not found" className="ballSport ffoo"/>
                    <p className="Saving">Earn</p>
                    <p className="perceT">25 - 100%</p>
                    <p className="dailyOn">Profits</p>
@@ -299,8 +301,11 @@ const Sports1 =()=>{
                        <p className="RateSuccess">75% Success Rate</p>
                    </div>
                </div>
-               <div className="commT">
+               <div className="commT dese">
                    <div className="FreeComm">Sports Prediction</div>
+                   <img src="/img/sport.png" alt="not found" className="ballSport1 ffoo"/>
+                   <img src="/img/sports1.png" alt="not found" className="ballSport ffoo"/>
+
                    <p className="Saving">Earn</p>
                    <p className="perceT">50-100%</p>
                    <p className="dailyOn">Profits</p>
@@ -314,6 +319,8 @@ const Sports1 =()=>{
                
                <div className="commT">
                    <div className="FreeComm">Cryptocurrency Trading</div>
+                   <img src="/img/crypto.png" alt="not found" className="ballSport1 ffoo"/>
+                   <img src="/img/crypto1.png" alt="not found" className="ballSport ffoo"/>
                    <p className="Saving">Earn</p>
                    <p className="perceT">65 - 100%</p>
                    <p className="dailyOn">Profits</p>
@@ -322,8 +329,10 @@ const Sports1 =()=>{
                        <p className="RateSuccess">85% Success Rate</p>
                    </div>
                </div>
-               <div className="commT">
+               <div className="commT dese">
                    <div className="FreeComm">Binary Option Trading</div>
+                   <img src="/img/binary.png" alt="not found" className="ballSport1 ffoo"/>
+                   <img src="/img/binary1.png" alt="not found" className="ballSport ffoo"/>
                    <p className="Saving">Earn</p>
                    <p className="perceT">50-100%</p>
                    <p className="dailyOn">Profits</p>
@@ -351,18 +360,20 @@ const Sports1 =()=>{
            <div className="Rtme">
                <div className="loud">Our Results Speaks Louder</div>
                <div className="ye"></div>
+               <div className="faith">
                <div className="Forex1">
                    <div className={sports === "sports"?"Forex12 pin":"Forex12"} onClick={Sports1}>Sports</div>
                    <div className={sports==="Forex"?"Forex12 pin":"Forex12"} onClick={forf}>Forex</div>
                    <div className={sports === "cryptocurrency"?"Forex12 pin":"Forex12"} onClick={crypto}>Cryptocurrency</div>
                    <div className={sports === "binary"?"Forex12 pin":"Forex12"} onClick={bina}>Binary</div>
                </div>
+               </div>
                { sports === "sports"?
              
                <Carousel
   swipeable={false}
   draggable={false}
-  showDots={false}
+  showDots={true}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
   infinite={true}
@@ -544,8 +555,8 @@ const Sports1 =()=>{
                         
                                  <Carousel
   swipeable={false}
-  draggable={false}
-  showDots={false}
+  draggable={true}
+  showDots={true}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
   infinite={true}
@@ -696,8 +707,8 @@ const Sports1 =()=>{
                  
                  <Carousel
                  swipeable={false}
-                 draggable={false}
-                 showDots={false}
+                 draggable={true}
+                 showDots={true}
                  responsive={responsive1}
                  ssr={true} // means to render carousel on server-side.
                  infinite={true}
@@ -846,8 +857,8 @@ const Sports1 =()=>{
  { sports=== "binary"? 
                    <Carousel
                    swipeable={false}
-                   draggable={false}
-                   showDots={false}
+                   draggable={true}
+                   showDots={true}
                    responsive={responsive1}
                    ssr={true} // means to render carousel on server-side.
                    infinite={true}

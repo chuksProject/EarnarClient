@@ -197,9 +197,9 @@ ul{
 .carouselPW1{
     height:600px; 
 }
-.carouselPW{
+/* .carouselPW{
     height:100px;
-}
+} */
 
 .carousel .thumb{
     display:none !important;
@@ -223,7 +223,7 @@ ul{
 }
 .EarnP{
     font-size: 60px ;
-    color:#c4c8d5;
+    color:#3c476e;
     font-weight: 800;
     margin-bottom: 12px;
     margin-top:30px ;
@@ -334,6 +334,12 @@ ul{
     display: none;
     
 }
+.faith::-webkit-scrollbar{
+    display: none;
+}
+.SportsImg1::-webkit-scrollbar{
+    display: none;
+}
 .Europe_Div{
     background-color: #fff;
     padding:5px 10px;
@@ -364,6 +370,7 @@ ul{
 .TimeDiv1 li{
     width:16.6%;
     text-align: center;
+    
 }
 .See_All{
     padding:10px 0;
@@ -387,13 +394,7 @@ ul{
     background-color:#1f326c;
     color:#fff;
 }
-/* .bigManDiv{
-    padding:0 10px;
-    background-color:#2a4698c4  ;
-} */
-/* .TimeDiv12{
-    padding:0 30px;
-} */
+
 .FOR{
     overflow:hidden
 }
@@ -402,7 +403,7 @@ ul{
     color:#fff;
 }
 .react-multiple-carousel__arrow{
-    background-color:#afbfea !important ;
+    background-color:#354269 !important ;
 }
 .GameNO{
     display:flex;
@@ -849,7 +850,7 @@ color:#fff;
     margin-top: 9px;
 }
 .firstTom{
-    color:#c4c8d5;
+    color:#000;
     text-align: center;
     font-size: 22px;
     font-weight: 600;

@@ -5,7 +5,7 @@
     padding: 0 10px;
 }
 .Footer_Bg_Color{
-    background-color:#001041;
+    background-color:#1c2443;
     /* background-color:#3a44665e; */
     /* padding:40px 10px; */
     padding: 50px 10px 40px 10px;
@@ -50,6 +50,12 @@
 }
 .footerGo{
     font-size: 10px;
+}
+.twww{
+    color:#fff
+}
+.twww:hover{
+    color:rgba(218, 214, 214, 0.838)
 }
 
 .footer_brand_icon{
@@ -98,8 +104,12 @@
     }
     .footer_brand_icon {
         justify-content:start ;
-        gap: 8px;
+        /* gap: 8px; */
         
+    }
+    .icon_brand_size {
+       
+        margin-right: 8px;
     }
 }
 

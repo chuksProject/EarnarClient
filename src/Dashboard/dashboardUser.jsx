@@ -12,6 +12,7 @@ const DashboardUser = () => {
         const res = await axios.get('/post')
  
         setUserInfo(res.data)
+        console.log(res.data)
       }catch(err){
         console.log(err)
       }
@@ -61,6 +62,8 @@ const DashboardUser = () => {
                     </ul>
                   </div>
                   ))}
+
+
           
                 </div>
               </div>

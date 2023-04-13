@@ -1,13 +1,21 @@
 .Sporthead{
     display:flex;
     max-width: 800px;
-    width:100%;
+    width:800px;
+    position:relative;
+    overflow-x: hidden;
     justify-content: space-between;
     align-items: center;
     margin:0 auto;
     text-align: center;
 }
-
+.coverPan{
+    width:100%;
+    overflow-x: scroll;
+}
+.coverPan::-webkit-scrollbar{
+    display:none
+}
 .Sport12{
     padding:10px 5px;
     background-color:  #ffffff1c;;
@@ -277,4 +285,41 @@ position: absolute;
 }
 .suc2{
     background-color: #79b5e6;
+}
+@media(max-width:768px){
+    .GamEType1 {
+       flex-direction: column; 
+       gap:10px;
+
+    }
+    .GamEType2,.GamEType3{
+        width:100%;
+    
+    }
+
+.opst {
+    width: 40%;
+    padding: 10px 2px;
+
+}
+.format {
+ 
+    max-width: 300px;
+    width: 100%;
+
+}
+.inputAdd {
+    width: 100%;
+}
+.kiglim {
+    padding: 10px 15px;
+    width: 40%;
+}
+.Entre {
+    flex-direction: column;
+    gap: 10px;
+   
+}
+   
+     
 }
