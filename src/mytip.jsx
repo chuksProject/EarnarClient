@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react"
+import React,{useState,useEffect,useRef} from "react"
 import "./style/mytip.css"
 import { Link} from "react-router-dom";
 import Footer from "./footer"
@@ -11,12 +11,23 @@ const Mytip =()=>{
     const [register,setRegister] = useState(false)
     const [sportInfo,setSportInfo]=useState([])
     const [coupon,setCoupon]=useState([])
+    const [text,setText]= useState("3#$%!#DFGG")
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(10); 
+
+    const myDiv = useRef(null);
 
 
 //     const tr = window.location.pathname;
 //   if(tr === "/tip"){
 //     console.log("Mr kingsley is Good and nan")
 //   }
+const totalPages = Math.ceil(sportInfo.length / itemsPerPage);
+
+const handlePageChange = (pageNumber) => {
+  setCurrentPage(pageNumber);
+};
 
 
        const [tip,setTip] = useState("Tip")
@@ -27,6 +38,7 @@ const Mytip =()=>{
        const cryptoChange = ()=>{
            setTip('crypto')
        }
+
 
 
        useEffect(()=>{
@@ -54,6 +66,7 @@ const Mytip =()=>{
      
             setCoupon(res.data)
            
+           
           }catch(err){
             console.log(err)
           }
@@ -61,6 +74,26 @@ const Mytip =()=>{
         userCoupon()
     
       },[coupon])
+
+
+     
+
+
+      const copytext =()=>{
+
+            
+              const sade = document.getElementById("foren").innerText;
+              // console.log(id,sade)
+          
+        
+
+      
+        
+        // navigator.clipboard.writeText(textToCopy);
+        // alert('copied') 
+        
+    }
+
 
 
     return(
@@ -118,6 +151,12 @@ const Mytip =()=>{
                <div className="bigManDiv">
                    <div className="FOR">
                <div className="Leaque tipHeightDiv">
+
+               {/* {sportInfo(totalPages).map((_, index) => (
+    <div key={index} active={index + 1 === currentPage} onClick={() => handlePageChange(index + 1)}>
+      {index + 1}
+    </div>
+  ))} */}
                    
                 
             {sportInfo.map((user,id)=>(
@@ -196,12 +235,12 @@ const Mytip =()=>{
                    
                 
 
-    {coupon.map((app)=>(
-                   <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
+    {coupon.map((app,id)=>(
+                   <div key ={id}>
+            <ul className={(app.id %2 == 0)? "TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{app.betName}</li>
-                <li className="EngLan">{app.couponCode}</li>
-                <li>Copy Code </li>
+                <li className="EngLan"><div id="foren">{app.couponCode}</div></li>
+                <li><div className="CopyCode90" onClick={copytext}>Copy Code</div> </li>
                
              
                 

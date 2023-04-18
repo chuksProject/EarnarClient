@@ -1,4 +1,4 @@
-import React,{useState,useContext,useMemo} from "react";
+import React,{useState,useContext,useMemo,useEffect} from "react";
 import "./style/profile.css"
 import { Link,useLocation,useNavigate} from "react-router-dom";
 import { AuthContext } from './context/authContext';
@@ -7,11 +7,14 @@ import axios from "axios"
 import countryList from 'react-select-country-list'
 
 
+
 const Profile = () =>{
     const [register,setRegister] = useState(false)
     const {currentUser} = useContext(AuthContext);
     const [value, setValue] = useState('')
     const [err,setError] = useState(null)
+    const [text,setText]= useState("3#$%!#DFGG")
+
     const [inputs,setInputs] = useState({
       username:"",
       email:"",
@@ -48,9 +51,22 @@ const Profile = () =>{
         
        }catch(err){
         setError(err.response.data)
-        // console.log(err)
+      
        }    
         }
+
+        
+
+        const copytext =()=>{
+            navigator.clipboard.writeText(text);
+            alert('copied')
+        }
+        // useEffect(()=>{
+        //     document.addEventListener('copy', (event)=>{
+        //         event.preventDefault();
+        //         event.clipboardData.setData('text/plain',text);
+        //     })
+        // },[text]);
 
 
 
@@ -61,7 +77,10 @@ const Profile = () =>{
 
 <div className="pet">
             <div className="Profile_Div">
+                <div className="FimeOp">
                 <p className="ProfilePp" >Profile Overview</p>
+               <div className="ppCopy"><div className="copyCode"  >{text}</div><div onClick={copytext} className="copyCode copyCode1">copy</div></div>
+                </div>
                 <div className="ProfilePp_PP">
                     <div className="yink"><img src="/img/invite.jpg" alt="" className="ProfilePp_P2P" /></div>
                     <div className="Conty">

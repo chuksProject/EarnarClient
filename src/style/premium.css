@@ -12,6 +12,9 @@
     word-spacing: 0.2px;
 
 }
+.yip{
+    text-decoration: none;
+}
 
 .AffliateBannertt{
     margin: 8px auto 0 auto;
@@ -42,6 +45,7 @@
 
 .fff33{
     background-color:#fff;
+    cursor: pointer;
 }
 .fff33:hover{
     background-color: #001041;

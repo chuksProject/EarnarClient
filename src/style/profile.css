@@ -113,19 +113,44 @@
     margin:10px 0;
     align-items: center;
 }
+.FimeOp{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ppCopy{
+    display:flex;
+    align-items: center;
+}
+.copyCode1{
+    margin-left: 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    padding:4px 6px;
+    background-color: #1f326c;
+}
+.copyCode{
+    cursor: pointer;
+    color:#e4e2e2;
+    font-size: 16px;
+    font-weight: 500;
+}
 .EditProfileButtoon{
     width:100px;
    padding:6px 5px;
-    background-color: #fff;
+ 
     color:#000;
     font-size: 18px;
     font-weight: 600;
+    background-image: linear-gradient(to right, #1A2980 0%, #9ca8ec 51%, #1a298094 100%);
     text-align: center;
+    box-shadow: 0px 2px 10px #0d0d2f82;
     border-radius:50px;
     cursor:pointer;
 }
 .EditProfileButtoon:hover{
-    background-color: #001041;
+    /* background-color: #001041; */
+    background-image: linear-gradient(to right,  #1a298094 0%, #9ca8ec 51%,  #1A2980 100%);
     color:#fff;
 }
 .NoteRote{
@@ -141,6 +166,9 @@
 .RoteDiv{
     width:45%;
     border-bottom: 0.5px solid #909090;
+}
+.CopyCode90{
+    cursor:pointer;
 }
 .mustbebak{
     color:#fff;

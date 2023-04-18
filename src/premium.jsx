@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState,useContext} from 'react'
 import "./style/premium.css"
 import Footer from "./footer"
+import { Link} from "react-router-dom";
+import { AuthContext } from './context/authContext';
 
-const premium = () => {
+
+const Premium = () => {
+
+  const {currentUser,login,logout} = useContext(AuthContext);
   return (
     <div style={{backgroundColor:"#192854"}}>
        <div className="PrmiumBanner" >
@@ -16,7 +21,8 @@ your next month subscription becomes free. </p>
         </div>
         <div className="freeB">
             <div className="ButtonQ fff">$50/₦25,000</div>
-            <div className="ButtonQ fff33">Subscribe Now</div>
+            {currentUser?<a href="/wallet" className="yip"><div className="ButtonQ fff33">Subscribe Now</div></a>:<a href="/login" className="yip"><div className="ButtonQ fff33">Subscribe Now</div></a>}
+            
         </div>
         <div>
             <div><p className="AFFORDABLE">PREMIUM PREDICTION ON ALL MARKETS </p></div>
@@ -71,4 +77,4 @@ your next month subscription becomes free. </p>
   )
 }
 
-export default premium
+export default Premium

@@ -11,22 +11,51 @@ const WalletOverView =()=>{
     const [refferal,setRefferal]=useState('')
     const [modal,setModal]= useState(false)
     const [deposit,setDeposit]= useState("")
+    const [subAmount,setSubAmount]=useState(25000)
     const [withdraw,setWithdraw]= useState("")
     const [transfer,setTransfer]= useState("")
     const [pinAmount,setPinAmount]=useState("Enter Amount")
     const [move,setMove] = useState(true)
     const [active,setActive] = useState(true)
   
-    const [amount,setAmount] =useState("")
+    const [amount,setAmount] =useState(null)
     const {currentUser} = useContext(AuthContext);
     const[divFlex,setDivFlex]=useState("")
+
+    const [duration,setDuration] = useState()
+    const [visit,setVisit] = useState()
+    const [hours,setHours] = useState()
+    const [Active,setActivem] = useState("active")
+
+    const date = new Date();
+
+    const showTime = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+
+
+
+    // To set two dates to two variables
+    const date4 = new Date("06/30/2019");
+    const date5 = new Date("06/31/2019");
+
+        // To calculate the time difference of two dates
+        const Difference_In_Time = date5.getTime() - date4.getTime();
+
+        // To calculate the no. of days between two dates
+     const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    // console.log(showTime)
+
+
+    const dayBy = new Date();
+    console.log(dayBy)
+
 
 
 
     const config = {
         public_key: 'FLWPUBK-b42771553f0c152c7a00ef070ececc77-X',
         tx_ref: Date.now(),
-        amount: amount,
+        amount: amount || subAmount,
         currency: 'NGN',
         payment_options: 'card,mobilemoney,ussd',
         customer: {
@@ -62,6 +91,10 @@ const WalletOverView =()=>{
         setRefferal("fort")
         setDivFlex("")
     }
+  
+    const day = Date.now;
+    console.log(day)
+   
 
     
  const depositT =()=>{
@@ -70,6 +103,13 @@ const WalletOverView =()=>{
      setModal(!modal)
      setTransfer("")
  }
+     
+ const subscript =()=>{
+    setDeposit('subScriptionP')
+    setWithdraw('')
+    setModal(!modal)
+    setTransfer("")
+}
  const withdrawT =()=>{
     setWithdraw('withdrawMe')
     setDeposit('')
@@ -92,7 +132,7 @@ const trig =()=>{
 
 
     return(
-        <div className="Parent_Over_File_Bg" style={{    backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
+        <div className="Parent_Over_File_Bg BgColorT" >
 
 
 
@@ -105,7 +145,7 @@ const trig =()=>{
                     <div className={refferal === "fort" ?"overView gbg" : "overView" } onClick={setGo2}>My Referrals</div>
                 </div>
 
-                <p className="Status_Active">Account Status <span className="Actn">active</span></p>
+                <p className="Status_Active">Account Status <span className="Actn">{ Difference_In_Days > 25 ? "non Active":Active}</span></p>
                 
 
                 <div className={divFlex}>
@@ -220,7 +260,7 @@ const trig =()=>{
                      <p className="AccessTo">Premium Tips For 30days</p>
                      <div className="Going1"><p className="Going"> $50/₦25,000</p></div>
                      </div>
-                     <div className="NOWYY"><button className="BUbU" >Subcribe Now</button></div>
+                     <div className="NOWYY"><button className="BUbU"  onClick={subscript}>Subcribe Now</button></div>
                  </div>
 
                
@@ -312,10 +352,10 @@ const trig =()=>{
             <div className="Deposit_Modal" onClick={()=>setModal(!modal)}>
             </div>
                 <div className="Deposit_Modal_Div_Div">
-                    {deposit === "depositMe" ? 
+                    {(deposit === "depositMe") ||(deposit ==="subScriptionP")? 
                     <div className="FirstDivFolder">
-                    <div className="DepositY">Deposit</div>
-                    <p className="AnyPay">Choose any convinient payment method you want.</p>
+                    <div className="DepositY">{deposit === "depositMe"? "Deposit" :deposit === "subScriptionP" ? "Subscrpition Payment" :"" }</div>
+                    <p className="AnyPay">Convinient payment method for You.</p>
                     <div className="DivflutterWave">
                         <div className="Wave1">
                             <p className="PinW">Flutterwave Secured Payment.</p>
@@ -335,7 +375,7 @@ const trig =()=>{
                             } */}
 
                         <div className="ProccedRent">
-                            <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} value={amount} onChange={(e)=>setAmount(e.target.value)}/></div>
+                            <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} value={ deposit === "subScriptionP"? subAmount:amount} onChange={(e)=>setAmount(e.target.value)}/></div>
 
                         <div className="MMMYE"   onClick={() => {
           handleFlutterPayment({
