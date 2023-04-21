@@ -11,9 +11,13 @@ const Navbar= () => {
     const tr = window.location.pathname;
 
     console.log(tr)
+    
+
+
 
   return (
     <div>
+      {tr === "/dashboard" ? "":
         <div className="Header_Div_New_Bg">
           <div className="header">
             <div>
@@ -89,6 +93,7 @@ const Navbar= () => {
             </div>
           </div>
         </div>
+        }
     </div>
   )
 }

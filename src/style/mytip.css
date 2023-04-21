@@ -33,6 +33,25 @@ font-weight: 500;
     border-bottom-right-radius: 4px;
 
 }
+
+.tomh{
+    display:flex
+}
+.tomh67{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.tomh1{
+    padding:10px 15px;
+    background-color: #fff;
+    color:#000;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+.tomh1:hover{
+    background-color: #001041;
+    color:#fff
+}
 .spaceMargiN{
     margin-top: 0;
     /* border-top-left-radius: 4px;
@@ -141,7 +160,8 @@ style={{backgroundImage:"url(/img/save.svg)",backgroundRepeat:"no-repeat ", back
     margin-top: 40px;
     margin-bottom: 20px;
     padding:10px 2px;
-    border-radius: 4px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 .Sports23{
     display:flex;
@@ -172,11 +192,13 @@ style={{backgroundImage:"url(/img/save.svg)",backgroundRepeat:"no-repeat ", back
 }
 .Clas{
     padding:10px 15px;
-    border:1px solid #7687b6;
+    /* border:1px solid #7687b6; */
     width: 200px;
     margin: -30px auto 15px auto;
-    background-color:#001041; 
+    /* background-color:#001041;  */
+    background-color: #ffffff;
     color:#d38b8b;
+    font-weight: 600;
     font-size: 16px;
 
 }

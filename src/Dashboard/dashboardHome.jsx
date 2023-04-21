@@ -11,10 +11,18 @@ import { faTableColumns,faEnvelopesBulk,faSquarePollVertical,faTrash,faUsers,faM
 
 const DashboardHome = () => {
     const [home,setHome] = useState(<Demo/>)
+    const [backColor,setBackColor] = useState("")
     // const [colr,setColor]=useState("by")
 
     const chang =()=>{
         setHome(<Demo5/>)
+        
+    }
+
+    const ChangeBackColor =()=>{
+
+        setHome(<Demo/>)
+        setBackColor("backC")
         
     }
   return (
@@ -24,7 +32,7 @@ const DashboardHome = () => {
                 <div className="poer">
                 <div className="dashboardMegaMenu">
                 <ul className="dashList">
-                    <li onClick={()=>setHome(<Demo/>)}> <div className="Homdash"><FontAwesomeIcon icon={faTableColumns} className="iconDash" /> <span className="dashboardIcon">Dashboard</span></div></li>
+                    <li onClick={()=>setHome(<Demo/>)} > <div className="Homdash "><FontAwesomeIcon icon={faTableColumns} className="iconDash" /> <span className="dashboardIcon">Dashboard</span></div></li>
                     <li onClick={()=>setHome(<Demo1/>)}>
                     <div className="Homdash"><FontAwesomeIcon icon={faEnvelopesBulk} className="iconDash" /> <span className="dashboardIcon">Post Tip</span></div></li>
                     <li onClick={()=>setHome(<Demo2/>)}>

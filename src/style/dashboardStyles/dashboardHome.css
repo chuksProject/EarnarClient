@@ -10,7 +10,7 @@
     background-color: #3c476e;
     height: 100vh;
     overflow-y: scroll;
-    padding:80px 4px 2px 4px;
+    padding:30px 4px 2px 4px;
 }
 .menuDiv::-webkit-scrollbar{
     display:none;
@@ -18,7 +18,7 @@
 
 .itemDiv{
     flex:5;
-    padding:80px 20px 2px 20px;
+    padding:30px 20px 2px 20px;
     overflow-y: scroll;
     background-color: #192854;
     height: 100vh;
@@ -99,6 +99,10 @@
     color:#abbbe9;
     /* margin-right: 18px;
     margin-left:10px */
+}
+.backC{
+    background-color:#ffffff !important;
+    color:#000
 }
 .totalBot{
     margin-top: 30px;

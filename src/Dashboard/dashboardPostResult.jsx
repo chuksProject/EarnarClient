@@ -161,6 +161,7 @@ const DashboardPostResult = () => {
         
           {success && <div className="SuccessInfoM suc1">{success}</div>} 
           {notSuccessful && <div className="SuccessInfoM suc2">{notSuccessful}</div>}
+          {err && <div className="SuccessInfoM suc2">{err}</div>}
 
           
        

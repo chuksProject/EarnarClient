@@ -55,7 +55,8 @@ const DashboardSports = () => {
     const[list1,setList1]=useState([])
     const[list2,setList2]=useState([])
     const[list3,setList3]=useState([])
-    const [success,setSuccess]=useState()
+    const [success,setSuccess]=useState("")
+    const [notsuccess,setNotSuccess]=useState("")
 
     const handleChange = e =>{
         setInputs(prev=>({...prev,[e.target.name]:e.target.value}))
@@ -169,16 +170,19 @@ const DashboardSports = () => {
         e.preventDefault()
  
        try{
-         await axios.post("/post/sports",list2)
-        //  console.log(list2)
-        const interval = setInterval(() => {
-            setSuccess("user has been created")
-                }, 1000);
-                 clearInterval(interval);
-         
-         
+       
+            await axios.post("/post/sports",list2)
+            setSuccess('Succesful upload')
+            setTimeout(() => {
+                setSuccess('')
+              }, 5000);
+              
        }catch(err){
         setError(err.response.data)
+        setNotSuccess("files was not uploaded")
+        setTimeout(() => {
+            setNotSuccess('')
+          }, 5000);
        
        }    
         }
@@ -339,7 +343,7 @@ const DashboardSports = () => {
       </div>
       </div>
 
-       {success && <div className="chuksInput"><p style={{fontSize:'18px'}}>{success}</p></div> }
+       {/* {success && <div className="chuksInput"><p style={{fontSize:'18px'}}>{success}</p></div> } */}
      
       {trade === "sports" ?  
       <div className="GamEType">
@@ -385,6 +389,13 @@ const DashboardSports = () => {
               <input type="text" placeholder="Enter" className="pade" onChange={handleChange} name="odd" value={inputs.odd}/>
               </div>
           </div>
+
+
+          {success && <div className="SuccessInfoM suc1">{success}</div>} 
+          {notsuccess && <div className="SuccessInfoM suc1">{notsuccess}</div>} 
+          {err && <div className="SuccessInfoM suc1">{err}</div>} 
+
+
           <div>
               <div className="dashboardAdd" onClick={()=>addList2(inputs)} >Add</div>
               <div></div>

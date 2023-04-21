@@ -30,6 +30,7 @@ import Flutter from "./flutterwave"
 
 import Navbar from "./navbar"
 import DashboardHome from "./Dashboard/dashboardHome"
+import Widthdrawal from "./Dashboard/dashboardWithdrawal"
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
            <Route path="/profile" element={<Profile/>} />
            <Route path="/flu" element={<Flutter/>} />
            <Route path="/Odd" element={<OddPredict/>} />
+          
            <Route path="/agent" element={<Agent/>} />
            <Route path="/sport" element={<SportPage/>} />
            <Route path="/forex" element={<ForexPage/>} />

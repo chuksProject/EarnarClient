@@ -29,6 +29,39 @@
     padding:10px 8px;
     border-radius: 6px;
 }
+.PHONENUM{
+    margin-top: 20px;
+}
+.ApprovedButton{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #001041;
+    padding: 6px 14px;
+    border-radius: 4px;
+}
+.yesp{
+    padding: 8px 9px;
+    background-color: #fff;
+    color:#000;
+    border-radius: 4px;
+}
+.yesp:hover{
+    background-color: gray;
+    color:#fff
+
+}
+.Nop{
+    background-color: red !important; 
+    color:#fff; 
+}
+.Nop:hover{
+    background-color:#be5a5f !important; 
+    color:#fff; 
+}
+.work{
+    padding:4px !important;
+}
 .ikeli{
     background-color: #3c476e;
     color:#fff;

@@ -14,7 +14,7 @@ const Mytip =()=>{
     const [text,setText]= useState("3#$%!#DFGG")
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(10); 
+    const [itemsPerPage, setItemsPerPage] = useState(5); 
 
     const myDiv = useRef(null);
 
@@ -23,11 +23,13 @@ const Mytip =()=>{
 //   if(tr === "/tip"){
 //     console.log("Mr kingsley is Good and nan")
 //   }
-const totalPages = Math.ceil(sportInfo.length / itemsPerPage);
+// const totalPages = Math.ceil(sportInfo.length / itemsPerPage);
 
-const handlePageChange = (pageNumber) => {
-  setCurrentPage(pageNumber);
-};
+// const handlePageChange = (pageNumber) => {
+//   setCurrentPage(pageNumber);
+// };
+
+
 
 
        const [tip,setTip] = useState("Tip")
@@ -54,7 +56,7 @@ const handlePageChange = (pageNumber) => {
         }
         userInfom()
     
-      },[])
+      },[sportInfo])
 
    
 
@@ -93,6 +95,19 @@ const handlePageChange = (pageNumber) => {
         // alert('copied') 
         
     }
+
+    const indexOfLastPost = currentPage * itemsPerPage; 
+const indexOfFirstPost = indexOfLastPost - itemsPerPage;
+const  currentPosts = sportInfo.slice(indexOfFirstPost,indexOfLastPost);
+const pageNumber = [];
+
+ for(let i = 1; i <= Math.ceil(sportInfo.length / itemsPerPage ); i++ ){
+  pageNumber.push(i)
+ }
+
+ const changePage=(pageNumber)=>setCurrentPage(pageNumber);
+ const changePage1=(pageNumber)=>setCurrentPage(pageNumber);
+ 
 
 
 
@@ -152,14 +167,8 @@ const handlePageChange = (pageNumber) => {
                    <div className="FOR">
                <div className="Leaque tipHeightDiv">
 
-               {/* {sportInfo(totalPages).map((_, index) => (
-    <div key={index} active={index + 1 === currentPage} onClick={() => handlePageChange(index + 1)}>
-      {index + 1}
-    </div>
-  ))} */}
-                   
-                
-            {sportInfo.map((user,id)=>(
+     
+            {currentPosts.map((user,id)=>(
                    <div key={id}>
             <ul className={(user.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{user.time}</li>
@@ -172,7 +181,19 @@ const handlePageChange = (pageNumber) => {
             </ul>
         </div>
         ))}
+          <div className="tomh67"> 
+       <ul className="tomh">
+        { pageNumber.map((number,index)=>(
+          <li key={index} onClick={()=>changePage(number)} className="">
+           <a href="#" className="tomh1">
+             {number}
+           </a>
+          </li>
+        ))}
+        </ul>
         
+
+        </div>
      
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
@@ -310,7 +331,7 @@ const handlePageChange = (pageNumber) => {
                <div className="Leaque tipHeightDiv">
                    
                 
-               {sportInfo.map((users,id)=>(
+               {currentPosts.map((users,id)=>(
                    <div key={id}>
             <ul className={(users.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{users.time}</li>
@@ -323,6 +344,20 @@ const handlePageChange = (pageNumber) => {
             </ul>
         </div>
         ))}
+
+   <div className="tomh67"> 
+       <ul className="tomh">
+        { pageNumber.map((numb,index)=>(
+          <li key={index} onClick={()=>changePage1(numb)} className="">
+           <a href="#" className="tomh1">
+             {numb}
+           </a>
+          </li>
+        ))}
+        </ul>
+        
+
+        </div>
      
        
       
@@ -451,7 +486,7 @@ const handlePageChange = (pageNumber) => {
             <div className="MyTip">
             <div className="Free">
                <div>
-                   <p className="Free_ExportTT Dop">Daily</p>
+                   <p className="Free_ExportTT Dop">Hourly</p>
                </div>
              
           </div>
@@ -700,7 +735,7 @@ const handlePageChange = (pageNumber) => {
           
                     </div>
      
-                    <div className="MyTip MyTipUp MyPity">
+                    {/* <div className="MyTip MyTipUp MyPity">
             <div className="Free">
                <div>
                    <p className="Free_ExportTT Dop">Daily</p>
@@ -824,7 +859,7 @@ const handlePageChange = (pageNumber) => {
                  
      
           
-                    </div>
+                    </div> */}
      
                     <div className="MyTip">
             <div className="Free">
@@ -972,7 +1007,7 @@ const handlePageChange = (pageNumber) => {
        <div className="MyTip ">
        <div className="Free">
           <div>
-              <p className="Free_ExportTT Dop">Daily</p>
+              <p className="Free_ExportTT Dop">Hourly</p>
           </div>
         
      </div>
@@ -1222,7 +1257,7 @@ const handlePageChange = (pageNumber) => {
      
                </div>
 
-               <div className="MyTip MyTipUp MyPity">
+               {/* <div className="MyTip MyTipUp MyPity">
        <div className="Free">
           <div>
               <p className="Free_ExportTT Dop">Daily</p>
@@ -1346,7 +1381,7 @@ const handlePageChange = (pageNumber) => {
             
 
      
-               </div>
+               </div> */}
 
                <div className="MyTip">
        <div className="Free">

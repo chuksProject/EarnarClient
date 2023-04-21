@@ -1,16 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "../style/dashboardStyles/dashboardFunding.css"
+import Withdrawal from "./dashboardWithdrawal"
 
-const dashboardFunding = () => {
+const DashboardFunding = () => {
+
+    const [funds,setFunds]=useState("credit")
+
+
+
   return (
     <div>
         <div className="fortCredit">
         <div className="Sporthead headSport">
-            <div className="Sport12 credit fort">Credit User</div>
-            <div className="Sport12 credit fort">Withdrawal Request</div>
+            <div className="Sport12 credit fort" onClick={()=>setFunds("credit")}>Credit User</div>
+            <div className="Sport12 credit fort" onClick={()=>setFunds("Withdrawal")}>Withdrawal Request</div>
         </div>
         </div>
 
+
+        {funds === "credit"? 
         <div className="GamEType">
             <div className="remey">
                 <div className="TexT">
@@ -30,9 +38,11 @@ const dashboardFunding = () => {
             </div>
             <div className="Sport12 SeconT">Credit</div>
         </div>
+        :""}
+        {funds === "Withdrawal"?<Withdrawal/>:""}
     
     </div>
   )
 }
 
-export default dashboardFunding
+export default DashboardFunding

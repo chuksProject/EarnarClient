@@ -159,6 +159,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     font-size: 16px;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .opst:hover{
     background-color: #fff;
@@ -273,12 +274,14 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 position: absolute;
  left:40%;
  right:40%;
- top:10%;
+ top:50%;
+ 
     padding:8px 10px;
    margin:auto;
     width:15%;
     text-align: center;
     z-index: 20;
+    transform:translate(-50%,-50%)
 }
 .suc1{
     background-color: #4e9479;
