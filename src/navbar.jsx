@@ -70,7 +70,7 @@ const Navbar= () => {
                   <ul className="paulFr">
                       <li className="padup_Guide"></li>
                       <li className="paulmy_man">{currentUser?.username} </li>
-                      <li className="Email_Like">{currentUser?.email}</li>
+                      <li className="Email_Like"><div className="Email_Like2">{currentUser?.email}</div></li>
                       <li className="paulmy_man">ID:00000{currentUser?.id}</li>
                       <a href="/wallet" className="FeedDiv"><li className="LogOutDiv_UN">My Wallet</li></a>
                       <a href="/profile" className="FeedDiv"><li className="LogOutDiv_UN">My Profile</li></a>

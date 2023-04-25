@@ -8,6 +8,7 @@ const DashboardSports = () => {
     const [err,setError]= useState(null)
     const [userInfo1,setUserInfo1]=useState([])
     const [userFind,setUserFind]=useState([])
+    const [type,setType]= useState('')
 
     const [inputs,setInputs]=useState({
         id:"",
@@ -19,13 +20,16 @@ const DashboardSports = () => {
         odd:""
     })
 
+
+
     const [inputs1,setInputs1]=useState({
-      
         pair:"",
         condition:"",
         entry:"",
         takeProfit:"",
         stopLoss:"",
+        TP_no_Of_Pips:"",
+        SL_no_Of_Pips:""
         
     })
     const [inputs2,setInputs2]=useState({
@@ -97,6 +101,8 @@ const DashboardSports = () => {
             stopLoss:"",
         });
     }
+
+
     
     const addList1=(todo)=>{
  
@@ -106,6 +112,7 @@ const DashboardSports = () => {
 
         }
         setList1([...list1,newTodo])
+        console.log(inputs1)
        
 
         setInputs1({
@@ -114,6 +121,8 @@ const DashboardSports = () => {
             entry:"",
             takeProfit:"",
             stopLoss:"",
+            TP_no_Of_Pips:"",
+            SL_no_Of_Pips:""
         });
 
    
@@ -161,10 +170,28 @@ const DashboardSports = () => {
             condition:"",
             expireTime:"",
         });
-
-   
        
     }
+
+
+const onChangeHanler =(e)=>{
+    const vale = e.target.value;
+
+    switch(vale){
+        case "hourly":
+            setType("hourly")
+        break;
+        case  "daily":
+            setType("daily")
+        break;
+        case "weekly":
+            setType("weekly")
+        break;
+        default:
+    }
+
+}
+
 
     const handleSumit = async e =>{
         e.preventDefault()
@@ -190,19 +217,11 @@ const DashboardSports = () => {
 
         const handleSumit9 = async e =>{
             e.preventDefault()
-     
            try{
              await axios.post("/post/forex",list1)
-            //  console.log(list2)
-            const interval = setInterval(() => {
-                setSuccess("user has been created")
-                    }, 1000);
-                     clearInterval(interval);
-             
-             
+             console.log(list1) 
            }catch(err){
-            setError(err.response.data)
-           
+            console.log(err)
            }    
             }
 
@@ -446,12 +465,16 @@ const DashboardSports = () => {
       <div className="GamEType">
           <div className="GamEType1 daro">
               <div className="GamEType2">Trade Type</div>
-              <div className="GamEType3 juji"><select className="selectDiv">
-                  <option>Hourly</option>
-                  <option>Daily</option>
-                  <option>Weekly</option></select></div>
+              <div className="GamEType3 juji"><select className="selectDiv" onChange={onChangeHanler}>
+                  <option value="hourly">Hourly</option>
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option></select></div>
           </div>
           
+          {/* <div className="GamEType1 diappear" >
+              <div className="GamEType2">Pair</div>
+              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="tradeType" onChange={handleChange1} value={type}/></div>
+          </div> */}
           <div className="GamEType1">
               <div className="GamEType2">Pair</div>
               <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="pair" onChange={handleChange1} value={inputs1.pair}/></div>
@@ -477,11 +500,15 @@ const DashboardSports = () => {
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Tp No of Pips  </div>
-              <div className="GamEType3"></div>
+              <div className="GamEType3">
+              <input type="text" placeholder="Enter" className="pade" name="TP_no_Of_Pips" onChange={handleChange1} value={inputs1.TP_no_Of_Pips} />
+              </div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">SL No of Pips  </div>
-              <div className="GamEType3"></div>
+              <div className="GamEType3">
+              <input type="text" placeholder="Enter" className="pade" name="SL_no_Of_Pips" onChange={handleChange1} value={inputs1.SL_no_Of_Pips} />
+              </div>
           </div>
           <div>
               <div className="dashboardAdd" onClick={()=>addList1(inputs1)
@@ -493,12 +520,14 @@ const DashboardSports = () => {
           <div className ="RomaDAs" key={app1.id}>
               <div style={{width:"80%"}}>
                   <ul className="GEoniPad">
-                      <li>{app1.id}</li>
+                    
                       <li>{app1.todo.pair}</li>
                       <li>{app1.todo.condition}</li>
                       <li>{app1.todo.entry}</li>
                       <li>{app1.todo.takeProfit}</li>
                       <li>{app1.todo.stopLoss}</li>
+                      <li>{app1.todo.TP_no_Of_Pips}</li>
+                      <li>{app1.todo.SL_no_Of_Pips}</li>
                   </ul>
               </div>
               <div style={{width:"20%",textAlign:"center",color:"#fff",display:""}}><div className="Asaa" onClick={()=>deleteTodo1(app1.id)}>Remove</div></div>

@@ -7,6 +7,14 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 const DashboardHome1 = () => {
     const {currentUser} = useContext(AuthContext);
 
+   
+    const firstTime = new Date().getTime();
+    const [registeredTime,setRegisteredTime]=useState(`${firstTime}`)
+    const now = new Date().getTime();
+    
+
+    console.log(`${registeredTime}`)
+
      const [sap,setSap]=useState(null)
 
     useEffect(()=>{
@@ -70,7 +78,7 @@ const DashboardHome1 = () => {
       ];
 
 
-      const changewith = 1000
+      const changewith = 1580
         
       
    
@@ -111,10 +119,10 @@ const DashboardHome1 = () => {
                     {/* <div>
                         Chart Div
                     </div> */}
-                    <div>
+                    <div className="ChartFArea">
                     
         <AreaChart
-      
+          overflowX="hidden"
           width={changewith}
           height={600}
           data={data}

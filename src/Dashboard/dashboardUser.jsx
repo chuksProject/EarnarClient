@@ -5,6 +5,15 @@ import axios from "axios";
 
 const DashboardUser = () => {
   const [userInfo,setUserInfo]=useState([])
+  const [searchQuery, setSearchQuery] = useState('');
+
+  function handleInputChange(event){
+    setSearchQuery(event.target.value);
+  }
+  function filterData(data){
+    return data.filter(item => item.username.toLowerCase().includes(searchQuery.toLowerCase()) 
+    );
+  }
 
   useEffect(()=>{
     const userInfom = async ()=>{
@@ -20,12 +29,14 @@ const DashboardUser = () => {
     userInfom()
 
   },[])
+
+  const filteredData = filterData(userInfo);
   return (
     <div>
 
       <div className="userRo">
         <div className="helpin">
-            <input type="text"  placeholder="Search for username,id,E-mail" className="forr"/>
+            <input type="text"  placeholder="Search for username" className="forr" onChange={handleInputChange} />
           
         </div>
         <div className="helpin1"><div className="ikeli">Active</div></div>
@@ -50,7 +61,7 @@ const DashboardUser = () => {
                  
             
 
-                  {userInfo.map((user,id)=>(
+                  {filteredData.map((user,id)=>(
                   <div key={id}>
                     <ul className={(user.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"} >
                     <li>{user.id}</li>

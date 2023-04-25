@@ -52,6 +52,10 @@
     cursor:pointer
 
 }
+.param{
+    background-color: #fff !important; 
+    color:#192854;
+}
 .dashList li:hover{
     background-color: #1f326b;
  
@@ -102,7 +106,7 @@
 }
 .backC{
     background-color:#ffffff !important;
-    color:#000
+    color:#000 !important
 }
 .totalBot{
     margin-top: 30px;

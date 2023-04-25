@@ -427,8 +427,15 @@ ul{
     text-align: center;
 }
 .Email_Like{
-    padding:4px 2px;
+    padding:4px 6px;
     text-align: center;
+  
+}
+.Email_Like2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .FeedDiv{
    /* text-align: center; */

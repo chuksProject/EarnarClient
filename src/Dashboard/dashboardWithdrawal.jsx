@@ -26,7 +26,7 @@ const dashboardWithdrawal = () => {
                   {/* {userInfo.map((user,id)=>( */}
                   <div >
                     <ul className="TimeDiv1 ADDTimeDbg work" >
-                    <li>1</li>
+                    <li>Samuel</li>
                       <li>09060243960</li>
                       <li>Chukwubuike Kingsley</li>
                       <li>Kingsley@gmail.com</li>

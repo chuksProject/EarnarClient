@@ -127,13 +127,25 @@
     cursor: pointer;
     border-radius: 6px;
     padding:4px 6px;
-    background-color: #1f326c;
+    background-color: #001041;
+}
+.copyCode2{
+    background-color: #000 !important;
+    padding:8px 12px !important;
 }
 .copyCode{
     cursor: pointer;
-    color:#e4e2e2;
+    color:#fff;
     font-size: 16px;
     font-weight: 500;
+    padding:0 6px;
+    background-color: #4e64a8;
+    outline:0;
+    border:none;
+}
+.copyCode4{
+    max-width: 150px;
+    width:100%;
 }
 .EditProfileButtoon{
     width:100px;

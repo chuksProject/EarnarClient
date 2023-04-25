@@ -17,6 +17,9 @@ const WalletOverView =()=>{
     const [pinAmount,setPinAmount]=useState("Enter Amount")
     const [move,setMove] = useState(true)
     const [active,setActive] = useState(true)
+    const [walletAcount,setWalletAccount]=useState("000")
+    const [affliateAcount,setAffliateAccount]=useState("000")
+    
   
     const [amount,setAmount] =useState(null)
     const {currentUser} = useContext(AuthContext);
@@ -160,7 +163,7 @@ const trig =()=>{
                       <div className="Firet">
                       <div className="Main_WALL1">
                           <p className="Is_KB">Main Wallet</p>
-                          <p className="Is_KB1">₦5000.00</p>
+                          <p className="Is_KB1">₦{walletAcount}.00</p>
                       </div>
                       <div className="Depost">
                           <p className="dep1 add1" onClick={ depositT}>Deposit</p>
@@ -171,7 +174,7 @@ const trig =()=>{
                   <div className="Main_WALL">
                       <div className="Main_WALL1">
                           <p className="Is_KB">Affliate Earning</p>
-                          <p className="Is_KB1">₦50,000.00</p>
+                          <p className="Is_KB1">₦{affliateAcount}.00</p>
                       </div>
                       <div className="Trans" onClick={transferT}>Transfer</div>
                   </div>

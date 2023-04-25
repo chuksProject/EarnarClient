@@ -205,20 +205,22 @@ const Sports1 =()=>{
 //   fetchData()
 // },[cat])
 
-// useEffect(()=>{
-//   const fetchData1 = async ()=>{
-//     try{
-//  const res = await axios.get(`/post/sports/tip3`)
-//    setPosts1(res.data)
+useEffect(()=>{
+  const fetchData1 = async ()=>{
+    try{
+ const res = await axios.get(`/post/sports/tip3`)
+   setPosts1(res.data)
+
+   console.log(res.data)
   
  
-//     }catch(err){
-//       console.log(err)
+    }catch(err){
+      console.log(err)
 
-//     }
-//   }
-//   fetchData1()
-// },[post1])
+    }
+  }
+  fetchData1()
+},[post1])
 
   useEffect(()=>{
     AOS.init();
@@ -373,7 +375,7 @@ const Sports1 =()=>{
                <Carousel
   swipeable={false}
   draggable={false}
-  showDots={true}
+  showDots={false}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
   infinite={true}
@@ -393,8 +395,7 @@ const Sports1 =()=>{
       
             
                
-
-               {/* {post1.map((app,id)=>(
+ {post1.map((app,id)=>(
                    <div className="sport2 cappin" key={id}>
                        <div className="divS"><span className="Nog">Game No: </span>SP-{date}/{app.gameNo}</div>
                        <p className="dailyP21">Daily Profit</p>
@@ -403,10 +404,10 @@ const Sports1 =()=>{
                        <div className={app.checked ===true?"EarnLoss":"EarnLoss loss"}>{app.checked ===true?"Earned":"Loss"}</div>
 
                    </div>
-                   ))} */}
+                   ))} 
              
 
-             <div className="sport2 cappin">
+             {/* <div className="sport2 cappin">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0017</div>
 
                             <div className="busyer">
@@ -430,8 +431,8 @@ const Sports1 =()=>{
                           
                             <div className="EarnLoss">Earned</div>
      
-                        </div>
-                        <div className="sport2 cappin">
+                        </div> */}
+                        {/* <div className="sport2 cappin">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0016</div>
 
                             <div className="busyer">
@@ -455,8 +456,8 @@ const Sports1 =()=>{
                           
                             <div className="EarnLoss">Earned</div>
      
-                        </div>
-                        <div className="sport2 cappin">
+                        </div> */}
+                        {/* <div className="sport2 cappin">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0015</div>
 
                             <div className="busyer">
@@ -480,9 +481,9 @@ const Sports1 =()=>{
                           
                             <div className="EarnLoss">Earned</div>
      
-                        </div>
+                        </div> */}
 
-                        <div className="sport2 cappin">
+                        {/* <div className="sport2 cappin">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0014</div>
 
                             <div className="busyer">
@@ -506,8 +507,8 @@ const Sports1 =()=>{
                           
                             <div className="EarnLoss">Earned</div>
      
-                        </div>
-                        <div className="sport2 cappin">
+                        </div> */}
+                        {/* <div className="sport2 cappin">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0013</div>
 
                             <div className="busyer">
@@ -531,7 +532,7 @@ const Sports1 =()=>{
                           
                             <div className="EarnLoss">Earned</div>
      
-                        </div>
+                        </div> */}
 
 
                   

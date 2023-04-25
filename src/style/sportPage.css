@@ -31,13 +31,19 @@
 }
 .ifi{
     text-decoration: none;
-    color:#fff
+    color:#fff;
+ 
+}
+.ifi:hover{
+    color:#000;
 }
 
-.NowUpSign:hover{
+.NowUpSign:hover {
 background:#fff;
-color:#000
+color: #000 !important;
 }
+
+
 .SportBetting{
     color:#c6cbd2;
     margin:45px auto 20px auto;

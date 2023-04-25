@@ -63,6 +63,14 @@
     color:#fff;
     margin-bottom: 10px;
 }
+.ChartFArea{
+    width:100%;
+    max-width: 100%;
+    overflow-x: scroll;
+
+}
+.ChartFArea::-webkit-scrollbar {
+        display: none;}
 
 .dailyOn{
     font-size: 28px;
