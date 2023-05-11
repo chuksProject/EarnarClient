@@ -61,7 +61,7 @@
 }
 .unlock{
     text-align: center;
-    color:#7b93df;
+    color:#e1ca3b;
     font-size: 30px;
     margin-bottom: 10px;
 }
@@ -140,7 +140,7 @@ td{
         margin-bottom: 55px;
     }
     .PrmiumBanner{
-        margin: 8px auto 0 auto;
+        margin:-10px auto 0 auto;
         width:100%;
         max-width: 1500px;
         padding-bottom: 10px;

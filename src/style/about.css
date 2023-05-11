@@ -7,8 +7,8 @@
 .About_Us{
     width: 100%;
     max-width: 820px;
-    margin:180px auto;
-    color:#fff;
+    margin:130px auto;
+    color:#000;
     
 }
 
@@ -16,13 +16,15 @@
 .About_header{
     font-size: 21px;
     margin-bottom: 40px;
-    font-weight: 400;
+    font-weight: 700;
+        color: #e1ca3b;
+
 
 }
 .About_paragraph{
 
     /* background-color: #001041; */
-    background-color: #404f7e;
+    background-color: #fff;
     padding:35px 20px;
     border-radius: 5px;
 
@@ -34,7 +36,7 @@
 .Set_A_Branch{
     line-height: 25px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 

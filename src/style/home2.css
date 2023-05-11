@@ -9,11 +9,12 @@
     position: relative;
     width:50%;
     border-radius: 4px;
-    background-color: rgb(71 79 217 / 15%);
+    background-color: #2d2f4cc9;
     text-align: center;
     z-index: 1;
     /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px; */
-    box-shadow: 0 13px 27px -5px rgb(178 178 212 / 25%), 0 8px 16px -8px rgb(15 15 15 / 17%);
+    /* box-shadow: 0 13px 27px -5px rgb(178 178 212 / 25%), 0 8px 16px -8px rgb(15 15 15 / 17%); */
+    box-shadow: 0 -2px 14px -5px rgb(15 15 36 / 28%), 0px 3px 16px -4px rgb(15 15 15 / 17%);
 }
 
 .fareWo{
@@ -49,12 +50,13 @@
     font-weight: 500;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
+    color:#c1c3cb;
 }
 .Saving{
     padding:10px;
     font-size: 28px;
     font-weight: 800;
-    color:#001041;
+    color:#e1ca3b;
 
 }
 .perceT{
@@ -80,7 +82,7 @@
 }
 .AirTime{
     font-size:16px ;
-    color:#53555a;
+    color:#a6acbb;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -111,7 +113,7 @@
     text-align: center;
     font-size: 28px;
     font-weight: 700;
-    color:#3c476e;
+    color:#e1ca3b;
     margin-bottom: 20px;
     padding-top: 20px;
 }
@@ -130,14 +132,19 @@
 
     background: #fff;
     border-radius: 26px;
-    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+      box-shadow: 0 2px 8px rgb(18 14 56 / 32%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
     color: #000;
     cursor: pointer;
   
 }
+.Forex12:hover{
+    background: #2d2d4c;
+    color:#fff  
+}
+
 .SPM{
     display:flex;
     justify-content: space-between;
@@ -202,7 +209,9 @@
 
 
     border-radius: 6px;
-    background: rgb(71 79 217 / 15%);
+    /* background: rgb(71 79 217 / 15%);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%); */
+        background: rgb(6 8 28 / 15%);
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -212,17 +221,17 @@
     padding:10px 2px;
     text-align: center;
     /* background-color:#cbcbcb; */
-    background-color: #3c476e;
+    background-color: #e1ca3b;
     font-size: 16px;
     font-weight: 600;
     width:30%;
     max-width: 400px;
     margin:-20px auto 20px auto;
-    color: #e9e9ef;
+    color: #3c476e;
 }
 .ifYou{
     width:75%;
-    color:#040f32;
+    color:#d4d9e9;
     margin:0 auto 10px auto;
     font-size: 18px;
     font-weight: 400;
@@ -239,7 +248,7 @@
     width:200px;
     height:4px;
     margin: 0 auto 20px auto;
-    background-color: #5b6587;
+    background-color: #8f94aac2;
 }
 .with{
     font-size: 28px;
@@ -331,7 +340,7 @@
     width:50%;
     max-width: 415px;
     margin:30px auto 0 auto;
-    color:#000;
+    color:#e1ca3b;
    
     margin-bottom: 40px;
     transition: ease all 2s;
@@ -397,7 +406,7 @@ background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119,
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 10px;
-    color:#2d3c73;
+    color:#919dcb;
 
 }
 .pickStuff{
@@ -452,11 +461,11 @@ padding:10px 10px 0px 10px;
 .Great{
     padding-top:60px;
     padding-bottom: 50px;
-    background-color:rgb(71 79 217 / 15%);
+    background-color:#fff;
     height:300px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     /* border: 20px solid rgb(60 71 110); */
-    border: 20px solid rgb(158 169 208);
+    /* border: 20px solid rgb(158 169 208); */
   
     border-radius: 10px;
 }
@@ -496,7 +505,7 @@ padding:10px 10px 0px 10px;
     .commT {
         width: 100%;
         margin-bottom:20px;
-        background-color:rgb(71 79 217 / 15%);
+        background-color:#323448a6;
     }
 
 

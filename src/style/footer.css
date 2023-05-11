@@ -5,8 +5,8 @@
     padding: 0 10px;
 }
 .Footer_Bg_Color{
-    background-color:#1c2443;
-    /* background-color:#3a44665e; */
+    /* background-color:#1c2443; */
+    background-color:#1e202e;
     /* padding:40px 10px; */
     padding: 50px 10px 40px 10px;
     /* margin-top: 35px; */
@@ -88,6 +88,9 @@
         text-align: center; */
         flex-direction: column;
     } 
+    .Footer_Copyright{
+     width:85%;
+    }
     .MobileFooter{
        display:block 
     }
@@ -115,7 +118,7 @@
 
 @media(min-width:1250px){
     .Footer_Div{
-        max-width: 1200px;
+        max-width: 1000px;
     }
 }
 

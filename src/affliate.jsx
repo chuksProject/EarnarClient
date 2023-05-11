@@ -9,7 +9,7 @@ const Affliate =()=>{
 
     const {currentUser} = useContext(AuthContext);
     return(
-        <div className=" " style={{background:"#192854"}}>
+        <div className=" " style={{background:"#2a2c42"}}>
        
 
          <div className="AffliateDiv34">

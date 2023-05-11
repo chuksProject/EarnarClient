@@ -135,7 +135,7 @@ const trig =()=>{
 
 
     return(
-        <div className="Parent_Over_File_Bg BgColorT" >
+        <div className="Parent_Over_File_Bg BgColorT"   style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
 
 
 

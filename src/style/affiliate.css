@@ -6,7 +6,7 @@
  background-color:inherit;
 }
 .Header_Div_New_Bg{
-    background-color: #3c476e;
+    background-color: #383f56;
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
     position: fixed;
     top:0;
@@ -15,12 +15,12 @@
     z-index: 6000;
 }
 .AffliateBanner{
-    margin: 54px auto 0 auto;
+    margin: 46px auto 0 auto;
     width:100%;
     max-width: 1500px;
 }
 .ExcitedShare{
-    color:#7b93df;
+    color:#e1ca3b;
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 28px;
@@ -42,11 +42,11 @@
     padding:10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 2px 2px 2px #2f4586;
+      box-shadow: 0px 2px 2px 2px #2e3142e3;
 }
 .Watch_Now25:hover{
     background-color: #fff;
-    box-shadow: 0px 2px 2px 2px #c9c8e3de;
+    box-shadow: 0px 2px 2px 2px #232324de;
     color:#000; 
 }
 .ButtonT{
@@ -103,7 +103,7 @@
     margin: 100px auto 0 auto;
 }
 .Create_AccountD{
-    color:#969fbb;
+    color:#646a7c;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
@@ -135,7 +135,7 @@
 }
 
 .Your_Earning_never_Stop{
-    color:#c4c8d5;
+    color:#e1ca3b;
     padding:10px;
     text-align: center;
     font-weight: 600;
@@ -145,11 +145,13 @@
     width:26%;
 }
 .Package_Up{
-   background-color: #354269; 
-   width:66%;
-   margin:20px auto;
-   padding:30px 10px;
-   border-radius: 5px;
+  
+    background-color: #405ecd;
+    width: 66%;
+    margin: 20px auto;
+    padding: 30px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 12px #2e4187;
 }
 .Each_Time_your{
     text-align: center;
@@ -175,12 +177,12 @@
 }
 
 .Start_Now_Button:hover{
-    background-color:#115f11;
-    box-shadow: 0px 2px 2px #2e5c4c;
+     background-color: #505476;
+    box-shadow: 0px 2px 12px #464a6a;
 }
 .header_list li a{
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: 0.5px;
 }
 .Promotional_Material{

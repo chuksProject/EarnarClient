@@ -10,7 +10,7 @@
 .For_General_Div{
     width:48%;
     box-shadow: 0 21px 17px 1px rgb(0 0 0 / 10%);
-    background-color: cornflowerblue;
+  background-color: #768295;;
     border-radius: 5px;
     padding:15px 20px;
     margin:35px 0;
@@ -25,6 +25,10 @@
 }
 .infoTrY{
     margin-bottom: 8px;
+    color:#000;
+}
+.monday{
+    color:#000;
 }
 .fontWW{
     font-weight: 700;
@@ -35,6 +39,8 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.3px;
+     color: #b5aeae;
+
 }
 .ClickHereMe{
     color:#590795;

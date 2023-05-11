@@ -47,7 +47,7 @@ const Contact =()=>{
                            </div> 
                        </div>
                        <p className="infoTrY">Working Hours :</p>
-                       <p>Mondays to Saturdays (9am to 5pm) (WAT)  </p>
+                       <p className="monday">Mondays to Saturdays (9am to 5pm) (WAT)  </p>
                      
                    </div>
 

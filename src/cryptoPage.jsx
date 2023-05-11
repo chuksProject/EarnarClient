@@ -76,7 +76,7 @@ const CryptoPage = () => {
    
 
   return (
-    <div style={{  backgroundColor:"#192854"}}>
+    <div style={{  backgroundColor:"#2a2c42"}}>
         <div className="sportPa">
           <div>
           <img src="/img/earnarsbanner23.png" className="AffliateBanner" alt=""/>
