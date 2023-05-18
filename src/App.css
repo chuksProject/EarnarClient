@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,700&family=Open+Sans:wght@300&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Mulish', sans-serif;
+  /* overflow: hidden; */
+}
+html{
+  /* background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95)); */
+  background-color: #30335af5;
+}
+

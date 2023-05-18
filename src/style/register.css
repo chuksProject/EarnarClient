@@ -1,0 +1,123 @@
+.BgColor{
+    /* background-color: #1f326d; */
+    width:100vw;
+    height:100vh;
+    /* max-height: 100%; */
+    overflow-y: scroll;
+}
+.BgColor::-webkit-scrollbar {
+    display: none;
+    
+}
+.Form_Div{
+   width:100%;
+   max-width: 450px;
+   transform:translate(0%,0%);
+   margin: 100px auto;
+   /* box-shadow: 0px 2px 8px 1px #5c6a96;
+   background-color: #001041; */
+       box-shadow: 0px 2px 8px 1px #4d546a;
+    background-color: #20263a;
+   padding:15px 15px;
+   border-radius: 5px;
+   
+}
+.formDivPAd{
+    padding:0 8px;
+}
+.New_Account{
+        text-align: center;
+        margin-bottom: 10px;
+        color:#e1ca3b;
+        font-weight: 600;
+}
+.Full_Name{
+    width:100%;
+    padding:7px;
+    margin-bottom: 10px;
+}
+.Full_Name:focus{
+  outline:none;
+  box-shadow: 0px 2px 2px #8a8b95;
+  border-radius: 4px;
+}
+.RegisterM{
+    padding:10px 10px;
+    text-align: center;
+    background-color: #fec82f;
+    border-radius: 40px;
+    color:#000;
+    cursor:pointer;
+
+}
+.RegisterM:hover{
+    background-color:#48b977;
+    color:#fff;
+
+}
+.Or_with2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:18px 0;
+    color:#fff
+}
+.Or_With{
+   width:33%;
+   border:0.5px solid #958d8da8;; 
+   
+}
+.Googgle{
+    background-color: #fff;
+    padding:10px 10px;
+    color:#000;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.Already_Account{
+    text-align: center;
+    color:#fff;
+}
+.LOGIN_HERE_NOW{
+    /* color:greenyellow; */
+    padding:10px;
+    text-align: center;
+    font-weight: 700;
+}
+.p_LoGIn{
+    color:greenyellow;
+    text-decoration: none;
+}
+.Over_18{
+    color:#fff;
+    font-size: 12px;
+}
+.HERE0{
+    color:#964747;
+    font-size: 12px;
+    font-weight: 500;
+}
+.Checkbox_div{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: baseline;
+}
+.Bym{
+    margin-right: 3px;
+}
+.Include{
+    color:#964747;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.NoteP{
+    color:#fff;
+}
+
+@media (max-width:768px){
+    .Form_Div {
+        margin: 28px auto !important;
+       
+    }
+}

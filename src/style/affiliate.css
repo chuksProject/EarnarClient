@@ -1,0 +1,359 @@
+.AffliateDiv34{
+ width:100%;
+ max-width: 1500px;
+ margin:0 auto;
+ height: auto;
+ background-color:inherit;
+}
+.Header_Div_New_Bg{
+    background-color: #383f56;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 6000;
+}
+.AffliateBanner{
+    margin: 46px auto 0 auto;
+    width:100%;
+    max-width: 1500px;
+}
+.ExcitedShare{
+    color:#e1ca3b;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 500;
+}
+.EarnNaira{
+    color:#c4c8d5;
+    font-size: 24px;
+    text-align: center;
+
+}
+.Watch_Now25{
+    border:none;
+    background-color: #536cb9;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color:#fff;
+    padding:10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+      box-shadow: 0px 2px 2px 2px #2e3142e3;
+}
+.Watch_Now25:hover{
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 2px #232324de;
+    color:#000; 
+}
+.ButtonT{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.SimpleLet{
+    color:#c4c8d5;
+    text-align: center;
+    padding:15px 8px;
+    border-bottom:0.5px solid #948a8a;
+    width: 29%;
+    font-size: 18px;
+    font-weight: 600;
+    margin:0 auto;
+}
+.Create_account_Div{
+     
+     position:relative;
+     width: 200px;
+}
+.AccountPTag{
+    /* padding:5px 5px; */
+    width:30px;
+    height:30px;
+    text-align: center;
+    background-color:#455b98;
+    color:#fff;
+    font-size: 20px;
+    position:absolute;
+    top:45%;
+    right:-12px;
+    border-radius: 50%;
+    border:1px solid #fff;
+}
+.Create_account_Div1{
+    /* width:100%; */
+    width:200px;
+     height:200px;
+     border-radius: 50%;
+     background-color:#546cb9;
+     padding:4px;
+     border:1px solid #fff;
+    
+}
+.Create_account_holder_Div{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+    max-width: 1050px;
+    width: 100%;
+    margin: 100px auto 0 auto;
+}
+.Create_AccountD{
+    color:#646a7c;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+.logoM{
+    color:#fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Promo_Div2{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    max-width: 990px;
+    margin:15px auto 30px auto;
+}
+
+.Promo_Div{
+    width:32%;
+    height:200px;
+    background-color:#546cb9;
+    color:#fff;
+    border-radius: 5px;
+
+}
+
+.Your_Earning_never_Stop{
+    color:#e1ca3b;
+    padding:10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 70px auto 0 auto;
+    border-bottom:0.5px solid #948a8a;
+    width:26%;
+}
+.Package_Up{
+  
+    background-color: #405ecd;
+    width: 66%;
+    margin: 20px auto;
+    padding: 30px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 12px #2e4187;
+}
+.Each_Time_your{
+    text-align: center;
+    color:#fff;
+    width:50%;
+    margin:10px auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+.Start_Now_Button{
+    color:#fff;
+    padding:10px;
+    background-color:#354269 ;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width:150px;
+    text-align: center;
+    margin:0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px #45537d;
+    cursor: pointer;
+
+}
+
+.Start_Now_Button:hover{
+     background-color: #505476;
+    box-shadow: 0px 2px 12px #464a6a;
+}
+.header_list li a{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+.Promotional_Material{
+    text-align: center;
+    color:#fff;
+    margin-top: 70px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.PromoTv{
+    margin-bottom: 70px;
+}
+.DefBets{
+    padding:5px 5px 8px 10px;
+    margin: 10px 9px ;
+    border-left: 1px solid #fff;
+}
+.AffButton{
+    text-decoration: none;
+}
+.cap{
+    margin-bottom: 70px;
+}
+
+@media(max-width:1024px){
+    .header_list li a{
+        font-size: 14px;
+    }
+    .AffliateDiv34 {
+        max-width: 760px;
+    }
+
+    .FREE1 {
+        max-width: 768px; 
+    }
+    .WE1 {
+        width: 72%;
+    }
+    .OUR_P {
+        width:auto;
+        font-size: 22px;
+    }
+    .SapDiv {
+        width: 180px;
+    }
+    .SapImg {
+        height: 143px;
+    }
+    .Nigerian {
+        font-size: 14px;
+       
+        margin-top: 10px;
+    }
+    .Emeka {
+        margin: 2px auto 0 auto;
+    }
+    .Read {
+     
+        margin-bottom: 10px;
+        margin-top: 2px;
+    }
+    .IMGS {
+     
+        height: 142px;
+    }
+
+    .WEME {
+       
+        width: 37%;
+    }
+    .SimpleLet {
+       
+        width: 39%;
+       
+    }
+    .Create_account_holder_Div {
+        max-width: 100%;
+    }
+    .Package_Up {
+        width: 76%;
+       
+    }
+    .Promo_Div2 {
+       
+        max-width: 760px;
+        
+    }
+}
+
+@media(max-width:768px){
+    .ExcitedShare {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    .Create_account_holder_Div {
+        flex-direction: column;
+        margin: 46px auto 0 auto;
+    }
+.Package_Up {
+   
+    padding: 15px 10px;
+   
+}
+  
+    .AffliateBanner {
+        margin: 5px auto 0 auto !important;
+    }
+    .EarnNaira {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    .SimpleLet {
+        width: 70%;
+    }
+    .cap{
+        margin-bottom: 36px;
+    }
+
+    .Your_Earning_never_Stop {
+        margin: 6px auto 0 auto;
+        width: 80%;
+      
+    }
+   
+  
+   
+    .Each_Time_your {
+        width: 90%;
+       
+    }
+    .Promo_Div2 {
+        flex-direction: column;
+        padding: 0 8px;
+        width: 100%;
+      
+    }
+   
+    .Create_AccountD {
+      
+        margin-top: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px)  {
+    .Package_Up {
+         width: 70%;
+     }
+     .Promo_Div {
+         width: 70%;
+         margin: 0 auto 8px auto;
+         /* margin-bottom: 8px; */
+     }
+    
+     }
+     @media(max-width:500px){
+        .Package_Up {
+            width: 96%;
+        }
+        .Promo_Div {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .SimpleLet {
+            width: 70% !important;
+        }
+     }
+

@@ -1,0 +1,71 @@
+
+
+.For_general_Advert{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.For_General_Div{
+    width:48%;
+    box-shadow: 0 21px 17px 1px rgb(0 0 0 / 10%);
+  background-color: #768295;;
+    border-radius: 5px;
+    padding:15px 20px;
+    margin:35px 0;
+}
+.contact_p_c{
+    padding:10px 0;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #001041a1;
+    margin-bottom: 15px;
+}
+.infoTrY{
+    margin-bottom: 8px;
+    color:#000;
+}
+.monday{
+    color:#000;
+}
+.fontWW{
+    font-weight: 700;
+    font-size: 16px;
+}
+.We_areF{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+     color: #b5aeae;
+
+}
+.ClickHereMe{
+    color:#590795;
+    text-decoration: none;
+}
+.ClickHereMe:hover{
+    color:#0417a7;   
+}
+.WhattsZ{
+    color:#7c0b0bd4;
+}
+
+@media(max-width:594px){
+    .For_general_Advert{
+        flex-direction: column;
+    } 
+    .For_General_Div{
+        width:100%;
+        margin:20px 0;
+    }
+}
+@media(max-width:768px){
+    .We_areF{
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+    }
+}

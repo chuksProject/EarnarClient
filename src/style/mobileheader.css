@@ -1,0 +1,137 @@
+.Sapap{
+    /* background-color: #001041; */
+    background-color: #3c476e;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    border: 1px solid transparent;
+    /* box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%); */
+  
+}
+.derpm{
+  color:#fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 2px 0px;
+}
+.dpM{
+  margin-bottom: 8px;
+}
+.appjo{
+  background: #ffffff12;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(133, 164, 229, 0.32);
+  padding:6px 10px;
+  color:#fff
+}
+.tef{
+  text-align: center;
+  margin-top: 8px;
+}
+.derr{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Sapap1{
+    /* background-color: #001041; */
+    background-color: #3c476e;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    border: 1px solid transparent;
+    /* box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%); */
+  
+    position:fixed;
+    width:100%;
+    opacity: 0.9;
+    backdrop-filter: blur(239px);
+    top:0;
+    z-index: 1000;
+}
+.mobileH{
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+.Mobile_menu12 li{
+    padding:8px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+  .line {
+    fill: none;
+    stroke:#fff;
+    stroke-width: 4;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 40 207;
+    stroke-width: 3;
+  }
+  .line2 {
+    stroke-dasharray: 40 60;
+    stroke-width: 4;
+  }
+  .line3 {
+    stroke-dasharray: 40 207;
+    stroke-width: 4;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 4;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 4;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 4;
+  }
+  .LogIn{
+    padding:8px 14px;
+    border-radius: 24px;
+    background-color: #fff;
+    color:#001041;
+    text-decoration: none;
+  }
+
+  .IfeY{
+   
+    padding:0 20px 10px 20px;
+   
+}
+.emanu{
+  width:130px;
+  margin: 9px 0 4px 10px;
+}
+
+
+.Forexmm{
+  display:flex;
+  flex-direction: column;
+}
+.fit{
+  color:#fff;
+  text-decoration: none;
+}
+
+@media(min-width:769px){
+    .Sapap{
+        display:none;
+    }
+}

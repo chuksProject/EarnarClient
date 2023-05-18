@@ -1,0 +1,158 @@
+.ApplyFor{
+    padding: 15px 8px 4px 8px;
+    width:100%;
+    max-width: 900px;
+    margin:0 auto 10px auto
+   
+}
+.pageRisk{
+    color:#cccfd7;
+    text-align: center;
+    font-size: 16px;
+    word-spacing: 0.2px;
+
+}
+.yip{
+    text-decoration: none;
+}
+
+.AffliateBannertt{
+    margin: 8px auto 0 auto;
+    width:100%;
+    max-width: 1500px;
+    padding-bottom: 10px;
+    /* padding-top: 54px; */
+    text-align: center;
+}
+.freeB{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap:15px;
+}
+.ButtonQ{
+    padding:8px 8px;
+    background-color:#475891;
+    color:#000;
+    border-radius: 5px;
+
+}
+.fff{
+    background-color:#475891;
+   color: #cdced5
+}
+
+.fff33{
+    background-color:#fff;
+    cursor: pointer;
+}
+.fff33:hover{
+    background-color: #001041;
+    color:#fff
+}
+.AFFORDABLE{
+    padding:0 10px;
+    color:#7b93df;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.unlock{
+    text-align: center;
+    color:#e1ca3b;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.LIne{
+    width:30%;
+    background-color: #bdc7e4;
+    height:3px;
+    margin:0 auto 15px auto
+}
+.AY{
+    padding:0 8px;
+    margin-bottom:15px;
+
+
+}
+
+.TYPE{
+    width:100%;
+    position:relative;
+ 
+    max-width:1200px;
+    margin: 0 auto 0 auto;
+}
+th,td{
+    width:20%;
+    text-align: center;
+    font-size: 8px;
+    color:#fff
+}
+td{
+    font-size: 8px;
+}
+
+@media(max-width:320px){
+    td{
+        font-size: 6px;
+    } 
+    .AY{
+        padding:0 4px;
+   
+    }
+}
+@media(min-width:447px) and (max-width:768px){
+    th{
+        font-size: 12px;
+    }
+    td{
+        font-size: 13px;
+    } 
+}
+@media(min-width:769px) and (max-width:1024px){
+    .TYPE,.ApplyFor{
+      
+        max-width:768px;
+       
+    }
+    th{
+        font-size: 13px;
+    }
+    td{
+        font-size: 11px;
+    } 
+
+
+}
+@media(min-width:1024px){
+    th{
+        font-size: 14px;
+    }
+    td{
+        font-size: 12px;
+
+    } 
+    .AY {
+       
+        margin-bottom: 55px;
+    }
+    .PrmiumBanner{
+        margin:-10px auto 0 auto;
+        width:100%;
+        max-width: 1500px;
+        padding-bottom: 10px;
+        padding-top: 50px;
+       
+        text-align: center;
+    }
+}
+@media(max-width:768px){
+    .unlock {
+       
+        font-size: 26px;
+        
+    }
+}

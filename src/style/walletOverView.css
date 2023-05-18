@@ -1,0 +1,561 @@
+.Wallet_P_Div{
+    width:100%;
+    max-width: 1200px;
+    /* height:100vh; */
+    margin:100px auto;
+    background-color:#465b9b8a ;
+    padding:20px 15px;
+    overflow-y: scroll;
+    border-radius: 4px;
+}
+
+.Wallet_P_Div::-webkit-scrollbar {
+    display: none;
+    
+}
+
+.gbg{
+    background-color: #fff !important;
+    color:#000 !important;
+}
+
+.overView{
+    padding:12px 10px;
+    color:#fff;
+    background-color:#001041;
+    width:33%;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.overView:hover{
+background-color:#00104180;
+}
+
+
+.P_P{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Status_Active{
+    text-align: center;
+    margin: 32px 0 15px 0;
+    color:#fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+.Actn{
+    padding:5px 10px;
+    font-size: 18px;
+    background-color: greenyellow;
+    color:#000;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+/* .Firet{
+ border-radius: 10px;
+ position:relative;
+} */
+.Main_WALL{
+    width:30%;
+    height:auto;
+    border-radius: 10px;
+    box-shadow: rgb(80 80 118 / 25%) 0px 13px 27px -5px, rgb(152 164 195 / 30%) 0px 8px 16px -8px;
+    
+
+}
+.Main_WALL1{
+    display:flex;
+    /* align-items: center; */
+}
+.Is_KB{
+    padding:20px 10px;
+    width:20%;
+    text-align: center;
+    background-color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Is_KB1{
+    padding:32px 10px;
+    width:80%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    text-shadow: white;
+    background-color:#6a779df7 ;
+}
+.Depost{
+    display:flex;
+    align-items: center;
+}
+.dep1{
+    width:50%;
+    padding:10px;
+    text-align: center;
+    cursor:pointer
+}
+.add1:hover{
+    background-color:#00104180;
+    color:#fff
+}
+.add1{
+    background-color: #556fbdf2;
+    color: #fff;
+}
+.add2{
+    background-color:#001041;
+    color:#fff;
+}
+.lik{
+    height: 137px;
+}
+
+.add2:hover{
+    background-color:#32498ae8;
+}
+.Trans{
+    padding:10px;
+    text-align: center;
+    background-color:#001041;
+    color:#fff;
+    cursor: pointer;
+}
+.Trans:hover{
+    background-color:#00104180;
+}
+.Pay_Bills{
+    width:30%;
+    background-color:#fff;
+    color:#000;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Data{
+    width:70%;
+    background-color: #69769c;
+}
+.With_upto{
+    display:flex
+}
+.Betting1{
+    display:flex;
+    justify-content:space-evenly ;
+}
+.TREEH{
+ display:flex;
+ justify-content: space-between;
+ 
+}
+.LikeSed{
+    margin-top: 30px;
+}
+.AIR_I{
+    /* padding:20px 25px;  */
+    background-color:#536087;
+    color:#fff;
+    margin: 31px 0;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AllTrans{
+    color:#000;
+    margin-top: 20px;
+    font-size: 16px;
+    padding:15px 20px;
+    display:flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 15px;
+
+    align-items: center;
+}
+.REEE{
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.TYPE_DATE{
+ display:flex;
+ align-items: center;
+ background-color:#455c98;
+}
+.STaTus{
+    padding:10px  0;
+    width:25%;
+    text-align: center;
+    color:#fff
+}
+.DopoR{
+    display:flex;
+    align-items: center;
+}
+.Wallet_Up_Div{
+    padding-top: 50px;
+}
+.SuccessId{
+    padding:10px 0;
+    width:25%;
+    text-align: center;
+    color:#fff;
+}
+.DOPOPO{
+    background-color:#8b9ed3;
+    margin-bottom: 2px;
+}
+.DOPOPO:hover{
+    background-color: #384e90;
+    margin-bottom: 0;
+}
+.asem{
+    background-color:#384e90 !important;
+}
+.Silver_Weekly2{
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+ 
+}
+.Silver_Weekly{
+    width:70%;
+    box-shadow: rgb(80 80 118 / 25%) 0px 13px 27px -5px, rgb(152 164 195 / 30%) 0px 8px 16px -8px;
+    
+}
+.Pack{
+    padding:12px 0;
+    text-align: center;
+    color:#fff;
+    background-color: #455d98;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px
+}
+.AccessTo{
+    
+    text-align: center;
+    padding:10px 15px;
+    width:50%;
+    font-size: 26px;
+    font-weight: 600;
+
+    color:#fff;
+    margin:0 auto;
+}
+.Access1{
+    background-color:#8b9ed3;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.Going{
+    color:#fff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 41px;
+    padding-top:19px;
+    
+}
+.NOWYY{
+   padding:12px;
+   color:#fff;
+   background-color:#3558bd;
+   text-align: center; 
+   font-size: 16px;
+   font-weight: 500;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.BUbU{
+    border:none;
+    padding:8px 15px;
+    background-color: #3558bd;
+    border-radius: 4px;
+    color:#fff;
+    border:1px solid #fff;
+    cursor: pointer;
+
+}
+.BUbU:hover{
+  background-color: #fff;  
+  color:#000
+}
+.InvestorBy{
+    margin-top: 25px;
+    background-color: #455e98;
+    border-radius: 5px;
+    padding:15px 25px;
+
+}
+.Ifum{
+    padding:10px;
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color:#fff;
+}
+.Gambmi{
+    color:#540000;
+}
+
+.VES{
+  color:#adff2f; 
+}
+.termsApp{
+    font-size: 18px;
+    font-weight: 600;
+    color:#fff;
+    text-align: center;
+    margin-top: 15px;
+}
+.Iam{
+    color:peru
+}
+/* .ILOVEP{
+    margin-top: 15px;
+} */
+
+.Deposit_Modal{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    background-color: #0404058c;
+    width:100%
+}
+.Deposit_Modal_Div_Div{
+    width:25%;
+    background-color: #fff;
+    height: auto;
+    padding:15px 10px;
+    border-radius: 5px;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.DepositY{
+    font-size: 16px;
+    color:#000;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid black;
+    padding:10px 0;
+}
+.AnyPay{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.DivflutterWave{
+    display: flex;
+    justify-content: space-between;
+}
+.Wave1{
+    width:100%;  
+    
+} 
+.addFine{
+    border:1px solid #d94e34 !important;
+}
+.Wave2{
+    width:100%;
+    background-color: #455c98;
+    border-radius: 4px;
+    height: 105px;
+    color:#fff;
+    padding:10px 7px;
+    cursor: pointer;
+
+}
+.WithdrawTextIn{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.WidrawMoney{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin:20px 0 40px 0;
+}
+.PinW{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color:#034cfff7
+}
+.payWithY{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.CardBankTM{
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    width: 70%;
+    margin: auto;
+}
+.FromAny{
+    text-align: center;
+    font-size: 13px;
+    
+}
+.pppp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.ProccedRent{
+    margin-top: 20px;
+}
+.ProccedRent1{
+    padding:10px 8px;
+    width:100%;
+    font-size: 14px;
+    border:0;
+    border:0.5px solid gray;
+    border-radius: 4px;
+    text-align: center;
+}
+.MMMYE{
+   padding:10px; 
+   margin-top: 15px;
+   background-color:#55e055; 
+   border-radius: 5px;
+   text-align: center;
+  
+   cursor: pointer;
+   box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(35 132 56 / 41%) 0px 2px 2px 3px;
+
+}
+.Parent_Over_File_Bg{
+    width:100%;
+    /* height:100vh; */
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+/* .BgColorT{
+    background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95));
+     
+} */
+.MMMYE:hover{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color: #fff;
+    
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+      
+      .Deposit_Modal_Div_Div{
+        width:50%;
+        top:50%;
+    }
+   
+    } 
+
+    @media only screen and (min-width: 500px) and (max-width: 768px){
+      
+        .Deposit_Modal_Div_Div{
+          width:60%;
+          top:50%;
+      }
+     
+      } 
+
+@media(max-width:768px){
+    .P_P {
+        flex-direction: column;
+    }
+    .overView {
+      
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .Att{
+        margin-bottom: 10px;
+    }
+    .Main_WALL {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .Is_KB {
+        width: 40%;  
+    }
+    .Amam{
+        display:flex;
+        flex-direction:column-reverse
+    
+    }
+    .AIR_I {
+        width: 60px;
+        height: 60px;
+    }
+    .Pay_Bills {
+        width: 36%;
+    }
+    .TREEH {
+        flex-direction: column;
+    }
+    .Silver_Weekly2 {
+       
+        flex-direction: column;
+   
+    }
+    .Silver_Weekly {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .AccessTo {
+        width: 70%;
+    }
+    .Wallet_Up_Div {
+        padding-top: 22px;
+    }
+    .Parent_Over_File_Bg{
+    padding-top: 2px !important;
+    height:auto;
+ 
+    }
+    .Wallet_P_Div{
+        width:98%;
+        padding: 20px 10px;
+        margin: 20px auto;
+       
+    }
+    .WallForm{
+        padding:0 1px;
+    }
+   .Going{
+    font-size: 30px;
+   }
+
+}
+
+@media(max-width:499px){
+    .Deposit_Modal_Div_Div{
+        width:90%;
+        top:50%;
+    }
+}
+@media(min-width:769px){
+    .WallForm {
+        padding: 0 10px;
+    } 
+}
