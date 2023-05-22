@@ -31,9 +31,9 @@ const Footer =()=>{
                           <li className="Footer_header_title   titleFott" onClick={dropdown1}><span>NAVIGATION </span><span>{footerShow?<FontAwesomeIcon icon={faAngleUp} className="PlusIcon plusIcon2" />:<FontAwesomeIcon icon={faAngleDown} className="PlusIcon plusIcon2" />}</span></li>
                           {footerShow ? (<div>
                           <li className="Footer_list_space"><a href="#">Blog</a></li>
-                          <li className="Footer_list_space"><a href="#">LiveScores</a></li>
-                          <li className="Footer_list_space"><a href="#">Forex Calender</a></li>
-                          <li className="Footer_list_space"><a href="#">Coingecko</a></li>
+                          <li className="Footer_list_space"><a href="https://www.livescore.com/en/" target="_blank" rel="noopener noreferrer">LiveScores</a></li>
+                          <li className="Footer_list_space"><a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener noreferrer">Forex Calender</a></li>
+                          <li className="Footer_list_space"><a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer">Coingecko</a></li>
                           </div>) : ("")}
                       </ul>
 
@@ -41,9 +41,9 @@ const Footer =()=>{
                           <li className="Footer_header_title" >NAVIGATION</li>
                           
                           <li className="Footer_list_space"><a href="#">Blog</a></li>
-                          <li className="Footer_list_space"><a href="#">LiveScores</a></li>
-                          <li className="Footer_list_space"><Link to="/refund">Forex Calender</Link></li>
-                          <li className="Footer_list_space"><a href="#">Coingecko</a></li>
+                          <li className="Footer_list_space"><a href="https://www.livescore.com/en/" target="_blank" rel="noopener noreferrer">LiveScores</a></li>
+                          <li className="Footer_list_space"><a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener noreferrer">Forex Calender</a></li>
+                          <li className="Footer_list_space"><a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer">Coingecko</a></li>
                           
                       </ul>
                   </div>

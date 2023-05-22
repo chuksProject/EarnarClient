@@ -16,6 +16,8 @@ const Register =()=>{
         showPassword1: false
     })
     const navigate = useNavigate()
+    const[over18,setOver18]=useState(false);
+    const [term,setTerm]=useState(false)
 
     const [err,setError]= useState(null)
 
@@ -24,6 +26,15 @@ const Register =()=>{
 
     }
 
+      const handleChange1 = (event) => {
+    setOver18(event.target.checked);
+      
+  }
+
+       const handleChange2 = (event) => {
+    
+      setTerm(event.target.checked);
+  }
     const handleSumit = async e =>{
     e.preventDefault()
    try{
@@ -76,19 +87,19 @@ const Register =()=>{
                   />
                   {inputs.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
                   {err && <p>{err}</p>}
-                     <p className="Include"><span className="NoteP"> Note: </span>Password must be at least six (6) characters and must include Upper Case and Lower Case,Number and a special character e.g PREditam247@</p>
+                     {/* <p className="Include"><span className="NoteP"> Note: </span>Password must be at least six (6) characters and must include Upper Case and Lower Case,Number and a special character e.g PREditam247@</p> */}
 
-                     <div className="Checkbox_div"><input type="checkbox" className="Bym"/> <label className="Over_18">By checking this box you declare that you are over 18yrs of age.</label></div>
+                     <div className="Checkbox_div"><input type="checkbox" name="over18" onChange={handleChange1} className="Bym"/> <label className="Over_18">By checking this box you declare that you are over 18yrs of age.</label></div>
                     
-                    <div className="Checkbox_div"> <input type="checkbox" className="Bym"/><label className="Over_18">By checking this box you agree to all our Terms/Conditions.Click to <span className="HERE0">HERE</span> to read.</label></div>
+                    <div className="Checkbox_div"> <input type="checkbox" className="Bym" name="term" onChange={handleChange2}/><label className="Over_18">By checking this box you agree to all our Terms/Conditions.Click to  <span><a href="/termscondition">HERE</a></span> to read.</label></div>
 
-                     <div className="RegisterM" onClick={handleSumit}>Register</div>
+                     <button disabled={!over18 || !term} className={over18 && term?" RegisterM regmin":"RegisterM"} onClick={handleSumit}>Register</button>
                      <div className="Or_with2">
                          <div className="Or_With"></div>
                          <p>Or register with</p>
                          <div className="Or_With"></div>
                      </div>
-                     <div className="Googgle">Google</div>
+                     <div className="Googgle">Googgle</div>
                      <p className="Already_Account">Already have an account?</p>
                      <div className="LOGIN_HERE_NOW"><Link to="/login" className="p_LoGIn">LOGIN HERE</Link></div>
 

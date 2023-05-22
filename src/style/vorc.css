@@ -8,7 +8,7 @@
     width:100%;
     /* max-width:600px; */
     margin:1px auto;
-    background-color: #304688;
+    background-color: #1e2c54;
     padding:10px 15px 20px 15px;
     margin-bottom: 40px;
     border-radius: 5px;
@@ -137,7 +137,7 @@
     
     
     margin:0 auto 100px auto;
-    background-color: #304688;
+    background-color: #1e2c54;
     padding:10px 15px 20px 15px;
     color:#fff;
     border-radius: 4px;
@@ -305,8 +305,7 @@ cursor: pointer;
 }
 .VirtualP:hover{
     background-color:#001041;
-    border-left: 0.3px solid #fff;
-    border-right: 0.3px solid #fff;
+    
 }
 
 .lin{

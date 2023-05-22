@@ -44,13 +44,19 @@
 .RegisterM{
     padding:10px 10px;
     text-align: center;
-    background-color: #fec82f;
+    /* background-color: #fec82f; */
     border-radius: 40px;
     color:#000;
-    cursor:pointer;
+    border:0;
+    outline: none;
+    width:100%;
+    
 
 }
-.RegisterM:hover{
+.regmin{
+    cursor:pointer;
+}
+.regmin:hover{
     background-color:#48b977;
     color:#fff;
 
@@ -74,6 +80,7 @@
     border-radius: 40px;
     text-align: center;
     margin-bottom: 15px;
+    cursor:pointer;
 }
 .Already_Account{
     text-align: center;
