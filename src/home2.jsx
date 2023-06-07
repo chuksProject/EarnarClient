@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import Footer from "./footer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faPlus,faMinus,faVolleyball} from '@fortawesome/free-solid-svg-icons'
+import {  faPlus,faMinus,faVolleyball,faCheckToSlot, faCheckDouble} from '@fortawesome/free-solid-svg-icons'
 import Came from "./addcarousel"
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -28,7 +28,7 @@ const Home2=() =>{
   const [show6,setShow6]= useState(false)
   const [show7,setShow7]= useState(false)
   const [forex,setForex] = useState("")
-  const [sports,setSports]= useState("sports")
+  const [sports,setSports]= useState("Forex")
   const [Cryptocurrency,setCryptocurrency] = useState("")
   const [Binary,setBinary] = useState("")
 
@@ -168,7 +168,7 @@ const Home2=() =>{
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 1.1,
       slidesToSlide: 1 // optional, default to 1.
     }
   }
@@ -291,7 +291,7 @@ useEffect(()=>{
 
            <div className="teleCom">
               
-               <div className="commT">
+               <div className="commT bg-green-box">
                    <div className="FreeComm">Forex Trading</div>
                    <img src="/img/forexIcon.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/forex12.png" alt="not found" className="ballSport ffoo"/>
@@ -303,7 +303,7 @@ useEffect(()=>{
                        <p className="RateSuccess">75% Success Rate</p>
                    </div>
                </div>
-               <div className="commT dese">
+               <div className="commT dese bg-white-box">
                    <div className="FreeComm">Sports Prediction</div>
                    <img src="/img/sport.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/sports1.png" alt="not found" className="ballSport ffoo"/>
@@ -319,7 +319,7 @@ useEffect(()=>{
         <div className="divRatT">
            <div className="teleCom">
                
-               <div className="commT">
+               <div className="commT bg-yellow-box">
                    <div className="FreeComm">Cryptocurrency Trading</div>
                    <img src="/img/crypto.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/crypto1.png" alt="not found" className="ballSport ffoo"/>
@@ -331,7 +331,7 @@ useEffect(()=>{
                        <p className="RateSuccess">85% Success Rate</p>
                    </div>
                </div>
-               <div className="commT dese">
+               <div className="commT dese bg-blue-box">
                    <div className="FreeComm">Binary Option Trading</div>
                    <img src="/img/binary.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/binary1.png" alt="not found" className="ballSport ffoo"/>
@@ -364,8 +364,9 @@ useEffect(()=>{
                <div className="ye"></div>
                <div className="faith">
                <div className="Forex1">
-                   <div className={sports === "sports"?"Forex12 pin":"Forex12"} onClick={Sports1}>Sports</div>
                    <div className={sports==="Forex"?"Forex12 pin":"Forex12"} onClick={forf}>Forex</div>
+                   <div className={sports === "sports"?"Forex12 pin":"Forex12"} onClick={Sports1}>Sports</div>
+                   
                    <div className={sports === "cryptocurrency"?"Forex12 pin":"Forex12"} onClick={crypto}>Cryptocurrency</div>
                    <div className={sports === "binary"?"Forex12 pin":"Forex12"} onClick={bina}>Binary</div>
                </div>
@@ -395,7 +396,7 @@ useEffect(()=>{
       
             
                
- {post1.map((app,id)=>(
+ {/* {post1.map((app,id)=>(
                    <div className="sport2 cappin" key={id}>
                        <div className="divS"><span className="Nog">Game No: </span>SP-{date}/{app.gameNo}</div>
                        <p className="dailyP21">Daily Profit</p>
@@ -404,7 +405,54 @@ useEffect(()=>{
                        <div className={app.checked ===true?"EarnLoss":"EarnLoss loss"}>{app.checked ===true?"Earned":"Loss"}</div>
 
                    </div>
-                   ))} 
+                   ))}  */}
+
+
+               
+                   <div className="sport2 cappin" >
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0034</div>
+                       <p className="dailyP21">Daily Profit</p>
+                       <p className="Dyc">20%</p>
+                       <p className="addErn">odd:1.8</p>
+                       <div className="EarnLoss">Earned</div>
+
+                   </div>
+                    
+                   <div className="sport2 cappin" >
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0035</div>
+                       <p className="dailyP21">Daily Profit</p>
+                       <p className="Dyc">40%</p>
+                       <p className="addErn">odd:1.43</p>
+                       <div className="EarnLoss">Earned</div>
+
+                   </div>
+                    
+                   <div className="sport2 cappin" >
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0036</div>
+                       <p className="dailyP21">Daily Profit</p>
+                       <p className="Dyc">80%</p>
+                       <p className="addErn">odd:6.34</p>
+                       <div className="EarnLoss">Earned</div>
+
+                   </div>
+                    
+                   <div className="sport2 cappin" >
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0037</div>
+                       <p className="dailyP21">Daily Profit</p>
+                       <p className="Dyc">10%</p>
+                       <p className="addErn">odd:1.834</p>
+                       <div className="EarnLoss">Earned</div>
+
+                   </div>
+                                  <div className="sport2 cappin" >
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0038</div>
+                       <p className="dailyP21">Daily Profit</p>
+                       <p className="Dyc">40%</p>
+                       <p className="addErn">odd:1.64</p>
+                       <div className="EarnLoss">Earned</div>
+
+                   </div>
+                   
              
 
              {/* <div className="sport2 cappin">
@@ -560,9 +608,9 @@ useEffect(()=>{
   showDots={true}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
-  infinite={true}
+  infinite={false}
   // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-  autoPlay={true}
+  autoPlay={false}
   autoPlaySpeed={1000}
   keyBoardControl={true}
   customTransition="all .5"
@@ -572,8 +620,9 @@ useEffect(()=>{
   // deviceType={this.props.deviceType}
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
+  className="king"
 >
-                        <div className="sport2 cappin">
+                        <div className="sport2 cappin yellowC">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0017</div>
 
                             <div className="busyer">
@@ -587,18 +636,18 @@ useEffect(()=>{
                                    <p className="Usdj">Exit point-1.8923</p>
                                </div>
                                <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">45 pips</p>
+                                   <p className="Usdj addpo">Take Profit</p>
+                                   <p className="Usdj addpo1">45 pips</p>
                                </div>
                            </div>
 
                            </div>
                            
                           
-                            <div className="EarnLoss">Earned</div>
+                            <div className="EarnLoss"><FontAwesomeIcon icon={faCheckDouble} className="icon_brand_size"/>Earned</div>
      
                         </div>
-                        <div className="sport2 cappin">
+                        <div className="sport2 cappin yellowC">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0016</div>
 
                             <div className="busyer">
@@ -623,7 +672,7 @@ useEffect(()=>{
                             <div className="EarnLoss">Earned</div>
      
                         </div>
-                        <div className="sport2 cappin">
+                        <div className="sport2 cappin yellowC">
                             <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0015</div>
 
                             <div className="busyer">
@@ -712,9 +761,9 @@ useEffect(()=>{
                  showDots={true}
                  responsive={responsive1}
                  ssr={true} // means to render carousel on server-side.
-                 infinite={true}
+                 infinite={false}
                  // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                 autoPlay={true}
+                 autoPlay={false}
                  autoPlaySpeed={1000}
                  keyBoardControl={true}
                  customTransition="all .5"
@@ -725,8 +774,8 @@ useEffect(()=>{
                  dotListClass="custom-dot-list-style"
                  itemClass="carousel-item-padding-40-px"
                >
-                    <div className="sport2 cappin">
-                        <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0021</div>
+                    <div className="sport2 cappin yellowA">
+                        <div className="divS"><span className="Nog Nog4">Trade No: </span>SP-{date}/0021</div>
 
                         <div className="busyer">
                         <div className="pairs">
@@ -739,8 +788,8 @@ useEffect(()=>{
                                <p className="Usdj">Exit point-1.8923</p>
                            </div>
                            <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">60%</p>
+                               <p className="Usdj Nog4">Take Profit</p>
+                               <p className="Usdj Nog4fade">60%</p>
                            </div>
                        </div>
 
@@ -750,7 +799,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowA">
                         <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/007</div>
 
                         <div className="busyer">
@@ -775,7 +824,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowA">
                         <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/004</div>
 
                         <div className="busyer">
@@ -800,7 +849,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowA">
                         <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0012</div>
 
                         <div className="busyer">
@@ -825,7 +874,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowA">
                         <div className="divS"><span className="Nog">Trade No: </span>SP-{date}</div>
 
                         <div className="busyer">
@@ -862,9 +911,9 @@ useEffect(()=>{
                    showDots={true}
                    responsive={responsive1}
                    ssr={true} // means to render carousel on server-side.
-                   infinite={true}
+                   infinite={false}
                    // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                   autoPlay={true}
+                   autoPlay={false}
                    autoPlaySpeed={1000}
                    keyBoardControl={true}
                    customTransition="all .5"
@@ -875,8 +924,8 @@ useEffect(()=>{
                    dotListClass="custom-dot-list-style"
                    itemClass="carousel-item-padding-40-px"
                  >
-                    <div className="sport2 cappin">
-                        <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/001</div>
+                    <div className="sport2 cappin yellowB">
+                        <div className="divS"><span className="Nog Nog5">Trade No: </span>BN-{date}/001</div>
 
                         <div className="busyer">
                         <div className="pairs">
@@ -889,8 +938,8 @@ useEffect(()=>{
                              
                            </div>
                            <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">60%</p>
+                               <p className="Usdj Nog5">Take Profit</p>
+                               <p className="Usdj Nog5fade">60%</p>
                            </div>
                        </div>
 
@@ -900,7 +949,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowB">
                         <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/009</div>
 
                         <div className="busyer">
@@ -922,10 +971,10 @@ useEffect(()=>{
                        </div>
                        
                       
-                        <div className="EarnLoss">Earned</div>
+                        <div className="EarnLoss">Earned </div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowB">
                         <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/005</div>
 
                         <div className="busyer">
@@ -950,7 +999,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowB">
                         <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/002</div>
 
                         <div className="busyer">
@@ -975,7 +1024,7 @@ useEffect(()=>{
                         <div className="EarnLoss">Earned</div>
  
                     </div>
-                    <div className="sport2 cappin">
+                    <div className="sport2 cappin yellowB">
                         <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/003</div>
 
                         <div className="busyer">
@@ -1170,7 +1219,7 @@ useEffect(()=>{
               </div>
               {show1 ? (
                 <p className="ILOVEK">
-                 You dont need to understand much about sport betting to bet. one you are registered with our recomemded bookmaker just copy our coupon code and search for it. with the code your can place your bet.
+                 You dont need to understand much about sport betting to bet. Once you are registered with our recommended bookmaker just copy our coupon code and search for it. With the code your can place your bet.
                 </p>
               ) : (
                 ""
@@ -1185,7 +1234,7 @@ useEffect(()=>{
               </div>
               {show2 ? (
                 <p className="ILOVEK">
-                Click the prediction button on the header and go through forex section to see recomemded brokers
+                Click the prediction button on the header and go through forex section to see recommended brokers
                 </p>
               ) : (
                 ""
@@ -1200,7 +1249,7 @@ useEffect(()=>{
               </div>
               {show3 ? (
                 <p className="ILOVEK">
-                Click the prediction button on the header and go through Cryptocurrency section to see recomemded exchanges
+                Click the prediction button on the header and go through Cryptocurrency section to see recommended exchanges
                 </p>
               ) : (
                 ""
@@ -1245,7 +1294,7 @@ useEffect(()=>{
               </div>
               {show6 ? (
                 <p className="ILOVEK">
-                  We pay 50% commission on any user your refer to our plaform.e.g if Jones refers John and Jonh subscribe to our premium prediction, Jones will recieve 50% ($25 or ₦12,500). if John continue renewing his subscrption every month, Jones will keep earning his referral bonus for life.
+                  We pay 50% commission on any user your refer to our plaform.e.g if Jones refers Emeka and Emeka subscribe to our premium prediction, Jones will recieve 50% ($25 or ₦12,500). if Emeka continue renewing his subscrption every month, Jones will keep earning his referral bonus for life.
                 </p>
               ) : (
                 ""

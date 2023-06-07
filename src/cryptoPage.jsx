@@ -76,7 +76,8 @@ const CryptoPage = () => {
    
 
   return (
-    <div style={{  backgroundColor:"#2a2c42"}}>
+    <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}} >
         <div className="sportPa">
           <div>
           <img src="/img/earnarsbanner23.png" className="AffliateBanner" alt=""/>
@@ -84,7 +85,7 @@ const CryptoPage = () => {
         <div className="MakingMoney">
         Making Money Daily on <span className="forexy">Cryptocurrency</span> trading is as easy as following our daily expert predictions
         </div>
-        <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
+       <Link to="/login" className="ifi"> <div className="NowUpSign">SIGN UP NOW</div></Link>
         <p className="SportBetting">What Is Cryptocurrency trading</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">

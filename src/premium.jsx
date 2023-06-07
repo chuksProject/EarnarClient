@@ -9,7 +9,8 @@ const Premium = () => {
 
   const {currentUser,login,logout} = useContext(AuthContext);
   return (
-    <div style={{backgroundColor:"#2a2c42"}}>
+    <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}}>
        <div className="PrmiumBanner" >
           <img src="/img/EarnarsBanner16.png" className="AffliateBannertt" />
           </div>

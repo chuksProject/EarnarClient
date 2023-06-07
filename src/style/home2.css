@@ -8,14 +8,40 @@
 .commT{
     position: relative;
     width:50%;
-    border-radius: 4px;
-    background-color: #2d2f4cc9;
+    border-radius: 22px;
+    /* background-color: #5d6793cf; */
     text-align: center;
     z-index: 1;
     /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px; */
     /* box-shadow: 0 13px 27px -5px rgb(178 178 212 / 25%), 0 8px 16px -8px rgb(15 15 15 / 17%); */
     box-shadow: 0 -2px 14px -5px rgb(15 15 36 / 28%), 0px 3px 16px -4px rgb(15 15 15 / 17%);
+        background: linear-gradient(71deg, #323956, #4a4f79, #86b3ef);
+
+
+    /* position: relative; */
+        /* border: 2px solid transparent; */
+        /* background: linear-gradient(71deg, #080509, #1a171c, #080509); */
+        background-clip: padding-box;
+        /* border-radius: 45px;
+        padding: 10px 8px; */
 }
+
+
+
+
+
+.commT:after{
+    content: "";
+            display: block; width: 0px; height: 0px; background-color: #6e7ca7fa; top: 0px; right: 0px; border-bottom: 20px solid darken(teal, 5%); border-left: 20px solid darken(teal, 5%); border-right: 20px solid #6f7dab99;
+                border-top: 20px solid #36406080;position: absolute; filter: drop-shadow(-5px 5px -1px rgba(0, 0, 0, 0.5))
+}
+/* .commT:before{
+    content: "";
+            display: block;width: 0px; height: 0px; border-top: 40px solid darken(teal, 5%); border-right: 40px solid darken(teal, 5%); bottom: 0px ;left: 0px ;position: absolute; filter: drop-shadow(7px -7px -1px rgba(0, 0, 0, 0.5)); margin-right: 10%;border-left: 40px solid #535c876e;
+                border-bottom: 47px solid #4a507aba;
+} */
+
+
 
 .fareWo{
     position:relative;
@@ -84,11 +110,11 @@
     font-size:16px ;
     color:#a6acbb;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .successRate100{
     padding:10px;
-    background-color: rgb(60 71 110 / 73%);
+    /* background-color: rgb(60 71 110 / 73%); */
     /* background-color: #354269; */
     /* color: #c4c8d6; */
     color: #ffffff;
@@ -99,6 +125,8 @@
 .RateSuccess{
     font-size: 22px;
     font-weight: 700;
+    margin-bottom: 10px;
+    color:#a6b1d1;
 }
 .divRatT{
     margin-top: 20px;
@@ -153,6 +181,26 @@
     margin-bottom: 60px;
   
 }
+/* .element.style {
+    flex: 1 1 auto;
+    position: relative;
+    width: 372px;
+} */
+.Nog4{
+    color:#56ff56 !important;
+}
+.Nog4fade{
+    color: #91ef91 !important;
+}
+.Nog5{
+    color:#7c7cf3 !important;
+}
+.Nog5fade {
+    color: #9292e5 !important;
+}
+/* .king .react-multi-carousel-item{
+    width: 300px !important;
+} */
 .cappin{
     width: 98% !important;
     gap:10px;
@@ -162,16 +210,55 @@
 
 
 .sport2{
-    background-color:#3c476e;
+    /* background-color:#3c476e; */
+    position:relative;
     width: 30% ;
     text-align: center;
-    z-index: 1;
+    /* z-index: 1; */
     border-radius: 4px;
-    box-shadow: rgb(80 80 118 / 25%) 0px 13px 27px -5px, rgb(152 164 195 / 30%) 0px 8px 16px -8px;
+        background: linear-gradient(71deg, #383f56, #222738, #3c476e);
+    /* background: linear-gradient(71deg, #080509, #1a171c, #080509); */
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    /* box-shadow: rgb(80 80 118 / 25%) 0px 13px 27px -5px, rgb(152 164 195 / 30%) 0px 8px 16px -8px; */
+     border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        /* background: radial-gradient(circle, #7f89b7 0%, #3e4970 100%); */
+            box-shadow: rgb(174 174 219 / 25%) 0px 13px 27px -5px, rgb(122 133 161 / 30%) 0px 8px 16px -8px;
+}
+.yellowC, .yellowA, .yellowB{
+    position:relative
+}
+.yellowC::after, .yellowA::after, .yellowB::after{
+    position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        content: "";
+        z-index: -1;
+        border-radius: 10px;
+    /* background: linear-gradient(71deg, #3e4970, #afa220, #3e4970); */
+}
+.yellowC::after{
+    background: linear-gradient(71deg, #3e4970, #dddd33, #3e4970);
+
+}
+.yellowA::after{
+    background: linear-gradient(71deg, #3e4970, #56ff56, #3e4970);
+}
+.yellowB::after{
+    background: linear-gradient(71deg, #3e4970, #7c7cf3, #3e4970);
 }
 .divS{
     padding:10px 2px;
-    background-color: #d8d8d8;
+        background-color: #7788bf36;
+    /* background-color: #d8d8d8; */
+        border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            color:#e5e0e0;
 }
 .dailyP21{
     font-size: 16px;
@@ -191,13 +278,14 @@
     line-height: 40px;
 }
 .EarnLoss{
-    padding:15px 2px;
-    background-color:#1e7d49;
-    color:#fff;
-    font-size: 16px;
+        padding: 7px 12px;
+    
+    color:#39df55;
+    font-size: 20px;
     font-weight: 500;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    text-align: right;
+    font-weight: 800;
+
     
 }
 .loss{
@@ -212,7 +300,7 @@
     /* background: rgb(71 79 217 / 15%);
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%); */
         background: rgb(6 8 28 / 15%);
-    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+        box-shadow: 0 4px 30px rgb(253 250 250 / 10%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 90px solid rgb(61 65 129 / 15%)
@@ -220,14 +308,16 @@
 .SealY{
     padding:10px 2px;
     text-align: center;
-    /* background-color:#cbcbcb; */
-    background-color: #e1ca3b;
+    background-color: #5f6c9e;
+        backdrop-filter: blur(44px);
     font-size: 16px;
     font-weight: 600;
     width:30%;
     max-width: 400px;
     margin:-20px auto 20px auto;
-    color: #3c476e;
+    color: yellow;
+    border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
 }
 .ifYou{
     width:75%;
@@ -241,6 +331,7 @@
     font-size:18px;
     font-weight: 700;
     margin-top: 20px;
+    color:#000;
     
 }
 
@@ -293,7 +384,8 @@
 }
 .Nog{
    font-size: 16px;
-   font-weight: 700; 
+   font-weight: 700;
+   color:#dddd33;
 }
 
 .UsAbout {
@@ -317,7 +409,7 @@
 .ballSport{
     position: absolute;
     font-size: 60px;
-    top:47%;
+    top:56%;
     color:#3c476e;
     left:5%
 }
@@ -406,7 +498,7 @@ background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119,
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 10px;
-    color:#919dcb;
+    color:#1b213a;
 
 }
 .pickStuff{
@@ -441,17 +533,23 @@ background-image: linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119,
     font-size:16px;
     font-weight: 400;
     margin-bottom: 10px;
-    color:#fff;
+    color:#e3e1e1;
+}
+.addpo{
+    color:#dddd33
+}
+.addpo1{
+    color: #f5f5a0;
 }
 .busyer{
 padding:10px 10px 0px 10px;
 }
 .Fitwem{
-    /* border:1px solid #fff; */
+   
     padding:6px 22px;
     border-radius: 3px;
-    box-shadow: 0px 2px 8px #182852;
-    /* background-color: #000; */
+        box-shadow: 1px 2px 121px #a6adc9;
+    
 }
 .fadama{
     width:100%;
@@ -493,31 +591,31 @@ padding:10px 10px 0px 10px;
     .CarouseDivDiv {
         margin: 2px auto 2px auto !important;
     }
-    .teleCom {
-        flex-direction: column;
-        gap:0; 
-        /* margin-bottom: 20px; */ 
-        padding: 0 6px;
+
+.pickStuff{
+    font-size: 16px;
+}
+    .Usdj{
+        font-size: 14px;
     }
-    .dese{
-        margin-bottom:0px !important;
-    }
+        .king .react-multi-carousel-item {
+            width: 300px !important;
+        }
     .commT {
         width: 100%;
-        margin-bottom:20px;
-        background-color:#323448a6;
+        max-width: 425px;
+        margin: 0 auto 10px auto;
     }
 
 
-.successRate100 {
-  
-    background-color: rgb(60 71 110 / 73%);
-  
-}
+
 .TrustSeal {
   
-    background: rgb(71 79 217 / 15%);
+    background: rgb(67 78 119);
     border: 1px solid rgb(61 65 129 / 15%);
+    width: 100%;
+    max-width: 530px;
+     margin: 0 auto;
   
 }
     .FreeComm {
@@ -525,12 +623,13 @@ padding:10px 10px 0px 10px;
        
     }
     .Forex1 {
-        /* flex-direction: column; */
-        width:900px;
-        max-width: 900px;
+     
+        width:720px;
+        max-width: 720px;
         overflow-x: hidden;
         position: relative;
         padding: 0 6px;
+        margin:0 auto
     }
     .faith{
         width:100%;
@@ -544,7 +643,7 @@ padding:10px 10px 0px 10px;
     }
 
     .Forex12 {
-        width: 210px;
+        width: 170px;
         margin-bottom: 5px;
     }
     .ImgDiv{
@@ -578,14 +677,15 @@ padding:10px 10px 0px 10px;
 }
 .ifYou {
     width: 92%;
+    font-size: 15px;
 }
 .fear{
     padding-bottom: 42px;
     padding-top: 0px;
-    height: 246px;
+    height: auto;
 }
 .Make15 {
-    flex-direction: column;
+ 
     width: 100%;
 }
 .loud{
@@ -607,8 +707,13 @@ padding:10px 10px 0px 10px;
 }
 .Great{
     height:auto;
-    background-color: rgb(71 79 217 / 15%);
-    border:1px solid rgb(130 143 197);
+ 
+    background-color: rgb(60 71 110 / 32%);
+        border: 1px solid rgb(111 121 163);
+        backdrop-filter: blur(60px);
+    width: 100%;
+        max-width: 530px;
+        margin: 0 auto;
 }
 
 .EarnP {
@@ -627,8 +732,20 @@ padding:10px 10px 0px 10px;
     margin-bottom: 0;
 }
 .Great{
-    padding-top:40px;
+    padding-top:20px;
+    padding-bottom: 20px;
 }
+}
+@media(max-width:500px){
+    .teleCom {
+            flex-direction: column;
+            gap: 0;
+         
+            padding: 0 6px;
+        }
+        .Make15{
+            flex-direction: column;
+        }
 }
 @media (max-width: 1024px){
 .Rtme {
@@ -641,14 +758,22 @@ padding:10px 10px 0px 10px;
         max-width: 1200px;
     } 
 }
-@media(max-width:351px){
+/* @media(max-width:351px){
     .fear{
         margin-bottom: 15px;
     }
-}
+} */
 
 @media(max-width:464px){
     .cappin{
-        width:100% !important;
+        width:98% !important;
+        max-width: 300px;
     }
+}
+@media(min-width:501px) and (max-width:768px){
+    .ballSport {
+            
+            top: 58%;
+            left: 2%;
+        }
 }

@@ -75,6 +75,9 @@
 }
 .Googgle{
     background-color: #fff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     padding:10px 10px;
     color:#000;
     border-radius: 40px;
@@ -110,6 +113,10 @@
     display: flex;
     align-items: baseline;
 }
+.trems1{
+    color:#64c56d;
+    font-weight:700;
+}
 .Bym{
     margin-right: 3px;
 }
@@ -117,6 +124,14 @@
     color:#964747;
     font-size: 13px;
     margin-bottom: 20px;
+}
+.gooleI{
+    color:#5e6370;
+    font-size: 30px;
+}
+.goole {
+    color: #ffffff;
+    font-size: 30px;
 }
 .NoteP{
     color:#fff;
@@ -126,5 +141,10 @@
     .Form_Div {
         margin: 28px auto !important;
        
+    }
+}
+@media (max-width:320px){
+    .Or_With{
+        width:30%
     }
 }

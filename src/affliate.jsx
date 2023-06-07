@@ -9,7 +9,8 @@ const Affliate =()=>{
 
     const {currentUser} = useContext(AuthContext);
     return(
-        <div className=" " style={{background:"#2a2c42"}}>
+        <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}}  >
        
 
          <div className="AffliateDiv34">
@@ -22,7 +23,8 @@ const Affliate =()=>{
                </div>
                <div className="EarnNaira">Earn $25 dollars or ₦12,500 Naira per referral</div>
 
-               <div className="ButtonT"> <button className="Watch_Now25">Watch Now</button></div>
+               {/* <div className="ButtonT"> <button className="Watch_Now25">Watch Now</button></div> */}
+                <Link to="/login" className="ifi"> <div className="NowUpSign">Watch Now</div></Link>
                <div className="SimpleLet">Its easy and Simple .Lets get started with the following Steps.</div>
 
                <div className="Create_account_holder_Div">
@@ -55,8 +57,8 @@ const Affliate =()=>{
                    </p>
                </div>
 
-     {currentUser? <a href="/profile" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>:
-               <a href="/register" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>}
+     {currentUser? <a href="/profile" className="ifi"><div className="NowUpSign">  Start Now</div></a>:
+     <a href="/register" className="ifi"><div className="NowUpSign">  Start Now</div></a>}
              
 
 
