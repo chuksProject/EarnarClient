@@ -12,8 +12,12 @@ import {AuthContext}from "./context/authContext"
 const Login =()=>{
 
     const [inputs,setInputs]=useState({
-        username:"",
+        email:"",
         password:"",
+       
+    })
+    const [inputs2,setInputs2]=useState({
+        
         showPassword: false,
     })
     const navigate = useNavigate()
@@ -28,18 +32,19 @@ const Login =()=>{
     }
 
     const handleClickShowPassword = () => {
-        setInputs(previ=>({ ...previ, showPassword: !inputs.showPassword }));
+        setInputs2(previ=>({ ...previ, showPassword: !inputs2.showPassword }));
       };
 
-    const handleSumit1 = async e =>{
+    const handleSumit1 = async (e) =>{
     e.preventDefault()
    try{
     await login(inputs)
      navigate('/')
-    
+    // await axios.post("http://localhost:8080/api/auth/login",inputs)
+    // console.log("success")
    }catch(err){
     setError(err.response.data)
-    // console.log(err)
+    console.log(err)
    }    
     }
     return(
@@ -49,13 +54,13 @@ const Login =()=>{
                <form>
                   
                   <div className="welcome4">Welcome</div>
-                  <div> <input type="text" placeholder="User_name" className="Full_Name" name="username" onChange={handleChange}/></div>
-                  <div className="sers"> <input type={inputs.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}
+                  <div> <input type="email" placeholder="Email" className="Full_Name" name="email" onChange={handleChange}/></div>
+                  <div className="sers"> <input type={inputs2.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" 
                   />
-                  {inputs.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
+                  {inputs2.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
                   <div onClick={handleSumit1} className="loginn">LOGIN</div>
                   {err && <p className="errorP">{err}</p>}
-                  <p className="FofD">Forget password ? <span className="ClickMe">Click Here</span> </p>
+                  <p className="FofD">Forget password ? <a href="/forgotpassword" className="sesetP"><span className="ClickMe">Click Here</span></a> </p>
                   <div className="Or_with2">
                          <div className="Or_With"></div>
                          <p>Or register with</p>

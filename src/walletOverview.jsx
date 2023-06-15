@@ -21,7 +21,7 @@ const WalletOverView =()=>{
     const [affliateAcount,setAffliateAccount]=useState("000")
     
   
-    const [amount,setAmount] =useState(null)
+    const [amount,setAmount] =useState(0)
     const {currentUser} = useContext(AuthContext);
     const[divFlex,setDivFlex]=useState("")
 
@@ -55,25 +55,7 @@ const WalletOverView =()=>{
 
 
 
-    const config = {
-        public_key: 'FLWPUBK-b42771553f0c152c7a00ef070ececc77-X',
-        tx_ref: Date.now(),
-        amount: amount || subAmount,
-        currency: 'NGN',
-        payment_options: 'card,mobilemoney,ussd',
-        customer: {
-          email: `${currentUser?.email}`,
-           phone_number: '070********',
-          name: `${currentUser?.username}`,
-        },
-        customizations: {
-          title: 'my Payment Title',
-          description: 'Payment for items in cart',
-          logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
-        },
-      };
     
-      const handleFlutterPayment = useFlutterwave(config);
 
 
     const setGo=()=>{
@@ -133,6 +115,26 @@ const trig =()=>{
     setActive(!active)
 }
 
+ const config = {
+    public_key: 'FLWPUBK_TEST-968ad24101fcac26e1750f77e2a2d46b-X',
+    tx_ref: Date.now(),
+    amount: amount,
+    currency: 'NGN',
+    payment_options: 'card,mobilemoney,ussd',
+    customer: {
+      email: 'user@gmail.com',
+       phone_number: '070********',
+      name: 'john doe',
+    },
+    customizations: {
+      title: 'my Payment Title',
+      description: 'Payment for items in cart',
+      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
+
 
     return(
         <div className="Parent_Over_File_Bg BgColorT"   style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
@@ -141,11 +143,13 @@ const trig =()=>{
 
     <div className="WallForm">
             <div className="Wallet_P_Div Wallet_Up_Div">
+                <div className="Pmain">
                 <div className="P_P">
                     <div className={wallet === "wallets" ?"overView gbg" : "overView" } onClick={setGo1}>Wallet Overview</div>
                     <div className={subscription === "going" ?"overView gbg" : "overView" }
                     onClick={setGo}>Subcription</div>
                     <div className={refferal === "fort" ?"overView gbg" : "overView" } onClick={setGo2}>My Referrals</div>
+                </div>
                 </div>
 
                 <p className="Status_Active">Account Status <span className="Actn">{ Difference_In_Days > 25 ? "non Active":Active}</span></p>

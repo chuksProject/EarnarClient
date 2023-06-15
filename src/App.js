@@ -1,5 +1,4 @@
 
-
 import { BrowserRouter,Routes, Route,Navigate } from "react-router-dom";
 
 import Register from "./register"
@@ -27,17 +26,27 @@ import ForexPage from "./forexPage"
 import CryptoPage from "./cryptoPage"
 import BinaryPage from "./binarypage"
 import Flutter from "./flutterwave"
+import ForgotPassword from "./forgotpassword"
+import OTP from "./otp"
+import ResetPassword from "./resetPassword"
+import Hamburger from "./hamburger"
 
 import Navbar from "./navbar"
 import DashboardHome from "./Dashboard/dashboardHome"
 import Widthdrawal from "./Dashboard/dashboardWithdrawal"
+// import { Link, useLocation } from "react-router-dom";
 
 function App() {
+
+  const tr = window.location.pathname;
+  // const navigate = useLocation();
   return (
     <div>
        <BrowserRouter>
-       <Navbar/>
-       <Mobile/>
+        {tr === "/dashboard" ? " " : <> <Navbar/>
+       <Mobile/></>}
+       {/* <Navbar/>
+       <Mobile/> */}
         <Routes>
            <Route path="/" element={<SampleHome/>} />
            <Route path="/register" element={<Register/>} />
@@ -50,6 +59,11 @@ function App() {
            <Route path="/profile" element={<Profile/>} />
            <Route path="/flu" element={<Flutter/>} />
            <Route path="/Odd" element={<OddPredict/>} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/otp" element={<OTP />} />
+          <Route path="/resetpassword" element={<ResetPassword/>} />
+          {/* <Route path="/hamburg" element={<Hamburger />} /> */}
+
           
            <Route path="/agent" element={<Agent/>} />
            <Route path="/sport" element={<SportPage/>} />

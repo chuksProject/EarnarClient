@@ -588,6 +588,9 @@ padding:10px 10px 0px 10px;
     .fugmu {
         padding: 1px 0 1px 0;
     } 
+    .IconSpace{
+        margin-left: 4px;
+    }
     .CarouseDivDiv {
         margin: 2px auto 2px auto !important;
     }
@@ -604,7 +607,7 @@ padding:10px 10px 0px 10px;
     .commT {
         width: 100%;
         max-width: 425px;
-        margin: 0 auto 10px auto;
+        margin: 0 auto 15px auto;
     }
 
 
@@ -708,12 +711,18 @@ padding:10px 10px 0px 10px;
 .Great{
     height:auto;
  
-    background-color: rgb(60 71 110 / 32%);
+    /* background-color: rgb(60 71 110 / 32%); */
+    background: linear-gradient(90deg, rgb(10 6 68 / 57%) 31%, rgb(26 49 102 / 24%) 62%, rgb(31 40 90 / 22%) 76%);
+        /* background: linear-gradient(90deg, rgb(10 6 68 / 46%) 31%, rgb(7 12 48 / 24%) 62%, rgb(31 40 90 / 33%) 76%); */
         border: 1px solid rgb(111 121 163);
         backdrop-filter: blur(60px);
     width: 100%;
         max-width: 530px;
         margin: 0 auto;
+}
+.yuri{
+    background-color: #7b85a9;
+    
 }
 
 .EarnP {
@@ -730,6 +739,7 @@ padding:10px 10px 0px 10px;
 }
 .divRatT{
     margin-bottom: 0;
+    margin-top: 1px;
 }
 .Great{
     padding-top:20px;

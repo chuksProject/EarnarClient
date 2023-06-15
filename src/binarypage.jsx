@@ -192,7 +192,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping}>
                 <span>How do resgister  with a Binary Option Broker?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -208,7 +208,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping1}>
                 <span>I dont Know anything about Binary trading,What should i do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -223,7 +223,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping2}>
                 <span> How can i fund my account? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -238,7 +238,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping3}>
                 <span> Can your company Trade for me and pay me a percentage monthly?</span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -253,7 +253,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping4}>
                 <span>How much do i stake in every trade?</span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -268,7 +268,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping5}>
                 <span> What is the guarantee am going to make money on Binary trading?</span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

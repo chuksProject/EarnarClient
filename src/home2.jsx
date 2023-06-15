@@ -7,9 +7,8 @@ import "react-multi-carousel/lib/styles.css";
 import Footer from "./footer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faPlus,faMinus,faVolleyball,faCheckToSlot, faCheckDouble} from '@fortawesome/free-solid-svg-icons'
-import Came from "./addcarousel"
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
+
+
 import AOS from 'aos';
 import "./style/home2.css"
 import axios from "axios";
@@ -349,7 +348,7 @@ useEffect(()=>{
 
 
            {/* end section5   */}
-               {/* <Carous/> */}
+               {/* <Came/> */}
            {/*section6 */}
 
 
@@ -391,6 +390,7 @@ useEffect(()=>{
   // deviceType={this.props.deviceType}
   dotListClass="custom-dot-list-style"
   itemClass="carousel-item-padding-40-px"
+   className="king"
  
 >
       
@@ -773,6 +773,7 @@ useEffect(()=>{
                  // deviceType={this.props.deviceType}
                  dotListClass="custom-dot-list-style"
                  itemClass="carousel-item-padding-40-px"
+                  className="king"
                >
                     <div className="sport2 cappin yellowA">
                         <div className="divS"><span className="Nog Nog4">Trade No: </span>SP-{date}/0021</div>
@@ -923,6 +924,7 @@ useEffect(()=>{
                    // deviceType={this.props.deviceType}
                    dotListClass="custom-dot-list-style"
                    itemClass="carousel-item-padding-40-px"
+                    className="king"
                  >
                     <div className="sport2 cappin yellowB">
                         <div className="divS"><span className="Nog Nog5">Trade No: </span>BN-{date}/001</div>
@@ -1197,7 +1199,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop}>
                 <span>I have never traded the forex or crypto market before. How do I Start?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1213,7 +1215,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop1}>
                 <span>I don't know how to bet on sports. How do I start?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1228,7 +1230,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop2}>
                 <span> I don't Have an account with any forex platform. Can I get any recommendations? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1243,7 +1245,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop3}>
                 <span> I am not registered with any cryptocurrency trading platform. Can I get any recommendations? </span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1258,7 +1260,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop4}>
                 <span> How much does it cost to subscribe monthly? </span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1273,7 +1275,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop5}>
                 <span>What if I don't make a profit at the end of the month with your predictions? </span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1288,7 +1290,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop6}>
                 <span> If my referral subscribes every month will I still get paid my referral commission? </span>
-                <span>
+                <span className="IconSpace">
                   {show6? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -1303,7 +1305,7 @@ useEffect(()=>{
             <div>
               <div className="HowFarBro" onClick={drop7}>
                 <span> Can i invest my money with your company so you trade & bet for me and pay me percentage monthly?</span>
-                <span>
+                <span className="IconSpace">
                   {show7? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

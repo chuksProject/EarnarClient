@@ -183,7 +183,7 @@ You can also enjoy sports betting anywhere and anytime e.g from the comfort of y
             <div>
               <div className="HowFarBro" onClick={drup}>
                 <span>How do I register  with a broker?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -199,7 +199,7 @@ with more than one broker.
             <div>
               <div className="HowFarBro" onClick={drup1}>
                 <span>I dont Know anything about betting,What should I do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -214,7 +214,7 @@ with more than one broker.
             <div>
               <div className="HowFarBro" onClick={drup2}>
                 <span> How can I fund my account?</span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -229,7 +229,7 @@ with more than one broker.
             <div>
               <div className="HowFarBro" onClick={drup3}>
                 <span> Can your company bet for me and pay me percentage monthly? </span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -245,7 +245,7 @@ We do not manage users funds or bet for any user, we only forecast/predicts game
             <div>
               <div className="HowFarBro" onClick={drup4}>
                 <span>How much do I bet in every game?</span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -260,7 +260,7 @@ We do not manage users funds or bet for any user, we only forecast/predicts game
             <div>
               <div className="HowFarBro" onClick={drup5}>
                 <span> What is the guarantee am going to make money betting?</span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

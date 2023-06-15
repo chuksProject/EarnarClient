@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
+    "react-flutterwave": "^1.0.4",
     "react-multi-carousel": "^2.8.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
@@ -53,5 +54,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8000/api"
+  "proxy": "http://localhost:8080/api"
 }

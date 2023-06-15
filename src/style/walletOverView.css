@@ -3,8 +3,10 @@
     max-width: 1200px;
     /* height:100vh; */
     margin:100px auto;
-    background-color:#465b9b8a ;
+    background-color:#0300416e ;
     padding:20px 15px;
+        background: linear-gradient(164deg, rgb(51 61 98 / 93%) 31%, rgb(59 86 149 / 24%) 62%, rgb(11 17 48 / 77%) 76%);
+        backdrop-filter: blur(60px);
     overflow-y: scroll;
     border-radius: 4px;
 }
@@ -22,13 +24,14 @@
 .overView{
     padding:12px 10px;
     color:#fff;
-    background-color:#001041;
+    background-color:#1e2a50;
     width:33%;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .overView:hover{
 background-color:#00104180;
@@ -76,6 +79,7 @@ background-color:#00104180;
     width:20%;
     text-align: center;
     background-color: #fff;
+        border-top-left-radius: 10px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -87,6 +91,7 @@ background-color:#00104180;
     text-align: center;
     font-size: 32px;
     font-weight: 800;
+    border-top-right-radius: 10px;
     text-shadow: white;
     background-color:#6a779df7 ;
 }
@@ -107,10 +112,12 @@ background-color:#00104180;
 .add1{
     background-color: #556fbdf2;
     color: #fff;
+    border-bottom-left-radius: 10px;
 }
 .add2{
     background-color:#001041;
     color:#fff;
+    border-bottom-right-radius: 10px;
 }
 .lik{
     height: 137px;
@@ -125,6 +132,8 @@ background-color:#00104180;
     background-color:#001041;
     color:#fff;
     cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .Trans:hover{
     background-color:#00104180;
@@ -136,11 +145,15 @@ background-color:#00104180;
     text-align: center;
     display:flex;
     justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     align-items: center;
 }
 .Data{
     width:70%;
     background-color: #69769c;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .With_upto{
     display:flex
@@ -481,19 +494,37 @@ background-color:#00104180;
 
 @media(max-width:768px){
     .P_P {
-        flex-direction: column;
+        width:620px;
+        max-width: 700px;
+        overflow-x: hidden;
+        margin:0 auto;
     }
+        .InvestorBy{
+            width:100%;max-width: 500px;
+            margin:0 auto;
+        }
+    .Pmain{
+        width:100%;
+        max-width: 100%;
+        margin-top: 10px;
+        overflow-x: scroll;
+
+    }
+        .Pmain::-webkit-scrollbar {
+            display: none;
+        }
     .overView {
       
-        width: 100%;
-        margin-bottom: 8px;
+        width: 200px;
+        /* margin-bottom: 8px; */
     }
     .Att{
         margin-bottom: 10px;
     }
     .Main_WALL {
         width: 100%;
-        margin-bottom: 8px;
+        max-width:500px;
+        margin:0 auto 12px auto;
     }
     .Is_KB {
         width: 40%;  

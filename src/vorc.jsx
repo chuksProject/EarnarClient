@@ -163,7 +163,7 @@ const Vic = () => {
                   <button className="Win_ButTON addWin">WIN</button>
                 </div>
                 <div className="school245">
-                  <button className="Win_ButTON addWin12">LOSE</button>
+                  <button className="Win_ButTON addWin12">LOSS</button>
                 </div>
               </div>
               <div className="Total56">

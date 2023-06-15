@@ -18,7 +18,7 @@ const DashboardUser = () => {
   useEffect(()=>{
     const userInfom = async ()=>{
       try{
-        const res = await axios.get('/post')
+        const res = await axios.get('http://localhost:8080/api/post')
  
         setUserInfo(res.data)
         console.log(res.data)

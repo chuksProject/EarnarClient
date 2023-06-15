@@ -43,7 +43,7 @@ const DashboardHome = () => {
     }
     const chang6 =()=>{
         setHome(<Demo4/>);
-        setBackColor("tips4")
+        setBackColor("tips5")
         
     }
     const chang7 =()=>{

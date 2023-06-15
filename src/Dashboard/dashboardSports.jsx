@@ -12,6 +12,7 @@ const DashboardSports = () => {
 
     const [inputs,setInputs]=useState({
         id:"",
+        gameType:"",
         time:"",
         league:"",
         teamA:"",
@@ -144,6 +145,7 @@ const DashboardSports = () => {
 
         setInputs({
             id:"",
+            gameType:"",
             time:"",
             league:"",
             teamA:"",
@@ -198,7 +200,7 @@ const onChangeHanler =(e)=>{
  
        try{
        
-            await axios.post("/post/sports",list2)
+            await axios.post("http://localhost:8080/api/post/sports",list2)
             setSuccess('Succesful upload')
             setTimeout(() => {
                 setSuccess('')
@@ -368,9 +370,9 @@ const onChangeHanler =(e)=>{
       <div className="GamEType">
           <div className="GamEType1 daro">
               <div className="GamEType2">Game Type</div>
-              <div className="GamEType3 juji"><select className="selectDiv">
-                  <option>Daily</option>
-                  <option>MidWeek</option></select></div>
+              <div className="GamEType3 juji"><select name="gameType" className="selectDiv" onChange={handleChange}>
+                  <option value="daily" id={1}>Daily</option>
+                  <option value="midweek" id={2}>MidWeek</option></select></div>
           </div>
          
           <div className="GamEType1">

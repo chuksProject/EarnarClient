@@ -18,7 +18,7 @@ const ForexPage = () => {
     const [show3,setShow3]= useState(false)
     const [show4,setShow4]= useState(false)
     const [show5,setShow5]= useState(false)
-    const [show6,setShow6]= useState(false)
+  
     const {currentUser} = useContext(AuthContext);
 
   const drop=()=>{
@@ -79,7 +79,7 @@ const ForexPage = () => {
 }} >
         <div className="sportPa">
         <div>
-          <img src="/img/earnarsBanner45.png" className="AffliateBanner" alt=""/>
+          <img src="/img/earnarsBanner45.png" className="AffliateBanner" alt="Affliate Banner"/>
           </div>
           
         <div className="MakingMoney">
@@ -215,7 +215,7 @@ management, this high degree
               <div className="HowFarBro" onClick={drop}>
                 <span>
 How do I register  with a broker?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -231,7 +231,7 @@ How do I register  with a broker?</span>{" "}
             <div>
               <div className="HowFarBro" onClick={drop1}>
                 <span>I dont Know anything about Forex trading,What should i do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -246,7 +246,7 @@ How do I register  with a broker?</span>{" "}
             <div>
               <div className="HowFarBro" onClick={drop2}>
                 <span>How can i fund my account? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -261,7 +261,7 @@ How do I register  with a broker?</span>{" "}
             <div>
               <div className="HowFarBro" onClick={drop3}>
                 <span> Can your company Trade for me and pay me a percentage monthly? </span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -276,7 +276,7 @@ How do I register  with a broker?</span>{" "}
             <div>
               <div className="HowFarBro" onClick={drop4}>
                 <span>How much do i stake in every trade? </span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -291,7 +291,7 @@ How do I register  with a broker?</span>{" "}
             <div>
               <div className="HowFarBro" onClick={drop5}>
                 <span>What is the guarantee am going to make money trading forex? </span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

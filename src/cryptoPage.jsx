@@ -210,7 +210,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop}>
                 <span>How do resgister  with an Exchange?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -226,7 +226,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop1}>
                 <span>I dont Know anything about crypto trading,What should i do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -241,7 +241,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop2}>
                 <span>How can i fund my account? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -256,7 +256,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop3}>
                 <span> Can your company Trade for me and pay me a percentage monthly? </span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -271,7 +271,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop4}>
                 <span> How much do i stake in every trade? </span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -286,7 +286,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop5}>
                 <span> What is the guarantee am going to make money trading Crypto?</span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

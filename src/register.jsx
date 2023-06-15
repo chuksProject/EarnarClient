@@ -12,9 +12,10 @@ const Register =()=>{
         username:"",
         email:"",
         password:"",
-        password1:"",
-        showPassword: false,
-        showPassword1: false
+      
+    })
+    const [inputs50,setInputs50]=useState({
+         showPassword: false,
     })
     const navigate = useNavigate()
     const[over18,setOver18]=useState(false);
@@ -36,32 +37,23 @@ const Register =()=>{
     
       setTerm(event.target.checked);
   }
-    const handleSumit = async e =>{
+    const handleSumit = async (e)=>{
     e.preventDefault()
    try{
-    //    if(inputs.password =! inputs.password1){
-    //        setError("password do not match")
-    //    }else if(inputs.email.length === (null || 0)){
-    //     setError("email field is empty")
-    //    }else if(inputs.username.length === (null || 0)){
-    //     setError("user field is empty")
-    //    }
-    //    else{
+   
         await axios.post("/auth/register",inputs)
         navigate('/login')
-    //    }
-    
-    
+
    }catch(err){
     // setError(err.response.data)
     setError("connection denied")
-    // console.log(err)
+    console.log(err)
    }    
     }
 
 
     const handleClickShowPassword = () => {
-        setInputs(previ=>({ ...previ, showPassword: !inputs.showPassword,showPassword1: !inputs.showPassword1 }));
+        setInputs50(previ=>({ ...previ, showPassword: !inputs50.showPassword }));
       };
 
     
@@ -73,13 +65,13 @@ const Register =()=>{
             <div className="Form_Div">
                 <form>
                      <p className="New_Account">Register New Account</p>
-                    <div> <input type="text" placeholder="User Name"  className="Full_Name" onChange={handleChange} name="username"/></div>
-                    <div> <input type="email" placeholder="Enter_Your Email" className="Full_Name" onChange={handleChange} name="email"/></div>
+                    <div> <input type="text" placeholder="User_name"  className="Full_Name" onChange={handleChange} name="username"/></div>
+                    <div> <input type="email" placeholder="Email" className="Full_Name" onChange={handleChange} name="email"/></div>
                   
 
-                    <div className="sers"> <input type={inputs.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}
+                    <div className="sers"> <input type={inputs50.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}
                   />
-                  {inputs.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
+                  {inputs50.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
                   {err && <p>{err}</p>}
                      {/* <p className="Include"><span className="NoteP"> Note: </span>Password must be at least six (6) characters and must include Upper Case and Lower Case,Number and a special character e.g PREditam247@</p> */}
 
