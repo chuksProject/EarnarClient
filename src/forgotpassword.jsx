@@ -9,6 +9,8 @@ import {AuthContext}from "./context/authContext"
 
 
 
+
+
 const ForgotPassword =()=>{
 
     const [OTP,setOtp]=useState("")
@@ -17,6 +19,7 @@ const ForgotPassword =()=>{
         
     })
   
+      const {forgotPassword}=useContext(AuthContext)
 
 
     
@@ -42,13 +45,14 @@ const ForgotPassword =()=>{
     e.preventDefault()
 
    try{
-    await axios.post("/auth/forgotpassword",email2)
+    // await axios.post("/auth/forgotpassword",email2)
+    await forgotPassword(email2)
      navigate('/otp')
      console.log('success')
     
    }catch(err){
-    setError(err.response.data)
-    console.log(err)
+    setError(err.response.data.msg)
+    console.log(err.response.data.msg)
    } 
      
     
@@ -58,12 +62,14 @@ const ForgotPassword =()=>{
             <div className="Form_Divbb">
            <div className="Form_Div renttt">
                <form>
-                  
+                   {err && <p style={{color:"#fff",textAlign:"center",padding:"6px 4px",background:"#6d7aa8",borderRadius:"5px"}}>{err}</p>}
                   <div className="welcome4">Forgot Password</div>
                   <div  className="forgotText">Enter Your Email Address </div>
                   <div> <input type="email" placeholder="Enter Your Email" className="Full_Name" name="email" onChange={handleChange}/></div>
                   
                  <a className="otpLink" onClick={handleSumit1}> <div  className="loginn">Send Reset Link</div></a>
+
+                 
                  
                </form>
            </div>

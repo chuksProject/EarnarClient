@@ -1,16 +1,13 @@
-import react,{useState} from "react"
+import React,{useState} from "react"
 import "./style/footer.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPlus,faCaretDown,faCaretUp,faAngleDown,faAngleUp} from '@fortawesome/free-solid-svg-icons'
+import {faAngleDown,faAngleUp} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook,faTwitter,faLinkedin,faTelegram,faYoutube,}from '@fortawesome/free-brands-svg-icons'
-import { Link} from "react-router-dom";
-// import{ faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const Footer =()=>{
 
      const [footerShow,setFooterShow]=useState(false)
      const [footerShow1,setFooterShow1]=useState(false)
-
 
       const dropdown =()=>{
            
@@ -88,17 +85,12 @@ const Footer =()=>{
                               <li><a href="https://t.me/earnarshub" className="twww"><FontAwesomeIcon icon={faTelegram} className="icon_brand_size" /></a></li>
                               <li><a href="https://www.youtube.com/@Earnars" className="twww"><FontAwesomeIcon icon={faYoutube} className="icon_brand_size" /></a></li>
                               </ul></li>
-                          
-                          
                       </ul>
                   </div>
               </div>
               
               <div className="Footer_Copyright">© 2023 Earnars. All rights reserved.</div>
           </div>
-
-       
-
         </div>
     )
 }

@@ -1,8 +1,28 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import "../style/home.css";
 import "../style/dashboardStyles/dashboardUser.css"
+import axios from "axios"
 
-const dashboardWithdrawal = () => {
+const DashboardWithdrawal = () => {
+
+  const [withdrawalList,setWithdrawalList] = useState([])
+
+  useEffect(()=>{
+
+    const fetchWithdrawal = async ()=>{
+    
+       try{ 
+        const res =   await axios.get("/user/withdrawal")
+
+         setWithdrawalList(res.data)
+       }catch(err){
+         console.log(err)
+       }
+    }
+    fetchWithdrawal()
+
+  },[])
+
   return (
     <div className="PHONENUM">
          <div className="TimeDiv12">
@@ -10,7 +30,8 @@ const dashboardWithdrawal = () => {
                 <li>USERNAME</li>
                 <li>BANK NAME</li>
                 <li>BANK ACCOUNT</li>
-                <li>AMOUNT</li>
+                <li>MAIN WALLET</li>
+                <li>WITHDRAWAL AMOUNT </li>
                 <li>STATUS</li>
                
               </ul>
@@ -18,24 +39,21 @@ const dashboardWithdrawal = () => {
             <div className="bigManDiv">
               <div className="FOR">
                 <div className="Leaque lagak">
-                
-
-                 
-            
-
-                  {/* {userInfo.map((user,id)=>( */}
+              
+                  {withdrawalList.map((user,id)=>(
                   <div >
                     <ul className="TimeDiv1 ADDTimeDbg work" >
                     <li>Samuel</li>
-                      <li>09060243960</li>
-                      <li>Chukwubuike Kingsley</li>
-                      <li>Kingsley@gmail.com</li>
+                      <li>{user.account_name}</li>
+                      <li>{user.account_no}</li>
+                       <li>{user.main_amount}</li>
+                      <li>{user.withdrawal_amount}</li>
                       <li><div className="ApprovedButton"><span>Approved</span><div className="yesp">yes</div><div className="yesp Nop">NO</div>
                           </div></li>
                    
                     </ul>
                   </div>
-                  {/* ))} */}
+                   ))} 
 
 
           
@@ -48,4 +66,4 @@ const dashboardWithdrawal = () => {
   )
 }
 
-export default dashboardWithdrawal
+export default DashboardWithdrawal

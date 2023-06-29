@@ -4,7 +4,7 @@ import { Link,useNavigate} from "react-router-dom";
 import axios from "axios"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
-import { faGooglePlusG,faGoogle}from '@fortawesome/free-brands-svg-icons'
+import { faGooglePlusG}from '@fortawesome/free-brands-svg-icons'
 
 const Register =()=>{
 
@@ -45,9 +45,7 @@ const Register =()=>{
         navigate('/login')
 
    }catch(err){
-    // setError(err.response.data)
-    setError("connection denied")
-    console.log(err)
+    setError(err.response.data.msg)
    }    
     }
 
@@ -72,8 +70,7 @@ const Register =()=>{
                     <div className="sers"> <input type={inputs50.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}
                   />
                   {inputs50.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
-                  {err && <p>{err}</p>}
-                     {/* <p className="Include"><span className="NoteP"> Note: </span>Password must be at least six (6) characters and must include Upper Case and Lower Case,Number and a special character e.g PREditam247@</p> */}
+                  {err && <p className="errpage">{err}</p>}
 
                      <div className="Checkbox_div"><input type="checkbox" name="over18" onChange={handleChange1} className="Bym"/> <label className="Over_18">By checking this box you declare that you are over 18yrs of age.</label></div>
                     

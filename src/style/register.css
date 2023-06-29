@@ -9,6 +9,10 @@
     display: none;
     
 }
+.errpage{
+    color:red;
+    padding:5px 5px 5px 10px;
+}
 .Form_Div{
    width:100%;
    max-width: 450px;

@@ -2,6 +2,7 @@ import React,{useState,useContext} from "react";
 import "./style/register.css";
 import "./style/login.css";
 import "./style/resetpassword.css"
+import {useParams} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 import { Link,useNavigate} from "react-router-dom";
@@ -10,13 +11,21 @@ import {AuthContext}from "./context/authContext"
 
 
 
+
 const ResetPassword =()=>{
 
+ const pa = useParams().id;
+ console.log(pa)
+     
     const [inputs,setInputs]=useState({
-        username:"",
         password:"",
+        password1:"",
        
     })
+    const [error1,setError1]=useState("")
+   
+
+    const [checkPassword,setCheckPassword] = useState("")
     const [inputs2,setInputs2]=useState({
         
         showPassword: false,
@@ -47,6 +56,35 @@ const ResetPassword =()=>{
     console.log(err)
    }    
     }
+
+ const checkSubmit = async()=>{
+    if(inputs.password1 !== inputs.password){
+        // setError1("password do not match")
+        setTimeout(
+           setError1("password do not match"),1000  
+        )
+    //   setError1("password do not match")
+    }else if((inputs.password.length < 10) || (inputs.password1.length < 10)){
+        setError1("Increase password strength")
+    }else{
+        if(inputs.password1 === inputs.password){
+           setCheckPassword(inputs.password) 
+           const passWord = async()=>{
+            try{
+               await axios.post(`/auth/resetpass!45!@word/${pa}`,{password:checkPassword})
+               navigate("/success")
+            }catch(err){
+                   console.log(err)
+            }
+
+           }
+
+           passWord()
+        }
+    }
+
+ }
+
     return(
         <div className="BgColor" style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
             <div className="Form_Divbb">
@@ -54,14 +92,15 @@ const ResetPassword =()=>{
                <form>
                   
                   <div className="welcome4">Change Password</div>
+                  {error1 && <p style={{color:"#fff"}}>{error1}</p>}
                   <p className="NewpAss">New Password</p>
-                  <div> <input type="password" placeholder="password" className="Full_Name pCard1" name="username" onChange={handleChange}/></div>
+                  <div> <input type= {inputs2.showPassword ? "text":"password"} placeholder="password" className="Full_Name pCard1" name="password" onChange={handleChange}/></div>
                    <p className="NewpAss">Confirm Password</p>
-                  <div className="sers"> <input type={inputs2.showPassword ? "text":"password"} placeholder= "confirm_Password" className="Full_Name" onChange ={handleChange} name="password" 
+                  <div className="sers"> <input type={inputs2.showPassword ? "text":"password"} placeholder= "confirm_Password" className="Full_Name" onChange ={handleChange} name="password1" 
                   />
                   {inputs2.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
-                   <div className="Checkbox_div"><input type="checkbox" name="over18"  className="Bym"/> <label className="Over_18">I accept the Terms and Conditions</label></div>
-                     <a href="/login" className="sesetP"> <div  className="loginn">Reset Password</div></a>
+                   {/* <div className="Checkbox_div"><input type="checkbox" name="over18"  className="Bym"/> <label className="Over_18">I accept the Terms and Conditions</label></div> */}
+                     <div className="sesetP marKing" onClick={checkSubmit}> <div  className="loginn">Reset Password</div></div>
 
                   
                </form>

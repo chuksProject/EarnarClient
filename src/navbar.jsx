@@ -1,4 +1,4 @@
-import React, {useState,useContext} from 'react'
+import React, {useState,useContext,useEffect} from 'react'
 import "./style/home2.css"
 import "./style/home.css";
 import { Link} from "react-router-dom";
@@ -7,13 +7,16 @@ import { AuthContext } from './context/authContext';
 const Navbar= () => {
 
     const [register,setRegister] = useState(false)
-    const {currentUser,logout} = useContext(AuthContext);
+    const {currentUser,logout,isPaid} = useContext(AuthContext);
     const tr = window.location.pathname;
 
     console.log(tr)
     
-
-
+ 
+     setTimeout(() => {
+            setRegister() 
+              }, 5000);
+ 
 
   return (
     <div>
@@ -74,8 +77,8 @@ const Navbar= () => {
                       <li className="paulmy_man">ID:00000{currentUser?.id}</li>
                       <a href="/wallet" className="FeedDiv"><li className="LogOutDiv_UN">My Wallet</li></a>
                       <a href="/profile" className="FeedDiv"><li className="LogOutDiv_UN">My Profile</li></a>
-                      {/* <Link to="" className="FeedDiv"> <li className="LogOutDiv_UN">My Subscription</li></Link> */}
-                      <a href="/tip" className="FeedDiv"><li className="LogOutDiv_UN">My Tips(Premium)</li></a>
+                      {isPaid ? <a href="/tip" className="FeedDiv"><li className="LogOutDiv_UN">My Tips(Premium)</li></a> :<div onClick={()=>setRegister(!register)} className="FeedDiv" ><li className="LogOutDiv_UN">My Tips(Subscribe)</li></div>}
+                     
                      
                       {currentUser?  <Link to="" className="FeedDiv"><li className="LogOutDiv_UN AMKING" onClick={logout}>Logout</li></Link>:""}
                      
@@ -94,6 +97,10 @@ const Navbar= () => {
           </div>
         </div>
         }
+
+
+         {register ? <div style={{position:'absolute',top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:"red",zIndex:"500",fontSize:"20px",padding:"5px 10px",backgroundColor:"#fff"}}> Please subscribe to unlock</div>:""}
+        {/* <div style={{position:'absolute',top:"400px",left:"50%",transform:"translate(-50%,-50%)",color:"red",zIndex:"500"}}> Please subscribe to unlock</div> */}
     </div>
   )
 }

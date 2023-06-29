@@ -1,14 +1,10 @@
 import React ,{useState,useEffect}from "react";
-import { Link} from "react-router-dom";
 import "./style/home.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import Footer from "./footer"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faPlus,faMinus,faVolleyball,faCheckToSlot, faCheckDouble} from '@fortawesome/free-solid-svg-icons'
-
-
 import AOS from 'aos';
 import "./style/home2.css"
 import axios from "axios";
@@ -26,15 +22,9 @@ const Home2=() =>{
   const [show5,setShow5]= useState(false)
   const [show6,setShow6]= useState(false)
   const [show7,setShow7]= useState(false)
-  const [forex,setForex] = useState("")
+
   const [sports,setSports]= useState("Forex")
-  const [Cryptocurrency,setCryptocurrency] = useState("")
-  const [Binary,setBinary] = useState("")
-
-  const [register,setRegister] = useState(false)
-
-
-
+ 
   const drop =()=>{
      setShow(!show)
      setShow1(false)
@@ -120,9 +110,11 @@ const Home2=() =>{
     setShow6(false)
     setShow7(!show7)
   }
-
-  const [post,setPosts] = useState([])
+ const [error,setError]=useState("")
   const [post1,setPosts1] = useState([])
+   const [post2,setPosts2] = useState([])
+   const [post3,setPosts3] = useState([])
+   const [post4,setPosts4] = useState([])
   const cat = useLocation().search
   
 
@@ -163,7 +155,7 @@ const Home2=() =>{
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2 // optional, default to 1.
+      slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -190,31 +182,55 @@ const Sports1 =()=>{
     setSports("sports")
 }
 
-// useEffect(()=>{
-//   const fetchData = async ()=>{
-//     try{
-//  const res = await axios.get(`/posts${cat}`)
-//    setPosts(res.data)
+useEffect(()=>{
+  const fetchData4 = async ()=>{
+    try{
+ const res = await axios.get(`/post/binary/tip3`)
+   setPosts4(res.data)
+   console.log(res.data)
+    }catch(err){
+    setError(err)
 
-//     }catch(err){
-//       console.log(err)
+    }
+  }
+  fetchData4()
+},[post4])
 
-//     }
-//   }
-//   fetchData()
-// },[cat])
+useEffect(()=>{
+  const fetchData3 = async ()=>{
+    try{
+ const res = await axios.get(`/post/crypto/tip3`)
+   setPosts3(res.data)
+   console.log(res.data)
+    }catch(err){
+    setError(err)
+
+    }
+  }
+  fetchData3()
+},[post3])
+
+
+useEffect(()=>{
+  const fetchData2 = async ()=>{
+    try{
+ const res = await axios.get(`/post/forex/tip3`)
+   setPosts2(res.data)
+    }catch(err){
+    setError(err)
+
+    }
+  }
+  fetchData2()
+},[post2])
 
 useEffect(()=>{
   const fetchData1 = async ()=>{
     try{
  const res = await axios.get(`/post/sports/tip3`)
    setPosts1(res.data)
-
-   console.log(res.data)
-  
- 
     }catch(err){
-      console.log(err)
+       setError(err)
 
     }
   }
@@ -229,15 +245,7 @@ useEffect(()=>{
     return (
       <div  className="HomPageBg">
       <div className="Home_Bg_Bg" >
-      
-
-       
-        {/*======  mobile header ========*/} 
-
-
-      
-        
-
+    
         {/*======  section2 ========*/}
 
       <div className="fugmu">
@@ -347,16 +355,8 @@ useEffect(()=>{
            </div>
 
 
-           {/* end section5   */}
-               {/* <Came/> */}
-           {/*section6 */}
-
-
          <div style={{paddingBottom:"20px",position:"relative"}}>
-         
-
-
-         
+        
 
            <div className="Rtme">
                <div className="loud">Our Results Speaks Louder</div>
@@ -381,7 +381,7 @@ useEffect(()=>{
   infinite={true}
   // autoPlay={this.props.deviceType !== "mobile" ? true : false}
   autoPlay={true}
-  autoPlaySpeed={1000}
+  autoPlaySpeed={3000}
   keyBoardControl={true}
   customTransition="all .5"
   transitionDuration={500}
@@ -394,207 +394,18 @@ useEffect(()=>{
  
 >
       
-            
-               
- {/* {post1.map((app,id)=>(
-                   <div className="sport2 cappin" key={id}>
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/{app.gameNo}</div>
+
+               {post1.map((app,id)=>(
+                   <div className="sport2 cappin yellowD" key={id}>
+                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/{app.game_no}</div>
                        <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">{app.dailyProfit}%</p>
-                       <p className="addErn">odd:1.834</p>
-                       <div className={app.checked ===true?"EarnLoss":"EarnLoss loss"}>{app.checked ===true?"Earned":"Loss"}</div>
+                       <p className="Dyc">{app.daily_profit}%</p>
+                       <p className="addErn">odd:{app.odd}</p>
+                       <div className={app.action === "earned"?"EarnLoss":"EarnLoss losscolor"}>{app.action === "earned"?"Earned":"Loss"}</div>
 
                    </div>
-                   ))}  */}
-
-
-               
-                   <div className="sport2 cappin" >
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0034</div>
-                       <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">20%</p>
-                       <p className="addErn">odd:1.8</p>
-                       <div className="EarnLoss">Earned</div>
-
-                   </div>
-                    
-                   <div className="sport2 cappin" >
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0035</div>
-                       <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">40%</p>
-                       <p className="addErn">odd:1.43</p>
-                       <div className="EarnLoss">Earned</div>
-
-                   </div>
-                    
-                   <div className="sport2 cappin" >
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0036</div>
-                       <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">80%</p>
-                       <p className="addErn">odd:6.34</p>
-                       <div className="EarnLoss">Earned</div>
-
-                   </div>
-                    
-                   <div className="sport2 cappin" >
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0037</div>
-                       <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">10%</p>
-                       <p className="addErn">odd:1.834</p>
-                       <div className="EarnLoss">Earned</div>
-
-                   </div>
-                                  <div className="sport2 cappin" >
-                       <div className="divS"><span className="Nog">Game No: </span>SP-{date}/0038</div>
-                       <p className="dailyP21">Daily Profit</p>
-                       <p className="Dyc">40%</p>
-                       <p className="addErn">odd:1.64</p>
-                       <div className="EarnLoss">Earned</div>
-
-                   </div>
-                   
-             
-
-             {/* <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0017</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">45 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div> */}
-                        {/* <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0016</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">40 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div> */}
-                        {/* <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0015</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">80 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div> */}
-
-                        {/* <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0014</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">80 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div> */}
-                        {/* <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0013</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">40 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div> */}
-
-
+                   ))}
                   
-
-        
-               
-                    
-             
-
-                
-
-
-          
-
        
 </Carousel>
 
@@ -603,15 +414,15 @@ useEffect(()=>{
                { sports ==="Forex"? 
                         
                                  <Carousel
-  swipeable={false}
-  draggable={true}
-  showDots={true}
+  swipeable={true}
+  draggable={false}
+  showDots={false}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
-  infinite={false}
+  infinite={true}
   // autoPlay={this.props.deviceType !== "mobile" ? true : false}
   autoPlay={false}
-  autoPlaySpeed={1000}
+  autoPlaySpeed={3000}
   keyBoardControl={true}
   customTransition="all .5"
   transitionDuration={500}
@@ -622,132 +433,36 @@ useEffect(()=>{
   itemClass="carousel-item-padding-40-px"
   className="king"
 >
-                        <div className="sport2 cappin yellowC">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0017</div>
+
+
+  {post2.map((app,id)=>(
+                        <div className="sport2 cappin yellowC" key={id}>
+                            <div className="divS"><span className="Nog">Trade No: </span>FX-{date}/{app.r_trade_no}</div>
 
                             <div className="busyer">
                             <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
+                                <p className="Usdj ">Pair: <span className="upcase">{app.r_pair}</span></p>
+                                <p className="Usdj">Condition: <span className="lowcase">{app.r_condition}</span></p>
                             </div>
                            <div className="pairs">
                                <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
+                                   <p className="Usdj">Entry point-{app.r_entry_point}</p>
+                                   <p className="Usdj">Exit point-{app.r_exit_point}</p>
                                </div>
                                <div className="Fitwem">
                                    <p className="Usdj addpo">Take Profit</p>
-                                   <p className="Usdj addpo1">45 pips</p>
+                                   <p className="Usdj addpo1" >{app.r_take_profit} pips</p>
                                </div>
                            </div>
 
                            </div>
                            
                           
-                            <div className="EarnLoss"><FontAwesomeIcon icon={faCheckDouble} className="icon_brand_size"/>Earned</div>
+                            <div className= {app.r_check === "earned"?"EarnLoss":"EarnLoss losscolor"}><FontAwesomeIcon icon={faCheckDouble} className="icon_brand_size"/>{app.r_check === "earned"?"Earned":"Loss"}</div>
      
                         </div>
-                        <div className="sport2 cappin yellowC">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0016</div>
+                        ))}
 
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">40 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div>
-                        <div className="sport2 cappin yellowC">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0015</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">80 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div>
-
-                        <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0014</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">80 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div>
-                        <div className="sport2 cappin">
-                            <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0013</div>
-
-                            <div className="busyer">
-                            <div className="pairs">
-                                <p className="Usdj">Pair: GBPUSD</p>
-                                <p className="Usdj">Condition: Long</p>
-                            </div>
-                           <div className="pairs">
-                               <div>
-                                   <p className="Usdj">Entry point-1.8923</p>
-                                   <p className="Usdj">Exit point-1.8923</p>
-                               </div>
-                               <div className="Fitwem">
-                                   <p className="Usdj">Take Profit</p>
-                                   <p className="Usdj">40 pips</p>
-                               </div>
-                           </div>
-
-                           </div>
-                           
-                          
-                            <div className="EarnLoss">Earned</div>
-     
-                        </div>
                         </Carousel>
                   
                :""}
@@ -756,15 +471,15 @@ useEffect(()=>{
                { sports === "cryptocurrency"? 
                  
                  <Carousel
-                 swipeable={false}
-                 draggable={true}
-                 showDots={true}
+                 swipeable={true}
+                 draggable={false}
+                 showDots={false}
                  responsive={responsive1}
                  ssr={true} // means to render carousel on server-side.
-                 infinite={false}
+                 infinite={true}
                  // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                 autoPlay={false}
-                 autoPlaySpeed={1000}
+                 autoPlay={true}
+                 autoPlaySpeed={3000}
                  keyBoardControl={true}
                  customTransition="all .5"
                  transitionDuration={500}
@@ -775,131 +490,34 @@ useEffect(()=>{
                  itemClass="carousel-item-padding-40-px"
                   className="king"
                >
-                    <div className="sport2 cappin yellowA">
-                        <div className="divS"><span className="Nog Nog4">Trade No: </span>SP-{date}/0021</div>
+
+                   {post3.map((app,id)=>(
+                    <div className="sport2 cappin yellowA" key={id}>
+                        <div className="divS"><span className="Nog Nog4">Trade No: </span>CT-{date}/{app.c_trade_no}</div>
 
                         <div className="busyer">
                         <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Long</p>
+                            <p className="Usdj">Pair:<span className="upcase">{app.c_pair}</span></p>
+                            <p className="Usdj">Condition:<span className="lowcase">{app.c_condition}</span></p>
                         </div>
                        <div className="pairs">
                            <div>
-                               <p className="Usdj">Entry point-1.8923</p>
-                               <p className="Usdj">Exit point-1.8923</p>
+                               <p className="Usdj">Entry point-{app.c_entry_point}</p>
+                               <p className="Usdj">Exit point-{app.c_exit_point}</p>
                            </div>
                            <div className="Fitwem">
                                <p className="Usdj Nog4">Take Profit</p>
-                               <p className="Usdj Nog4fade">60%</p>
+                               <p className="Usdj Nog4fade">{app.c_take_profit}%</p>
                            </div>
                        </div>
 
                        </div>
                        
                       
-                        <div className="EarnLoss">Earned</div>
+                        <div className={app.c_check === "earned"?"EarnLoss":"EarnLos losscolor"}>{app.c_check === "earned"?"Earned":"Loss"}</div>
  
                     </div>
-                    <div className="sport2 cappin yellowA">
-                        <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/007</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Long</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">Entry point-1.8923</p>
-                               <p className="Usdj">Exit point-1.8923</p>
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">80%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowA">
-                        <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/004</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Long</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">Entry point-1.8923</p>
-                               <p className="Usdj">Exit point-1.8923</p>
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowA">
-                        <div className="divS"><span className="Nog">Trade No: </span>SP-{date}/0012</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Long</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">Entry point-1.8923</p>
-                               <p className="Usdj">Exit point-1.8923</p>
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowA">
-                        <div className="divS"><span className="Nog">Trade No: </span>SP-{date}</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Long</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">Entry point-1.8923</p>
-                               <p className="Usdj">Exit point-1.8923</p>
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
+                    ))}
                     </Carousel>
                :""}
  
@@ -907,15 +525,15 @@ useEffect(()=>{
 
  { sports=== "binary"? 
                    <Carousel
-                   swipeable={false}
-                   draggable={true}
-                   showDots={true}
+                   swipeable={true}
+                   draggable={false}
+                   showDots={false}
                    responsive={responsive1}
                    ssr={true} // means to render carousel on server-side.
-                   infinite={false}
+                   infinite={true}
                    // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                   autoPlay={false}
-                   autoPlaySpeed={1000}
+                   autoPlay={true}
+                   autoPlaySpeed={3000}
                    keyBoardControl={true}
                    customTransition="all .5"
                    transitionDuration={500}
@@ -926,131 +544,34 @@ useEffect(()=>{
                    itemClass="carousel-item-padding-40-px"
                     className="king"
                  >
-                    <div className="sport2 cappin yellowB">
-                        <div className="divS"><span className="Nog Nog5">Trade No: </span>BN-{date}/001</div>
+
+                {post4.map((app,id)=>(
+                    <div className="sport2 cappin yellowB" key={id}>
+                        <div className="divS"><span className="Nog Nog5">Trade No: </span>BN-{date}/{app.b_trade_no}</div>
 
                         <div className="busyer">
                         <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Buy(call)</p>
+                            <p className="Usdj">Pair: {app.b_pair}</p>
+                            <p className="Usdj">Condition: {app.b_condition}</p>
                         </div>
                        <div className="pairs">
                            <div>
-                               <p className="Usdj">TIME : 5:45pm</p>
+                               <p className="Usdj">TIME : {app.b_expire_time}</p>
                              
                            </div>
                            <div className="Fitwem">
                                <p className="Usdj Nog5">Take Profit</p>
-                               <p className="Usdj Nog5fade">60%</p>
+                               <p className="Usdj Nog5fade">{app.b_profit}%</p>
                            </div>
                        </div>
 
                        </div>
                        
                       
-                        <div className="EarnLoss">Earned</div>
+                        <div className={app.b_check === "earned"?"EarnLoss":"EarnLoss losscolor"}> {app.b_check === "earned"?"Earned":"Loss"}</div>
  
                     </div>
-                    <div className="sport2 cappin yellowB">
-                        <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/009</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Sell(put)</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">TIME : 3:00am</p>
-                          
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">80%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned </div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowB">
-                        <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/005</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Buy(call)</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">TIME : 2:00pm</p>
-                            
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowB">
-                        <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/002</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Buy(call)</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">TIME : 2:00pm</p>
-                            
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
-                    <div className="sport2 cappin yellowB">
-                        <div className="divS"><span className="Nog">Trade No: </span>BN-{date}/003</div>
-
-                        <div className="busyer">
-                        <div className="pairs">
-                            <p className="Usdj">Pair: GBPUSD</p>
-                            <p className="Usdj">Condition: Buy(call)</p>
-                        </div>
-                       <div className="pairs">
-                           <div>
-                               <p className="Usdj">TIME : 2:00pm</p>
-                            
-                           </div>
-                           <div className="Fitwem">
-                               <p className="Usdj">Take Profit</p>
-                               <p className="Usdj">75%</p>
-                           </div>
-                       </div>
-
-                       </div>
-                       
-                      
-                        <div className="EarnLoss">Earned</div>
- 
-                    </div>
+                    ))}
                     </Carousel>
                :""}
 

@@ -95,15 +95,8 @@ const Vic = () => {
   return (
     <div className="Cover_BackgroundColor" style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
   
-
       {/* mobile view */}
       
-
-
- 
-
-
-
       <div className="Du">
         <ul className="Bet_CC">
           <li className="VirtualP" onClick={()=>setShow1( "ultimate")}>Ultimate Virtual Bet</li>
@@ -134,8 +127,6 @@ const Vic = () => {
       </div>
       </div>
  
- 
-
       <div className="New_Month">
 
      {show1 === "ultimate"? 

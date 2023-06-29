@@ -4,7 +4,6 @@ import "./style/login.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 import { Link,useNavigate} from "react-router-dom";
-import axios from "axios"
 import {AuthContext}from "./context/authContext"
 
 
@@ -43,8 +42,8 @@ const Login =()=>{
     // await axios.post("http://localhost:8080/api/auth/login",inputs)
     // console.log("success")
    }catch(err){
-    setError(err.response.data)
-    console.log(err)
+    setError(err.response.data.msg)
+    // console.log(err.response.data.msg)
    }    
     }
     return(

@@ -1,7 +1,7 @@
-import React,{useState,useContext} from 'react'
+import React,{useContext} from 'react'
 import "./style/premium.css"
 import Footer from "./footer"
-import { Link} from "react-router-dom";
+
 import { AuthContext } from './context/authContext';
 
 
@@ -12,7 +12,7 @@ const Premium = () => {
     <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
 }}>
        <div className="PrmiumBanner" >
-          <img src="/img/EarnarsBanner16.png" className="AffliateBannertt" />
+          <img src="/img/EarnarsBanner16.png" className="AffliateBannertt" alt=""/>
           </div>
         <div className="ApplyFor">
           <p className="unlock">Premium Subscription Unlocks All Predictions</p>

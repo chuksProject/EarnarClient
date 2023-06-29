@@ -1,8 +1,9 @@
-import React,{useState,useContext} from "react";
+import React,{useState,useContext, useEffect} from "react";
 import "./style/walletOverView.css"
 import { Link} from "react-router-dom";
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import { AuthContext } from './context/authContext';
+import axios from "axios"
 
 const WalletOverView =()=>{
 
@@ -19,18 +20,33 @@ const WalletOverView =()=>{
     const [active,setActive] = useState(true)
     const [walletAcount,setWalletAccount]=useState("000")
     const [affliateAcount,setAffliateAccount]=useState("000")
-    
-  
     const [amount,setAmount] =useState(0)
-    const {currentUser} = useContext(AuthContext);
+    const {currentUser,setIsPaid} = useContext(AuthContext);
     const[divFlex,setDivFlex]=useState("")
-
-    const [duration,setDuration] = useState()
+        let pars = 0;
+      const [moneyDeposit,setMoneyDeposit] = useState([])
+    const [duration,setDuration] = useState();
+    const [mainWallet,setMainWallet] = useState(1000)
     const [visit,setVisit] = useState()
+    
     const [hours,setHours] = useState()
     const [Active,setActivem] = useState("active")
+    const [withdrawalInfo,setWithdrawalInfo] = useState({
+        withdrawalAmount:"",
+       accountName:"",
+        accountNo:""
+    })
+    const [responseInfo,setResponseInfo] = useState([])
 
+
+    const handleChanges =(e)=>{
+        setWithdrawalInfo(prev =>({...prev,[e.target.name]:e.target.value}))
+    }
+
+   const mon = [withdrawalInfo,{main:mainWallet}]
     const date = new Date();
+ 
+ 
 
     const showTime = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
@@ -100,6 +116,7 @@ const WalletOverView =()=>{
     setDeposit('')
     setModal(!modal)
     setTransfer("")
+    document.body.classList.add('hou')
 }
 
 const transferT =()=>{
@@ -109,11 +126,55 @@ const transferT =()=>{
     setModal(!modal)
 }
 
+const reOpen =()=>{
+    setModal(!modal);
+    document.body.classList.remove('hou')
+}
+
 const trig =()=>{
     setPinAmount("Enter Amount")
     setMove(false)
     setActive(!active)
 }
+
+
+ const handleWithdrawal =(e) =>{
+                    e.preventDefault()
+                    console.log(mainWallet)
+                    if(mainWallet > withdrawalInfo.withdrawalAmount ){
+                        const mainWalletBefore = mainWallet;
+                        const amountToWithdraw = withdrawalInfo.withdrawalAmount;
+                        const balance = parseInt(mainWalletBefore) - parseInt(amountToWithdraw) ;
+                    //     // const mon1 = [withdrawalInfo,{main:mainWalletBefore,balance:balance}]
+                        console.log(balance)
+                //    try{
+                //      await axios.post("/user/withdrawal",mon1)
+                //      console.log("success")
+                //      setModal(!modal)
+                //    }catch(err){
+                
+                //     console.log(err)
+                //    }
+
+                   }
+                   
+                   
+                    }
+
+
+                //     const handleDeposit = async () =>{
+                //    try{
+                //      await axios.post("/user/deposit-money",moneyDeposit)
+                //      console.log("success")
+                //      setModal(!modal)
+                //    }catch(err){
+                
+                //     console.log(err)
+                //    }    
+                //     }
+        
+
+    
 
  const config = {
     public_key: 'FLWPUBK_TEST-968ad24101fcac26e1750f77e2a2d46b-X',
@@ -122,19 +183,84 @@ const trig =()=>{
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
-      email: 'user@gmail.com',
+      email: currentUser.email,
        phone_number: '070********',
-      name: 'john doe',
+      name: currentUser.username,
     },
     customizations: {
-      title: 'my Payment Title',
+      title: 'Deposit',
       description: 'Payment for items in cart',
-      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+      logo: 'http://localhost:3000/public/img/Earnars1@72x1.png',
     },
   };
 
-  const handleFlutterPayment = useFlutterwave(config);
+//   const config1 = {
+//     public_key: 'FLWPUBK_TEST-968ad24101fcac26e1750f77e2a2d46b-X',
+//     tx_ref: Date.now(),
+//     amount: subAmount,
+//     currency: 'NGN',
+//     payment_options: 'card,mobilemoney,ussd',
+//     customer: {
+//       email: currentUser.email,
+//        phone_number: '070********',
+//       name: currentUser.username,
+//     },
+//     customizations: {
+//       title: 'Deposit',
+//       description: 'Payment for items in cart',
+//       logo: 'http://localhost:3000/public/img/Earnars1@72x1.png',
+//     },
+//   };
 
+  const handleFlutterPayment = useFlutterwave(config);
+//    const handleFlutterPayment1 = useFlutterwave(config1);
+
+
+  const flut =()=>{
+     handleFlutterPayment({
+            callback: (response) => {
+                console.log(response)
+              
+                closePaymentModal() // this will close the modal programmatically
+            },
+            onClose: () => {
+                
+            },
+          });
+  }
+//    const flut2 =()=>{
+//      handleFlutterPayment({
+//             callback: (response) => {
+//                console.log(response);
+//             //    if(response.status === "successful"){
+//             //     // setMainWallet(mainWallet + amount)
+//             //       setIsPaid(true)
+//             //     // pars += parseInt(amount)
+                
+//             //    }
+//                 closePaymentModal() // this will close the modal programmatically
+//             },
+//             onClose: () => {
+                
+//             },
+//           });
+//   }
+
+
+  useEffect(()=>{
+    const handleDeposit = async () =>{
+                   try{
+                     await axios.post("/user/deposit-money", responseInfo)
+                     console.log("success")
+                    //  setModal(!modal)
+                   }catch(err){
+                
+                    console.log(err)
+                   }    
+                    }
+handleDeposit()
+
+  },[responseInfo])
 
     return(
         <div className="Parent_Over_File_Bg BgColorT"   style={{backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"}}>
@@ -167,7 +293,7 @@ const trig =()=>{
                       <div className="Firet">
                       <div className="Main_WALL1">
                           <p className="Is_KB">Main Wallet</p>
-                          <p className="Is_KB1">₦{walletAcount}.00</p>
+                          <p className="Is_KB1">₦{mainWallet}.00</p>
                       </div>
                       <div className="Depost">
                           <p className="dep1 add1" onClick={ depositT}>Deposit</p>
@@ -356,7 +482,7 @@ const trig =()=>{
                {modal ? 
             <div>
 
-            <div className="Deposit_Modal" onClick={()=>setModal(!modal)}>
+            <div className="Deposit_Modal" onClick={reOpen}>
             </div>
                 <div className="Deposit_Modal_Div_Div">
                     {(deposit === "depositMe") ||(deposit ==="subScriptionP")? 
@@ -382,17 +508,9 @@ const trig =()=>{
                             } */}
 
                         <div className="ProccedRent">
-                            <input type="text" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} value={ deposit === "subScriptionP"? subAmount:amount} onChange={(e)=>setAmount(e.target.value)}/></div>
+                            <input type="number" placeholder={pinAmount} className={move? "ProccedRent1":"ProccedRent1 addFine"} value={ deposit === "subScriptionP"? subAmount:amount} onChange={(e)=>setAmount(e.target.value)}/></div>
 
-                        <div className="MMMYE"   onClick={() => {
-          handleFlutterPayment({
-            callback: (response) => {
-               console.log(response);
-                closePaymentModal() // this will close the modal programmatically
-            },
-            onClose: () => {},
-          });
-        }}>Proceed</div>
+                        <div className="MMMYE"   onClick={flut}>Proceed</div>
                     </form>
                     </div>
                     :" "}
@@ -401,19 +519,19 @@ const trig =()=>{
                     <div className="SecondDivFolder">
                         <p className="DepositY">Withdraw</p>
                         <p className="PinW">Available Balance</p>
-                        <p className="WidrawMoney">₦2,000,000.00</p>
+                        <p className="WidrawMoney">₦{mainWallet}.00</p>
                         <form>
-                            <div className="ProccedRent"><input type="text" placeholder="EnterAmount"
-                            className="ProccedRent1" value={amount} onChange={(e)=>setAmount(e.target.value)}/></div>
-                            <div className="MMMYE" onClick={() => {
-          handleFlutterPayment({
-            callback: (response) => {
-               console.log(response);
-                closePaymentModal() // this will close the modal programmatically
-            },
-            onClose: () => {},
-          });
-        }}>Withdraw</div>
+                            <p>Amount to withdraw</p>
+                            <div className="ProccedRent fback"><input type="number" placeholder="EnterAmount"
+                            className="ProccedRent1 loo"  name="withdrawalAmount" onChange={handleChanges}/></div>
+                            <p style={{textAlign:"center",margin:"5px 2px"}}>to</p>
+                            <p>Account name</p>
+                            <div className="ProccedRent fback"><input type="text" placeholder="Account name"
+                            className="ProccedRent1 loo" name="accountName" onChange={handleChanges}/></div>
+                            <p style={{marginTop:"4px"}}>Account no</p>
+                            <div className="ProccedRent fback"><input type="number" placeholder="Account no"
+                            className="ProccedRent1 loo" name="accountNo" onChange={handleChanges}/></div>
+                            <div className="MMMYE" onClick={handleWithdrawal}>Withdraw</div>
                             <p className="WithdrawTextIn">Note : All withdrawals are processed authomatically within 24hrs.</p>
                         </form>
 
