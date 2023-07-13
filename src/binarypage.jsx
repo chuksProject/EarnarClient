@@ -16,10 +16,7 @@ const BinaryPage = () => {
     const [show3,setShow3]= useState(false)
     const [show4,setShow4]= useState(false)
     const [show5,setShow5]= useState(false)
-    const [show6,setShow6]= useState(false)
-
-    
-
+ 
      const dropping =()=>{
       setShow(!show)
       setShow1(false)
@@ -78,7 +75,8 @@ const BinaryPage = () => {
     }
 
   return (
-    <div style={{backgroundColor:"#2a2c42"}}>
+    <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}}>
         <div className="sportPa">
         <div>
           <img src="/img/earnarsBanners3.png" className="AffliateBanner" alt=""/>
@@ -86,7 +84,7 @@ const BinaryPage = () => {
         <div className="MakingMoney">
         Making Money Daily on <span className="forexy">Binary </span>trading is as easy as following our daily expert predictions
         </div>
-        <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
+        <Link to="/login" className="ifi"><div className="NowUpSign">SIGN UP NOW</div></Link>
         <p className="SportBetting">What Is Binary trading</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">
@@ -173,7 +171,8 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
 </div>
 
         <div className="BettingTu">Binary Option Tutorial Videos</div>
-        <div className="firey">
+        <div className='figma'>
+        <div className="firey how">
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zBlvE9pX-IQ" title="How to Register and Verify Pocket Option Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -184,6 +183,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Z5e1CbNbxdU" title="How To WITHDRAW Money From Pocket Option - 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
+        </div>
 
         <div>
           <div id="Faqc" className="faqSportMa">
@@ -191,7 +191,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping}>
                 <span>How do resgister  with a Binary Option Broker?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -207,7 +207,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping1}>
                 <span>I dont Know anything about Binary trading,What should i do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -222,7 +222,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping2}>
                 <span> How can i fund my account? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -237,7 +237,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping3}>
                 <span> Can your company Trade for me and pay me a percentage monthly?</span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -252,7 +252,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping4}>
                 <span>How much do i stake in every trade?</span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -267,7 +267,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div>
               <div className="HowFarBro" onClick={dropping5}>
                 <span> What is the guarantee am going to make money on Binary trading?</span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

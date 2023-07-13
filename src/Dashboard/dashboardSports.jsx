@@ -8,10 +8,15 @@ const DashboardSports = () => {
     const [err,setError]= useState(null)
     const [userInfo1,setUserInfo1]=useState([])
     const [userFind,setUserFind]=useState([])
-    const [type,setType]= useState('')
+    const [type,setType]= useState('hourly')
+    const [type1,setType1]= useState('daily')
+    const [type2,setType2]= useState('hourly')
+    const [type3,setType3]= useState('hourly')
+    const [gameType,setGameType]=useState("")
 
     const [inputs,setInputs]=useState({
         id:"",
+     
         time:"",
         league:"",
         teamA:"",
@@ -39,6 +44,8 @@ const DashboardSports = () => {
         entry:"",
         takeProfit:"",
         stopLoss:"",
+        Tp_No_Of_Pips:"",
+        Sl_No_Of_Pips:""
         
     })
     const [inputs3,setInputs3]=useState({
@@ -60,6 +67,9 @@ const DashboardSports = () => {
     const[list2,setList2]=useState([])
     const[list3,setList3]=useState([])
     const [success,setSuccess]=useState("")
+    const [success1,setSuccess1]=useState("")
+     const [success2,setSuccess2]=useState("")
+      const [success3,setSuccess3]=useState("")
     const [notsuccess,setNotSuccess]=useState("")
 
     const handleChange = e =>{
@@ -99,6 +109,8 @@ const DashboardSports = () => {
             entry:"",
             takeProfit:"",
             stopLoss:"",
+            Tp_No_Of_Pips:"",
+            Sl_No_Of_Pips:""
         });
     }
 
@@ -179,33 +191,93 @@ const onChangeHanler =(e)=>{
 
     switch(vale){
         case "hourly":
-            setType("hourly")
+            setType("hourly");
+            // console.log("hourly")
         break;
         case  "daily":
-            setType("daily")
+            setType("daily");
         break;
         case "weekly":
-            setType("weekly")
+            setType("weekly");
         break;
         default:
+            setType("hourly");
+    }
+
+}
+const onChangeHanler1 =(e)=>{
+    const vale = e.target.value;
+
+    switch(vale){
+        case "hourly":
+            setType2("hourly");
+            // console.log("hourly")
+        break;
+        case  "daily":
+            setType2("daily");
+        break;
+        case "weekly":
+            setType2("weekly");
+        break;
+        default:
+            setType2("hourly");
+    }
+
+}
+
+const onChangeHanler2 =(e)=>{
+    const vale = e.target.value;
+
+    switch(vale){
+        case "hourly":
+            setType3("hourly");
+            // console.log("hourly")
+        break;
+        case  "daily":
+            setType3("daily");
+        break;
+        case "weekly":
+            setType3("weekly");
+        break;
+        default:
+            setType3("hourly");
     }
 
 }
 
 
-    const handleSumit = async e =>{
+const onChangeSport =(e)=>{
+    let valle = e.target.value;
+
+    // console.log(valle)
+    switch(valle){
+        case  "daily":
+            setType1("daily");
+            // console.log("bike")
+            break;
+        case "midweek":
+            setType1("midweek");
+            break;
+        default:
+            setType1("daily");
+    }
+
+}
+
+
+const files =[list2,{gameType:type1}]
+
+    const handleSumit = async (e) =>{
         e.preventDefault()
  
        try{
-       
-            await axios.post("/post/sports",list2)
+            await axios.post("http://localhost:8080/api/post/sports", files)
             setSuccess('Succesful upload')
             setTimeout(() => {
                 setSuccess('')
               }, 5000);
               
        }catch(err){
-        setError(err.response.data)
         setNotSuccess("files was not uploaded")
         setTimeout(() => {
             setNotSuccess('')
@@ -225,40 +297,51 @@ const onChangeHanler =(e)=>{
            }    
             }
 
-            const handleSumit8 = async e =>{
+
+            const file2 =[list,{tradeType:type2}]
+            // console.log(file2)
+            const handleSumit8 = async (e) =>{
                 e.preventDefault()
          
                try{
-                 await axios.post("/post/crypto",list)
+                 await axios.post("/post/crypto",file2)
                 //  console.log(list2)
-                const interval = setInterval(() => {
-                    setSuccess("user has been created")
-                        }, 1000);
-                         clearInterval(interval);
+                setSuccess2('Succesful upload')
+            setTimeout(() => {
+                setSuccess2('')
+              }, 5000);
                  
                  
                }catch(err){
-                setError(err.response.data)
+              setError(err.response.data)
+        setNotSuccess("files was not uploaded")
+        setTimeout(() => {
+            setNotSuccess('')
+          }, 5000);
                
                }    
                 }
 
-
+const fill =[list3,{tradeType:type3}]
 
                 const handleSumit7 = async e =>{
                     e.preventDefault()
              
                    try{
-                     await axios.post("/post/binary",list3)
+                     await axios.post("/post/binary",fill)
                     //  console.log(list2)
-                    const interval = setInterval(() => {
-                        setSuccess("user has been created")
-                            }, 1000);
-                             clearInterval(interval);
+                      setSuccess3('Succesful upload')
+            setTimeout(() => {
+                setSuccess3('')
+              }, 5000);
                      
                      
                    }catch(err){
-                    setError(err.response.data)
+                    // setError(err.response.data)
+                    setNotSuccess("files was not uploaded")
+        setTimeout(() => {
+            setNotSuccess('')
+          }, 5000);
                    
                    }    
                     }
@@ -280,17 +363,26 @@ const onChangeHanler =(e)=>{
 
 
         
+const files1 =[list1,{tradeType:type}]
 
 
-
-    const handleSumit1 = async e =>{
+    const handleSumit1 = async (e) =>{
         e.preventDefault()
        try{
-         await axios.post("/post/forex",inputs1)
+         await axios.post("http://localhost:8080/api/post/forex",files1)
+         setSuccess('Succesful upload')
+            setTimeout(() => {
+                setSuccess('')
+              }, 5000);
          
-        console.log(inputs1)
+        
        }catch(err){
+       
         setError(err.response.data)
+        setNotSuccess("files was not uploaded")
+        setTimeout(() => {
+            setNotSuccess('')
+          }, 5000);
         
        }    
         }
@@ -344,7 +436,22 @@ const onChangeHanler =(e)=>{
             console.log(coupons)
         }
 
-      
+    //   const handleChange90 =(e)=>{
+    //     const val4 = e.target.value;
+
+    //     switch(val4){
+
+    //         case "daily":
+    //            setGameType("daily")
+    //            break;
+    //            case "weekly":
+    //              setGameType("weekly")
+    //              default:
+    //                  setGameType("daily")
+               
+    //     }
+
+    //   }
             
 
         
@@ -368,9 +475,10 @@ const onChangeHanler =(e)=>{
       <div className="GamEType">
           <div className="GamEType1 daro">
               <div className="GamEType2">Game Type</div>
-              <div className="GamEType3 juji"><select className="selectDiv">
-                  <option>Daily</option>
-                  <option>MidWeek</option></select></div>
+              <div className="GamEType3 juji">
+                <select id="gameType" name="gameType" className="selectDiv" onChange={onChangeSport}>
+                  <option value="daily" id={1}>Daily</option>
+                  <option value="midweek" id={2}>MidWeek</option></select></div>
           </div>
          
           <div className="GamEType1">
@@ -471,10 +579,7 @@ const onChangeHanler =(e)=>{
                   <option value="weekly">Weekly</option></select></div>
           </div>
           
-          {/* <div className="GamEType1 diappear" >
-              <div className="GamEType2">Pair</div>
-              <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="tradeType" onChange={handleChange1} value={type}/></div>
-          </div> */}
+       
           <div className="GamEType1">
               <div className="GamEType2">Pair</div>
               <div className="GamEType3"><input type="text" placeholder="Enter" className="pade" name="pair" onChange={handleChange1} value={inputs1.pair}/></div>
@@ -510,6 +615,9 @@ const onChangeHanler =(e)=>{
               <input type="text" placeholder="Enter" className="pade" name="SL_no_Of_Pips" onChange={handleChange1} value={inputs1.SL_no_Of_Pips} />
               </div>
           </div>
+          {success && <div className="SuccessInfoM suc1">{success}</div>} 
+          {notsuccess && <div className="SuccessInfoM suc1">{notsuccess}</div>} 
+          {/* {err && <div className="SuccessInfoM suc1">{err}</div>}  */}
           <div>
               <div className="dashboardAdd" onClick={()=>addList1(inputs1)
               }>Add</div>
@@ -549,7 +657,7 @@ const onChangeHanler =(e)=>{
           </div>
           </div>
        
-       <div className="opst" onClick={handleSumit9}>Post</div>
+       <div className="opst" onClick={handleSumit1}>Post</div>
        
       
       </div>
@@ -558,10 +666,10 @@ const onChangeHanler =(e)=>{
       <div className="GamEType">
           <div className="GamEType1 daro">
               <div className="GamEType2">Trade Type</div>
-              <div className="GamEType3 juji"><select className="selectDiv">
-                  <option>Hourly</option>
-                  <option>Daily</option>
-                  <option>Weekly</option></select></div>
+              <div className="GamEType3 juji"><select className="selectDiv" onChange={onChangeHanler1}>
+                  <option value="hourly">Hourly</option>
+                  <option value="daily">Daily</option>
+                  <option value="weekly">Weekly</option></select></div>
           </div>
           {/* <div className="GamEType1 daro">
               <div className="GamEType2">Trade No</div>
@@ -600,27 +708,38 @@ const onChangeHanler =(e)=>{
           </div>
           <div className="GamEType1">
               <div className="GamEType2">Tp No of Pips  </div>
-              <div className="GamEType3"></div>
+              <div className="GamEType3">
+                 <input type="text" placeholder="Enter" className="pade" onChange={handleChange2} name="Tp_No_Of_Pips" value={inputs2.Tp_No_Of_Pips}/>
+              </div>
           </div>
           <div className="GamEType1">
               <div className="GamEType2">SL No of Pips  </div>
-              <div className="GamEType3"></div>
+              <div className="GamEType3">
+                 <input type="text" placeholder="Enter" className="pade" onChange={handleChange2} name="Sl_No_Of_Pips" value={inputs2.Sl_No_Of_Pips}/>
+              </div>
           </div>
+
+           {success2 && <div className="SuccessInfoM suc1">{success2}</div>} 
+          {notsuccess && <div className="SuccessInfoM suc1">{notsuccess}</div>} 
           <div>
               <div className="dashboardAdd" onClick={()=>addList(inputs2)}>Add</div>
               <div></div>
           </div>
+
+          
           <div className="amaF">
               {list.map((app)=>(
           <div className ="RomaDAs" key={app.todo.id}>
               <div style={{width:"80%"}}>
                   <ul className="GEoniPad">
-                  <li>{app.id}</li>
+                  {/* <li>{app.id}</li> */}
                       <li>{app.todo.pair}</li>
                       <li>{app.todo.condition}</li>
                       <li>{app.todo.entry}</li>
                       <li>{app.todo.takeProfit}</li>
                       <li>{app.todo.stopLoss}</li>
+                      <li>{app.todo.Tp_No_Of_Pips}</li>
+                      <li>{app.todo.Sl_No_Of_Pips}</li>
                   </ul>
               </div>
               <div style={{width:"20%",textAlign:"center",color:"#fff",display:""}}><div className="Asaa" onClick={()=>deleteTodo(app.id)}>Remove</div></div>
@@ -646,7 +765,7 @@ const onChangeHanler =(e)=>{
       <div className="GamEType">
           <div className="GamEType1 daro">
               <div className="GamEType2">Trade Type</div>
-              <div className="GamEType3 juji"><select className="selectDiv">
+              <div className="GamEType3 juji"><select className="selectDiv" onChange={onChangeHanler2}>
                   <option>Hourly</option>
                   <option>Daily</option>
                   <option>Weekly</option></select></div>
@@ -672,7 +791,8 @@ const onChangeHanler =(e)=>{
             
           </div>
          
-         
+          {success3 && <div className="SuccessInfoM suc1">{success3}</div>} 
+          {notsuccess && <div className="SuccessInfoM suc1">{notsuccess}</div>} 
         
           <div>
               <div className="dashboardAdd" onClick={()=>addList3(inputs3)}>Add</div>

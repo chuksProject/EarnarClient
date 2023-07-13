@@ -4,6 +4,7 @@ import { Link,useNavigate} from "react-router-dom";
 import axios from "axios"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+import { faGooglePlusG}from '@fortawesome/free-brands-svg-icons'
 
 const Register =()=>{
 
@@ -11,11 +12,14 @@ const Register =()=>{
         username:"",
         email:"",
         password:"",
-        password1:"",
-        showPassword: false,
-        showPassword1: false
+      
+    })
+    const [inputs50,setInputs50]=useState({
+         showPassword: false,
     })
     const navigate = useNavigate()
+    const[over18,setOver18]=useState(false);
+    const [term,setTerm]=useState(false)
 
     const [err,setError]= useState(null)
 
@@ -24,32 +28,30 @@ const Register =()=>{
 
     }
 
-    const handleSumit = async e =>{
+      const handleChange1 = (event) => {
+    setOver18(event.target.checked);
+      
+  }
+
+       const handleChange2 = (event) => {
+    
+      setTerm(event.target.checked);
+  }
+    const handleSumit = async (e)=>{
     e.preventDefault()
    try{
-    //    if(inputs.password =! inputs.password1){
-    //        setError("password do not match")
-    //    }else if(inputs.email.length === (null || 0)){
-    //     setError("email field is empty")
-    //    }else if(inputs.username.length === (null || 0)){
-    //     setError("user field is empty")
-    //    }
-    //    else{
+   
         await axios.post("/auth/register",inputs)
         navigate('/login')
-    //    }
-    
-    
+
    }catch(err){
-    // setError(err.response.data)
-    setError("connection denied")
-    // console.log(err)
+    setError(err.response.data.msg)
    }    
     }
 
 
     const handleClickShowPassword = () => {
-        setInputs(previ=>({ ...previ, showPassword: !inputs.showPassword,showPassword1: !inputs.showPassword1 }));
+        setInputs50(previ=>({ ...previ, showPassword: !inputs50.showPassword }));
       };
 
     
@@ -61,34 +63,27 @@ const Register =()=>{
             <div className="Form_Div">
                 <form>
                      <p className="New_Account">Register New Account</p>
-                    <div> <input type="text" placeholder="User Name"  className="Full_Name" onChange={handleChange} name="username"/></div>
-                    <div> <input type="email" placeholder="Enter_Your Email" className="Full_Name" onChange={handleChange} name="email"/></div>
-                    {/* <div> <select className="Full_Name">
-                         <option>school</option>
-                         <option>Bussiness</option>
-                         <option>Enterprise</option>
-                         <option>Soccer</option>
-                     </select></div> */}
-                    <div> <input type={inputs.showPassword? "text":"password"}  placeholder="Password" className="Full_Name" onChange={handleChange} name="password" value={inputs.password}/></div>
-                    {/* <div> <input type="password" placeholder=" Confirm_password" className="Full_Name" name="password" onChange={handleChange}/></div> */}
+                    <div> <input type="text" placeholder="User_name"  className="Full_Name" onChange={handleChange} name="username"/></div>
+                    <div> <input type="email" placeholder="Email" className="Full_Name" onChange={handleChange} name="email"/></div>
+                  
 
-                    <div className="sers"> <input type={inputs.showPassword ? "text":"password"} placeholder="Confirm_password" className="Full_Name" onChange ={handleChange} name="password1" value={inputs.password1}
+                    <div className="sers"> <input type={inputs50.showPassword ? "text":"password"} placeholder="Password" className="Full_Name" onChange ={handleChange} name="password" value={inputs.password}
                   />
-                  {inputs.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
-                  {err && <p>{err}</p>}
-                     <p className="Include"><span className="NoteP"> Note: </span>Password must be at least six (6) characters and must include Upper Case and Lower Case,Number and a special character e.g PREditam247@</p>
+                  {inputs50.showPassword ?<FontAwesomeIcon icon={faEye} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/>:<FontAwesomeIcon icon={faEyeSlash} className="PlusIcon plusIcon2 ser1" onClick={handleClickShowPassword}/> }</div>
+                  {err && <p className="errpage">{err}</p>}
 
-                     <div className="Checkbox_div"><input type="checkbox" className="Bym"/> <label className="Over_18">By checking this box you declare that you are over 18yrs of age.</label></div>
+                     <div className="Checkbox_div"><input type="checkbox" name="over18" onChange={handleChange1} className="Bym"/> <label className="Over_18">By checking this box you declare that you are over 18yrs of age.</label></div>
                     
-                    <div className="Checkbox_div"> <input type="checkbox" className="Bym"/><label className="Over_18">By checking this box you agree to all our Terms/Conditions.Click to <span className="HERE0">HERE</span> to read.</label></div>
+                    <div className="Checkbox_div"> <input type="checkbox" className="Bym" name="term" onChange={handleChange2}/><p className="Over_18">By checking this box you agree to all our Terms/Conditions.Click to  <a href="/termscondition" className="trems1">HERE</a> to read.</p></div>
 
-                     <div className="RegisterM" onClick={handleSumit}>Register</div>
+                     <button disabled={!over18 || !term} className={over18 && term?" RegisterM regmin":"RegisterM"} onClick={handleSumit}>Register</button>
                      <div className="Or_with2">
                          <div className="Or_With"></div>
                          <p>Or register with</p>
+                        
                          <div className="Or_With"></div>
                      </div>
-                     <div className="Googgle">Google</div>
+                     <div className="Googgle"><FontAwesomeIcon icon={faGooglePlusG} className="gooleI" /><div>Google</div><FontAwesomeIcon icon={faGooglePlusG} className="goole" /></div>
                      <p className="Already_Account">Already have an account?</p>
                      <div className="LOGIN_HERE_NOW"><Link to="/login" className="p_LoGIn">LOGIN HERE</Link></div>
 

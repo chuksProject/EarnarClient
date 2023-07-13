@@ -16,11 +16,13 @@ const DashboardHome1 = () => {
     console.log(`${registeredTime}`)
 
      const [sap,setSap]=useState(null)
+      const [sap1,setSap1]=useState(null)
+       const [sap2,setSap2]=useState(null)
 
     useEffect(()=>{
         const fetchCount = async()=>{
             try{
-   const res = await axios.get(`/post/count`)
+   const res = await axios.get(`http://localhost:8080/api/post/count`)
     //  setSap(res.data)
      setSap(res.data[0].id_count)
      console.log(sap)
@@ -31,6 +33,53 @@ const DashboardHome1 = () => {
         }
         fetchCount()
     },[sap])
+
+  //   useEffect(()=>{
+  //       const activeUserCount = async()=>{
+  //           try{
+  //  const res = await axios.get(`http://localhost:8080/api/user/active-user`)
+  //   //  setSap(res.data)
+  //    setSap1(res.data[0].activeUserCount)
+  //    console.log(sap1)
+  //           }catch(err){
+  //         console.log(err)
+  //           }
+
+  //       }
+  //       activeUserCount()
+  //   },[sap1])
+
+    useEffect(()=>{
+        const activeUserCount1 = async()=>{
+            try{
+   const res = await axios.get(`/user/active-count`)
+   
+     setSap1(res.data[0].active_count)
+    //  console.log(res.data[0].active_count)
+            }catch(err){
+          console.log(err)
+            }
+
+        }
+        activeUserCount1()
+    },[sap1])
+
+
+
+     useEffect(()=>{
+        const inActiveUserCount2 = async()=>{
+            try{
+   const res = await axios.get(`/user/inactive-count`)
+   
+     setSap2(res.data[0].inActive_count)
+    //  console.log(res.data)
+            }catch(err){
+          console.log(err)
+            }
+
+        }
+        inActiveUserCount2()
+    },[sap2])
 
     const data = [
         {
@@ -92,11 +141,11 @@ const DashboardHome1 = () => {
                     </div>
                     <div className="Active Users"> 
                         <p className="Userstext">Active Users</p>
-                        <p className="UserNum" >150,000</p>
+                        <p className="UserNum" >{sap1}</p>
                     </div>
                     <div className="Inactive Users">
                         <p className="Userstext">Inactive Users</p>
-                        <p className="UserNum">350,000</p>
+                        <p className="UserNum">{sap2}</p>
                     </div>
                     </div>
             

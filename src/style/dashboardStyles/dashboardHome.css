@@ -54,7 +54,7 @@
 }
 .param{
     background-color: #fff !important; 
-    color:#192854;
+    color:#000 !important;
 }
 .dashList li:hover{
     background-color: #1f326b;

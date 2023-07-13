@@ -1,4 +1,4 @@
-import React ,{useState,useContext} from "react";
+import React ,{useContext} from "react";
 import "./style/home.css"
 import "./style/affiliate.css"
 import Footer from "./footer";
@@ -9,12 +9,13 @@ const Affliate =()=>{
 
     const {currentUser} = useContext(AuthContext);
     return(
-        <div className=" " style={{background:"#2a2c42"}}>
+        <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}}  >
        
 
          <div className="AffliateDiv34">
                  <div >
-                     <img src="/img/EarnarsAffliateBanner.png" className="AffliateBanner"/>
+                     <img src="/img/EarnarsAffliateBanner.png" className="AffliateBanner" alt="affiliate_banner"/>
                  </div>
                 
                <div className="ExcitedShare">
@@ -22,23 +23,23 @@ const Affliate =()=>{
                </div>
                <div className="EarnNaira">Earn $25 dollars or ₦12,500 Naira per referral</div>
 
-               <div className="ButtonT"> <button className="Watch_Now25">Watch Now</button></div>
+                <Link to="/login" className="ifi"> <div className="NowUpSign">Watch Now</div></Link>
                <div className="SimpleLet">Its easy and Simple .Lets get started with the following Steps.</div>
 
                <div className="Create_account_holder_Div">
                    <div className="who">
-                       <div className="Create_account_Div"><img src="/img/create.png" className="Create_account_Div1"/>
+                       <div className="Create_account_Div"><img src="/img/create.png" className="Create_account_Div1"  alt="pics"/>
                        <p className="AccountPTag">1</p></div>
                        <div className="Create_AccountD">Create Account</div>
                    </div>
                    <div className="who">
-                   <div className="Create_account_Div"><img src="/img/invite.jpg" className="Create_account_Div1"/>
+                   <div className="Create_account_Div"><img src="/img/invite.jpg" className="Create_account_Div1"  alt="pics"/>
                    <p className="AccountPTag">2</p>
                    </div>
                        <div className="Create_AccountD">Invite Your friends</div>
                    </div>
                    <div className="who">
-                   <div className="Create_account_Div"><img src="/img/earn.png" className="Create_account_Div1"/>
+                   <div className="Create_account_Div"><img src="/img/earn.png" className="Create_account_Div1" alt="pics"/>
                    <p className="AccountPTag">3</p></div>
                        <div className="Create_AccountD">Start Earning</div>
                    </div>
@@ -55,8 +56,8 @@ const Affliate =()=>{
                    </p>
                </div>
 
-     {currentUser? <a href="/profile" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>:
-               <a href="/register" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>}
+     {currentUser? <a href="/profile" className="ifi"><div className="NowUpSign">  Start Now</div></a>:
+     <a href="/register" className="ifi"><div className="NowUpSign">  Start Now</div></a>}
              
 
 

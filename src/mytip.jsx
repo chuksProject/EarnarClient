@@ -10,11 +10,27 @@ const Mytip =()=>{
 
     const [register,setRegister] = useState(false)
     const [sportInfo,setSportInfo]=useState([])
+     const [sportInfoM,setSportInfoM]=useState([])
+    const [forexInfo,setForexInfo]=useState([])
+    const [cryptoInfo,setCryptoInfo]=useState([])
+        const [cryptoInfoD,setCryptoInfoD]=useState([])
+         const [cryptoInfoM,setCryptoInfoM]=useState([])
     const [coupon,setCoupon]=useState([])
+    const [odd,setOdd] = useState([])
     const [text,setText]= useState("3#$%!#DFGG")
 
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(5); 
+     const [currentPage1, setCurrentPage1] = useState(1);
+    const [itemsPerPage1, setItemsPerPage1] = useState(5); 
+    const [currentPage2, setCurrentPage2] = useState(1);
+    const [itemsPerPage2, setItemsPerPage2] = useState(5); 
+     const [currentPage3, setCurrentPage3] = useState(1);
+    const [itemsPerPage3, setItemsPerPage3] = useState(5); 
+     const [currentPage4, setCurrentPage4] = useState(1);
+    const [itemsPerPage4, setItemsPerPage4] = useState(5); 
+
+
 
     const myDiv = useRef(null);
 
@@ -23,14 +39,6 @@ const Mytip =()=>{
 //   if(tr === "/tip"){
 //     console.log("Mr kingsley is Good and nan")
 //   }
-// const totalPages = Math.ceil(sportInfo.length / itemsPerPage);
-
-// const handlePageChange = (pageNumber) => {
-//   setCurrentPage(pageNumber);
-// };
-
-
-
 
        const [tip,setTip] = useState("Tip")
    
@@ -46,9 +54,11 @@ const Mytip =()=>{
        useEffect(()=>{
         const userInfom = async ()=>{
           try{
-            const res = await axios.get('/post/sports/tip')
+            const res = await axios.get('/post/sports/tip/daily')
      
             setSportInfo(res.data)
+            // console.log(res.data)
+            // setOdd(res.data)
            
           }catch(err){
             console.log(err)
@@ -58,42 +68,112 @@ const Mytip =()=>{
     
       },[sportInfo])
 
-   
-
-
-      useEffect(()=>{
-        const userCoupon = async ()=>{
+       useEffect(()=>{
+        const userInfomM = async ()=>{
           try{
-            const res = await axios.get('/post/coupon')
+            const res = await axios.get('/post/sports/tip/mid')
      
-            setCoupon(res.data)
-           
+            setSportInfoM(res.data)
+            // console.log(res.data)
+            // setOdd(res.data)
            
           }catch(err){
             console.log(err)
           }
         }
-        userCoupon()
+        userInfomM()
     
-      },[coupon])
+      },[sportInfoM])
 
 
+       useEffect(()=>{
+        const userInfom1 = async ()=>{
+          try{
+            const res = await axios.get('/post/forex/tip')
      
+            setForexInfo(res.data)
+            // console.log(res.data)
+            // setOdd(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userInfom1()
+    
+      },[forexInfo])
 
+
+        useEffect(()=>{
+        const userInfom2 = async ()=>{
+          try{
+            const res = await axios.get('/post/crypto/tip')
+     
+            setCryptoInfo(res.data)
+            console.log(res.data)
+            // setOdd(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userInfom2()
+    
+      },[cryptoInfo])
+
+       useEffect(()=>{
+        const userInfom6 = async ()=>{
+          try{
+            const res = await axios.get('/post/crypto/tip/d')
+     
+            setCryptoInfoD(res.data)
+            console.log(res.data)
+            // setOdd(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userInfom6()
+    
+      },[cryptoInfoD])
+
+      useEffect(()=>{
+        const userInfom9 = async ()=>{
+          try{
+            const res = await axios.get('/post/crypto/tip/m')
+     
+            setCryptoInfoM(res.data)
+            console.log(res.data)
+            // setOdd(res.data)
+           
+          }catch(err){
+            console.log(err)
+          }
+        }
+        userInfom9()
+    
+      },[cryptoInfoM])
+
+   
+
+
+      // useEffect(()=>{
+      //   const userCoupon = async ()=>{
+      //     try{
+      //       const res = await axios.get('/post/coupon')
+      //       setCoupon(res.data)
+      //     }catch(err){
+      //       console.log(err)
+      //     }
+      //   }
+      //   userCoupon()
+    
+      // },[coupon])
 
       const copytext =()=>{
-
-            
               const sade = document.getElementById("foren").innerText;
-              // console.log(id,sade)
-          
-        
-
-      
-        
-        // navigator.clipboard.writeText(textToCopy);
-        // alert('copied') 
-        
+              
     }
 
     const indexOfLastPost = currentPage * itemsPerPage; 
@@ -105,8 +185,48 @@ const pageNumber = [];
   pageNumber.push(i)
  }
 
+ const indexOfLastPost1 = currentPage1 * itemsPerPage1; 
+const indexOfFirstPost1 = indexOfLastPost1 - itemsPerPage1;
+const  currentPosts1 = sportInfoM.slice(indexOfFirstPost1,indexOfLastPost1);
+const pageNumber1 = [];
+
+ for(let i = 1; i <= Math.ceil(sportInfoM.length / itemsPerPage1 ); i++ ){
+  pageNumber1.push(i)
+ }
+
+ const indexOfLastPost2 = currentPage2 * itemsPerPage2; 
+const indexOfFirstPost2 = indexOfLastPost2 - itemsPerPage2;
+const  currentPosts2 = cryptoInfoD.slice(indexOfFirstPost2,indexOfLastPost2);
+const pageNumber2 = [];
+
+ for(let i = 1; i <= Math.ceil(cryptoInfoD.length / itemsPerPage2 ); i++ ){
+  pageNumber2.push(i)
+ }
+
+
+ const indexOfLastPost4 = currentPage4 * itemsPerPage4; 
+const indexOfFirstPost4 = indexOfLastPost4 - itemsPerPage4;
+const  currentPosts4 = cryptoInfo.slice(indexOfFirstPost4,indexOfLastPost4);
+const pageNumber4 = [];
+
+ for(let i = 1; i <= Math.ceil(cryptoInfo.length / itemsPerPage4 ); i++ ){
+  pageNumber4.push(i)
+ }
+
+ const indexOfLastPost3 = currentPage3 * itemsPerPage3; 
+const indexOfFirstPost3 = indexOfLastPost3 - itemsPerPage3;
+const  currentPosts3 = cryptoInfoM.slice(indexOfFirstPost3,indexOfLastPost3);
+const pageNumber3 = [];
+
+ for(let i = 1; i <= Math.ceil(cryptoInfoM.length / itemsPerPage3 ); i++ ){
+  pageNumber3.push(i)
+ }
+
  const changePage=(pageNumber)=>setCurrentPage(pageNumber);
- const changePage1=(pageNumber)=>setCurrentPage(pageNumber);
+ const changePage1=(pageNumber1)=>setCurrentPage1(pageNumber1);
+  const changePage2=(pageNumber2)=>setCurrentPage2(pageNumber2);
+  const changePage3=(pageNumber3)=>setCurrentPage2(pageNumber3);
+  const changePage4=(pageNumber4)=>setCurrentPage2(pageNumber4);
  
 
 
@@ -173,7 +293,7 @@ const pageNumber = [];
             <ul className={(user.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{user.time}</li>
                 <li className="EngLan">{user.league}</li>
-                <li>{`${user.teamA} vs ${user.teamB}`}</li>
+                <li>{`${user.team_a} vs ${user.team_b}`}</li>
                 <li>{user.tip}</li>
                 <li>{user.odd}</li>
              
@@ -256,7 +376,7 @@ const pageNumber = [];
                    
                 
 
-    {coupon.map((app,id)=>(
+    {/* {coupon.map((app,id)=>(
                    <div key ={id}>
             <ul className={(app.id %2 == 0)? "TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{app.betName}</li>
@@ -267,7 +387,7 @@ const pageNumber = [];
                 
             </ul>
         </div>
-        ))}
+        ))} */}
        
        
        
@@ -331,7 +451,7 @@ const pageNumber = [];
                <div className="Leaque tipHeightDiv">
                    
                 
-               {currentPosts.map((users,id)=>(
+               {currentPosts1.map((users,id)=>(
                    <div key={id}>
             <ul className={(users.id %2 == 0)?"TimeDiv1 ADDTimeDbg":"TimeDiv1 ADDTimeDbg1"}>
                 <li>{users.time}</li>
@@ -537,6 +657,20 @@ const pageNumber = [];
                      
                  </ul>
              </div>
+
+             {forexInfo.map((app2,id)=>(
+                    <div key={id}>
+                 <ul className="TimeDiv1 ADDTimeDbg1">
+                     <li>{app2.pair}</li>
+                     <li className="EngLan">{app2.condition}</li>
+                     <li>{app2.entry}</li>
+                     <li>{app2.take_profit}</li>
+                     <li>{app2.stop_loss}</li>
+                  
+                     
+                 </ul>
+             </div>
+             ))}
            
            
              <div>
@@ -663,132 +797,17 @@ const pageNumber = [];
                      
                  </ul>
              </div>
-           
-           
-             <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
-                     <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
-                    
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li className="tippo">60</li>
-                     
-                 </ul>
-             </div>
-             <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ggLive">
-                     <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
-                    
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li className="tippo">40</li>
-                     
-                 </ul>
-             </div>
-             <div>
-                 <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
-                     <li className="Total_Odd">RESULT</li>
-                    
-                     <li></li>
-                     <li></li>
-                     <li>
-                     <div >
-                       <form>
-                         <div className="sped ">
-                           <div>Lost</div>
-                           <div className="greenDiv gt"></div>
-                         </div>
-                         </form>
-                         </div>
-                     </li>
-                     <li className="tippo">
-                       <div>
-                       <form>
-                         <div className="sped">
-                           <div>Won</div>
-                           <div className="greenDiv"></div>
-                         </div>
-                         </form>
-                         </div>
-                         </li>
-                     
-                 </ul>
-             </div>
-             
-             
-       
-                    </div>
-                 
-                   
-     
-                 
-                    <div className="finding">GOOD LUCK</div>
-     
-     
-                    </div>
-                    </div>
-     
-                 
-     
-          
-                    </div>
-     
-                    {/* <div className="MyTip MyTipUp MyPity">
-            <div className="Free">
-               <div>
-                   <p className="Free_ExportTT Dop">Daily</p>
-               </div>
-             
-          </div>
-     
-          <div className="TimeDiv12 ">
-                           <div>
-                             <ul className="GameN">
-                               <li className="NoGame">Trade No</li>
-                               <li className="NoGame">Fx/2022/10/7/3</li>
-                             </ul>
-                           </div>
-                        <ul className="TimeDiv spaceMargiN">
-                            <li>
-                                PAIR
-                            </li>
-                            <li className="EngLan">
-                             CONDITION
-                            </li>
-                            <li>
-                              ENTRY
-                            </li>
-                            <li>
-                                TAKE PROFIT
-                            </li>
-                            <li>
-                                STOP LOSS
-                            </li>
-                        
-                          
-                          
-                        </ul>
-                    </div> 
-     
-                    <div className="bigManDiv">
-                        <div className="FOR">
-                    <div className="Leaque tipHeightDiv">
-                        
-                     
-     
-                        <div>
+              {forexInfo.map((app2,id)=>(
+                    <div key={id}>
                  <ul className="TimeDiv1 ADDTimeDbg1">
-                     <li>GBPUSD</li>
-                     <li className="EngLan">Long(buy)</li>
-                     <li>1.687894 </li>
-                     <li>1.896540</li>
-                     <li>1.567123</li>
-                  
-                     
+                     <li>{app2.pair}</li>
+                     <li className="EngLan">{app2.condition}</li>
+                     <li>{app2.entry}</li>
+                     <li>{app2.take_profit}</li>
+                     <li>{app2.stop_loss}</li>
                  </ul>
              </div>
+             ))}
            
            
              <div>
@@ -842,24 +861,13 @@ const pageNumber = [];
                      
                  </ul>
              </div>
-             
-             
-       
-                    </div>
-                 
-                   
-     
-                 
+                    </div> 
                     <div className="finding">GOOD LUCK</div>
-     
-     
                     </div>
                     </div>
+                    </div>
      
-                 
-     
-          
-                    </div> */}
+      
      
                     <div className="MyTip">
             <div className="Free">
@@ -915,12 +923,19 @@ const pageNumber = [];
                      
                  </ul>
              </div>
-             
-            
-            
-            
-            
-             
+              {forexInfo.map((app2,id)=>(
+                    <div key={id}>
+                 <ul className="TimeDiv1 ADDTimeDbg1">
+                     <li>{app2.pair}</li>
+                     <li className="EngLan">{app2.condition}</li>
+                     <li>{app2.entry}</li>
+                     <li>{app2.take_profit}</li>
+                     <li>{app2.stop_loss}</li>
+                  
+                     
+                 </ul>
+             </div>
+             ))}
              <div>
                  <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult ">
                      <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
@@ -1058,8 +1073,36 @@ const pageNumber = [];
                 
             </ul>
         </div>
+
+        {currentPosts4.map((app4,id)=>(
+             <div key={id}>
+            <ul className="TimeDiv1 ADDTimeDbg1">
+                <li>{app4.c_pair}</li>
+                <li className="EngLan">{app4.c_condition}</li>
+                <li>{app4.c_entry}</li>
+                <li>{app4.c_take_profit}</li>
+                <li>{app4.c_stop_loss}</li>
+                
+            </ul>
+        </div>
+        ))}
+
+        <div className="tomh67"> 
+       <ul className="tomh">
+        { pageNumber4.map((numb,index)=>(
+          <li key={index} onClick={()=>changePage4(numb)} className="">
+           <a href="#" className="tomh1">
+             {numb}
+           </a>
+          </li>
+        ))}
+        </ul>
+        
+
+        </div>
       
-      
+       {currentPosts4.map((app4,id)=>(
+        <div key={id} style={{background:(app4.id %2 == 0)? "#5e5eb794" :""}}>
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
                 <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
@@ -1067,7 +1110,7 @@ const pageNumber = [];
                 <li></li>
                 <li></li>
                 <li></li>
-                <li className="tippo">60</li>
+                <li className="tippo">{app4.c_take_profit_no}</li>
                 
             </ul>
         </div>
@@ -1078,10 +1121,14 @@ const pageNumber = [];
                 <li></li>
                 <li></li>
                 <li></li>
-                <li className="tippo">40</li>
+                <li className="tippo">{app4.c_stop_loss_no}</li>
                 
             </ul>
         </div>
+        </div>
+            ))}
+
+
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
                 <li className="Total_Odd">RESULT</li>
@@ -1170,9 +1217,7 @@ const pageNumber = [];
                <div className="bigManDiv">
                    <div className="FOR">
                <div className="Leaque tipHeightDiv">
-                   
-                
-
+      
                    <div>
             <ul className="TimeDiv1 ADDTimeDbg1">
                 <li>GBPUSD</li>
@@ -1180,11 +1225,35 @@ const pageNumber = [];
                 <li>1.687894 </li>
                 <li>1.896540</li>
                 <li>1.567123</li>
-             
-                
             </ul>
         </div>
-      
+
+         {currentPosts2.map((app4,id)=>(
+             <div key={id}>
+            <ul className="TimeDiv1 ADDTimeDbg1">
+                <li>{app4.c_pair}</li>
+                <li className="EngLan">{app4.c_condition}</li>
+                <li>{app4.c_entry}</li>
+                <li>{app4.c_take_profit}</li>
+                <li>{app4.c_stop_loss}</li>
+            </ul>
+        </div>
+        ))}
+
+
+          <div className="tomh67"> 
+       <ul className="tomh">
+        { pageNumber2.map((numb,index)=>(
+          <li key={index} onClick={()=>changePage2(numb)} className="">
+           <a href="#" className="tomh1">
+             {numb}
+           </a>
+          </li>
+        ))}
+        </ul>
+        
+
+        </div>
       
         <div>
             <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
@@ -1235,154 +1304,15 @@ const pageNumber = [];
                     </form>
                     </div>
                     </li>
-                
             </ul>
         </div>
-        
-        
-  
                </div>
-            
-              
-
-            
                <div className="finding">GOOD LUCK</div>
 
 
                </div>
                </div>
-
-            
-
-     
                </div>
-
-               {/* <div className="MyTip MyTipUp MyPity">
-       <div className="Free">
-          <div>
-              <p className="Free_ExportTT Dop">Daily</p>
-          </div>
-        
-     </div>
-
-     <div className="TimeDiv12 ">
-                      <div>
-                        <ul className="GameN">
-                          <li className="NoGame">Trade No</li>
-                          <li className="NoGame">CT/2022/10/7/3</li>
-                        </ul>
-                      </div>
-                   <ul className="TimeDiv spaceMargiN">
-                       <li>
-                           PAIR
-                       </li>
-                       <li className="EngLan">
-                        CONDITION
-                       </li>
-                       <li>
-                         ENTRY
-                       </li>
-                       <li>
-                           TAKE PROFIT
-                       </li>
-                       <li>
-                           STOP LOSS
-                       </li>
-                   
-                     
-                     
-                   </ul>
-               </div> 
-
-               <div className="bigManDiv">
-                   <div className="FOR">
-               <div className="Leaque tipHeightDiv">
-                   
-                
-
-                   <div>
-            <ul className="TimeDiv1 ADDTimeDbg1">
-                <li>GBPUSD</li>
-                <li className="EngLan">Long(buy)</li>
-                <li>1.687894 </li>
-                <li>1.896540</li>
-                <li>1.567123</li>
-             
-                
-            </ul>
-        </div>
-      
-      
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd ggLive">Take Profit: No of Pips</li>
-               
-                <li></li>
-                <li></li>
-                <li></li>
-                <li className="tippo">60</li>
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult">
-                <li className="Total_Odd ggLive">Stop Loss: No of Pips</li>
-               
-                <li></li>
-                <li></li>
-                <li></li>
-                <li className="tippo">40</li>
-                
-            </ul>
-        </div>
-        <div>
-            <ul className="TimeDiv1 ADDTimeDbg1 TatotalResult gt1 ResultTip">
-                <li className="Total_Odd">RESULT</li>
-               
-                <li></li>
-                <li></li>
-                <li>
-                <div >
-                  <form>
-                    <div className="sped ">
-                      <div>Lost</div>
-                      <div className="greenDiv gt"></div>
-                    </div>
-                    </form>
-                    </div>
-                </li>
-                <li className="tippo">
-                  <div>
-                  <form>
-                    <div className="sped">
-                      <div>Won</div>
-                      <div className="greenDiv"></div>
-                    </div>
-                    </form>
-                    </div>
-                    </li>
-                
-            </ul>
-        </div>
-        
-        
-  
-               </div>
-            
-              
-
-            
-               <div className="finding">GOOD LUCK</div>
-
-
-               </div>
-               </div>
-
-            
-
-     
-               </div> */}
-
                <div className="MyTip">
        <div className="Free">
           <div>
@@ -1414,9 +1344,6 @@ const pageNumber = [];
                        <li>
                            STOP LOSS
                        </li>
-                  
-                     
-                     
                    </ul>
                </div> 
 
@@ -1424,8 +1351,6 @@ const pageNumber = [];
                    <div className="FOR">
                <div className="Leaque tipHeightDiv">
                    
-                
-
                    <div>
             <ul className="TimeDiv1 ADDTimeDbg1">
                 <li>GBPUSD</li>
@@ -1433,10 +1358,36 @@ const pageNumber = [];
                 <li>1.66678</li>
                 <li>1.86753</li>
                 <li>1.54321</li>
-              
+            </ul>
+        </div>
+
+         {currentPosts3.map((app4,id)=>(
+             <div key={id}>
+            <ul className="TimeDiv1 ADDTimeDbg1">
+                <li>{app4.c_pair}</li>
+                <li className="EngLan">{app4.c_condition}</li>
+                <li>{app4.c_entry}</li>
+                <li>{app4.c_take_profit}</li>
+                <li>{app4.c_stop_loss}</li>
                 
             </ul>
         </div>
+        ))}
+
+          <div className="tomh67"> 
+       <ul className="tomh">
+        { pageNumber3.map((numb,index)=>(
+          <li key={index} onClick={()=>changePage3(numb)} className="">
+           <a href="#" className="tomh1">
+             {numb}
+           </a>
+          </li>
+        ))}
+        </ul>
+        
+
+        </div>
+      
         
        
        

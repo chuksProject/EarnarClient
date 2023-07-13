@@ -10,6 +10,19 @@ width:45%
 .timimg{
    width:350px;
 }
+.kim{
+    width:100%;
+    overflow-x: scroll;
+}
+.do{
+    width: 100%;
+        max-width: 1500px;
+        overflow: hidden;
+}
+
+.do li{
+    width:200px;
+}
 .Infomat{
     border:0;
     padding:10px 6px;

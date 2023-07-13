@@ -1,311 +1,421 @@
-.sportPa{
-    width:100%;
+.sportPa {
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 5px;
 }
-.MakingMoney{
-    width:100%;
+
+.MakingMoney {
+    width: 100%;
     max-width: 600px;
-    margin:20px auto 20px auto;
+    margin: 20px auto 20px auto;
     font-size: 20px;
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
-.NowUpSign{
-    padding:10px 5px;
-    margin:15px auto;
-    width:146px;
+
+.NowUpSign {
+    padding: 10px 5px;
+    margin: 15px auto;
+    width: 146px;
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-weight: 700;
     letter-spacing: 1px;
     border-radius: 4px;
     backdrop-filter: blur(4.3px);
-    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+
+    box-shadow: 0 4px 44px rgb(0 0 0 / 0%);
     border: 1px solid rgba(133, 164, 229, 0.32);
-    background: #ffffff12;
-    cursor:pointer;
+    background: #2c274a;
+    cursor: pointer;
 
 
 }
-.ifi{
+
+.ifi {
     text-decoration: none;
-    color:#fff;
- 
+    color: #fff;
+
 }
-.ifi:hover{
-    color:#000;
+
+.ifi:hover {
+    color: #000;
 }
 
 .NowUpSign:hover {
-background:#fff;
-color: #000 !important;
+    background: #fff;
+    color: #000 !important;
 }
 
 
-.SportBetting{
-    color:#e0be00;
-    margin:45px auto 20px auto;
+.SportBetting {
+    color: #e0be00;
+    margin: 45px auto 20px auto;
     text-align: center;
     font-size: 28px;
     font-weight: 700;
 }
-.outcomeBeen1{
-    padding:0 10px;
+
+.outcomeBeen1 {
+    padding: 0 10px;
 }
-.outcomeBeen{
-   width:100%;
-   max-width:800px;
-   margin:0 auto; 
-   text-align: center;
-   color: #b8bcc7;
-   backdrop-filter: blur(4.3px);
-   box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
-   border: 1px solid rgba(133, 164, 229, 0.32);
-   background: #0a0c222e;
-   padding:30px 10px;
-   border-radius:5px;
-   font-size: 18px;
-}
-.WhyStart{
+
+.outcomeBeen {
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    color:#e0be00;
+    color: #e5e7ef;
+    -webkit-backdrop-filter: blur(4.3px);
+    backdrop-filter: blur(4.3px);
+
+    border: 1px solid rgb(108 122 168);
+
+    background: radial-gradient(circle, #7f89b7 0%, #3e4970 100%);
+    box-shadow: rgb(174 174 219 / 25%) 0px 13px 27px -5px, rgb(122 133 161 / 30%) 0px 8px 16px -8px;
+    padding: 30px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.WhyStart {
+    text-align: center;
+    color: #e0be00;
     font-size: 24px;
     font-weight: 700;
     margin-top: 60px;
     margin-bottom: 8px;
 
 }
-.EasyTi{
-   display:flex;
-   height:auto;
-   padding:0 10px;
-   align-items: stretch;
-   justify-content: space-between;
+
+.EasyTi {
+    display: flex;
+    height: auto;
+    padding: 0 10px;
+    align-items: stretch;
+    justify-content: space-between;
 
 }
-.EasyTim{
-    width:32%;
-    border: 1px solid rgba(133, 164, 229, 0.32);
+
+.EasyTim {
+    width: 32%;
+    /* border: 1px solid rgba(133, 164, 229, 0.32);
     box-shadow: 0 4px 30px rgb(15 24 52 / 82%);
     backdrop-filter: blur(4.3px);
-    background-color: #2c254a30;
-    color:#b8bcc7;
-    padding:15px 15px;
+    background-color: #2c254a30; */
+    border: 1px solid rgb(91 100 143);
+    box-shadow: 0 4px 17px rgb(15 24 52 / 82%);
+    -webkit-backdrop-filter: blur(4.3px);
+    backdrop-filter: blur(4.3px);
+    background-color: #29214ed4;
+    color: #b8bcc7;
+    padding: 15px 15px;
 
     border-radius: 5px;
-   
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px
 }
-.fora{
+
+.fora {
     margin-bottom: 10px;
 }
-.everyDay{
-    font-size: 18px;
+
+.everyDay {
+    font-size: 16px;
 }
-.startedf{
-    color:#5f7ac9;
+
+.startedf {
+    color: #5f7ac9;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
     /* text-align: center; */
 }
-.AgenciesTy{
-    color:#fff;
+
+.AgenciesTy {
+    /* color:#fff; */
     text-align: center;
     margin-top: 60px;
     margin-bottom: 10px;
     font-size: 24px;
     font-weight: 700;
+    padding: 0 6px;
     color: #e0be00;
 }
-.everyDay{
-    width:100%;
+
+.everyDay {
+    width: 100%;
     max-width: 800px;
-    padding:0 8px;
+    padding: 0 8px;
     /* text-align: center; */
     color: #b8bcc7;
-    margin:0 auto 40px auto;
+    margin: 0 auto 40px auto;
 
 }
-.wemerYt{
-    display:flex;
+
+.wemerYt {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.papaf1{
-    width:100%;
-}
-.papaf12{
-    width:186px
-    
-}
-.papaf13{
-    width:250px;
-    
-}
-.papaf14{
-    width:50px;
-    
-}
-.papaf15{
-    width:90px;
-    
+.papaf1 {
+    width: 100%;
 }
 
-.BettingTu{
+.papaf12 {
+    width: 186px
+}
+
+.papaf13 {
+    width: 250px;
+
+}
+
+.papaf14 {
+    width: 50px;
+
+}
+
+.papaf15 {
+    width: 90px;
+
+}
+
+.BettingTu {
     text-align: center;
-    width:40%;
-    padding:12px 5px;
-    background-color:#efdc72;
-    color:#2a2c42;
-    margin:40px auto 20px auto;
+    width: 40%;
+    padding: 12px 5px;
+
+    /* background-color: #c7c9ed; */
+    color: #c7c9ed;
+    margin: 40px auto 20px auto;
     border-radius: 5px;
     font-size: 22px;
     font-weight: 600;
-     box-shadow: 0px 2px 2px #b7a30e;
+    border-bottom: 2px solid #c7c9ed;
+    box-shadow: 0px 2px 33px #6c6f9e;
 }
-.firey{
-    display:flex;
-    padding:0 10px;
+
+.firey {
+    display: flex;
+    padding: 0 10px;
     align-items: center;
-    justify-content:space-between ;
+    justify-content: space-between;
 }
-.firey1{
-    width:32%;
-    height:200px;
+
+.firey1 {
+    width: 32%;
+    height: 200px;
     background-color: #fff;
     border-radius: 5px;
 }
-.faqSports{
-    color:#fff;
+
+.faqSports {
+    color: #fff;
 }
-.faqSportMa{
+
+.faqSportMa {
     margin-bottom: 50px;
 }
-.imghi{
-    width:100%;
-    height:auto
+
+.imghi {
+    width: 100%;
+    height: auto
 }
-.ifNi{
-    width:24%;
-    margin:0 auto 30px auto;
-    height:3px;
+
+.ifNi {
+    width: 24%;
+    margin: 0 auto 30px auto;
+    height: 3px;
     background-color: #c6cbd2;
 }
-.forexy{
+
+.forexy {
     color: #9caef6;
     font-size: 18px;
 }
-.SportsImg{
-    display:flex;
+
+.SportsImg {
+    display: flex;
     align-items: center;
-    width:1200px;
-    position:relative;
+    width: 100%;
+    position: relative;
     justify-content: space-between;
     overflow-x: hidden;
 
 }
 
-.onV{
+.onV {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 15px;
     margin-bottom: 15px;
 }
-.everyday{
-    width:50px
+
+.everyday {
+    width: 50px
 }
-.SportsImg1{
-    width:100%;
-    padding:0 10px;
+
+.SportsImg1 {
+    width: 100%;
+    padding: 0 10px;
     max-width: 100%;
     overflow-x: scroll;
+    background-color: #c7c9ed;
+    padding: 10px 6px;
+    border-radius: 1px;
 }
-.Dayword{
+
+.Dayword {
     text-align: center;
 }
 
-@media(min-width:500px) and (max-width:768px){
-    .outcomeBeen1,.Dayword {
+@media(min-width:500px) and (max-width:768px) {
+
+    .outcomeBeen1,
+    .Dayword {
         padding: 0px 60px !important;
     }
+
     .BettingTu {
         width: 84% !important;
     }
+
     .firey {
         padding: 0 60px !important;
     }
+
     .EasyTi {
-       
+
         padding: 0 60px !important;
-       
+
     }
 
 }
-@media(max-width:768px){
-    .MakingMoney{
-        padding: 0 15px; 
+
+@media(max-width:768px) {
+    .MakingMoney {
+        padding: 0 15px;
     }
-    .EasyTi{
-        display:flex;
+
+    .EasyTi {
+        display: flex;
         flex-direction: column;
         padding: 0 10px;
         /* gap: 15px; */
     }
-    .EasyTim{
+
+    .outcomeBeen {
+        font-size: 15px;
+    }
+
+    .everyDay {
+        font-size: 14px;
+    }
+
+    .SportsImg {
+        width: 1050px
+    }
+
+    .EasyTim {
         margin-bottom: 15px;
     }
-    .Dayok{
-        padding:0 8px
+
+    .AgenciesTy {
+        font-size: 22px;
     }
-    .BettingTu{
-        width: 96%;
-        font-size: 20px;
+
+    .Dayok {
+        padding: 0 8px
     }
-    .faqSportMa{
+
+    .BettingTu {
+        width: 86%;
+        font-size: 18px;
+    }
+
+    .faqSportMa {
         margin-bottom: 18px;
         padding: 0 8px;
     }
-    .firey{
-        flex-direction: column;
-        gap: 12px;
-    padding: 0 8px;
+
+    .figma {
+        width: 100%;
+        max-width: 100%;
+        /* position:relative; */
+        overflow-x: scroll;
+
     }
-    .firey1{
+
+    .firey {
+        /* flex-direction: column;
+        gap: 12px; */
+        display: flex;
+        justify-content: space-between;
+        width: 1840px;
+        position: relative;
+        overflow-x: hidden;
+        padding: 0 8px;
+    }
+
+    .how {
+        width: 930px !important;
+    }
+
+    .firey1 {
+        width: 300px;
+
+        border-radius: 5px;
+    }
+
+    .pn {
+        border-radius: 5px;
+    }
+
+    .EasyTim {
+        height: fit-content;
         width: 100%;
     }
-    .EasyTim{
-        height: fit-content; 
-        width: 100%;
+
+    .outcomeBeen1 {
+        padding: 0 8px;
     }
-    .outcomeBeen1{
-        padding:0 8px;
+
+    .SportBetting {
+        font-size: 26px;
     }
+
     .cap3 {
         width: 44px !important;
     }
+
     .cap5 {
         width: 62px !important;
     }
+
     .cap4 {
         width: 38px !important;
     }
-    .wemerYt{
-        padding:0 8px
+
+    .wemerYt {
+        padding: 0 8px
     }
-    .startedf{
+
+    .startedf {
         font-size: 22px;
     }
-    
-    
+
+
 
 }
-@media(min-width:1250px){
-    .sportPa{
-    
+
+@media(min-width:1250px) {
+    .sportPa {
+
         max-width: 1200px;
-        
+
     }
 }

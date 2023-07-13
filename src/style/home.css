@@ -223,7 +223,7 @@ ul{
 }
 .EarnP{
     font-size: 60px ;
-    color:#c1c3cb;
+    color:#ffffff;
     font-weight: 800;
     margin-bottom: 12px;
     margin-top:30px ;
@@ -420,7 +420,7 @@ ul{
 }
 .padup_Guide{
     padding:6px 5px;
-    background-color:#3c476e;
+    background-color:#383f56;
 }
 .paulmy_man{
     padding:7px 5px;
@@ -806,7 +806,8 @@ color:#fff;
     background-color: #fff;
 }
 .HowFarBro{
-    background-color:#1b213a;
+    /* background-color:#1b213a; */
+    background-color: #272f52;
     color: #b2b6bd;
     padding:10px 15px;
     font-size: 16px;

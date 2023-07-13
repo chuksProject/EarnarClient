@@ -76,7 +76,8 @@ const CryptoPage = () => {
    
 
   return (
-    <div style={{  backgroundColor:"#2a2c42"}}>
+    <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
+}} >
         <div className="sportPa">
           <div>
           <img src="/img/earnarsbanner23.png" className="AffliateBanner" alt=""/>
@@ -84,7 +85,7 @@ const CryptoPage = () => {
         <div className="MakingMoney">
         Making Money Daily on <span className="forexy">Cryptocurrency</span> trading is as easy as following our daily expert predictions
         </div>
-        <div className="NowUpSign"><Link to="/login" className="ifi">SIGN UP NOW</Link></div>
+       <Link to="/login" className="ifi"> <div className="NowUpSign">SIGN UP NOW</div></Link>
         <p className="SportBetting">What Is Cryptocurrency trading</p>
         <div className="outcomeBeen1">
         <div className="outcomeBeen">
@@ -180,18 +181,31 @@ for another
 
 
         <div className="BettingTu">Crypto Trading Tutorial Videos</div>
+        <div className="figma">
         <div className="firey fora">
             <div className="firey1">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0UTzqjCbPsQ" title="Binance Futures: The Step By Step Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className ="pn" width="100%" height="100%" src="https://www.youtube.com/embed/0UTzqjCbPsQ" title="Binance Futures: The Step By Step Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div className="firey1">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Rb2wYoFHWEY" title="Section 1 - How to Register an Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe className="pn"  width="100%" height="100%" src="https://www.youtube.com/embed/Rb2wYoFHWEY" title="Section 1 - How to Register an Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div className="firey1">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HWSyqAOi3s0" title="Section 3 - How to Deposit Funds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/he3W11XtCGo" title="Section 2 - How to Verify your Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            <div className="firey1">
+            <iframe className="pn" width="100%" height="100%" src="https://www.youtube.com/embed/HWSyqAOi3s0" title="Section 3 - How to Deposit Funds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/C-Lso4v0Rew" title="Beginner&#39;s guide to trading on Binance Spot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div className="firey1">
+            <iframe className="pn" width="100%" height="100%" src="https://www.youtube.com/embed/BUjRz9SS3LY" title="Section 6 - How to Withdraw Funds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
         </div>
-        <div className="firey">
+        </div>
+
+        {/* <div className="firey">
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BUjRz9SS3LY" title="Section 6 - How to Withdraw Funds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -201,7 +215,7 @@ for another
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/he3W11XtCGo" title="Section 2 - How to Verify your Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-        </div>
+        </div> */}
 
         <div>
           <div id="Faqc" className="faqSportMa">
@@ -209,7 +223,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop}>
                 <span>How do resgister  with an Exchange?</span>{" "}
-                <span>
+                <span className="IconSpace">
                 {show? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -225,7 +239,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop1}>
                 <span>I dont Know anything about crypto trading,What should i do?</span>
-                <span>
+                <span className="IconSpace">
                 {show1? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -240,7 +254,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop2}>
                 <span>How can i fund my account? </span>
-                <span>
+                <span className="IconSpace">
                   {show2? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -255,7 +269,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop3}>
                 <span> Can your company Trade for me and pay me a percentage monthly? </span>
-                <span>
+                <span className="IconSpace">
                   {show3? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -270,7 +284,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop4}>
                 <span> How much do i stake in every trade? </span>
-                <span>
+                <span className="IconSpace">
                   {show4? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>
@@ -285,7 +299,7 @@ for another
             <div>
               <div className="HowFarBro" onClick={drop5}>
                 <span> What is the guarantee am going to make money trading Crypto?</span>
-                <span>
+                <span className="IconSpace">
                   {show5? <FontAwesomeIcon icon={faMinus} className="PlusIcon" />:<FontAwesomeIcon icon={faPlus} className="PlusIcon" />}
                 </span>
               </div>

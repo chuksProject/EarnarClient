@@ -9,10 +9,30 @@
     margin:2px auto 20px auto
 }
 .helpin{
-    width:60%
+    width:80%
+}
+
+.posit{
+    position:relative
+}
+.positIcon{
+    position:absolute;
+    right:10px;
+    top:32%;
+    color:gray;
+    font-size: 18px;
+    cursor:pointer;
+
+    transform: translateY(-50%,-50%);
 }
 .helpin1{
     width:18%  
+}
+.phoneNu{
+    width:20% !important;
+}
+.phone{
+    width:5% !important;
 }
 .Searchh{
     width:100px;

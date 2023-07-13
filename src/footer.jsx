@@ -1,16 +1,13 @@
-import react,{useState} from "react"
+import React,{useState} from "react"
 import "./style/footer.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPlus,faCaretDown,faCaretUp,faAngleDown,faAngleUp} from '@fortawesome/free-solid-svg-icons'
+import {faAngleDown,faAngleUp} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook,faTwitter,faLinkedin,faTelegram,faYoutube,}from '@fortawesome/free-brands-svg-icons'
-import { Link} from "react-router-dom";
-// import{ faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const Footer =()=>{
 
      const [footerShow,setFooterShow]=useState(false)
      const [footerShow1,setFooterShow1]=useState(false)
-
 
       const dropdown =()=>{
            
@@ -31,9 +28,9 @@ const Footer =()=>{
                           <li className="Footer_header_title   titleFott" onClick={dropdown1}><span>NAVIGATION </span><span>{footerShow?<FontAwesomeIcon icon={faAngleUp} className="PlusIcon plusIcon2" />:<FontAwesomeIcon icon={faAngleDown} className="PlusIcon plusIcon2" />}</span></li>
                           {footerShow ? (<div>
                           <li className="Footer_list_space"><a href="#">Blog</a></li>
-                          <li className="Footer_list_space"><a href="#">LiveScores</a></li>
-                          <li className="Footer_list_space"><a href="#">Forex Calender</a></li>
-                          <li className="Footer_list_space"><a href="#">Coingecko</a></li>
+                          <li className="Footer_list_space"><a href="https://www.livescore.com/en/" target="_blank" rel="noopener noreferrer">LiveScores</a></li>
+                          <li className="Footer_list_space"><a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener noreferrer">Forex Calender</a></li>
+                          <li className="Footer_list_space"><a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer">Coingecko</a></li>
                           </div>) : ("")}
                       </ul>
 
@@ -41,9 +38,9 @@ const Footer =()=>{
                           <li className="Footer_header_title" >NAVIGATION</li>
                           
                           <li className="Footer_list_space"><a href="#">Blog</a></li>
-                          <li className="Footer_list_space"><a href="#">LiveScores</a></li>
-                          <li className="Footer_list_space"><Link to="/refund">Forex Calender</Link></li>
-                          <li className="Footer_list_space"><a href="#">Coingecko</a></li>
+                          <li className="Footer_list_space"><a href="https://www.livescore.com/en/" target="_blank" rel="noopener noreferrer">LiveScores</a></li>
+                          <li className="Footer_list_space"><a href="https://www.forexfactory.com/calendar" target="_blank" rel="noopener noreferrer">Forex Calender</a></li>
+                          <li className="Footer_list_space"><a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer">Coingecko</a></li>
                           
                       </ul>
                   </div>
@@ -88,17 +85,12 @@ const Footer =()=>{
                               <li><a href="https://t.me/earnarshub" className="twww"><FontAwesomeIcon icon={faTelegram} className="icon_brand_size" /></a></li>
                               <li><a href="https://www.youtube.com/@Earnars" className="twww"><FontAwesomeIcon icon={faYoutube} className="icon_brand_size" /></a></li>
                               </ul></li>
-                          
-                          
                       </ul>
                   </div>
               </div>
               
               <div className="Footer_Copyright">© 2023 Earnars. All rights reserved.</div>
           </div>
-
-       
-
         </div>
     )
 }
