@@ -53,7 +53,7 @@ background-color:#00104180;
 .Actn{
     padding:5px 10px;
     font-size: 18px;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     color:#000;
     margin-left: 10px;
     border-radius: 3px;
@@ -180,10 +180,15 @@ background-color:#00104180;
     text-align: center;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
 }
+.AIR_I:hover{
+    background-color: #ffffff;
+    color:#000
 
+}
 .AllTrans{
     color:#000;
     margin-top: 20px;
@@ -352,9 +357,7 @@ background-color:#00104180;
     background-color: #03031ae0;
     overflow: hidden;
     z-index: 6000;
-    /* display:flex;
-    justify-content: center;
-    align-items: center; */
+   
 }
 .hou{
 overflow: hidden;
@@ -391,8 +394,32 @@ overflow: hidden;
     width:100%;  
     
 } 
+.popo{
+    position:relative
+}
+.popo1{
+   position:absolute;
+   padding:10px 6px;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   color:#fff;
+   background: #001041;
+   width:100%;
+   border-radius: 5px;
+}
 .addFine{
     border:1px solid #d94e34 !important;
+}
+.circleCheck{
+    position:absolute;
+    color: #0a0b24;
+    right: 6%;
+    top:10%;
+    display:none
+}
+.circleDisplay{
+  display:block
 }
 .Wave2{
     width:100%;
@@ -416,7 +443,7 @@ overflow: hidden;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-align: center;
-    margin:20px 0 40px 0;
+    margin:10px 0 14px 0;
 }
 .PinW{
     text-align: center;

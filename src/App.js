@@ -22,6 +22,7 @@ import SportPage from "./sportsPage"
 import ForexPage from "./forexPage"
 import CryptoPage from "./cryptoPage"
 import BinaryPage from "./binarypage"
+import Airtime from "./airtime"
 import ForgotPassword from "./forgotpassword"
 import OTP from "./otp"
 import Success from "./success"
@@ -70,6 +71,7 @@ function App() {
            <Route path="/dashboard" element={< DashboardHome />} />
            <Route path="/contact" element={< Contact />} />
            <Route path="/disclaimer" element={< Disclaimer/>} />
+          <Route path="/airtime" element={<Airtime />} />
            <Route path="/termscondition" element={<TermsAndCondition  />} />
           
          

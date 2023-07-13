@@ -43,7 +43,9 @@ const Referral =()=>{
       setTerm(event.target.checked);
   }
 
-  const rap =[inputs, usd ]
+  const rap =[inputs, {code:usd} ]
+  console.log(rap)
+
 
 console.log(rap)
     const handleSumit = async (e)=>{

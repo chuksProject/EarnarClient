@@ -2,6 +2,7 @@ import React, {useState,useContext,useEffect} from 'react'
 import "./style/home2.css"
 import "./style/home.css";
 import { Link} from "react-router-dom";
+import axios from "axios"
 import { AuthContext } from './context/authContext';
 
 const Navbar= () => {
@@ -10,13 +11,26 @@ const Navbar= () => {
     const {currentUser,logout,isPaid} = useContext(AuthContext);
     const tr = window.location.pathname;
 
-    console.log(tr)
-    
- 
      setTimeout(() => {
             setRegister() 
               }, 5000);
  
+
+    //            useEffect(()=>{
+    //   const getSubscriptionPay = async()=>{
+    //     try{
+    //     await axios.get(`/user/subscription-pay/${currentUser.id}`)
+    //     }catch(err){
+    //       console.log(err)
+    //     }
+        
+    //   }
+
+
+    //    getSubscriptionPay()
+
+    //  })
+     
 
   return (
     <div>
@@ -69,7 +83,7 @@ const Navbar= () => {
               <div>
               <ul>
                 <li className="pauling">
-                  <a>{currentUser?.username}</a>
+                  <a style={{padding:"5px 5px",background:"#6975a2"}}>{currentUser ?"Login":""}</a>
                   <ul className="paulFr">
                       <li className="padup_Guide"></li>
                       <li className="paulmy_man">{currentUser?.username} </li>
@@ -77,7 +91,7 @@ const Navbar= () => {
                       <li className="paulmy_man">ID:00000{currentUser?.id}</li>
                       <a href="/wallet" className="FeedDiv"><li className="LogOutDiv_UN">My Wallet</li></a>
                       <a href="/profile" className="FeedDiv"><li className="LogOutDiv_UN">My Profile</li></a>
-                      {isPaid ? <a href="/tip" className="FeedDiv"><li className="LogOutDiv_UN">My Tips(Premium)</li></a> :<div onClick={()=>setRegister(!register)} className="FeedDiv" ><li className="LogOutDiv_UN">My Tips(Subscribe)</li></div>}
+                      {isPaid === 1? <a href="/tip" className="FeedDiv"><li className="LogOutDiv_UN">My Tips(Premium)</li></a> :<div onClick={()=>setRegister(!register)} className="FeedDiv" ><li className="LogOutDiv_UN">My Tips(Subscribe)</li></div>}
                      
                      
                       {currentUser?  <Link to="" className="FeedDiv"><li className="LogOutDiv_UN AMKING" onClick={logout}>Logout</li></Link>:""}

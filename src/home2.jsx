@@ -187,7 +187,7 @@ useEffect(()=>{
     try{
  const res = await axios.get(`/post/binary/tip3`)
    setPosts4(res.data)
-   console.log(res.data)
+
     }catch(err){
     setError(err)
 
@@ -201,7 +201,7 @@ useEffect(()=>{
     try{
  const res = await axios.get(`/post/crypto/tip3`)
    setPosts3(res.data)
-   console.log(res.data)
+ 
     }catch(err){
     setError(err)
 
@@ -373,7 +373,7 @@ useEffect(()=>{
                { sports === "sports"?
              
                <Carousel
-  swipeable={false}
+  swipeable={true}
   draggable={false}
   showDots={false}
   responsive={responsive1}
@@ -421,7 +421,7 @@ useEffect(()=>{
   ssr={true} // means to render carousel on server-side.
   infinite={true}
   // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-  autoPlay={false}
+  autoPlay={true}
   autoPlaySpeed={3000}
   keyBoardControl={true}
   customTransition="all .5"
@@ -589,6 +589,7 @@ useEffect(()=>{
            {/*section7 */}
              <div className="fear">
               <div className="Rtme">
+           
               <div className="TrustSeal">
                  <div className="SealY">Earnars Trust Seal</div>
                  <p className="ifYou">If you judiciously follow our predictions and apply our risk reward ratio and dont turn profit at the end of the month, We will refund your subscription money or your next month subscription becomes free.</p>

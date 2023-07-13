@@ -4,25 +4,22 @@
     margin-bottom: 20px;
 }
 .codePP{
- width:30px;
- height:30px;
- border-radius: 5px;
+ width:60px;
+ height:60px;
+
  text-align: center;
- border:0;
- outline:none;
- border:2px solid gray;
- background-color: #ffffff;
+
+cursor:pointer;
+ position:relative;
 }
-.codePP:hover{
-    border:2px solid blue;
-}
+
 
 .fadaFara{
     color:#d1cece;
 }
 .OTPDiv{
     width:100%;
-    max-width:140px;
+    max-width:210px;
     margin:0 auto 15px auto;
     display:flex;
     justify-content: space-between;

@@ -29,7 +29,7 @@ const DashboardUser = () => {
         const res = await axios.get('http://localhost:8080/api/post')
  
         setUserInfo(res.data)
-        console.log(res.data)
+        // console.log(res.data)
       }catch(err){
         console.log(err)
       }
@@ -43,8 +43,8 @@ const DashboardUser = () => {
             try{
    const res = await axios.get(`/user/active-count`)
    
-     setSap(res.data)
-     console.log(res.data)
+     setSap(res.data[0].active_count)
+    //  console.log(res.data)
             }catch(err){
           console.log(err)
             }

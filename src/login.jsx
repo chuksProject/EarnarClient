@@ -6,9 +6,14 @@ import { faEye,faEyeSlash} from '@fortawesome/free-solid-svg-icons'
 import { Link,useNavigate} from "react-router-dom";
 import {AuthContext}from "./context/authContext"
 
+import {GoogleLogin} from 'react-google-login'
 
 
 const Login =()=>{
+
+    const responseGoogle=(response)=>{
+    console.log(response)
+    }
 
     const [inputs,setInputs]=useState({
         email:"",
@@ -66,6 +71,7 @@ const Login =()=>{
                          <div className="Or_With"></div>
                      </div>
                      <div className="Googgle">Google</div>
+                     <GoogleLogin clientId="451426581815-pp6r4p2ao4p9pmntdfjqn2arug1ojr31.apps.googleusercontent.com" buttonText="login wih Google" onSuccess={responseGoogle} onFailure={responseGoogle} cookiePolicy={`single_host_origin`}/>
                      <p className="Have_An">Don't have an account?</p>
                      <div className="LOGIN_HERE_NOW"><Link to="/register" className="p_LoGIn">Register HERE</Link></div>
                </form>

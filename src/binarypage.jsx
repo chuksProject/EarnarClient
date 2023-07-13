@@ -171,7 +171,8 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
 </div>
 
         <div className="BettingTu">Binary Option Tutorial Videos</div>
-        <div className="firey">
+        <div className='figma'>
+        <div className="firey how">
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zBlvE9pX-IQ" title="How to Register and Verify Pocket Option Account" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -181,6 +182,7 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Z5e1CbNbxdU" title="How To WITHDRAW Money From Pocket Option - 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+        </div>
         </div>
 
         <div>

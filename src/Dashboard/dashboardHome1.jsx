@@ -54,8 +54,8 @@ const DashboardHome1 = () => {
             try{
    const res = await axios.get(`/user/active-count`)
    
-     setSap1(res.data)
-     console.log(res.data)
+     setSap1(res.data[0].active_count)
+    //  console.log(res.data[0].active_count)
             }catch(err){
           console.log(err)
             }
@@ -71,8 +71,8 @@ const DashboardHome1 = () => {
             try{
    const res = await axios.get(`/user/inactive-count`)
    
-     setSap2(res.data)
-     console.log(res.data)
+     setSap2(res.data[0].inActive_count)
+    //  console.log(res.data)
             }catch(err){
           console.log(err)
             }

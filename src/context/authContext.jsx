@@ -7,7 +7,7 @@ export const AuthContextProvider = ({children})=>{
     // const [currentUser,setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
     const [currentUser,setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null)
     const [forgotEmail,setForgotEmail] = useState((localStorage.getItem("email")) || null)
-    const [isPaid,setIsPaid] = useState(false)
+    const [isPaid,setIsPaid] = useState(0)
 
     const login = async(inputs)=>{
        const res = await axios.post("/auth/login",inputs);
@@ -38,6 +38,22 @@ export const AuthContextProvider = ({children})=>{
    localStorage.setItem("user" || "email",JSON.stringify(currentUser,forgotEmail))
 
      },[currentUser,forgotEmail]);
+
+     useEffect(()=>{
+      const getSubscriptionPay = async()=>{
+        try{
+       const res = await axios.get(`/user/subscription-pay/${currentUser.id}`)
+        setIsPaid(res.data.pop().subscription_pay)
+        }catch(err){
+          console.log(err)
+        }
+        
+      }
+
+
+       getSubscriptionPay()
+
+     })
      
      return <AuthContext.Provider value={{currentUser,forgotEmail,isPaid,setIsPaid,login,logout,forgotPassword}}>{children}</AuthContext.Provider>
 }

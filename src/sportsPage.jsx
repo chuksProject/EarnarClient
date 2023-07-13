@@ -165,7 +165,8 @@ You can also enjoy sports betting anywhere and anytime e.g from the comfort of y
 
 
         <div className="BettingTu">Sport Betting Tutorial Videos</div>
-        <div className="firey">
+        <div className='figma'>
+        <div className="firey how">
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QLfYPHSCATU" title="SPORTYBET TUTORIAL: HOW TO SIGN UP AND LOGIN TO YOUR SPORTYBET ACCOUNT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -175,6 +176,7 @@ You can also enjoy sports betting anywhere and anytime e.g from the comfort of y
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/38TXXWrUrdQ" title="Sportybet Tips - How To Place Bets On Sportybet | Bet unlocked" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+        </div>
         </div>
 
         <div>

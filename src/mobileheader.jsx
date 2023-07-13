@@ -12,10 +12,10 @@ const Mobileheader = () => {
     const [show21, setShow21] = useState(false);
     const [show22, setShow22] = useState("Sapap");
     const [state1,setState1] = useState(true)
-    const {currentUser,logout} = useContext(AuthContext);
+    const {currentUser,logout,isPaid} = useContext(AuthContext);
     const [open,setOpen]=useState("")
      const [open1,setOpen1]=useState(true)
-
+ const [register,setRegister] = useState(false)
     const [showMe,setShowMe] = useState(false)
     const [showMe1,setShowMe1] = useState(false)
     
@@ -23,6 +23,10 @@ const Mobileheader = () => {
     window.onscroll =()=>{
         scrollF()
       }
+
+        setTimeout(() => {
+            setRegister() 
+              }, 5000);
   
       const scrollF =()=>{
           if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
@@ -99,7 +103,7 @@ const Mobileheader = () => {
             <div className="Forexmm">
                       <Link  className="fit" to="/wallet" onClick={mark}>My Wallet</Link>
                       <Link  className="fit" to="/profile" onClick={mark}>My Profile</Link>
-                      <Link  className="fit" to="/tip" onClick={mark}>My Tip(Premium)</Link>
+                       {isPaid === 1? <a href="/tip" className="fit">My Tips(Premium)</a> :<Link onClick={()=>setRegister(!register)} className="fit" >My Tips(Subscribe)</Link>}
                       <Link  className="fit appjo tef" to="" onClick={logout}>Log Out</Link> 
             </div>:""}</div>:  <Link to="/register" className="LogIn" onClick={mark}>Login/Register</Link>}
            </li>
@@ -115,6 +119,8 @@ const Mobileheader = () => {
 
     </div>
 
+
+ {register ? <div style={{position:'absolute',top:"50%",left:"50%",transform:"translate(-50%,-50%)",color:"red",zIndex:"500",fontSize:"20px",padding:"5px 10px",backgroundColor:"#fff"}}> Please subscribe to unlock</div>:""}
     </div>
   )
 }

@@ -195,8 +195,8 @@ management, this high degree
 
 
         <div className="BettingTu">Forex Trading Tutorial Videos</div>
-       
-        <div className="firey">
+       <div className="figma">
+        <div className="firey how">
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IUL29Vh6rF8" title="[ENGLISH] Tutorial - How to start trading with OctaTrader on your Android device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -206,6 +206,7 @@ management, this high degree
             <div className="firey1">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TgyisJAsGvE" title="How to make a deposit with Instant Bank Transfers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+        </div>
         </div>
 
         <div>
