@@ -9,11 +9,16 @@
 
 .For_General_Div{
     width:48%;
+<<<<<<< HEAD
     /* box-shadow: 0 21px 17px 1px rgb(0 0 0 / 10%);
   background-color: #768295;; */
     box-shadow: 0 8px 17px 1px rgb(0 0 0 / 10%);
         /* background-color: #ebeff5; */
             background: linear-gradient(200deg, rgb(79 89 124) 31%, rgba(39, 50, 105, 0.4738270308123249) 76%);
+=======
+    box-shadow: 0 21px 17px 1px rgb(0 0 0 / 10%);
+  background-color: #768295;;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     border-radius: 5px;
     padding:15px 20px;
     margin:35px 0;
@@ -23,9 +28,13 @@
     text-align: center;
     font-size: 16px;
     border-radius: 3px;
+<<<<<<< HEAD
     color:#fff;
         background-color: #00104154;
     /* background-color: #001041a1; */
+=======
+    background-color: #001041a1;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     margin-bottom: 15px;
 }
 .infoTrY{
@@ -44,7 +53,11 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.3px;
+<<<<<<< HEAD
      color: #000;
+=======
+     color: #b5aeae;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
 
 }
 .ClickHereMe{

@@ -90,8 +90,12 @@
      border-radius: 50%;
      background-color:#546cb9;
      padding:4px;
+<<<<<<< HEAD
         border: 2px solid #fff;
             backdrop-filter: blur(28px);
+=======
+     border:1px solid #fff;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     
 }
 .Create_account_holder_Div{
@@ -104,7 +108,11 @@
     margin: 100px auto 0 auto;
 }
 .Create_AccountD{
+<<<<<<< HEAD
     color:#a6a6a9;
+=======
+    color:#646a7c;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     text-align: center;
     font-size: 22px;
     font-weight: 700;
@@ -147,7 +155,11 @@
 }
 .Package_Up{
   
+<<<<<<< HEAD
     background-color: #4f63ab;
+=======
+    background-color: #405ecd;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     width: 66%;
     margin: 20px auto;
     padding: 30px 10px;

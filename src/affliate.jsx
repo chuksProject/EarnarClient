@@ -56,8 +56,8 @@ const Affliate =()=>{
                    </p>
                </div>
 
-     {currentUser? <a href="/profile" className="ifi"><div className="NowUpSign">  Start Now</div></a>:
-     <a href="/register" className="ifi"><div className="NowUpSign">  Start Now</div></a>}
+     {currentUser? <a href="/profile" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>:
+               <a href="/register" className="AffButton"><div className="Start_Now_Button cap" >Start now</div></a>}
              
 
 

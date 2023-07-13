@@ -3,6 +3,11 @@ import "./style/mytip.css"
 import { Link} from "react-router-dom";
 import Footer from "./footer"
 import axios from "axios";
+import React,{useState,useEffect,useRef} from "react"
+import "./style/mytip.css"
+import { Link} from "react-router-dom";
+import Footer from "./footer"
+import axios from "axios";
 
 
 

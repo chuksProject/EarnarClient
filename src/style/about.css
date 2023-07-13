@@ -23,6 +23,7 @@
 }
 .About_paragraph{
 
+<<<<<<< HEAD
     /* background-color: #001041;#d4d3ef */
     background-color: #ffffff;
     
@@ -30,6 +31,14 @@
     border-radius: 5px;
 
     box-shadow: 0px 0px 3px #c7cbd7;
+=======
+    /* background-color: #001041; */
+    background-color: #fff;
+    padding:35px 20px;
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 3px #051442;
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     
  
 

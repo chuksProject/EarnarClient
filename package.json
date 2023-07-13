@@ -19,8 +19,11 @@
     "react": "^18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-flutterwave": "^1.0.4",
     "react-google-login": "^5.2.2",
+=======
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
     "react-multi-carousel": "^2.8.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
@@ -55,5 +58,9 @@
       "last 1 safari version"
     ]
   },
+<<<<<<< HEAD
   "proxy": "http://localhost:8080/api"
+=======
+  "proxy": "http://localhost:8000/api"
+>>>>>>> 730295c30d108bb96a81816b4db4f79789f0f932
 }

@@ -1,4 +1,3 @@
-
 import React, {useState,useContext} from 'react'
 import "./style/mobileheader.css"
 import "./style/footer.css"
