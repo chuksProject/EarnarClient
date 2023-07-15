@@ -11,7 +11,7 @@ const TermsAndCondition=()=>{
         <div className="About_Dive_Page" style={{    backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))",paddingTop:"10px"}}>
              <div className="About_Dive_Page1">
 
-           
+              <div style={{padding:"0 10px"}}>
              <div className="About_Us">
                  <div className="About_paragraph"> 
                  <div className="About_header">Terms & Conditions</div>
@@ -50,6 +50,7 @@ Earnars does not accept any liability for any damages, liabilities or losses whi
 
 
                  </div>
+             </div>
              </div>
             <div className="Foot_VH"><Footer /></div> 
 

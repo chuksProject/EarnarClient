@@ -115,8 +115,8 @@
     margin-bottom: 60px;
 }
 .fear{
-    padding-top: 40px;
-    padding-bottom: 20px;
+    /* padding-top: 40px;
+    padding-bottom: 20px; */
         /* background: rgb(6 8 28 / 15%);
         overflow: hidden;
         height: auto;
@@ -201,7 +201,8 @@
     width: 30% ;
     text-align: center;
     border-radius: 4px;
-        background: linear-gradient(71deg, #383f56, #222738, #3c476e);
+        /* background: linear-gradient(71deg, #383f56, #222738, #3c476e); */
+        background:linear-gradient(176deg, #333255, #333252, #3e4168);
     background-clip: padding-box;
     border: 2px solid transparent;
      border-top-right-radius: 10px;
@@ -278,11 +279,11 @@
 .TrustSeal{
     margin:15px 0;
     border-radius: 6px;
-        background: rgb(6 8 28 / 15%);
-        box-shadow: 0 4px 30px rgb(253 250 250 / 10%);
+        /* background: rgb(6 8 28 / 15%); */
+        /* box-shadow: 0 4px 30px rgb(253 250 250 / 10%); */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 90px solid rgb(61 65 129 / 15%)
+    /* border: 90px solid rgb(61 65 129 / 15%) */
 
 }
 .change75{
@@ -300,13 +301,13 @@
     background-color: #5f6c9e;
         backdrop-filter: blur(44px);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     width:30%;
     max-width: 400px;
-    margin:-20px auto 20px auto;
-    color: yellow;
-    border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
+    margin:-14px auto 20px auto;
+    color: #e1ca3b;
+    /* border-top-right-radius: 10px;
+        border-top-left-radius: 10px; */
 }
 .ifYou{
     width:75%;
@@ -333,7 +334,7 @@
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    color:#000;
+    color:#fdfdfd;;
     margin-bottom: 10px;
 }
 .Rtme{
@@ -363,12 +364,12 @@
 .OnRef{
     text-align: center;
     font-size: 18px;
-    color:#000;
+    color:#d5d5d5;
     font-weight: 500;
 }
 .Onref1{
     font-size: 18px;
-    color:#000;
+    color:#d5d5d5;
     font-weight: 500;
     line-height: 28px;
 }
@@ -538,7 +539,7 @@ padding:10px 10px 0px 10px;
 .Great{
     padding-top:60px;
     padding-bottom: 50px;
-    background-color:#fff;
+    background-color:#67668329;;
     height:300px;
     box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
     border-radius: 10px;
@@ -577,6 +578,11 @@ padding:10px 10px 0px 10px;
 .with{
     color:#ffffff;
 }
+.Fitwem {
+
+    padding: 6px 7px;
+    
+}
 .Onref1{
     color:#bebfc7;
     font-size: 15px;
@@ -589,8 +595,9 @@ padding:10px 10px 0px 10px;
         font-size: 14px;
     }
         .king .react-multi-carousel-item {
-            width:300px !important;
-            max-width: 300px !important;
+            max-width: 100%;
+            /* width:300px !important; */
+            /* max-width: 300px !important; */
         }
     .commT {
         width: 100%;
@@ -600,8 +607,8 @@ padding:10px 10px 0px 10px;
 
 .TrustSeal {
   
-    background: rgb(67 78 119);
-    border: 1px solid rgb(61 65 129 / 15%);
+    background: rgb(67 78 119); 
+    border: 1px solid rgb(61 65 129 / 15%); 
     width: 100%;
     max-width: 530px;
      margin: 0 auto;
@@ -670,7 +677,7 @@ padding:10px 10px 0px 10px;
     font-size: 15px;
 }
 .fear{
-    padding-bottom: 42px;
+    padding-bottom: 20px;
     padding-top: 0px;
    
  
@@ -700,8 +707,10 @@ padding:10px 10px 0px 10px;
 }
 .Great{
     height:auto;
-    background: linear-gradient(90deg, rgb(10 6 68 / 57%) 31%, rgb(26 49 102 / 24%) 62%, rgb(31 40 90 / 22%) 76%);
-        border: 1px solid rgb(111 121 163);
+    background: linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%);
+        border: 1px solid rgb(100 100 169);
+    /* background: linear-gradient(90deg, rgb(10 6 68 / 57%) 31%, rgb(26 49 102 / 24%) 62%, rgb(31 40 90 / 22%) 76%);
+        border: 1px solid rgb(111 121 163); */
         backdrop-filter: blur(60px);
     width: 100%;
         max-width: 530px;
@@ -752,6 +761,11 @@ padding:10px 10px 0px 10px;
     .Rtme {
         max-width: 1200px;
     } 
+    .home5{
+        width:100%;
+        background-color:#333255;
+        padding:10px 10px 40px 10px
+    }
 }
 
 @media(max-width:464px){

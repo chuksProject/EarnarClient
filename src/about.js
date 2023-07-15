@@ -11,7 +11,7 @@ const About=()=>{
         <div className="About_Dive_Page" style={{backgroundImage:"linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))",paddingTop:"10px"}}>
              <div className="About_Dive_Page1">
 
-    
+    <div style={{padding:"0 10px"}}>
              <div className="About_Us">
                  <div className="About_paragraph"> 
                  <div className="About_header">About Us</div>
@@ -22,6 +22,7 @@ const About=()=>{
 <p className="Set_A_Branch">Our expers at Earnars offer predictions for various market. We are thorough in our work and have the success of our users in mind. We promise to aid you in your bets/trades! Wonder less we are considered the Home of Successful Predictions!</p>
                  </div>
              </div>
+            </div>
             <div className="Foot_VH"><Footer /></div> 
 
             </div>

@@ -61,9 +61,10 @@
 }
 .unlock{
     text-align: center;
-    color:#e1ca3b;
+    color:#e0be00;
     font-size: 30px;
     margin-bottom: 10px;
+        font-weight: 700
 }
 .LIne{
     width:30%;
@@ -153,6 +154,7 @@ td{
     .unlock {
        
         font-size: 26px;
+
         
     }
 }

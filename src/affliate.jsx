@@ -49,11 +49,13 @@ const Affliate =()=>{
                <div className="Your_Earning_never_Stop">
                    Your Earnings Never Stops
                </div>
+               <div style={{padding:"0 10px"}}>
                <div className="Package_Up">
                    <p className="Each_Time_your">Each time your referral subscribe to  our premium package you earn 50% of the amount paid.</p>
                    <p className="Each_Time_your">
                        Withdrawals of Earnings Are instant and paid directly to your bank account.
                    </p>
+               </div>
                </div>
 
      {currentUser? <a href="/profile" className="ifi"><div className="NowUpSign">  Start Now</div></a>:

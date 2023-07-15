@@ -1,5 +1,6 @@
 import React ,{useState,useEffect}from "react";
 import "./style/home.css";
+import "./style/slide.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer from "./footer"
@@ -159,7 +160,7 @@ const Home2=() =>{
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1.1,
+      items: 1.25,
       slidesToSlide: 1 // optional, default to 1.
     }
   }
@@ -299,7 +300,8 @@ useEffect(()=>{
 
            <div className="teleCom">
               
-               <div className="commT bg-green-box">
+               <div className="commT bg-green-box" style={{ 
+      backgroundImage: `url("/img/pad.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
                    <div className="FreeComm">Forex Trading</div>
                    <img src="/img/forexIcon.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/forex12.png" alt="not found" className="ballSport ffoo"/>
@@ -311,7 +313,8 @@ useEffect(()=>{
                        <p className="RateSuccess">75% Success Rate</p>
                    </div>
                </div>
-               <div className="commT dese bg-white-box">
+               <div className="commT dese bg-white-box " style={{ 
+      backgroundImage: `url("/img/pad.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}> 
                    <div className="FreeComm">Sports Prediction</div>
                    <img src="/img/sport.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/sports1.png" alt="not found" className="ballSport ffoo"/>
@@ -327,7 +330,8 @@ useEffect(()=>{
         <div className="divRatT">
            <div className="teleCom">
                
-               <div className="commT bg-yellow-box">
+               <div className="commT bg-yellow-box" style={{ 
+      backgroundImage: `url("/img/pad.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
                    <div className="FreeComm">Cryptocurrency Trading</div>
                    <img src="/img/crypto.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/crypto1.png" alt="not found" className="ballSport ffoo"/>
@@ -339,7 +343,8 @@ useEffect(()=>{
                        <p className="RateSuccess">85% Success Rate</p>
                    </div>
                </div>
-               <div className="commT dese bg-blue-box">
+               <div className="commT dese bg-blue-box" style={{ 
+      backgroundImage: `url("/img/pad.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
                    <div className="FreeComm">Binary Option Trading</div>
                    <img src="/img/binary.png" alt="not found" className="ballSport1 ffoo"/>
                    <img src="/img/binary1.png" alt="not found" className="ballSport ffoo"/>
@@ -375,7 +380,7 @@ useEffect(()=>{
              
                <Carousel
   swipeable={true}
-  draggable={false}
+  draggable={true}
   showDots={false}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
@@ -416,7 +421,7 @@ useEffect(()=>{
                         
                                  <Carousel
   swipeable={true}
-  draggable={false}
+  draggable={true}
   showDots={false}
   responsive={responsive1}
   ssr={true} // means to render carousel on server-side.
@@ -473,7 +478,7 @@ useEffect(()=>{
                  
                  <Carousel
                  swipeable={true}
-                 draggable={false}
+                 draggable={true}
                  showDots={false}
                  responsive={responsive1}
                  ssr={true} // means to render carousel on server-side.
@@ -525,28 +530,31 @@ useEffect(()=>{
 
 
  { sports=== "binary"? 
-                   <Carousel
-                   swipeable={true}
-                   draggable={false}
-                   showDots={false}
-                   responsive={responsive1}
-                   ssr={true} // means to render carousel on server-side.
-                   infinite={true}
-                   // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                   autoPlay={true}
-                   autoPlaySpeed={3000}
-                   keyBoardControl={true}
-                   customTransition="all .5"
-                   transitionDuration={500}
-                   containerClass="carousel-container"
-                   removeArrowOnDeviceType={["tablet", "mobile"]}
-                   // deviceType={this.props.deviceType}
-                   dotListClass="custom-dot-list-style"
-                   itemClass="carousel-item-padding-40-px"
-                    className="king"
-                 >
-
+                //    <Carousel
+                //    swipeable={true}
+                //    draggable={true}
+                //    showDots={false}
+                //    responsive={responsive1}
+                //    ssr={true} // means to render carousel on server-side.
+                //    infinite={true}
+                //    // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                //    autoPlay={true}
+                //    autoPlaySpeed={3000}
+                //    keyBoardControl={true}
+                //    customTransition="all .5"
+                //    transitionDuration={500}
+                //    containerClass="carousel-container"
+                //    removeArrowOnDeviceType={["tablet", "mobile"]}
+                //    // deviceType={this.props.deviceType}
+                //    dotListClass="custom-dot-list-style"
+                //    itemClass="carousel-item-padding-40-px"
+                //     className="king"
+                //  >
+                 <div>
+                  <div className="pack">
+                    <div className="slide-track">
                 {post4.map((app,id)=>(
+                  <div  className="slide1">
                     <div className="sport2 cappin yellowB" key={id}>
                         <div className="divS"><span className="Nog Nog5">Trade No: </span>BN-{date}/{app.b_trade_no}</div>
 
@@ -572,8 +580,12 @@ useEffect(()=>{
                         <div className={app.b_check === "earned"?"EarnLoss":"EarnLoss losscolor"}> {app.b_check === "earned"?"Earned":"Loss"}</div>
  
                     </div>
+                    </div>
                     ))}
-                    </Carousel>
+                    </div>
+                    </div>
+                    </div>
+                    // </Carousel>
                :""}
 
 
@@ -588,10 +600,13 @@ useEffect(()=>{
 
 
            {/*section7 */}
+
+           <div className="home5">
              <div className="fear">
               <div className="Rtme">
            
-              <div className="TrustSeal">
+              <div className="TrustSeal" style={{ 
+      backgroundImage: `url("/img/sample.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 5px",backgroundSize:"cover"}} >
                  <div className="SealY">Earnars Trust Seal</div>
                  <p className="ifYou">If you judiciously follow our predictions and apply our risk reward ratio and dont turn profit at the end of the month, We will refund your subscription money or your next month subscription becomes free.</p>
 <p className="ifYou lio">T&C Apply</p>
@@ -600,9 +615,6 @@ useEffect(()=>{
               </div>
 
 
-           {/* end section7 */}
-
-           {/*  */}
            <div className="Rtme">
            <div  className="Great" >
              <div className="with">Partners With Great Benefits  </div>
@@ -635,6 +647,7 @@ useEffect(()=>{
                    <p className="Onref1">Residual Income For Life</p>
                    </div>
                </div>
+           </div>
            </div>
            </div>
            </div>

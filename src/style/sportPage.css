@@ -9,9 +9,10 @@
     width: 100%;
     max-width: 600px;
     margin: 20px auto 20px auto;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     color: #fff;
+        font-weight: 800;
 }
 
 .NowUpSign {
@@ -50,7 +51,8 @@
 
 
 .SportBetting {
-    color: #e0be00;
+    /* color: #e0be00; */
+    color:#131226;
     margin: 45px auto 20px auto;
     text-align: center;
     font-size: 28px;
@@ -74,7 +76,8 @@
     border: 1px solid rgb(108 122 168);
 
     background: radial-gradient(circle, #7f89b7 0%, #3e4970 100%);
-    box-shadow: rgb(174 174 219 / 25%) 0px 13px 27px -5px, rgb(122 133 161 / 30%) 0px 8px 16px -8px;
+    box-shadow: rgb(20 20 62 / 25%) 0px 13px 27px -5px, rgb(14 13 70) 0px 8px 16px -8px;
+    /* box-shadow: rgb(174 174 219 / 25%) 0px 13px 27px -5px, rgb(122 133 161 / 30%) 0px 8px 16px -8px; */
     padding: 30px 10px;
     border-radius: 5px;
     font-size: 18px;
@@ -101,21 +104,19 @@
 
 .EasyTim {
     width: 32%;
-    /* border: 1px solid rgba(133, 164, 229, 0.32);
-    box-shadow: 0 4px 30px rgb(15 24 52 / 82%);
-    backdrop-filter: blur(4.3px);
-    background-color: #2c254a30; */
     border: 1px solid rgb(91 100 143);
     box-shadow: 0 4px 17px rgb(15 24 52 / 82%);
     -webkit-backdrop-filter: blur(4.3px);
     backdrop-filter: blur(4.3px);
-    background-color: #29214ed4;
+    /* background-color: #29214ed4; */
+    backdrop-filter: blur(100px);
+    background-color: #29214e26;
     color: #b8bcc7;
     padding: 15px 15px;
 
     border-radius: 5px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px
+   
+     border-radius: 20px
 }
 
 .fora {
@@ -150,7 +151,7 @@
     max-width: 800px;
     padding: 0 8px;
     /* text-align: center; */
-    color: #b8bcc7;
+    color: #dddfe3;
     margin: 0 auto 40px auto;
 
 }
@@ -187,16 +188,13 @@
 .BettingTu {
     text-align: center;
     width: 40%;
-    padding: 12px 5px;
-
-    /* background-color: #c7c9ed; */
-    color: #c7c9ed;
+    padding: 6px 2px;
+    color: #ffffff;
     margin: 40px auto 20px auto;
-    border-radius: 5px;
-    font-size: 22px;
-    font-weight: 600;
-    border-bottom: 2px solid #c7c9ed;
-    box-shadow: 0px 2px 33px #6c6f9e;
+  
+    font-size: 24px;
+    font-weight: 700;
+    
 }
 
 .firey {
@@ -234,8 +232,14 @@
 }
 
 .forexy {
-    color: #9caef6;
+    color: #e0be00;
+    font-size: 24px;
+    font-weight: 700;
+}
+.forexy1 {
+    color: #e0be00;
     font-size: 18px;
+   
 }
 
 .SportsImg {
@@ -264,7 +268,7 @@
     padding: 0 10px;
     max-width: 100%;
     overflow-x: scroll;
-    background-color: #c7c9ed;
+    background-color: #505782;
     padding: 10px 6px;
     border-radius: 1px;
 }
@@ -303,6 +307,7 @@
 
     .EasyTi {
         display: flex;
+        align-items: stretch;
         flex-direction: column;
         padding: 0 10px;
         /* gap: 15px; */
@@ -313,7 +318,7 @@
     }
 
     .everyDay {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .SportsImg {
@@ -326,6 +331,7 @@
 
     .AgenciesTy {
         font-size: 22px;
+        margin-top: 22px;
     }
 
     .Dayok {
@@ -334,7 +340,8 @@
 
     .BettingTu {
         width: 86%;
-        font-size: 18px;
+        font-size: 22px;
+        margin: 22px auto 8px auto;
     }
 
     .faqSportMa {
@@ -376,7 +383,7 @@
     }
 
     .EasyTim {
-        height: fit-content;
+        height: 100%;
         width: 100%;
     }
 
@@ -386,6 +393,10 @@
 
     .SportBetting {
         font-size: 26px;
+         margin: 22px auto 14px auto;
+    }
+    .WhyStart{
+        margin-top: 22px;
     }
 
     .cap3 {
@@ -405,7 +416,7 @@
     }
 
     .startedf {
-        font-size: 22px;
+        font-size: 20px;
     }
 
 

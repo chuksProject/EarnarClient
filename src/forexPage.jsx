@@ -5,6 +5,8 @@ import {  faPlus,faMinus} from '@fortawesome/free-solid-svg-icons'
 import "./style/home.css";
 import "./style/home2.css"
 import "./style/sportsP.css"
+import "./style/slide.css"
+
 import { Link} from "react-router-dom";
 import Footer from "./footer"
 import { AuthContext } from './context/authContext';
@@ -88,20 +90,25 @@ const ForexPage = () => {
         
       <Link to="/login" className="ifi"> <div className="NowUpSign"> SIGN UP NOW
       </div></Link>
-        <p className="SportBetting">What Is FOREX Trading</p>
+        <div style={{padding:"0px 12px"}} >
+        <p className="SportBetting">What Is Forex Trading</p>
         <div className="outcomeBeen1">
-        <div className="outcomeBeen">
-       <span className="forexy"> Forex </span>trading or FX trading (also known as foreign exchange) happens 
+        <div className="outcomeBeen" style={{ 
+      backgroundImage: `url("/img/sample.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
+       <span className="forexy1"> Forex </span>trading or FX trading (also known as foreign exchange) happens 
 when you buy or sell one countries currencies against another 
 (e.g GBP/USD) with the aim of making a profit from the changing 
-value of the underlying asset. <span className="forexy">Forex</span> markets is the largest and most 
+value of the underlying asset. <span className="forexy1">Forex</span> markets is the largest and most 
 liquid asset markets in the world.   
         </div>
         </div>
+        </div>
+        <div style={{padding:"0px 12px"}}>
         <p className="WhyStart">Why Start Forex Trading</p>
         <div className="ifNi"></div>
         <div className="EasyTi">
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+ background:"linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Low Barriers to Entry</p>
@@ -121,7 +128,8 @@ We are here to help you start
 making money online by just 
 following our expert forecast.</div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">A 24-hours market</p>
@@ -144,7 +152,8 @@ sleep.
 
 </div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+     background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Leverage</p>
@@ -171,6 +180,7 @@ management, this high degree
  losses as well as gains.</div>
             </div>
         </div>
+        </div>
 
         <div className="AgenciesTy">Who  Are Forex Brokers</div>
         <div className="ifNi"></div>
@@ -180,16 +190,49 @@ management, this high degree
 
   
 
-
-<div className="SportsImg1">
-   <div className="SportsImg">
-   <img src="/img/oct.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+<div className="slider">
+<div className="slide-track">
+   <div className="slide">
+    <img src="/img/apari.png" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+  
+    </div>
+     <div className="slide">
    <img src="/img/fxtm.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+   </div>
+    <div className="slide">
    <img src="/img/ex.svg" alt="" title="" className="marqueelogo" style={{width: "180px", maxWidth:"none"}}/>
-   <img src="/img/apari.png" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   </div>
+   <div className="slide">
+    <img src="/img/oct.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+   
+   </div>
+    <div className="slide">
    <img src="/img/fbs.svg" alt="" title="" className="marqueelogo" style={{width: "60px", maxWidth:"none"}}/>
+   </div>
+    <div className="slide">
    <img src="/img/hfm.svg" alt="" title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
    </div>
+       <div className="slide">
+   <img src="/img/oct.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+   </div>
+       <div className="slide">
+           <img src="/img/fbs.svg" alt="" title="" className="marqueelogo" style={{width: "60px", maxWidth:"none"}}/>
+   </div>
+       <div className="slide">
+   <img src="/img/ex.svg" alt="" title="" className="marqueelogo" style={{width: "180px", maxWidth:"none"}}/>
+   </div>
+       <div className="slide">
+   <img src="/img/apari.png" alt="" title="" className="marqueelogo" style={{width: "160px", maxWidth:"none"}}/>
+   </div>
+       <div className="slide">
+         <img src="/img/fxtm.svg" alt="" title="" className="marqueelogo" style={{width: "170px", maxWidth:"none"}}/>
+
+   </div>
+       <div className="slide">
+   <img src="/img/hfm.svg" alt="" title="" className="marqueelogo" style={{width: "110px", maxWidth:"none"}}/>
+   </div>
+ 
+</div>
 </div>
 
 

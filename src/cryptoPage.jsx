@@ -83,23 +83,28 @@ const CryptoPage = () => {
           <img src="/img/earnarsbanner23.png" className="AffliateBanner" alt=""/>
           </div>
         <div className="MakingMoney">
-        Making Money Daily on <span className="forexy">Cryptocurrency</span> trading is as easy as following our daily expert predictions
+        Making Money Daily on <span className="forexy">CRYPTOCURRENCY</span> trading is as easy as following our daily expert predictions
         </div>
        <Link to="/login" className="ifi"> <div className="NowUpSign">SIGN UP NOW</div></Link>
-        <p className="SportBetting">What Is Cryptocurrency trading</p>
+        <div style={{padding:"0px 12px"}} >
+        <p className="SportBetting">What Is Cryptocurrency Trading</p>
         <div className="outcomeBeen1">
-        <div className="outcomeBeen">
-        <span className="forexy">   Cryptocurrency </span>trading happens when you buy or sell digital 
+        <div className="outcomeBeen" style={{ 
+      backgroundImage: `url("/img/sample.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
+        <span className="forexy1">   Cryptocurrency </span>trading happens when you buy or sell digital 
 currencies with the aim of making a profit when their is change in value 
 of the underlying asset. There are two main ways to trade 
 cryptocurrency online: through a specialized brokerage or via a 
 dedicated cryptocurrency exchange.  
         </div>
         </div>
+        </div>
+        <div  style={{padding:"0px 12px"}}>
         <p className="WhyStart">Why Start  Cryptocurreny Trading</p>
         <div className="ifNi"></div>
         <div className="EasyTi">
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+     background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">High Volatility</p>
@@ -118,7 +123,8 @@ market, make sure that you have
 done your research and developed 
 a risk management strategy.</div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+  background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">A 24-hour market</p>
@@ -137,7 +143,8 @@ sleep.
 
 </div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+     background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Low Barriers to Entry</p>
@@ -156,6 +163,7 @@ We are here to help you start
 making money online by just 
 following our expert prediction.</div>
             </div>
+        </div>
         </div>
 
         <div className="AgenciesTy">What Are Cryptocurrency Exchanges</div>

@@ -15,7 +15,7 @@ const Contact =()=>{
         <div className="About_Dive_Page" style={{    backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))",paddingTop:"10px"}} >
              <div className="About_Dive_Page1">
 
-          
+               <div style={{padding:"0 10px"}}>
              <div className="About_Us">
                  <div className="About_paragraph"> 
                  <div className="About_header">Contact Information</div>
@@ -36,12 +36,13 @@ const Contact =()=>{
                                <p><a href="#" className="ClickHereMe">Click here to Chat on Skype</a></p>
                            </div> 
                        </div>
-                       <p className="infoTrY">Working Hours :</p>
+                       <p className="monday" style={{fontWeight:"700",fontSize:"18px"}}>Working Hours :</p>
                        <p className="monday">Mondays to Saturdays (9am to 5pm) (WAT)  </p>
                      
                    </div>
 
                  </div>
+             </div>
              </div>
             <div className="Foot_VH"><Footer /></div> 
 

@@ -1,8 +1,9 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./style/sportPage.css"
 import {  faPlus,faMinus} from '@fortawesome/free-solid-svg-icons'
 import "./style/home.css";
+import AOS from 'aos';
 import "./style/home2.css"
 import Footer from "./footer"
 import { Link} from "react-router-dom";
@@ -74,9 +75,15 @@ const BinaryPage = () => {
        
     }
 
+      useEffect(()=>{
+    AOS.init();
+  },[])
+
   return (
     <div style={{ backgroundImage: "linear-gradient(to right, rgba(106, 116, 167, 0.34), rgba(119, 135, 182, 0.95))"
 }}>
+     
+
         <div className="sportPa">
         <div>
           <img src="/img/earnarsBanners3.png" className="AffliateBanner" alt=""/>
@@ -85,20 +92,25 @@ const BinaryPage = () => {
         Making Money Daily on <span className="forexy">Binary </span>trading is as easy as following our daily expert predictions
         </div>
         <Link to="/login" className="ifi"><div className="NowUpSign">SIGN UP NOW</div></Link>
-        <p className="SportBetting">What Is Binary trading</p>
+        <div style={{padding:"0px 12px"}}>
+        <p className="SportBetting">What Is Binary Trading</p>
         <div className="outcomeBeen1">
-        <div className="outcomeBeen">
-        A <span className="forexy">Binary</span> option is a type of option with a fixed payout in which you 
+        <div className="outcomeBeen" style={{ 
+      backgroundImage: `url("/img/sample.png")`,backgroundPosition:"left right bottom top",backgroundRepeat:"no-repeat",padding:"18px 15px",backgroundSize:"cover"}}>
+        A <span className="forexy1">Binary</span> option is a type of option with a fixed payout in which you 
 predict the outcome from two possible results. If your prediction is 
 correct, you receive the agreed payout. If not, you lose your initial 
 stake, and nothing more. It's called 'binary' because there can be 
 only two outcomes – win or lose. 
         </div>
         </div>
+        </div>
+        <div style={{padding:"0px 12px"}}>
         <p className="WhyStart">Why Start Binary Trading</p>
         <div className="ifNi"></div>
-        <div className="EasyTi">
-            <div className="EasyTim">
+        <div className="EasyTi" >
+            <div className="EasyTim" style={{ 
+    background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">Easy To Trade</p>
@@ -117,7 +129,8 @@ stop losses, leverage and
 magnitude of price movement 
 when binary trading.</div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+      background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf">High  R.O.I  Potential</p>
@@ -133,7 +146,8 @@ returns of approximately 10%.
 
 </div>
             </div>
-            <div className="EasyTim">
+            <div className="EasyTim" style={{ 
+     background: "linear-gradient(206deg, rgb(51 50 85) 31%, rgb(50 49 90 / 54%) 62%, rgb(53 56 92 / 44%) 76%)",backgroundPosition:"center center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}} >
             <div className="onV">
             <img src="/img/icinC1.svg" alt="every source of fund" className="everyday"/>
                 <p className="startedf"> Known Risk And Reward </p>
@@ -152,6 +166,7 @@ you can possibly lose and how
 much exactly you can possibly 
 make if you win.</div>
             </div>
+        </div>
         </div>
 
         <div className="AgenciesTy">What Are Binary Option Broker</div>
@@ -186,8 +201,10 @@ and offer some fixed percentage return in case of in-the-money settlement.</p>
         </div>
 
         <div>
-          <div id="Faqc" className="faqSportMa">
-            <div className="firstTom faqSports">FAQ</div>
+          <div id="Faqc"  data-aos="fade-up" data-aos-duration="3000"
+             data-aos-easing="linear" className="faqSportMa">
+            <div className="firstTom faqSports"  data-aos="fade-down" data-aos-duration="3000"
+             data-aos-easing="linear">FAQ</div>
             <div>
               <div className="HowFarBro" onClick={dropping}>
                 <span>How do resgister  with a Binary Option Broker?</span>{" "}
